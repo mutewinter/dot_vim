@@ -49,7 +49,8 @@ Bundle 'vim-scripts/ZoomWin'
 Bundle 'scrooloose/syntastic'
 Bundle 'rson/vim-bufstat'
 Bundle 'dickeytk/status.vim'
-
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
 
@@ -57,7 +58,7 @@ filetype plugin indent on  " Automatically detect file types. (must turn on afte
 " Platform Specific Configuration
 " ----------------------------------------
 
-if has('win32') || has('win64') 
+if has('win32') || has('win64')
   " We want the sweet Windows mode on Windows
   source $VIMRUNTIME/mswin.vim
   set guifont=Consolas:h10:cANSI
@@ -112,21 +113,21 @@ set history=768        " Number of things to remember in history.
 set cf                 " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
 set autowrite          " Writes on make/shell commands
-set timeoutlen=350     " Time to wait for a command (after leader for example)
+set timeoutlen=250     " Time to wait for a command (after leader for example)
 set foldlevelstart=99  " Remove folds
-set formatoptions=crql 
+set formatoptions=crql
 
 " ---------------
 " Text Format
 " ---------------
-set ts=2 
+set ts=2
 set bs=2 " Delete everything with backspace
 set shiftwidth=2  " Tabs under smart indent
 set cindent
 set autoindent
 set smarttab
 set expandtab
-set backspace=2     
+set backspace=2
 
 " ---------------
 " Searching
@@ -144,9 +145,9 @@ set mat=2 " How many tenths of a second to blink
 " ---------------
 " Sounds
 " ---------------
-set visualbell 
-set novisualbell  
-set noerrorbells  
+set visualbell
+set novisualbell
+set noerrorbells
 set t_vb=
 
 " ---------------
@@ -187,6 +188,13 @@ nmap <silent> <leader>v :e $MYVIMRC<CR>
 " ----------------------------------------
 
 if has("autocmd")
+  " Automatically change directory with file
+  if exists('+autochdir')
+    set autochdir
+  else
+    autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
+  endif
+
   " No formatting on o key newlines
   autocmd BufNewFile,BufEnter * set formatoptions-=o
 
@@ -212,8 +220,20 @@ endif
 " neocomplcache
 " ---------------
 let g:neocomplcache_enable_at_startup = 1
-let g:rsenseUseOmniFunc = 1 " Fix completion in neocomplcache for ruby
 let g:neocomplcache_enable_auto_select = 1
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" ---------------
+" SuperTab
+" ---------------
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
 " ---------------
 " Lusty Juggler
@@ -281,7 +301,6 @@ let g:bufstat_active_hl_group = 'BufStatActive'
 " status.vim
 " ---------------
 let g:statusline_fugitive = 1
-let g:statusline_trailing_space_warning = 0
 " Everything must be after Right Separator for BufStat
 let g:statusline_order = [
       \ 'RightSeperator',
@@ -294,7 +313,6 @@ let g:statusline_order = [
       \ 'Fugitive',
       \ 'RVM',
       \ 'TabWarning',
-      \ 'TrailingSpaceWarning',
       \ 'Syntastic',
       \ 'Paste',
       \ 'ReadOnly',
