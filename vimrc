@@ -269,7 +269,6 @@ let g:miniBufExplModSelTarget = 1
 let g:fuf_modesDisable = 'mrucmd' " Enables FufMruFile
 nnoremap <silent><C-y> :FufMruFile<CR>
 nnoremap <silent><C-u> :FufFile<CR>
-nnoremap <silent><C-p> :FufBuffer<CR>
 
 " ---------------
 " NERDTree
@@ -334,6 +333,18 @@ let g:statusline_order = [
 " ---------------
 map <silent><leader>r :RRB<CR>
 map <silent><F5> :RRB<CR>
+
+" ---------------
+" SpeedDating
+" ---------------
+let g:speeddating_no_mappings=1 " Remove default mappings (C-a etc.)
+nmap  <C-p>     <Plug>SpeedDatingUp
+nmap  <C-m>     <Plug>SpeedDatingDown
+xmap  <C-p>     <Plug>SpeedDatingUp
+xmap  <C-m>     <Plug>SpeedDatingDown
+nmap d<C-p>     <Plug>SpeedDatingNowUTC
+nmap d<C-m>     <Plug>SpeedDatingNowLocal
+
 
 " ----------------------------------------
 " Functions
