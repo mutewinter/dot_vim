@@ -17,9 +17,9 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
-" ----------------------------------------
+" ---------------
 " Plugin Bundles
-" ----------------------------------------
+" ---------------
 
 " Navigation
 Bundle 'mutewinter/bufpos'
@@ -34,6 +34,7 @@ Bundle 'rson/vim-bufstat'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'mutewinter/ir_black_mod'
 " OS Integration
 Bundle 'mkitt/browser-refresh.vim'
 " Commands
@@ -69,7 +70,8 @@ filetype plugin indent on  " Automatically detect file types. (must turn on afte
 " ----------------------------------------
 
 if has('win32') || has('win64')
-  " We want the sweet Windows mode on Windows
+  " Windows
+
   source $VIMRUNTIME/mswin.vim
   set guifont=Consolas:h10:cANSI
   set guioptions-=T " Toolbar
@@ -82,7 +84,7 @@ elseif has('gui_macvim')
   set guifont=Menlo\ Regular:h12
   " Hide Toolbar in MacVim
   if has("gui_running")
-      set guioptions=egmrt
+    set guioptions=egmrt
   endif
 endif
 
@@ -371,5 +373,6 @@ endif
 
 command! OpenUrl call OpenURL()
 nnoremap <leader>o :call OpenURL()<CR>
+
 
 
