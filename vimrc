@@ -316,7 +316,6 @@ let g:statusline_fugitive = 1
 let g:statusline_order = [
       \ 'RightSeperator',
       \ 'Filename',
-      \ 'CheckUnix',
       \ 'Encoding',
       \ 'Help',
       \ 'Filetype',
