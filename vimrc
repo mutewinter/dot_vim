@@ -60,6 +60,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'tpope/vim-rails'
+Bundle 'mutewinter/taskpaper.vim'
 " Libraries
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
@@ -77,6 +78,7 @@ if has('win32') || has('win64')
   set guifont=Consolas:h10:cANSI
   set guioptions-=T " Toolbar
   set guioptions-=m " Menubar
+  " TODO move this into the .vim repo
   let g:syntastic_jsl_conf='C:\Users\jdm\programs\jsl-0.3.0\jsl.conf'
 
   " Set height and width on Windows
