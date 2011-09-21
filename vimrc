@@ -59,6 +59,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'itspriddle/vim-jquery'
+Bundle 'tpope/vim-rails'
 " Libraries
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
