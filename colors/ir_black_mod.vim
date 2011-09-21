@@ -183,8 +183,6 @@ hi link javaDocSeeTagParam    javaDocSeeTag
 
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
-"hi javaClassDecl              guifg=#CCFFCC     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
-
 
 " Special for XML
 hi link xmlTag          Keyword 
@@ -202,13 +200,6 @@ hi link htmlEndTag      Identifier
 hi link javaScriptNumber      Number 
 
 
-" Special for Python
-"hi  link pythonEscape         Keyword      
-
-
-" Special for CSharp
-hi  link csXmlTag             Keyword      
-
 " == CSS ==
 hi cssIdentifier	guifg=#b4b8e0 gui=none
 hi cssClassName		guifg=#f6d584 gui=none
@@ -225,3 +216,5 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#090909   ctermbg=4
 " == Taskpaper ==
 hi TaskPaperProject  guifg=#96CBFE     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
+" == BufStat ==
+hi BufStatActive          guifg=#f6d584     guibg=NONE        gui=NONE      ctermfg=NONE       ctermbg=NONE        cterm=NONE
