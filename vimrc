@@ -51,6 +51,7 @@ Bundle 'rson/vim-bufstat'
 Bundle 'dickeytk/status.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'ervandew/supertab'
+Bundle 'msanders/cocoa.vim'
 
 filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
 
