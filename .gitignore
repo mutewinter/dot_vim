@@ -1,12 +1,3 @@
 /tmp/
 /backup/
-/bundle/FuzzyFinder
-/bundle/L9
-/bundle/syntastic
-/bundle/vim-bufstat
-/bundle/vim-session
-/bundle/vim-speeddating
-/bundle/vundle
-/bundle/ZoomWin
-/bundle/supertab/
-/bundle/vim-ruby/
+/bundle
