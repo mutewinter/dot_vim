@@ -17,10 +17,14 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
+" ----------------------------------------
+" Plugin Bundles
+" ----------------------------------------
 
-" ----------------------------------------
-" Bundles
-" ----------------------------------------
+" Vim Scripts
+Bundle 'L9'
+Bundle 'LustyJuggler'
+Bundle 'IndexedSearch'
 
 " GitHub
 Bundle 'tpope/vim-fugitive'
@@ -37,6 +41,15 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-speeddating'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'tpope/vim-endwise'
+Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'mutewinter/bufpos'
+Bundle 'xolox/vim-session'
+Bundle 'vim-scripts/ZoomWin'
+Bundle 'scrooloose/syntastic'
+Bundle 'rson/vim-bufstat'
+Bundle 'dickeytk/status.vim'
+
 
 filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
 
@@ -44,7 +57,7 @@ filetype plugin indent on  " Automatically detect file types. (must turn on afte
 " Platform Specific Configuration
 " ----------------------------------------
 
-if has ('win32') || has ('win64') 
+if has('win32') || has('win64') 
   " We want the sweet Windows mode on Windows
   source $VIMRUNTIME/mswin.vim
   set guifont=Consolas:h10:cANSI
@@ -52,7 +65,7 @@ if has ('win32') || has ('win64')
   set guioptions-=m " Menubar
   let g:syntastic_jsl_conf='C:\Users\jdm\programs\jsl-0.3.0\jsl.conf'
 
-elseif has ('gui_macvim')
+elseif has('gui_macvim')
   " MacVim
 
   set guifont=Menlo\ Regular:h12
@@ -66,53 +79,61 @@ endif
 " Regular Vim Configuartion (No Plugins Needed)
 " ----------------------------------------
 
+" ---------------
+" Color
+" ---------------
 set background=dark
 colorscheme ir_black_mod
+set cursorline
 
-" Automatically reload changes if detected
-set autoread
-
-set wildmenu "Turn on WiLd menu
-set hidden "Change buffer - without saving
-
-set history=1000
-
+" ---------------
+" Backups
+" ---------------
 set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
-syntax enable
-
-set cf  " Enable error files & error jumping.
-set clipboard+=unnamed  " Yanks go on clipboard instead.
-set history=256  " Number of things to remember in history.
-set autowrite  " Writes on make/shell commands
+" ---------------
+" UI
+" ---------------
 set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
-set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-
+set laststatus=2  " Always show the statusline
 
 " ---------------
-" Formatting
+" Behaviors
+" ---------------
+syntax enable
+set autoread           " Automatically reload changes if detected
+set wildmenu           " Turn on WiLd menu
+set hidden             " Change buffer - without saving
+set history=768        " Number of things to remember in history.
+set cf                 " Enable error files & error jumping.
+set clipboard+=unnamed " Yanks go on clipboard instead.
+set autowrite          " Writes on make/shell commands
+set timeoutlen=350     " Time to wait for a command (after leader for example)
+set foldlevelstart=99  " Remove folds
+set formatoptions=crql 
+
+" ---------------
+" Text Format
 " ---------------
 set ts=2 
 set bs=2 " Delete everything with backspace
 set shiftwidth=2  " Tabs under smart indent
-set incsearch
-set hlsearch
 set cindent
 set autoindent
 set smarttab
 set expandtab
 set backspace=2     
-set cursorline
-
 
 " ---------------
 " Searching
 " ---------------
-set smartcase
+set smartcase " Non-case senstive search
+set incsearch
+set hlsearch
 
 " ---------------
 " Visual
@@ -120,54 +141,19 @@ set smartcase
 set showmatch  " Show matching brackets.
 set mat=2 " How many tenths of a second to blink
 
-
-" No sound on errors
+" ---------------
+" Sounds
+" ---------------
 set visualbell 
 set novisualbell  
 set noerrorbells  
 set t_vb=
 
-
 " ---------------
-" Status Line
-" ---------------
-set laststatus=2  " Always hide the statusline
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
-
-
-function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
-    return curdir
-endfunction
-
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    else
-        return ''
-    endif
-endfunction
-
-
 " Mouse
+" ---------------
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
-
-set tabpagemax=15
-
-command! W w
-command! Q q
-
-
-let g:buftabs_only_basename=1
-set laststatus=2
-let g:buftabs_in_statusline=1
-
-" Remove folds
-set foldlevelstart=99
-
-set formatoptions=crql 
-
 
 " ----------------------------------------
 " Bindings
@@ -179,12 +165,12 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
-map! <F1> <Esc>
+" Fixes common typos
+command W w
+command Q q
+map <F1> <Esc>
 imap <F1> <Esc>
 
-" Fixes common typos
-command! W w
-command! Q q
 
 " ---------------
 " Leader
@@ -233,13 +219,13 @@ let g:neocomplcache_enable_auto_select = 1
 " Lusty Juggler
 " ---------------
 nnoremap <leader>, :LustyJugglePrevious<CR>
+let g:LustyJugglerShowKeys = 1 " Show numbers for Lusty Buffers
 
 " ---------------
 " Syntasitic
 " ---------------
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
-
 
 " ---------------
 " Minibuffer Explorer
@@ -252,9 +238,10 @@ let g:miniBufExplModSelTarget = 1
 " ---------------
 " FuzzyFinder
 " ---------------
-nnoremap <silent><C-y> :FuzzyFinderMruFile<CR>
-nnoremap <silent><C-u> :FuzzyFinderFile<CR>
-nnoremap <silent><C-p> :FuzzyFinderBuffer<CR>
+let g:fuf_modesDisable = 'mrucmd' " Enables FufMruFile
+nnoremap <silent><C-y> :FufMruFile<CR>
+nnoremap <silent><C-u> :FufFile<CR>
+nnoremap <silent><C-p> :FufBuffer<CR>
 
 " ---------------
 " NERDTree
@@ -263,11 +250,10 @@ nmap <silent><C-n> :NERDTree<CR>
 nnoremap <leader>n :NERDTree<CR>
 let NERDTreeShowBookmarks=1
 
-
 " ---------------
 " Hex Highlight
 " ---------------
-command! HexHighlight call HexHighlight()
+command HexHighlight call HexHighlight()
 nnoremap <leader>h :HexHighlight<CR>
 
 " ---------------
@@ -281,20 +267,61 @@ nnoremap <silent><C-t> :CommandT<CR>
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
 
+" ---------------
+" Session
+" ---------------
+let g:session_autosave=0
+
+" ---------------
+" BufStat
+" ---------------
+let g:bufstat_active_hl_group = 'BufStatActive'
+
+" ---------------
+" status.vim
+" ---------------
+let g:statusline_fugitive = 1
+let g:statusline_trailing_space_warning = 0
+" Everything must be after Right Separator for BufStat
+let g:statusline_order = [
+      \ 'RightSeperator',
+      \ 'Filename',
+      \ 'CheckUnix',
+      \ 'Encoding',
+      \ 'Help',
+      \ 'Filetype',
+      \ 'Modified',
+      \ 'Fugitive',
+      \ 'RVM',
+      \ 'TabWarning',
+      \ 'TrailingSpaceWarning',
+      \ 'Syntastic',
+      \ 'Paste',
+      \ 'ReadOnly',
+      \ 'CurrentHighlight',
+      \ 'CursorColumn',
+      \ 'LineAndTotal',
+      \ 'FilePercent']
+
+
 
 " ----------------------------------------
 " Functions
 " ----------------------------------------
 
 " ---------------
-" Opens the first URL found on the lien
+" OpenURL
 " ---------------
-
 " TODO Make this work with Mac
 
 ruby << EOF
   def open_url
-    re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»]))}
+    re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}\
+    |[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.]\
+    [a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|\
+    (\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|\
+    (\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".\
+    ,<>?«»]))}
 
     line = VIM::Buffer.current.line
 
