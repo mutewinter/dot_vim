@@ -78,6 +78,9 @@ if has('win32') || has('win64')
   set guioptions-=m " Menubar
   let g:syntastic_jsl_conf='C:\Users\jdm\programs\jsl-0.3.0\jsl.conf'
 
+  " Set height and width on Windows
+  set lines=60
+  set columns=120
 elseif has('gui_macvim')
   " MacVim
 
@@ -266,7 +269,7 @@ let g:miniBufExplModSelTarget = 1
 " ---------------
 " FuzzyFinder
 " ---------------
-let g:fuf_modesDisable = 'mrucmd' " Enables FufMruFile
+let g:fuf_modesDisable = ['mrucmd'] " Enables FufMruFile
 nnoremap <silent><C-y> :FufMruFile<CR>
 nnoremap <silent><C-u> :FufFile<CR>
 
