@@ -21,37 +21,46 @@ Bundle 'gmarik/vundle'
 " Plugin Bundles
 " ----------------------------------------
 
-" Vim Scripts
-Bundle 'L9'
-Bundle 'LustyJuggler'
-Bundle 'IndexedSearch'
-
-" GitHub
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'godlygeek/tabular'
-Bundle 'Shougo/neocomplcache'
-Bundle 'kchmck/vim-coffee-script'
+" Navigation
+Bundle 'mutewinter/bufpos'
+Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'vim-scripts/ZoomWin'
 Bundle 'wincent/Command-T'
-Bundle 'vim-scripts/hexHighlight.vim'
 Bundle 'spiiph/vim-space'
-Bundle 'tpope/vim-repeat'
+Bundle 'LustyJuggler'
+Bundle 'Lokaltog/vim-easymotion'
+" UI Additions
+Bundle 'rson/vim-bufstat'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'dickeytk/status.vim'
+Bundle 'scrooloose/nerdtree'
+" OS Integration
+Bundle 'mkitt/browser-refresh.vim'
+" Commands
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-speeddating'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-endwise'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'mutewinter/bufpos'
+Bundle 'vim-scripts/hexHighlight.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'godlygeek/tabular'
+" Automatic Helpers
+Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
-Bundle 'vim-scripts/ZoomWin'
+Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
-Bundle 'rson/vim-bufstat'
-Bundle 'dickeytk/status.vim'
-Bundle 'vim-ruby/vim-ruby'
 Bundle 'ervandew/supertab'
+Bundle 'Shougo/neocomplcache'
+" Language Additions
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'msanders/cocoa.vim'
+Bundle 'tpope/vim-haml'
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'itspriddle/vim-jquery'
+" Libraries
+Bundle 'L9'
+Bundle 'tpope/vim-repeat'
 
 filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
 
@@ -208,10 +217,6 @@ if has("autocmd")
         \ if line("'\"") > 1 && line ("'\"") <= line("$") |
         \   exe "normal! g`\"" |
         \ endif
-
-
-  " Set jquery syntax
-  autocmd BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 endif
 " ----------------------------------------
 " Plugin Configuration
@@ -322,7 +327,11 @@ let g:statusline_order = [
       \ 'LineAndTotal',
       \ 'FilePercent']
 
-
+" ---------------
+" Browser Refresh
+" ---------------
+map <silent><leader>r :RRB<CR>
+map <silent><F5> :RRB<CR>
 
 " ----------------------------------------
 " Functions
