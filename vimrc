@@ -84,6 +84,7 @@ if has('win32') || has('win64')
   " Set height and width on Windows
   set lines=60
   set columns=120
+  
 elseif has('gui_macvim')
   " MacVim
 
@@ -199,7 +200,7 @@ imap <F1> <Esc>
 let mapleader = ","
 
 nmap <silent> <leader>s :set spell!<CR>
-nmap <silent> <leader>v :e $MYVIMRC<CR>
+nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
 
 " ----------------------------------------
 " Auto Commands
@@ -282,6 +283,7 @@ nnoremap <silent><C-u> :FufFile<CR>
 nmap <silent><C-n> :NERDTree<CR>
 nnoremap <leader>n :NERDTree<CR>
 let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
 
 " ---------------
 " Hex Highlight
