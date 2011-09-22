@@ -35,6 +35,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mutewinter/ir_black_mod'
+Bundle 'godlygeek/csapprox'
 " OS Integration
 Bundle 'mkitt/browser-refresh.vim'
 " Commands
@@ -254,6 +255,7 @@ let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 " ---------------
 nnoremap <leader>, :LustyJugglePrevious<CR>
 let g:LustyJugglerShowKeys = 1 " Show numbers for Lusty Buffers
+let g:LustyJugglerSuppressRubyWarning = 1
 
 " ---------------
 " Syntasitic
@@ -297,8 +299,9 @@ nnoremap <silent><C-t> :CommandT<CR>
 " ---------------
 " Indent Guides
 " ---------------
-let g:indent_guides_auto_colors = 0
+let g:indent_guides_auto_colors = 1
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_color_change_percent = 3
 
 " ---------------
 " Session
@@ -360,6 +363,7 @@ nmap d<C-m>     <Plug>SpeedDatingNowLocal
 " ---------------
 " TODO Make this work with Mac
 
+if has('ruby')
 ruby << EOF
   def open_url
     re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}\
@@ -389,6 +393,4 @@ endif
 
 command! OpenUrl call OpenURL()
 nnoremap <leader>o :call OpenURL()<CR>
-
-
-
+endif
