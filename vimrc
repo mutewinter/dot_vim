@@ -207,13 +207,6 @@ nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
 " ----------------------------------------
 
 if has("autocmd")
-  " Automatically change directory with file
-  if exists('+autochdir')
-    set autochdir
-  else
-    autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
-  endif
-
   " No formatting on o key newlines
   autocmd BufNewFile,BufEnter * set formatoptions-=o
 
@@ -275,13 +268,19 @@ let g:miniBufExplModSelTarget = 1
 " ---------------
 let g:fuf_modesDisable = ['mrucmd'] " Enables FufMruFile
 nnoremap <silent><C-y> :FufMruFile<CR>
-nnoremap <silent><C-u> :FufFile<CR>
+nnoremap <silent><C-u> :FufFileWithCurrentBufferDir<CR>
+nnoremap <leader>ff :FufFile<CR>
+nnoremap <leader>fm :FufMruFile<CR>
+nnoremap <leader>fb :FufFileWithCurrentBufferDir<CR>
 
 " ---------------
 " NERDTree
 " ---------------
 nmap <silent><C-n> :NERDTree<CR>
 nnoremap <leader>n :NERDTree<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>nc :NERDTreeClose<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
 
