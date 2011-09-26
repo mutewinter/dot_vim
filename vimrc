@@ -62,6 +62,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'tpope/vim-rails'
 Bundle 'mutewinter/taskpaper.vim'
+Bundle 'leshill/vim-json'
 " Libraries
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
