@@ -27,10 +27,9 @@ Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'wincent/Command-T'
 Bundle 'spiiph/vim-space'
-Bundle 'LustyJuggler'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'mutewinter/LustyJuggler'
 " UI Additions
-Bundle 'rson/vim-bufstat'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
 Bundle 'scrooloose/nerdtree'
@@ -307,17 +306,12 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:session_autosave=0
 
 " ---------------
-" BufStat
-" ---------------
-let g:bufstat_active_hl_group = 'BufStatActive'
-
-" ---------------
 " status.vim
 " ---------------
 let g:statusline_fugitive = 1
+let g:statusline_fullpath = 0
 " Everything must be after Right Separator for BufStat
 let g:statusline_order = [
-      \ 'RightSeperator',
       \ 'Filename',
       \ 'Encoding',
       \ 'Help',
@@ -329,6 +323,7 @@ let g:statusline_order = [
       \ 'Syntastic',
       \ 'Paste',
       \ 'ReadOnly',
+      \ 'RightSeperator',
       \ 'CurrentHighlight',
       \ 'CursorColumn',
       \ 'LineAndTotal',
