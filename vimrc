@@ -27,10 +27,9 @@ Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'wincent/Command-T'
 Bundle 'spiiph/vim-space'
-Bundle 'LustyJuggler'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'mutewinter/LustyJuggler'
 " UI Additions
-Bundle 'rson/vim-bufstat'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
 Bundle 'scrooloose/nerdtree'
@@ -311,17 +310,12 @@ let g:indent_guides_color_change_percent = 3
 let g:session_autosave=0
 
 " ---------------
-" BufStat
-" ---------------
-let g:bufstat_active_hl_group = 'BufStatActive'
-
-" ---------------
 " status.vim
 " ---------------
 let g:statusline_fugitive = 1
+let g:statusline_fullpath = 0
 " Everything must be after Right Separator for BufStat
 let g:statusline_order = [
-      \ 'RightSeperator',
       \ 'Filename',
       \ 'Encoding',
       \ 'Help',
@@ -333,6 +327,7 @@ let g:statusline_order = [
       \ 'Syntastic',
       \ 'Paste',
       \ 'ReadOnly',
+      \ 'RightSeperator',
       \ 'CurrentHighlight',
       \ 'CursorColumn',
       \ 'LineAndTotal',
@@ -349,11 +344,11 @@ map <silent><F5> :RRB<CR>
 " ---------------
 let g:speeddating_no_mappings=1 " Remove default mappings (C-a etc.)
 nmap  <C-p>     <Plug>SpeedDatingUp
-nmap  <C-m>     <Plug>SpeedDatingDown
+nmap  <C-;>     <Plug>SpeedDatingDown
 xmap  <C-p>     <Plug>SpeedDatingUp
-xmap  <C-m>     <Plug>SpeedDatingDown
+xmap  <C-;>     <Plug>SpeedDatingDown
 nmap d<C-p>     <Plug>SpeedDatingNowUTC
-nmap d<C-m>     <Plug>SpeedDatingNowLocal
+nmap d<C-;>     <Plug>SpeedDatingNowLocal
 
 
 " ----------------------------------------
