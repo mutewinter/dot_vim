@@ -345,11 +345,11 @@ map <silent><F5> :RRB<CR>
 " ---------------
 let g:speeddating_no_mappings=1 " Remove default mappings (C-a etc.)
 nmap  <C-p>     <Plug>SpeedDatingUp
-nmap  <C-m>     <Plug>SpeedDatingDown
+nmap  <C-;>     <Plug>SpeedDatingDown
 xmap  <C-p>     <Plug>SpeedDatingUp
-xmap  <C-m>     <Plug>SpeedDatingDown
+xmap  <C-;>     <Plug>SpeedDatingDown
 nmap d<C-p>     <Plug>SpeedDatingNowUTC
-nmap d<C-m>     <Plug>SpeedDatingNowLocal
+nmap d<C-;>     <Plug>SpeedDatingNowLocal
 
 
 " ----------------------------------------
