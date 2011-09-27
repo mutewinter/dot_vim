@@ -343,13 +343,9 @@ map <silent><F5> :RRB<CR>
 " SpeedDating
 " ---------------
 let g:speeddating_no_mappings=1 " Remove default mappings (C-a etc.)
-nmap  <C-p>     <Plug>SpeedDatingUp
-nmap  <C-;>     <Plug>SpeedDatingDown
-xmap  <C-p>     <Plug>SpeedDatingUp
-xmap  <C-;>     <Plug>SpeedDatingDown
-nmap d<C-p>     <Plug>SpeedDatingNowUTC
-nmap d<C-;>     <Plug>SpeedDatingNowLocal
-
+nmap <silent><leader>dm <Plug>SpeedDatingDown
+nmap <silent><leader>dp <Plug>SpeedDatingUp
+nmap <silent><leader>dn <Plug>SpeedDatingNowUTC
 
 " ----------------------------------------
 " Functions
