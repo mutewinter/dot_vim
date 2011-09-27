@@ -85,7 +85,7 @@ if has('win32') || has('win64')
   " Set height and width on Windows
   set lines=60
   set columns=120
-  
+
 elseif has('gui_macvim')
   " MacVim
 
@@ -213,7 +213,7 @@ if has("autocmd")
 
   " No more complaining about untitled documents
   autocmd FocusLost silent! :wa
-  
+
   " When editing a file, always jump to the last cursor position.
   " This must be after the uncompress commands.
   autocmd BufReadPost *
@@ -324,6 +324,7 @@ let g:statusline_order = [
       \ 'Fugitive',
       \ 'RVM',
       \ 'TabWarning',
+      \ 'TrailingSpaceWarning',
       \ 'Syntastic',
       \ 'Paste',
       \ 'ReadOnly',
@@ -387,3 +388,9 @@ endif
 command! OpenUrl call OpenURL()
 nnoremap <leader>o :call OpenURL()<CR>
 endif
+
+" ---------------
+" Fix Trailing White Space
+" ---------------
+map <leader>ws :%s/\s\+$//e<CR>
+command! FixTrailingWhiteSpace :%s/\s\+$//e
