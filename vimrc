@@ -120,6 +120,7 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set laststatus=2  " Always show the statusline
+set cmdheight=2
 
 " ---------------
 " Behaviors
