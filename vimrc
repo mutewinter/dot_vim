@@ -324,7 +324,6 @@ let g:statusline_order = [
       \ 'Fugitive',
       \ 'RVM',
       \ 'TabWarning',
-      \ 'TrailingSpaceWarning',
       \ 'Syntastic',
       \ 'Paste',
       \ 'ReadOnly',
