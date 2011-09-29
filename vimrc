@@ -30,7 +30,7 @@ Bundle 'spiiph/vim-space'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mutewinter/LustyJuggler'
 " UI Additions
-Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'mutewinter/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mutewinter/ir_black_mod'
