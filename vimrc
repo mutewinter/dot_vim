@@ -193,6 +193,9 @@ command Q q
 map <F1> <Esc>
 imap <F1> <Esc>
 
+" Removes doc lookup binding because it's easy to fat finger
+nmap K k  
+
 
 " ---------------
 " Leader
