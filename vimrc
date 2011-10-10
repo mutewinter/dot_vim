@@ -308,7 +308,8 @@ let g:indent_guides_color_change_percent = 3
 " ---------------
 " Session
 " ---------------
-let g:session_autosave=0
+let g:session_autosave = 0
+let g:session_autoload = 0
 
 " ---------------
 " status.vim
