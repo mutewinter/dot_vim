@@ -274,7 +274,7 @@ nnoremap <silent><C-y> :FufMruFile<CR>
 nnoremap <silent><C-u> :FufFileWithCurrentBufferDir<CR>
 nnoremap <leader>ff :FufFile<CR>
 nnoremap <leader>fm :FufMruFile<CR>
-nnoremap <leader>fb :FufFileWithCurrentBufferDir<CR>
+nnoremap <leader>fb :FufBuffer<CR>
 
 " ---------------
 " NERDTree
