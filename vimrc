@@ -44,6 +44,7 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'vim-scripts/hexHighlight.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
+Bundle 'mileszs/ack.vim'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
