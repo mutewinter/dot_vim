@@ -1,7 +1,8 @@
 " =======================================
-" Who: Jeremy
+" Who: Jeremy Mack (@mutewinter)
 " What: .vimrc of champions
-" Version: 1.0.0beta1
+" Version: 1.0 (this may never change because who versions dot files,
+" honestly)
 " =======================================
 
 " ----------------------------------------
