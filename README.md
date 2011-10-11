@@ -9,7 +9,7 @@
 
 **Running on MacVim**
 
-![MacVim](https://github.com/mutewinter/dot_vim/raw/screenshots/images/MacVim1.png)
+![MacVim](https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim1.png)
 
 
 ## Requirements
