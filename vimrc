@@ -349,25 +349,24 @@ nmap <silent><leader>dn <Plug>SpeedDatingNowUTC
 " ---------------
 " OpenURL
 " ---------------
-" TODO Make this work with Mac
 
 if has('ruby')
 ruby << EOF
   def open_url
-    re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}\
-    |[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.]\
-    [a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|\
-    (\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|\
-    (\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".\
-    ,<>?«»]))}
+    re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]\{\};:'".,<>?«»“”‘’]))}
 
     line = VIM::Buffer.current.line
 
     if url = line[re]
-      `start cmd /c chrome #{url}`
-      VIM::message("Opened #{url}")
+      if RUBY_PLATFORM.downcase =~ /win(32|64)/
+        `start cmd /c chrome #{url}`
+        VIM::message("Opened #{url}")
+      else
+        `open #{url}`
+        VIM::message("Opened #{url}")
+      end
     else
-      VIM::message("No URL found in line.")
+      VIM::message("No URL found on this line.")
     end
   end
 EOF
