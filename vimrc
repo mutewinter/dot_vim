@@ -79,9 +79,6 @@ if has('win32') || has('win64')
   set guifont=Consolas:h10:cANSI
   set guioptions-=T " Toolbar
   set guioptions-=m " Menubar
-  " TODO move this into the .vim repo
-  let g:syntastic_jsl_conf=$HOME.'/.vim/config/windows/syntastic/jsl.conf'
-  let g:syntastic_disabled_filetypes = ['sh'] " Disable .sh on Windows
 
   " Set height and width on Windows
   set lines=60
@@ -154,7 +151,7 @@ set backspace=2
 " ---------------
 " Searching
 " ---------------
-set smartcase " Non-case senstive search
+set smartcase " Non-case sensitive search
 set incsearch
 set hlsearch
 
@@ -243,11 +240,16 @@ let g:LustyJugglerShowKeys = 1 " Show numbers for Lusty Buffers
 let g:LustyJugglerSuppressRubyWarning = 1
 
 " ---------------
-" Syntasitic
+" Syntastic
 " ---------------
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
+" Platform-specific config files
+if has('win32') || has('win64')
+  let g:syntastic_jsl_conf=$HOME.'/.vim/config/windows/syntastic/jsl.conf'
+  let g:syntastic_disabled_filetypes = ['sh'] " Disable .sh on Windows
+endif
 " ---------------
 " Minibuffer Explorer
 " ---------------
