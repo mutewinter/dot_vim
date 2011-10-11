@@ -81,6 +81,7 @@ if has('win32') || has('win64')
   set guioptions-=m " Menubar
   " TODO move this into the .vim repo
   let g:syntastic_jsl_conf='C:\Users\jdm\programs\jsl-0.3.0\jsl.conf'
+  let g:syntastic_disabled_filetypes = ['sh'] " Disable .sh on Windows
 
   " Set height and width on Windows
   set lines=60
