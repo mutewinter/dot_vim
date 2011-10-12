@@ -343,6 +343,19 @@ nmap <silent><leader>dm <Plug>SpeedDatingDown
 nmap <silent><leader>dp <Plug>SpeedDatingUp
 nmap <silent><leader>dn <Plug>SpeedDatingNowUTC
 
+" ---------------
+" Tabular
+" ---------------
+nmap <Leader>t= :Tabularize /=<CR>
+vmap <Leader>t= :Tabularize /=<CR>
+nmap <Leader>t: :Tabularize /:\zs<CR>
+vmap <Leader>t: :Tabularize /:\zs<CR>
+nmap <Leader>t, :Tabularize /,\zs<CR>
+vmap <Leader>t, :Tabularize /,\zs<CR>
+nmap <Leader>t> :Tabularize /=>\zs<CR>
+vmap <Leader>t> :Tabularize /=>\zs<CR>
+
+
 " ----------------------------------------
 " Functions
 " ----------------------------------------
