@@ -200,7 +200,7 @@ nmap K k
 " ---------------
 
 " Set leader to ,
-let mapleader = ","
+let mapleader=","
 
 nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
@@ -230,15 +230,15 @@ endif
 " ---------------
 " SuperTab
 " ---------------
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabDefaultCompletionType="<c-x><c-o>"
+let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
 
 " ---------------
 " Lusty Juggler
 " ---------------
 nnoremap <leader>, :LustyJugglePrevious<CR>
-let g:LustyJugglerShowKeys = 1 " Show numbers for Lusty Buffers
-let g:LustyJugglerSuppressRubyWarning = 1
+let g:LustyJugglerShowKeys=1 " Show numbers for Lusty Buffers
+let g:LustyJugglerSuppressRubyWarning=1
 
 " ---------------
 " Syntastic
@@ -249,20 +249,20 @@ let g:syntastic_auto_loc_list=1
 " Platform-specific config files
 if has('win32') || has('win64')
   let g:syntastic_jsl_conf=$HOME.'/.vim/config/windows/syntastic/jsl.conf'
-  let g:syntastic_disabled_filetypes = ['sh'] " Disable .sh on Windows
+  let g:syntastic_disabled_filetypes=['sh'] " Disable .sh on Windows
 endif
 " ---------------
 " Minibuffer Explorer
 " ---------------
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+let g:miniBufExplMapWindowNavVim=1
+let g:miniBufExplMapWindowNavArrows=1
+let g:miniBufExplMapCTabSwitchBufs=1
+let g:miniBufExplModSelTarget=1
 
 " ---------------
 " FuzzyFinder
 " ---------------
-let g:fuf_modesDisable = ['mrucmd'] " Enables FufMruFile
+let g:fuf_modesDisable=['mrucmd'] " Enables FufMruFile
 nnoremap <silent><C-y> :FufMruFile<CR>
 nnoremap <silent><C-u> :FufFileWithCurrentBufferDir<CR>
 nnoremap <leader>ff :FufFile<CR>
@@ -294,24 +294,24 @@ nnoremap <silent><C-t> :CommandT<CR>
 " ---------------
 " Indent Guides
 " ---------------
-let g:indent_guides_auto_colors = 1
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_color_change_percent = 3
+let g:indent_guides_auto_colors=1
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_color_change_percent=3
 
 " ---------------
 " Session
 " ---------------
-let g:session_autosave = 0
-let g:session_autoload = 0
+let g:session_autosave=0
+let g:session_autoload=0
 nnoremap <leader>os :OpenSession<CR>
 
 " ---------------
 " status.vim
 " ---------------
-let g:statusline_fugitive = 1
-let g:statusline_fullpath = 0
+let g:statusline_fugitive=1
+let g:statusline_fullpath=0
 " Everything must be after Right Separator for BufStat
-let g:statusline_order = [
+let g:statusline_order=[
       \ 'Filename',
       \ 'Encoding',
       \ 'Help',
