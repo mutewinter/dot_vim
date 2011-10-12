@@ -2,8 +2,12 @@
 
 ## Installation
 
- 1. Run `rake vim:link` at the command line to create the .vimrc symbolic link in your home directory.
- 2. Then open Vim and type `:BundleInstall` to install the plugins, which are managed by [Vundle](https://github.com/gmarik/vundle).
+ 1. `git clone https://mutewinter@github.com/mutewinter/dot_vim.git` in your home folder.
+ 2. `mv dot_vim.git .vim`
+ 3. `cd .vim`
+ 3. `rake vim:link` to make the .vimrc symbolic link.
+ 4. Run Vim and type `:BundleInstall` to install the plugins, which are managed by [Vundle](https://github.com/gmarik/vundle).
+ 5. Enjoy enhanced productivity, increased levitation, reduced watermelon-related accidents, and startling sex appeal.
 
 ## Screenshot
 
