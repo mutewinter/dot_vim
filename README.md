@@ -9,12 +9,14 @@
  4. Run Vim and type `:BundleInstall` to install the plugins, which are managed by [Vundle](https://github.com/gmarik/vundle).
  5. Enjoy enhanced productivity, increased levitation, reduced watermelon-related accidents, and startling sex appeal.
 
-## Screenshot
+## Screenshots
 
-**Running on MacVim**
 
-![MacVim](https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim1.png)
+[![MacVim](https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim1_small.png)](https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim1.png)
+**MacVim**
 
+[![Windows gVim](https://github.com/mutewinter/dot_vim/raw/master/screenshots/Windows1_small.png)](https://github.com/mutewinter/dot_vim/raw/master/screenshots/Windows1.png)
+**Windows gVim**
 
 ## Requirements
 
@@ -24,7 +26,7 @@
 
 **Windows**
 
- * [gVim](http://www.vim.org/download.php#pc)
+ * [gVim](http://www.vim.org/download.php#pc) _I'm currently using [Cream's](http://cream.sourceforge.net/) gVim [build 7.333](http://sourceforge.net/projects/cream/files/Vim/7.3.333/) without Cream_
 
 ## Notes
 
