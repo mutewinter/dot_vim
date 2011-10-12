@@ -165,8 +165,8 @@ set mat=2 " How many tenths of a second to blink
 " ---------------
 " Sounds
 " ---------------
-set visualbell
 set noerrorbells
+set novisualbell
 set t_vb=
 
 " ---------------
