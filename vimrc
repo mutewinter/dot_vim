@@ -152,6 +152,7 @@ set backspace=2
 " ---------------
 " Searching
 " ---------------
+set ignorecase " Case insensitive search
 set smartcase " Non-case sensitive search
 set incsearch
 set hlsearch
