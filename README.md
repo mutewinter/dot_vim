@@ -26,11 +26,11 @@
 
 **Mac**
 
- * [MacVim](http://code.google.com/p/macvim/) _I'm currently using [snapshot 62](https://github.com/b4winckler/macvim/downloads)_
+ * [MacVim](http://code.google.com/p/macvim/) - I'm currently using [snapshot 62](https://github.com/b4winckler/macvim/downloads)
 
 **Windows**
 
- * [gVim](http://www.vim.org/download.php#pc) _I'm currently using [Cream's](http://cream.sourceforge.net/) gVim [build 7.333](http://sourceforge.net/projects/cream/files/Vim/7.3.333/) without Cream_
+ * [gVim](http://www.vim.org/download.php#pc) - I'm currently using [Wu Yongwei](http://wyw.dcweb.cn:8001/) pre-compiled [gVim 7.3.333](http://wyw.dcweb.cn:8001/download.asp?path=vim&file=gvim73.zip) because it has Ruby support and the latest patches
 
 ## Notes
 
