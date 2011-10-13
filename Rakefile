@@ -11,7 +11,16 @@ README_FILE = 'README.md'
 namespace :vim do 
   desc 'Create symlinks'
   task :link do
-    File.symlink(".vim/#{VIMRC_FILE}", File.expand_path('~/.vimrc'))
+    begin
+      File.symlink(".vim/#{VIMRC_FILE}", File.expand_path('~/.vimrc'))
+    rescue NotImplementedError
+      puts "File.symlink not supported, you must do it manually."
+      if RUBY_PLATFORM.downcase =~ /(mingw|win)(32|64)/
+        puts 'Windows 7 use mklink, e.g.'
+        puts '  mklink _vimrc .vim\vimrc'
+      end
+    end
+    
   end
 end
 
