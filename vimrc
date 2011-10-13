@@ -355,6 +355,13 @@ vmap <Leader>t, :Tabularize /,\zs<CR>
 nmap <Leader>t> :Tabularize /=>\zs<CR>
 vmap <Leader>t> :Tabularize /=>\zs<CR>
 
+" ---------------
+" Vundle
+" ---------------
+nmap <Leader>bi :BundleInstall<CR>
+nmap <Leader>bi! :BundleInstall!<CR>
+nmap <Leader>bu :BundleInstall!<CR> " Because this also updates
+nmap <Leader>bc :BundleClean<CR>
 
 " ----------------------------------------
 " Functions
