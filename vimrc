@@ -194,7 +194,7 @@ imap <F1> <Esc>
 
 " Removes doc lookup binding because it's easy to fat finger
 nmap K k  
-
+vmap K k  
 
 " ---------------
 " Leader
