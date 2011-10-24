@@ -75,7 +75,6 @@ filetype plugin indent on  " Automatically detect file types. (must turn on afte
 
 if has('win32') || has('win64')
   " Windows
-
   source $VIMRUNTIME/mswin.vim
   set guifont=Consolas:h10:cANSI
   set guioptions-=T " Toolbar
@@ -85,6 +84,7 @@ if has('win32') || has('win64')
   set lines=60
   set columns=120
 
+  cd ~
 elseif has('gui_macvim')
   " MacVim
 
