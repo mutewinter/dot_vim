@@ -42,7 +42,7 @@ end
 
 # Just takes an array of strings that resolve to plugins from Vundle
 def add_plugins_to_readme(plugins = [])
-  lines = File.readlines(README_FILE).map{|l| l.strip}
+  lines = File.readlines(README_FILE).map{|l| l.chomp}
   index = lines.index(PLUGIN_LIST_TAG)
   unless index.nil?
     lines.insert(index+1, "\n#{PLUGIN_LIST_NOTE}\n\n")
