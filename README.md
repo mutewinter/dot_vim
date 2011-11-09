@@ -3,7 +3,7 @@
 ## Installation
 
 1. `git clone http://github.com/mutewinter/dot_vim.git` in your home folder.
-2. `mv dot_vim.git .vim`
+2. `mv dot_vim .vim`
 3. `cd .vim`
 3. `rake vim:link` to make the .vimrc symbolic link.
 4. Install [Vundle](https://github.com/gmarik/vundle) with `git clone http://github.com/gmarik/vundle.git bundle/vundle`
