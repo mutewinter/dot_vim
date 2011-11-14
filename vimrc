@@ -380,13 +380,20 @@ nmap <Leader>bc :BundleClean<CR>
 
 if has('ruby')
 ruby << EOF
-  def open_url
+  require 'open-uri'
+  require 'openssl'
+
+  def extract_url(url)
     re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]\{\};:'".,<>?«»“”‘’]))}
 
+    url.match(re).to_s
+  end
+
+  def open_url
     line = VIM::Buffer.current.line
 
-    if url = line[re]
-      if RUBY_PLATFORM.downcase =~ /win(32|64)/
+    if url = extract_url(line)
+      if RUBY_PLATFORM.downcase =~ /(win|mingw)(32|64)/
         `start cmd /c chrome #{url}`
         VIM::message("Opened #{url}")
       else
@@ -395,6 +402,27 @@ ruby << EOF
       end
     else
       VIM::message("No URL found on this line.")
+    end
+
+  end
+
+  # Returns the contents of the <title> tag of a given page
+  def fetch_title(url)
+    title = open(url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read.match(/<title>(.*?)<\/title>?/i)[1]
+  end
+
+  # Paste the title and url for the url on the clipboard in markdown format: [Title](url)
+  # Note: Clobbers p register
+  def paste_url_and_title
+    clipboard = VIM::evaluate('@+')
+    url = extract_url(clipboard)
+    if url and url.strip != ""
+      puts "Fetching title"
+      title = fetch_title(url)
+      VIM::command "let @p = '[#{title}](#{url})'"
+      VIM::command 'normal! "pp'
+    else
+      VIM::message("Clipboard does not contain URL: '#{clipboard[1..10]}'...")
     end
   end
 EOF
@@ -408,10 +436,26 @@ endif
 
 command! OpenUrl call OpenURL()
 nnoremap <leader>o :call OpenURL()<CR>
+
+" ---------------
+" Paste link with Title
+" ---------------
+
+" Open a URL
+if !exists("*PasteURLTitle")
+  function! PasteURLTitle()
+    :ruby paste_url_and_title
+  endfunction
 endif
+
+command! PasteURLTitle call PasteURLTitle()
+map <leader>pt :PasteURLTitle<CR>
+
+endif " endif has('ruby')
 
 " ---------------
 " Fix Trailing White Space
 " ---------------
 map <leader>ws :%s/\s\+$//e<CR>
 command! FixTrailingWhiteSpace :%s/\s\+$//e
+
