@@ -238,7 +238,12 @@ let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
 " ---------------
 " Lusty Juggler
 " ---------------
-nnoremap <leader>, :LustyJugglePrevious<CR>
+if has('unix')
+  nnoremap <leader>, :e#<CR>
+else
+  nnoremap <leader>, :LustyJugglePrevious<CR>
+end
+
 let g:LustyJugglerShowKeys=1 " Show numbers for Lusty Buffers
 let g:LustyJugglerSuppressRubyWarning=1
 
