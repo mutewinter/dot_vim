@@ -239,11 +239,12 @@ let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
 " Lusty Juggler
 " ---------------
 if has('unix')
+  " Allows for previous buffer on unix systems without most recent patch level
+  " that enable LustyJuggler to work
   nnoremap <leader>, :e#<CR>
 else
   nnoremap <leader>, :LustyJugglePrevious<CR>
 end
-
 let g:LustyJugglerShowKeys=1 " Show numbers for Lusty Buffers
 let g:LustyJugglerSuppressRubyWarning=1
 
@@ -304,6 +305,16 @@ nnoremap <silent><C-t> :CommandT<CR>
 let g:indent_guides_auto_colors=1
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_color_change_percent=3
+
+if has('unix')
+  if $TERM == 'xterm-256color'
+    " Make the guides smaller since they will be crazy visible in 256color mode
+    let g:indent_guides_guide_size=1
+  else
+    " Turn off the guides when 256color mode isn't available
+    let g:indent_guides_enable_on_vim_startup=0
+  endif
+endif
 
 " ---------------
 " Session
