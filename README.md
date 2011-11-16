@@ -31,7 +31,7 @@
 
 **Windows**
 
- * [gVim](http://www.vim.org/download.php#pc) - I'm currently using [Wu Yongwei](http://wyw.dcweb.cn:8001/) pre-compiled [gVim 7.3.333](http://wyw.dcweb.cn:8001/download.asp?path=vim&file=gvim73.zip) because it has Ruby support and the latest patches
+ * [gVim](http://www.vim.org/download.php#pc) - I'm currently using [Wu Yongwei's](http://wyw.dcweb.cn) pre-compiled [gVim 7.3.333](http://wyw.dcweb.cn/download.asp?path=vim&file=gvim73.zip) because it has Ruby support and the latest patches
 
 ## Notes
 
