@@ -66,6 +66,8 @@ Bundle 'leshill/vim-json'
 " Libraries
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
+" Github
+Bundle 'mattn/gist-vim'
 
 filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
 
