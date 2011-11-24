@@ -52,7 +52,7 @@ Bundle 'xolox/vim-session'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
-Bundle 'vim-scripts/AutoComplPop'
+Bundle 'Shougo/neocomplcache'
 " Language Additions
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'msanders/cocoa.vim'
@@ -176,6 +176,9 @@ set t_vb=
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
 
+" Better complete options to speed it up
+set complete=.,w,b,u,U
+
 " ----------------------------------------
 " Bindings
 " ----------------------------------------
@@ -195,6 +198,9 @@ imap <F1> <Esc>
 " Removes doc lookup binding because it's easy to fat finger
 nmap K k
 vmap K k
+
+" Make line completion easier
+imap <C-l> <C-x><C-l>
 
 " ---------------
 " Leader
@@ -231,8 +237,25 @@ endif
 " ---------------
 " SuperTab
 " ---------------
-let g:SuperTabDefaultCompletionType="<c-x><c-o>"
-let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
+" Set these up for cross-buffer completion (something Neocachecompl has a hard
+" time with)
+let g:SuperTabDefaultCompletionType="<c-x><c-n>"
+let g:SuperTabContextDefaultCompletionType="<c-x><c-n>"
+
+" ---------------
+" Neocachecompl
+" ---------------
+let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_enable_auto_select = 1 "Select the first entry automatically
+
+" Tab / Shift-Tab to cycle completions
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" Ctrl-K to complete and advance snippet
+imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+
 
 " ---------------
 " Lusty Juggler
