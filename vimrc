@@ -211,8 +211,6 @@ let mapleader=","
 
 nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
-" Quick spelling fix (first item in z= list)
-nmap <silent> <leader>z 1z=
 
 " ----------------------------------------
 " Auto Commands
@@ -494,3 +492,19 @@ endif " endif has('ruby')
 map <leader>ws :%s/\s\+$//e<CR>
 command! FixTrailingWhiteSpace :%s/\s\+$//e
 
+" ---------------
+" Quick spelling fix (first item in z= list)
+" ---------------
+function! QuickSpellingFix()
+  if &spell
+    normal 1z=
+  else
+    " Enable spelling mode and do the correction
+    set spell
+    normal 1z=
+    set nospell
+  endif
+endfunction
+
+command! QuickSpellingFix call QuickSpellingFix()
+nmap <silent> <leader>z :QuickSpellingFix<CR>
