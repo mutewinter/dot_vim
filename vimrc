@@ -105,7 +105,6 @@ endif
 " ---------------
 set background=dark
 colorscheme ir_black_mod
-set cursorline
 
 " ---------------
 " Backups
