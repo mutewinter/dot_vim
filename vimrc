@@ -211,6 +211,8 @@ let mapleader=","
 
 nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
+" Quick spelling fix (first item in z= list)
+nmap <silent> <leader>z 1z=
 
 " ----------------------------------------
 " Auto Commands
