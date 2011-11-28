@@ -53,6 +53,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/AutoComplPop'
+Bundle 'gregsexton/MatchTag'
 " Language Additions
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'msanders/cocoa.vim'
