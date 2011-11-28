@@ -54,6 +54,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/AutoComplPop'
 Bundle 'gregsexton/MatchTag'
+Bundle 'Shougo/neocomplcache'
 " Language Additions
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'msanders/cocoa.vim'
@@ -106,7 +107,6 @@ endif
 " ---------------
 set background=dark
 colorscheme ir_black_mod
-set cursorline
 
 " ---------------
 " Backups
@@ -178,6 +178,9 @@ set t_vb=
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
 
+" Better complete options to speed it up
+set complete=.,w,b,u,U
+
 " ----------------------------------------
 " Bindings
 " ----------------------------------------
@@ -195,8 +198,11 @@ map <F1> <Esc>
 imap <F1> <Esc>
 
 " Removes doc lookup binding because it's easy to fat finger
-nmap K k  
-vmap K k  
+nmap K k
+vmap K k
+
+" Make line completion easier
+imap <C-l> <C-x><C-l>
 
 " ---------------
 " Leader
@@ -233,8 +239,25 @@ endif
 " ---------------
 " SuperTab
 " ---------------
-let g:SuperTabDefaultCompletionType="<c-x><c-o>"
-let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
+" Set these up for cross-buffer completion (something Neocachecompl has a hard
+" time with)
+let g:SuperTabDefaultCompletionType="<c-x><c-n>"
+let g:SuperTabContextDefaultCompletionType="<c-x><c-n>"
+
+" ---------------
+" Neocachecompl
+" ---------------
+let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_enable_auto_select = 1 "Select the first entry automatically
+
+" Tab / Shift-Tab to cycle completions
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" Ctrl-K to complete and advance snippet
+imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+
 
 " ---------------
 " Lusty Juggler
@@ -307,7 +330,7 @@ let g:indent_guides_auto_colors=1
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_color_change_percent=3
 
-if has('unix')
+if has('unix') && !has('gui_macvim')
   if $TERM == 'xterm-256color'
     " Make the guides smaller since they will be crazy visible in 256color mode
     let g:indent_guides_guide_size=1
@@ -394,6 +417,11 @@ if has('ruby')
 ruby << EOF
   require 'open-uri'
   require 'openssl'
+  
+  if RUBY_VERSION < '1.9'
+    # Have to do this for ruby 1.8.7 since :ssl_verify_mode isn't allowed
+    OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE 
+  end
 
   def extract_url(url)
     re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]\{\};:'".,<>?«»“”‘’]))}
@@ -420,7 +448,11 @@ ruby << EOF
 
   # Returns the contents of the <title> tag of a given page
   def fetch_title(url)
-    title = open(url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read.match(/<title>(.*?)<\/title>?/i)[1]
+    if RUBY_VERSION < '1.9'
+      open(url).read.match(/<title>(.*?)<\/title>?/i)[1]
+    else
+      open(url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read.match(/<title>(.*?)<\/title>?/i)[1]
+    end
   end
 
   # Paste the title and url for the url on the clipboard in markdown format: [Title](url)
@@ -471,3 +503,19 @@ endif " endif has('ruby')
 map <leader>ws :%s/\s\+$//e<CR>
 command! FixTrailingWhiteSpace :%s/\s\+$//e
 
+" ---------------
+" Quick spelling fix (first item in z= list)
+" ---------------
+function! QuickSpellingFix()
+  if &spell
+    normal 1z=
+  else
+    " Enable spelling mode and do the correction
+    set spell
+    normal 1z=
+    set nospell
+  endif
+endfunction
+
+command! QuickSpellingFix call QuickSpellingFix()
+nmap <silent> <leader>z :QuickSpellingFix<CR>
