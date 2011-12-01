@@ -256,6 +256,7 @@ let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_enable_auto_select=1 "Select the first entry automatically
 let g:neocomplcache_enable_cursor_hold_i=1
 let g:neocomplcache_cursor_hold_i_time=300
+let g:neocomplcache_auto_completion_start_length=1
 
 " Tab / Shift-Tab to cycle completions
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
