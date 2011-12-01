@@ -424,11 +424,6 @@ ruby << EOF
   require 'open-uri'
   require 'openssl'
   
-  if RUBY_VERSION < '1.9'
-    # Have to do this for ruby 1.8.7 since :ssl_verify_mode isn't allowed
-    OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE 
-  end
-
   def extract_url(url)
     re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]\{\};:'".,<>?«»“”‘’]))}
 
