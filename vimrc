@@ -24,8 +24,8 @@ Bundle 'gmarik/vundle'
 
 " Navigation
 Bundle 'mutewinter/bufpos'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'vim-scripts/ZoomWin'
+Bundle 'FuzzyFinder'
+Bundle 'ZoomWin'
 Bundle 'wincent/Command-T'
 Bundle 'spiiph/vim-space'
 Bundle 'Lokaltog/vim-easymotion'
