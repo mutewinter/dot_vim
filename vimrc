@@ -147,8 +147,8 @@ set formatoptions=crql
 " ---------------
 " Text Format
 " ---------------
-set ts=2
-set bs=2 " Delete everything with backspace
+set tabstop=2
+set backspace=2 " Delete everything with backspace
 set shiftwidth=2  " Tabs under smart indent
 set cindent
 set autoindent
@@ -168,7 +168,7 @@ set hlsearch
 " Visual
 " ---------------
 set showmatch  " Show matching brackets.
-set mat=2 " How many tenths of a second to blink
+set matchtime=2 " How many tenths of a second to blink
 
 " ---------------
 " Sounds
