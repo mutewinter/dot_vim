@@ -54,7 +54,12 @@ Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'gregsexton/MatchTag'
 Bundle 'Shougo/neocomplcache'
-Bundle 'msanders/snipmate.vim'
+" SnipMate
+Bundle "garbas/vim-snipmate"
+" SnipMate Depedancies
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "snipmate-snippets"
 " Language Additions
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'msanders/cocoa.vim'
