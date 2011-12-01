@@ -253,7 +253,9 @@ let g:SuperTabContextDefaultCompletionType="<c-x><c-n>"
 " Neocachecompl
 " ---------------
 let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_enable_auto_select = 1 "Select the first entry automatically
+let g:neocomplcache_enable_auto_select=1 "Select the first entry automatically
+let g:neocomplcache_enable_cursor_hold_i=1
+let g:neocomplcache_cursor_hold_i_time=300
 
 " Tab / Shift-Tab to cycle completions
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -262,7 +264,6 @@ inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
 " Ctrl-K to complete and advance snippet
 imap <C-k>     <Plug>(neocomplcache_snippets_expand)
 smap <C-k>     <Plug>(neocomplcache_snippets_expand)
-
 
 " ---------------
 " Lusty Juggler
