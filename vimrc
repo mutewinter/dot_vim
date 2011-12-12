@@ -111,7 +111,21 @@ endif
 " Color
 " ---------------
 set background=dark
-colorscheme ir_black_mod
+
+" Conditionally Set colorscheme
+if has('unix') && !has('gui_macvim')
+  if $TERM == 'xterm-256color'
+    " Neato, 256 color terminal. We can use ir_black_mod
+    colorscheme ir_black_mod
+  else
+    " We can't use ir_black_mod :(
+    let g:CSApprox_verbose_level=0
+    colorscheme slate
+  endif
+else
+  " We're good if not on unix or in MacVim
+  colorscheme ir_black_mod
+endif
 
 " ---------------
 " Backups
