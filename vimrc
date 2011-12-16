@@ -349,7 +349,7 @@ nnoremap <silent><C-t> :CommandT<CR>
 " ---------------
 let g:indent_guides_auto_colors=1
 let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_color_change_percent=3
+let g:indent_guides_color_change_percent=5
 
 if has('unix') && !has('gui_macvim')
   if $TERM == 'xterm-256color'
