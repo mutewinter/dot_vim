@@ -1,6 +1,6 @@
 # The Vim Configuration of Champions
 
-[![Watchers](http://gitego.com/mutewinter/dot_vim/watchers.png)![Forks](http://gitego.com/mutewinter/dot_vim/forks.png)![Size](http://gitego.com/mutewinter/dot_vim/size.png)](http://gitego.com/mutewinter/dot_vim)
+[See dot_vim's Stats on GitEgo](http://gitego.com/mutewinter/dot_vim)
 
 ## Installation
 
