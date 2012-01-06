@@ -38,8 +38,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'mutewinter/ir_black_mod'
 Bundle 'godlygeek/csapprox'
 Bundle 'Rykka/ColorV'
-" OS Integration
-Bundle 'mkitt/browser-refresh.vim'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
