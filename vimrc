@@ -27,7 +27,8 @@ Bundle 'mutewinter/bufpos'
 Bundle 'FuzzyFinder'
 Bundle 'ZoomWin'
 Bundle 'wincent/Command-T'
-Bundle 'spiiph/vim-space'
+" This fork is required due to remapping ; to :
+Bundle 'christoomey/vim-space'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mutewinter/LustyJuggler'
 " UI Additions
