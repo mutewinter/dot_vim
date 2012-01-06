@@ -224,6 +224,11 @@ vmap K k
 " Make line completion easier
 imap <C-l> <C-x><C-l>
 
+
+" Use ; for : in normal and visual mode, less keystrokes
+nnoremap ; :
+vnoremap ; :
+
 " ---------------
 " Leader
 " ---------------
