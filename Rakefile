@@ -3,6 +3,7 @@
 # Simple tasks for managing my .vim files
 
 require 'open-uri'
+require 'openssl'
 require 'json'
 
 
@@ -110,7 +111,13 @@ def convert_to_link_hash(link)
 end
 
 def fetch_github_repo_description(user, name)
-  response = open("https://api.github.com/repos/#{user}/#{name}").read
+  response = ''
+  if RUBY_VERSION < '1.9'
+    response = open("https://api.github.com/repos/#{user}/#{name}").read
+  else
+    response = open("https://api.github.com/repos/#{user}/#{name}", :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
+  end
+  
   repo = JSON.parse response
   repo['description']
 end
