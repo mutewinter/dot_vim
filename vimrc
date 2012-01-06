@@ -369,13 +369,12 @@ nnoremap <leader>fb :FufBuffer<CR>
 " ---------------
 " NERDTree
 " ---------------
-nmap <silent><M-n> :NERDTree<CR>
-nnoremap <leader>nn :NERDTree<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>nn :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
-nnoremap <leader>nc :NERDTreeClose<CR>
-nnoremap <leader>nt :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " ---------------
 " Hex Highlight
