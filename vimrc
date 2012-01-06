@@ -203,10 +203,17 @@ set complete=.,w,b,u,U
 " ----------------------------------------
 
 " Window Movement
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-l> :wincmd l<CR>
+if has('mac') || has('macunix') || has('gui_macvim')
+  nmap <silent> <D-h> :wincmd h<CR>
+  nmap <silent> <D-j> :wincmd j<CR>
+  nmap <silent> <D-k> :wincmd k<CR>
+  nmap <silent> <D-l> :wincmd l<CR>
+else
+  nmap <silent> <M-h> :wincmd h<CR>
+  nmap <silent> <M-j> :wincmd j<CR>
+  nmap <silent> <M-k> :wincmd k<CR>
+  nmap <silent> <M-l> :wincmd l<CR>
+endif
 
 " Fixes common typos
 command W w
@@ -221,6 +228,9 @@ vmap K k
 " Make line completion easier
 imap <C-l> <C-x><C-l>
 
+" Scrolling (Less RSI)
+nmap <M-f> <C-f>
+nmap <M-b> <C-b>
 
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
@@ -335,8 +345,13 @@ let g:miniBufExplModSelTarget=1
 " FuzzyFinder
 " ---------------
 let g:fuf_modesDisable=['mrucmd'] " Enables FufMruFile
-nnoremap <silent><C-y> :FufMruFile<CR>
-nnoremap <silent><C-u> :FufFileWithCurrentBufferDir<CR>
+if has('mac') || has('macunix') || has('gui_macvim')
+  nnoremap <silent><D-y> :FufMruFile<CR>
+  nnoremap <silent><D-u> :FufFileWithCurrentBufferDir<CR>
+else
+  nnoremap <silent><M-y> :FufMruFile<CR>
+  nnoremap <silent><M-u> :FufFileWithCurrentBufferDir<CR>
+end
 nnoremap <leader>ff :FufFile<CR>
 nnoremap <leader>fm :FufMruFile<CR>
 nnoremap <leader>fb :FufBuffer<CR>
@@ -344,7 +359,7 @@ nnoremap <leader>fb :FufBuffer<CR>
 " ---------------
 " NERDTree
 " ---------------
-nmap <silent><C-n> :NERDTree<CR>
+nmap <silent><M-n> :NERDTree<CR>
 nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nc :NERDTreeClose<CR>
@@ -361,7 +376,12 @@ nnoremap <leader>h :HexHighlight<CR>
 " ---------------
 " Command T
 " ---------------
-nnoremap <silent><C-t> :CommandT<CR>
+if has("gui_macvim")
+  macmenu &File.New\ Tab key=<nop>
+  map <D-t> :CommandT<CR>
+else
+  nnoremap <silent><M-t> :CommandT<CR>
+endif
 
 " ---------------
 " Indent Guides
