@@ -23,7 +23,6 @@ Bundle 'gmarik/vundle'
 " ---------------
 
 " Navigation
-Bundle 'mutewinter/bufpos'
 Bundle 'FuzzyFinder'
 Bundle 'ZoomWin'
 Bundle 'wincent/Command-T'
@@ -297,6 +296,22 @@ end
 let g:LustyJugglerShowKeys=1 " Show numbers for Lusty Buffers
 let g:LustyJugglerSuppressRubyWarning=1
 
+" Make Command / Alt 1-4 change to recent buffers in LustyJuggler
+
+if has('ruby')
+  if has('mac') || has('macunix') || has('gui_macvim')
+    nmap <silent><D-1> :ruby LustyJ::profile() {$lusty_juggler.send('choose',2)}<CR>
+    nmap <silent><D-2> :ruby LustyJ::profile() {$lusty_juggler.send('choose',3)}<CR>
+    nmap <silent><D-3> :ruby LustyJ::profile() {$lusty_juggler.send('choose',4)}<CR>
+    nmap <silent><D-4> :ruby LustyJ::profile() {$lusty_juggler.send('choose',5)}<CR>
+  else
+    nmap <silent><M-1> :ruby LustyJ::profile() {$lusty_juggler.send('choose',2)}<CR>
+    nmap <silent><M-2> :ruby LustyJ::profile() {$lusty_juggler.send('choose',3)}<CR>
+    nmap <silent><M-3> :ruby LustyJ::profile() {$lusty_juggler.send('choose',4)}<CR>
+    nmap <silent><M-4> :ruby LustyJ::profile() {$lusty_juggler.send('choose',5)}<CR>
+  endif
+end
+
 " ---------------
 " Syntastic
 " ---------------
@@ -353,7 +368,7 @@ nnoremap <silent><C-t> :CommandT<CR>
 " ---------------
 let g:indent_guides_auto_colors=1
 let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_color_change_percent=3
+let g:indent_guides_color_change_percent=5
 
 if has('unix') && !has('gui_macvim')
   if $TERM == 'xterm-256color'
