@@ -9,8 +9,8 @@
 " Vundle
 " ----------------------------------------
 
-set nocompatible               " be iMproved
-filetype off                   " required!
+set nocompatible " be iMproved
+filetype off     " required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -93,8 +93,8 @@ if has('win32') || has('win64')
   cd ~
 elseif has('gui_macvim')
   " MacVim
-
   set guifont=Menlo\ Regular:h12
+
   " Hide Toolbar in MacVim
   if has("gui_running")
     set guioptions=egmrt
@@ -204,15 +204,17 @@ set complete=.,w,b,u,U
 
 " Window Movement
 if has('mac') || has('macunix') || has('gui_macvim')
-  nmap <silent> <D-h> :wincmd h<CR>
   nmap <silent> <D-j> :wincmd j<CR>
   nmap <silent> <D-k> :wincmd k<CR>
   nmap <silent> <D-l> :wincmd l<CR>
+  nmap <silent> <D-h> :wincmd h<CR>
+  nmap <silent> <D-p> :wincmd p<CR>
 else
   nmap <silent> <M-h> :wincmd h<CR>
   nmap <silent> <M-j> :wincmd j<CR>
   nmap <silent> <M-k> :wincmd k<CR>
   nmap <silent> <M-l> :wincmd l<CR>
+  nmap <silent> <M-p> :wincmd p<CR>
 endif
 
 " Fixes common typos
@@ -229,8 +231,13 @@ vmap K k
 imap <C-l> <C-x><C-l>
 
 " Scrolling (Less RSI)
-nmap <M-f> <C-f>
-nmap <M-b> <C-b>
+if has('mac') || has('macunix') || has('gui_macvim')
+  nmap <D-f> <C-f>
+  nmap <D-b> <C-b>
+else
+  nmap <M-f> <C-f>
+  nmap <M-b> <C-b>
+endif
 
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
@@ -363,7 +370,7 @@ nnoremap <leader>fb :FufBuffer<CR>
 " NERDTree
 " ---------------
 nmap <silent><M-n> :NERDTree<CR>
-nnoremap <leader>n :NERDTree<CR>
+nnoremap <leader>nn :NERDTree<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nc :NERDTreeClose<CR>
 nnoremap <leader>nt :NERDTreeToggle<CR>
@@ -380,7 +387,6 @@ nnoremap <leader>h :HexHighlight<CR>
 " Command T
 " ---------------
 if has("gui_macvim")
-  macmenu &File.New\ Tab key=<nop>
   map <D-t> :CommandT<CR>
 else
   nnoremap <silent><M-t> :CommandT<CR>
