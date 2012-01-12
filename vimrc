@@ -217,11 +217,11 @@ imap <C-l> <C-x><C-l>
 
 " Scrolling (Less RSI)
 if has('mac') || has('macunix') || has('gui_macvim')
-  nmap <D-f> <C-f>
-  nmap <D-b> <C-b>
+  nmap <D-j> <C-f>
+  nmap <D-k> <C-b>
 else
-  nmap <M-f> <C-f>
-  nmap <M-b> <C-b>
+  nmap <M-j> <C-f>
+  nmap <M-k> <C-b>
 endif
 
 " Use ; for : in normal and visual mode, less keystrokes
