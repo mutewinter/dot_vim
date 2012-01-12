@@ -240,7 +240,9 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 " Leader Commands
 " ---------------
 
+" Toggle spelling mode with ,s
 nmap <silent> <leader>s :set spell!<CR>
+" Edit vimrc with ,v
 nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
 
 " Window Movement
@@ -252,6 +254,11 @@ nmap <silent> <leader>l :wincmd l<CR>
 nmap <silent> <leader>wp :wincmd p<CR>
 " Equal Size Windows
 nmap <silent> <leader>w= :wincmd =<CR>
+
+" Window Splitting
+nmap <silent> <leader>sh :split<CR>
+nmap <silent> <leader>sv :vsplit<CR>
+nmap <silent> <leader>sc :close<CR>
 
 " ----------------------------------------
 " Auto Commands
