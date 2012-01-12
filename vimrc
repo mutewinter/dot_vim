@@ -75,6 +75,10 @@ Bundle 'tpope/vim-repeat'
 
 filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
 
+" Set leader to ,
+" Note: This line MUST come before any <leader> mappings
+let mapleader=","
+
 " ----------------------------------------
 " Platform Specific Configuration
 " ----------------------------------------
@@ -232,11 +236,8 @@ vnoremap ; :
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " ---------------
-" Leader
+" Leader Commands
 " ---------------
-
-" Set leader to ,
-let mapleader=","
 
 nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
