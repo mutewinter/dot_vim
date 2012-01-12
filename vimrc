@@ -359,8 +359,9 @@ else
   nnoremap <silent><M-y> :FufMruFile<CR>
   nnoremap <silent><M-u> :FufFileWithCurrentBufferDir<CR>
 end
+nnoremap <leader>fu :FufFileWithCurrentBufferDir<CR>
 nnoremap <leader>ff :FufFile<CR>
-nnoremap <leader>fm :FufMruFile<CR>
+nnoremap <leader>fy :FufMruFile<CR>
 nnoremap <leader>fb :FufBuffer<CR>
 
 " ---------------
