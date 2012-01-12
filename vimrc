@@ -69,6 +69,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'mutewinter/taskpaper.vim'
 Bundle 'leshill/vim-json'
 Bundle 'mutewinter/nginx.vim'
+Bundle 'tpope/vim-rake'
 " Libraries
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
