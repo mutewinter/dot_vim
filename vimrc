@@ -249,7 +249,9 @@ nmap <silent> <leader>j :wincmd j<CR>
 nmap <silent> <leader>k :wincmd k<CR>
 nmap <silent> <leader>l :wincmd l<CR>
 " Previous Window
-nmap <silent> <leader>p :wincmd p<CR>
+nmap <silent> <leader>wp :wincmd p<CR>
+" Equal Size Windows
+nmap <silent> <leader>w= :wincmd =<CR>
 
 " ----------------------------------------
 " Auto Commands
@@ -449,6 +451,12 @@ nmap <Leader>gw :Gwrite<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gp :Git push<CR>
+
+" ---------------
+" Zoomwin
+" ---------------
+" Zoom Window to Full Size
+nmap <silent> <leader>wo :ZoomWin<CR>
 
 " ---------------
 " Vundle
