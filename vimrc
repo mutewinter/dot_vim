@@ -202,22 +202,6 @@ set complete=.,w,b,u,U
 " ----------------------------------------
 " Bindings
 " ----------------------------------------
-
-" Window Movement
-if has('mac') || has('macunix') || has('gui_macvim')
-  nmap <silent> <D-j> :wincmd j<CR>
-  nmap <silent> <D-k> :wincmd k<CR>
-  nmap <silent> <D-l> :wincmd l<CR>
-  nmap <silent> <D-h> :wincmd h<CR>
-  nmap <silent> <D-p> :wincmd p<CR>
-else
-  nmap <silent> <M-h> :wincmd h<CR>
-  nmap <silent> <M-j> :wincmd j<CR>
-  nmap <silent> <M-k> :wincmd k<CR>
-  nmap <silent> <M-l> :wincmd l<CR>
-  nmap <silent> <M-p> :wincmd p<CR>
-endif
-
 " Fixes common typos
 command W w
 command Q q
@@ -256,6 +240,14 @@ let mapleader=","
 
 nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
+
+" Window Movement
+nmap <silent> <leader>h :wincmd h<CR>
+nmap <silent> <leader>j :wincmd j<CR>
+nmap <silent> <leader>k :wincmd k<CR>
+nmap <silent> <leader>l :wincmd l<CR>
+" Previous Window
+nmap <silent> <leader>p :wincmd p<CR>
 
 " ----------------------------------------
 " Auto Commands
