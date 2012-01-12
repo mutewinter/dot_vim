@@ -446,6 +446,15 @@ nmap <Leader>t> :Tabularize /=>\zs<CR>
 vmap <Leader>t> :Tabularize /=>\zs<CR>
 
 " ---------------
+" Fugitive
+" ---------------
+nmap <Leader>gc :Gcommit<CR>
+nmap <Leader>gw :Gwrite<CR>
+nmap <Leader>gd :Gdiff<CR>
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gp :Git push<CR>
+
+" ---------------
 " Vundle
 " ---------------
 nmap <Leader>bi :BundleInstall<CR>
