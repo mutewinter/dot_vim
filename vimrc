@@ -421,12 +421,6 @@ let g:statusline_order=[
       \ 'FilePercent']
 
 " ---------------
-" Browser Refresh
-" ---------------
-map <silent><leader>r :RRB<CR>
-map <silent><F5> :RRB<CR>
-
-" ---------------
 " SpeedDating
 " ---------------
 let g:speeddating_no_mappings=1 " Remove default mappings (C-a etc.)
