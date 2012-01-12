@@ -336,13 +336,6 @@ if has('win32') || has('win64')
   let g:syntastic_jsl_conf=$HOME.'/.vim/config/windows/syntastic/jsl.conf'
   let g:syntastic_disabled_filetypes=['sh'] " Disable .sh on Windows
 endif
-" ---------------
-" Minibuffer Explorer
-" ---------------
-let g:miniBufExplMapWindowNavVim=1
-let g:miniBufExplMapWindowNavArrows=1
-let g:miniBufExplMapCTabSwitchBufs=1
-let g:miniBufExplModSelTarget=1
 
 " ---------------
 " FuzzyFinder
@@ -368,12 +361,6 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" ---------------
-" Hex Highlight
-" ---------------
-command HexHighlight call HexHighlight()
-nnoremap <leader>h :HexHighlight<CR>
 
 " ---------------
 " Command T
