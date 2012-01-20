@@ -105,6 +105,9 @@ elseif has('gui_macvim')
   if has("gui_running")
     set guioptions=egmrt
   endif
+
+  " Use option (alt) as meta key.
+  set macmeta
 endif
 
 " ----------------------------------------
@@ -221,13 +224,8 @@ vmap K k
 imap <C-l> <C-x><C-l>
 
 " Scrolling (Less RSI)
-if has('mac') || has('macunix') || has('gui_macvim')
-  nmap <D-j> <C-f>
-  nmap <D-k> <C-b>
-else
-  nmap <M-j> <C-f>
-  nmap <M-k> <C-b>
-endif
+nmap <M-f> <C-f>
+nmap <M-b> <C-b>
 
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
@@ -246,14 +244,14 @@ nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
 
 " Window Movement
-nmap <silent> <leader>h :wincmd h<CR>
-nmap <silent> <leader>j :wincmd j<CR>
-nmap <silent> <leader>k :wincmd k<CR>
-nmap <silent> <leader>l :wincmd l<CR>
+nmap <silent> <M-h> :wincmd h<CR>
+nmap <silent> <M-j> :wincmd j<CR>
+nmap <silent> <M-k> :wincmd k<CR>
+nmap <silent> <M-l> :wincmd l<CR>
 " Previous Window
-nmap <silent> <leader>wp :wincmd p<CR>
+nmap <silent> <M-p> :wincmd p<CR>
 " Equal Size Windows
-nmap <silent> <leader>w= :wincmd =<CR>
+nmap <silent> <M-=> :wincmd =<CR>
 
 " Window Splitting
 nmap <silent> <leader>sh :split<CR>
