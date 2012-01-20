@@ -382,6 +382,7 @@ if has("gui_macvim")
   map <D-t> :CommandT<CR>
 else
   nnoremap <silent><M-t> :CommandT<CR>
+  nnoremap <leader>t :CommandT<CR>
 endif
 
 " ---------------
@@ -485,6 +486,7 @@ else
   else
     let g:ctrlp_map = '<M-t>'
   endif
+  nnoremap <leader>t :CtrlP<CR>
   let g:ctrlp_custom_ignore = {
         \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.sass\-cache$',
         \ 'file': '\.exe$\|\.so$\|\.dll$',
