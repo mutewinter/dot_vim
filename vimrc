@@ -326,7 +326,7 @@ let g:LustyJugglerSuppressRubyWarning=1
 " Make Command / Alt 1-4 change to recent buffers in LustyJuggler
 
 if has('ruby')
-  if has('mac') || has('macunix') || has('gui_macvim')
+  if has('gui_macvim')
     nmap <silent><D-1> :ruby LustyJ::profile() {$lusty_juggler.send('choose',2)}<CR>
     nmap <silent><D-2> :ruby LustyJ::profile() {$lusty_juggler.send('choose',3)}<CR>
     nmap <silent><D-3> :ruby LustyJ::profile() {$lusty_juggler.send('choose',4)}<CR>
@@ -355,7 +355,7 @@ endif
 " FuzzyFinder
 " ---------------
 let g:fuf_modesDisable=['mrucmd'] " Enables FufMruFile
-if has('mac') || has('macunix') || has('gui_macvim')
+if has('gui_macvim')
   nnoremap <silent><D-y> :FufMruFile<CR>
   nnoremap <silent><D-u> :FufFileWithCurrentBufferDir<CR>
 else
