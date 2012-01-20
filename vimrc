@@ -36,7 +36,6 @@ Bundle 'mutewinter/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mutewinter/ir_black_mod'
-Bundle 'godlygeek/csapprox'
 Bundle 'Rykka/ColorV'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
