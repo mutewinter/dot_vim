@@ -256,6 +256,9 @@ nmap <silent> <M-=> :wincmd =<CR>
 " Window Splitting
 nmap <silent> <leader>sh :split<CR>
 nmap <silent> <leader>sv :vsplit<CR>
+" Because I'm dyslexic
+nmap <silent> <leader>hs :split<CR>
+nmap <silent> <leader>vs :vsplit<CR>
 nmap <silent> <leader>sc :close<CR>
 
 " ----------------------------------------
