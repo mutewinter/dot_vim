@@ -354,7 +354,6 @@ endif
 " ---------------
 " NERDTree
 " ---------------
-nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>nn :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 let NERDTreeShowBookmarks=1
