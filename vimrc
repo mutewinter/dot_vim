@@ -23,7 +23,6 @@ Bundle 'gmarik/vundle'
 " ---------------
 
 " Navigation
-Bundle 'FuzzyFinder'
 Bundle 'ZoomWin'
 Bundle 'wincent/Command-T'
 " This fork is required due to remapping ; to :
@@ -186,6 +185,7 @@ set ignorecase " Case insensitive search
 set smartcase " Non-case sensitive search
 set incsearch
 set hlsearch
+set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,.sass-cache
 
 " ---------------
 " Visual
@@ -352,22 +352,6 @@ if has('win32') || has('win64')
 endif
 
 " ---------------
-" FuzzyFinder
-" ---------------
-let g:fuf_modesDisable=['mrucmd'] " Enables FufMruFile
-if has('gui_macvim')
-  nnoremap <silent><D-y> :FufMruFile<CR>
-  nnoremap <silent><D-u> :FufFileWithCurrentBufferDir<CR>
-else
-  nnoremap <silent><M-y> :FufMruFile<CR>
-  nnoremap <silent><M-u> :FufFileWithCurrentBufferDir<CR>
-end
-nnoremap <leader>fu :FufFileWithCurrentBufferDir<CR>
-nnoremap <leader>ff :FufFile<CR>
-nnoremap <leader>fy :FufMruFile<CR>
-nnoremap <leader>fb :FufBuffer<CR>
-
-" ---------------
 " NERDTree
 " ---------------
 nnoremap <leader>n :NERDTreeToggle<CR>
@@ -376,16 +360,6 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" ---------------
-" Command T
-" ---------------
-if has("gui_macvim")
-  map <D-t> :CommandT<CR>
-else
-  nnoremap <silent><M-t> :CommandT<CR>
-  nnoremap <leader>t :CommandT<CR>
-endif
 
 " ---------------
 " Indent Guides
@@ -474,27 +448,52 @@ nmap <Leader>gD :wincmd h<CR>:q<CR>
 " Zoom Window to Full Size
 nmap <silent> <leader>wo :ZoomWin<CR>
 
-
 " ---------------
-" ctrlp
+" Command T and ctrlp.vim
 " ---------------
 if has('ruby')
-  " We've got ruby, use Command T
-  let g:loaded_ctrlp = 1
+  " We've got Ruby, use Command T
+
+  " Conditional Mappings
+  if has("gui_macvim")
+    nnoremap <silent><D-t> :CommandT<CR>
+  else
+    nnoremap <silent><M-t> :CommandT<CR>
+  endif
+
+  " Leader Commands
+  nnoremap <leader>t :CommandT<CR>
+  nnoremap <leader>u :CommandT %%<CR>
 else
-  " Fallback on ctrlp.vim if Command T not available
+  " Fallback on ctrlp.vim if Ruby for Command T not available
+
+  " Conditional Mappings
   if has("gui_macvim")
     let g:ctrlp_map = '<D-t>'
   else
     let g:ctrlp_map = '<M-t>'
   endif
-  nnoremap <leader>t :CtrlP<CR>
-  let g:ctrlp_custom_ignore = {
-        \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.sass\-cache$',
-        \ 'file': '\.exe$\|\.so$\|\.dll$',
-        \ 'link': 'bad_symbolic_link',
-        \ }
+
+  " Leader Commands
+  nnoremap <leader>t :CtrlPRoot<CR>
 endif
+
+" ctrlp.vim Options we always use
+
+let g:ctrlp_max_height = 100
+
+" Mapping from ctrlp we always use
+if has('gui_macvim')
+  nnoremap <silent><D-u> :CtrlPCurFile<CR>
+  nnoremap <silent><D-y> :CtrlPMRUFiles<CR>
+else
+  nnoremap <silent><M-u> :CtrlPCurFile<CR>
+  nnoremap <silent><M-y> :CtrlPMRUFiles<CR>
+end
+
+" Also map leader commands
+nnoremap <leader>u :CtrlPCurFile<CR>
+nnoremap <leader>y :CtrlPMRUFiles<CR>
 
 " ---------------
 " Vundle
