@@ -44,6 +44,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
 Bundle 'gmarik/sudo-gui.vim'
+Bundle 'milkypostman/vim-togglelist'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
