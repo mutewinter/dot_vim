@@ -30,6 +30,7 @@ Bundle 'wincent/Command-T'
 Bundle 'christoomey/vim-space'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mutewinter/LustyJuggler'
+Bundle 'kien/ctrlp.vim'
 " UI Additions
 Bundle 'mutewinter/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
@@ -470,6 +471,27 @@ nmap <Leader>gD :wincmd h<CR>:q<CR>
 " ---------------
 " Zoom Window to Full Size
 nmap <silent> <leader>wo :ZoomWin<CR>
+
+
+" ---------------
+" ctrlp
+" ---------------
+if has('ruby')
+  " We've got ruby, use Command T
+  let g:loaded_ctrlp = 1
+else
+  " Fallback on ctrlp.vim if Command T not available
+  if has("gui_macvim")
+    let g:ctrlp_map = '<D-t>'
+  else
+    let g:ctrlp_map = '<M-t>'
+  endif
+  let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.sass\-cache$',
+        \ 'file': '\.exe$\|\.so$\|\.dll$',
+        \ 'link': 'bad_symbolic_link',
+        \ }
+endif
 
 " ---------------
 " Vundle
