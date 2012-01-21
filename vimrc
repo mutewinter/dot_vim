@@ -32,7 +32,7 @@ Bundle 'mutewinter/LustyJuggler'
 Bundle 'kien/ctrlp.vim'
 " UI Additions
 Bundle 'mutewinter/vim-indent-guides'
-Bundle 'dickeytk/status.vim'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mutewinter/ir_black_mod'
 Bundle 'Rykka/ColorV'
@@ -374,30 +374,6 @@ endif
 let g:session_autosave=0
 let g:session_autoload=0
 nnoremap <leader>os :OpenSession<CR>
-
-" ---------------
-" status.vim
-" ---------------
-let g:statusline_fugitive=1
-let g:statusline_fullpath=0
-" Everything must be after Right Separator for BufStat
-let g:statusline_order=[
-      \ 'Filename',
-      \ 'Encoding',
-      \ 'Help',
-      \ 'Filetype',
-      \ 'Modified',
-      \ 'Fugitive',
-      \ 'RVM',
-      \ 'TabWarning',
-      \ 'Syntastic',
-      \ 'Paste',
-      \ 'ReadOnly',
-      \ 'RightSeperator',
-      \ 'CurrentHighlight',
-      \ 'CursorColumn',
-      \ 'LineAndTotal',
-      \ 'FilePercent']
 
 " ---------------
 " SpeedDating
