@@ -53,12 +53,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'gregsexton/MatchTag'
 Bundle 'Shougo/neocomplcache'
-" SnipMate
-Bundle "garbas/vim-snipmate"
-" SnipMate Depedancies
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "snipmate-snippets"
 " Language Additions
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'msanders/cocoa.vim'
@@ -306,10 +300,6 @@ let g:neocomplcache_auto_completion_start_length=1
 " Tab / Shift-Tab to cycle completions
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
-
-" Ctrl-K to complete and advance snippet
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
 
 " ---------------
 " Lusty Juggler
