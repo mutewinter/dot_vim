@@ -34,8 +34,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'mutewinter/vim-indent-guides'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
-Bundle 'mutewinter/ir_black_mod'
 Bundle 'Rykka/ColorV'
+Bundle 'nanotech/jellybeans.vim'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
@@ -114,21 +114,7 @@ endif
 " Color
 " ---------------
 set background=dark
-
-" Conditionally Set colorscheme
-if has('unix') && !has('gui_macvim')
-  if $TERM == 'xterm-256color'
-    " Neato, 256 color terminal. We can use ir_black_mod
-    colorscheme ir_black_mod
-  else
-    " We can't use ir_black_mod :(
-    let g:CSApprox_verbose_level=0
-    colorscheme slate
-  endif
-else
-  " We're good if not on unix or in MacVim
-  colorscheme ir_black_mod
-endif
+colorscheme jellybeans
 
 " ---------------
 " Backups
@@ -354,19 +340,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " ---------------
 " Indent Guides
 " ---------------
-let g:indent_guides_auto_colors=1
 let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_color_change_percent=5
-
-if has('unix') && !has('gui_macvim')
-  if $TERM == 'xterm-256color'
-    " Make the guides smaller since they will be crazy visible in 256color mode
-    let g:indent_guides_guide_size=1
-  else
-    " Turn off the guides when 256color mode isn't available
-    let g:indent_guides_enable_on_vim_startup=0
-  endif
-endif
 
 " ---------------
 " Session
