@@ -69,6 +69,10 @@ Bundle 'msanders/cocoa.vim'
 Bundle 'mutewinter/taskpaper.vim'
 Bundle 'mutewinter/nginx.vim'
 Bundle 'timcharper/textile.vim'
+" MatchIt
+Bundle 'matchit.zip'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
 " Libraries
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
