@@ -54,17 +54,20 @@ Bundle 'ervandew/supertab'
 Bundle 'gregsexton/MatchTag'
 Bundle 'Shougo/neocomplcache'
 " Language Additions
+"   Ruby
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'msanders/cocoa.vim'
 Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+"   JavaScript
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'itspriddle/vim-jquery'
-Bundle 'tpope/vim-rails'
-Bundle 'mutewinter/taskpaper.vim'
 Bundle 'leshill/vim-json'
+Bundle 'itspriddle/vim-jquery'
+"   Misc
+Bundle 'msanders/cocoa.vim'
+Bundle 'mutewinter/taskpaper.vim'
 Bundle 'mutewinter/nginx.vim'
-Bundle 'tpope/vim-rake'
 Bundle 'timcharper/textile.vim'
 " Libraries
 Bundle 'L9'
