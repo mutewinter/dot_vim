@@ -107,7 +107,7 @@ elseif has('gui_macvim')
 endif
 
 " ----------------------------------------
-" Regular Vim Configuartion (No Plugins Needed)
+" Regular Vim Configuration (No Plugins Needed)
 " ----------------------------------------
 
 " ---------------
