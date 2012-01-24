@@ -95,7 +95,10 @@ if has('win32') || has('win64')
   cd ~
 elseif has('gui_macvim')
   " MacVim
-  set guifont=Menlo\ Regular:h12
+
+  " Custom Menlo font for Powerline
+  " From: https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
+  set guifont=Menlo\ for\ Powerline:h12
 
   " Hide Toolbar in MacVim
   if has("gui_running")
@@ -442,6 +445,8 @@ nnoremap <leader>y :CtrlPMRUFiles<CR>
 " Keep ^B from showing on Windows in Powerline
 if has('win32') || has('win64')
   let g:Powerline_symbols = 'compatible'
+elseif has('gui_macvim')
+  let g:Powerline_symbols = 'fancy'
 endif
 
 " ---------------
