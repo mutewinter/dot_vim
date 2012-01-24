@@ -83,7 +83,7 @@ let mapleader=","
 if has('win32') || has('win64')
   " Windows
   source $VIMRUNTIME/mswin.vim
-  set guifont=Consolas:h10:cANSI
+  set guifont=Consolas:h10
   set guioptions-=T " Toolbar
   set guioptions-=m " Menubar
 
@@ -131,6 +131,7 @@ set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set laststatus=2  " Always show the statusline
 set cmdheight=2
+set encoding=utf-8
 
 " ---------------
 " Behaviors
@@ -434,6 +435,14 @@ end
 " Also map leader commands
 nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>y :CtrlPMRUFiles<CR>
+
+" ---------------
+" Powerline
+" ---------------
+" Keep ^B from showing on Windows in Powerline
+if has('win32') || has('win64')
+  let g:Powerline_symbols = 'compatible'
+endif
 
 " ---------------
 " Vundle
