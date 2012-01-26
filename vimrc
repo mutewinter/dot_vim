@@ -392,6 +392,8 @@ nmap <silent> <leader>wo :ZoomWin<CR>
 " ---------------
 " Command T and ctrlp.vim
 " ---------------
+" Ensure Ctrl-P isn't bound by default
+let g:ctrlp_map = ''
 if has('ruby')
   " We've got Ruby, use Command T
 
