@@ -381,7 +381,7 @@ nmap <Leader>gp :Git push<CR>
 nmap <Leader>gu :Git pull<CR>
 nmap <Leader>gd :Gdiff<CR>
 " Exit a diff by closing the diff window
-nmap <Leader>gD :wincmd h<CR>:q<CR>
+nmap <Leader>gx :wincmd h<CR>:q<CR>
 
 " ---------------
 " Zoomwin
