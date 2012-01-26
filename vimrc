@@ -317,22 +317,6 @@ end
 let g:LustyJugglerShowKeys=1 " Show numbers for Lusty Buffers
 let g:LustyJugglerSuppressRubyWarning=1
 
-" Make Command / Alt 1-4 change to recent buffers in LustyJuggler
-
-if has('ruby')
-  if has('gui_macvim')
-    nmap <silent><D-1> :ruby LustyJ::profile() {$lusty_juggler.send('choose',2)}<CR>
-    nmap <silent><D-2> :ruby LustyJ::profile() {$lusty_juggler.send('choose',3)}<CR>
-    nmap <silent><D-3> :ruby LustyJ::profile() {$lusty_juggler.send('choose',4)}<CR>
-    nmap <silent><D-4> :ruby LustyJ::profile() {$lusty_juggler.send('choose',5)}<CR>
-  else
-    nmap <silent><M-1> :ruby LustyJ::profile() {$lusty_juggler.send('choose',2)}<CR>
-    nmap <silent><M-2> :ruby LustyJ::profile() {$lusty_juggler.send('choose',3)}<CR>
-    nmap <silent><M-3> :ruby LustyJ::profile() {$lusty_juggler.send('choose',4)}<CR>
-    nmap <silent><M-4> :ruby LustyJ::profile() {$lusty_juggler.send('choose',5)}<CR>
-  endif
-end
-
 " ---------------
 " Syntastic
 " ---------------
