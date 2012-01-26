@@ -243,14 +243,15 @@ nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
 
 " Window Movement
-nmap <silent> <M-h> :wincmd h<CR>
-nmap <silent> <M-j> :wincmd j<CR>
-nmap <silent> <M-k> :wincmd k<CR>
-nmap <silent> <M-l> :wincmd l<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
 " Previous Window
-nmap <silent> <M-p> :wincmd p<CR>
+nmap <silent> <C-p> :wincmd p<CR>
+
 " Equal Size Windows
-nmap <silent> <M-=> :wincmd =<CR>
+nmap <silent> <leader>w= :wincmd =<CR>
 
 " Window Splitting
 nmap <silent> <leader>sh :split<CR>
