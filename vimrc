@@ -315,6 +315,14 @@ function! s:on_insert_enter()
   endif
 endfunction
 
+autocmd InsertLeave * call s:on_insert_leave()
+
+function! s:on_insert_leave()
+  if &updatetime < s:update_time_save
+    let &updatetime = s:update_time_save
+  endif
+endfunction
+
 " ---------------
 " Lusty Juggler
 " ---------------
