@@ -217,9 +217,14 @@ vmap K k
 " Make line completion easier
 imap <C-l> <C-x><C-l>
 
-" Scrolling (Less RSI)
-nmap <M-f> <C-f>
-nmap <M-b> <C-b>
+" Easier Scrolling (think j/k with left hand)
+if has("gui_macvim")
+  nmap <D-f> <C-f>
+  nmap <D-d> <C-b>
+else
+  nmap <M-f> <C-f>
+  nmap <M-d> <C-b>
+endif
 
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
