@@ -440,9 +440,9 @@ else
   nnoremap <leader>t :CtrlPRoot<CR>
 endif
 
-" ctrlp.vim Options we always use
-
-let g:ctrlp_max_height = 100
+" Ensure max height isn't too large. (for performance)
+let g:ctrlp_max_height = 10
+let g:CommandTMaxHeight = 10
 
 " Mapping from ctrlp we always use
 if has('gui_macvim')
