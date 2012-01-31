@@ -36,6 +36,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Rykka/ColorV'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'tomtom/quickfixsigns_vim'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
@@ -76,6 +77,7 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 " Libraries
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
+Bundle 'tomtom/tlib_vim'
 
 filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
 
