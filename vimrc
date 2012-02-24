@@ -71,6 +71,7 @@ Bundle 'mutewinter/taskpaper.vim'
 Bundle 'mutewinter/nginx.vim'
 Bundle 'timcharper/textile.vim'
 Bundle 'acustodioo/vim-tmux'
+Bundle 'hallison/vim-markdown'
 " MatchIt
 Bundle 'matchit.zip'
 Bundle 'kana/vim-textobj-user'
