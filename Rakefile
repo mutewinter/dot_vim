@@ -61,6 +61,7 @@ def add_plugins_to_readme(plugins = [])
   unless index.nil?
     lines.insert(index+1, "\n#{PLUGIN_LIST_NOTE}\n\n")
     lines.insert(index+2, plugins.map{|p| " * [#{p[:name]}](#{p[:uri]}) - #{p[:description]}"})
+    lines << "\n_That's #{plugins.length} plugins, holy crap._"
     write_lines_to_readme(lines)
   else
     puts "Error: Plugin List Tag (#{PLUGIN_LIST_TAG}) not found"
