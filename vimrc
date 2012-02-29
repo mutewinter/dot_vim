@@ -71,6 +71,8 @@ Bundle 'mutewinter/taskpaper.vim'
 Bundle 'mutewinter/nginx.vim'
 Bundle 'timcharper/textile.vim'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
+Bundle 'acustodioo/vim-tmux'
+Bundle 'hallison/vim-markdown'
 " MatchIt
 Bundle 'matchit.zip'
 Bundle 'kana/vim-textobj-user'
