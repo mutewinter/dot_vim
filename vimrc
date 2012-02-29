@@ -70,6 +70,7 @@ Bundle 'msanders/cocoa.vim'
 Bundle 'mutewinter/taskpaper.vim'
 Bundle 'mutewinter/nginx.vim'
 Bundle 'timcharper/textile.vim'
+Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 " MatchIt
 Bundle 'matchit.zip'
 Bundle 'kana/vim-textobj-user'
@@ -473,6 +474,12 @@ if has('win32') || has('win64')
 elseif has('gui_macvim')
   let g:Powerline_symbols = 'fancy'
 endif
+
+" ---------------
+" jellybeans.vim colorscheme tweaks
+" ---------------
+" Make cssAttrs (center, block, etc.) the same color as units
+hi! link cssAttr Constant
 
 " ---------------
 " Vundle
