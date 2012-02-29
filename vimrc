@@ -65,7 +65,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'leshill/vim-json'
 Bundle 'itspriddle/vim-jquery'
-"   Misc
+"   Other Languages
 Bundle 'msanders/cocoa.vim'
 Bundle 'mutewinter/taskpaper.vim'
 Bundle 'mutewinter/nginx.vim'
@@ -73,6 +73,7 @@ Bundle 'timcharper/textile.vim'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'hallison/vim-markdown'
+Bundle 'xhtml.vim--Grny'
 " MatchIt
 Bundle 'matchit.zip'
 Bundle 'kana/vim-textobj-user'
