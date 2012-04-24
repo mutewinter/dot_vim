@@ -164,6 +164,7 @@ set autowrite          " Writes on make/shell commands
 set timeoutlen=350     " Time to wait for a command (after leader for example)
 set foldlevelstart=99  " Remove folds
 set formatoptions=crql
+set iskeyword+=$,@     " Add extra characters that are valid parts of variables
 
 " ---------------
 " Text Format
