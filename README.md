@@ -36,10 +36,11 @@ Be sure to always edit the vimrc using `,v`, which opens the vimrc in the .vim f
 
 I may make this more verbose later, but for now, here's a list of plugins that require further installation:
 
- * [Command-T](https://github.com/wincent/Command-T) Needs compilation
- * [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be installed
- * [syntastic](https://github.com/scrooloose/syntastic) Requires many different binaries installed depending on what filetypes you want it to check
- * [ack.vim](https://github.com/mileszs/ack.vim) Requires [ack](http://betterthangrep.com/) to be installed
+ * [Command-T](https://github.com/wincent/Command-T) Needs compilation.
+ * [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be installed.
+ * [syntastic](https://github.com/scrooloose/syntastic) Requires many different binaries installed depending on what filetypes you want it to check.
+ * [ack.vim](https://github.com/mileszs/ack.vim) Requires [ack](http://betterthangrep.com/) to be installed.
+ * [Menlo for Powerline](https://gist.github.com/1627888) The custom font I'm using for vim-powerline.
 
 ## Plugin List
 
