@@ -485,6 +485,7 @@ if has('win32') || has('win64')
 elseif has('gui_macvim')
   let g:Powerline_symbols = 'fancy'
 endif
+call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " ---------------
 " jellybeans.vim colorscheme tweaks
@@ -511,7 +512,7 @@ if has('ruby')
 ruby << EOF
   require 'open-uri'
   require 'openssl'
-  
+
   def extract_url(url)
     re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]\{\};:'".,<>?«»“”‘’]))}
 
