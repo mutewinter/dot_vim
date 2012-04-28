@@ -432,12 +432,24 @@ nmap <silent> <leader>wo :ZoomWin<CR>
 " ---------------
 " Ensure Ctrl-P isn't bound by default
 let g:ctrlp_map = ''
+
+
+" Ensure max height isn't too large. (for performance)
+let g:ctrlp_max_height = 10
+let g:CommandTMaxHeight = 10
+
+
+" System Configuration
 if has('ruby')
-  " We've got Ruby, use Command T
+  " --------
+  " Use Command T since we've got Ruby
+  " --------
 
   " Conditional Mappings
   if has("gui_macvim")
     nnoremap <silent><D-t> :CommandT<CR>
+  elseif has('unix')
+    nnoremap <silent><C-t> :CommandT<CR>
   else
     nnoremap <silent><M-t> :CommandT<CR>
   endif
@@ -446,27 +458,31 @@ if has('ruby')
   nnoremap <leader>t :CommandT<CR>
   nnoremap <leader>u :CommandT %%<CR>
 else
-  " Fallback on ctrlp.vim if Ruby for Command T not available
+  " --------
+  " Use ctrlp.vim since we don't have Ruby
+  " --------
 
   " Conditional Mappings
   if has("gui_macvim")
     let g:ctrlp_map = '<D-t>'
+  elseif has('unix')
+    let g:ctrlp_map = '<C-t>'
   else
     let g:ctrlp_map = '<M-t>'
   endif
 
   " Leader Commands
   nnoremap <leader>t :CtrlPRoot<CR>
+  nnoremap <leader>b :CtrlPBuffer<CR>
 endif
 
-" Ensure max height isn't too large. (for performance)
-let g:ctrlp_max_height = 10
-let g:CommandTMaxHeight = 10
-
 " Mapping from ctrlp we always use
-if has('gui_macvim')
+if has("gui_macvim")
   nnoremap <silent><D-u> :CtrlPCurFile<CR>
   nnoremap <silent><D-y> :CtrlPMRUFiles<CR>
+elseif has('unix')
+  nnoremap <silent><C-u> :CtrlPCurFile<CR>
+  nnoremap <silent><C-y> :CtrlPMRUFiles<CR>
 else
   nnoremap <silent><M-u> :CtrlPCurFile<CR>
   nnoremap <silent><M-y> :CtrlPMRUFiles<CR>
@@ -475,6 +491,7 @@ end
 " Also map leader commands
 nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>y :CtrlPMRUFiles<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " ---------------
 " Powerline
