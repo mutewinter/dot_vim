@@ -463,7 +463,7 @@ else
     let g:ctrlp_map = '<C-t>'
   else
     let g:ctrlp_map = '<M-t>'
-
+  endif
 
   " Leader Commands
   nnoremap <leader>t :CtrlPRoot<CR>
@@ -477,7 +477,7 @@ if has('unix')
 else
   nnoremap <silent><M-u> :CtrlPCurFile<CR>
   nnoremap <silent><M-m> :CtrlPMRUFiles<CR>
-end
+endif
 
 " Also map leader commands
 nnoremap <leader>u :CtrlPCurFile<CR>
