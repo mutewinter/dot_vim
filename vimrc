@@ -82,6 +82,7 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
 Bundle 'tomtom/tlib_vim'
+Bundle 'mathml.vim'
 
 filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
 
