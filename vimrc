@@ -474,10 +474,8 @@ endif
 " Always use CtrlP for most recently used files and relative dierctory.
 if has('unix')
   nnoremap <silent><C-u> :CtrlPCurFile<CR>
-  nnoremap <silent><C-m> :CtrlPMRUFiles<CR>
 else
   nnoremap <silent><M-u> :CtrlPCurFile<CR>
-  nnoremap <silent><M-m> :CtrlPMRUFiles<CR>
 endif
 
 " Also map leader commands
