@@ -248,6 +248,9 @@ vnoremap ; :
 " to directory of current file - http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
+" Yank entire buffer with gy
+nmap gy :%y+<cr>
+
 " ---------------
 " Leader Commands
 " ---------------
