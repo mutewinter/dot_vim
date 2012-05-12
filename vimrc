@@ -268,9 +268,10 @@ nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 " Previous Window
 nmap <silent> <C-p> :wincmd p<CR>
-
 " Equal Size Windows
 nmap <silent> <leader>w= :wincmd =<CR>
+" Swap Windows
+nmap <silent> <leader>wx :wincmd x<CR>
 
 " Window Splitting
 nmap <silent> <leader>sh :split<CR>
