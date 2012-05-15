@@ -75,6 +75,7 @@ Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'hallison/vim-markdown'
 Bundle 'xhtml.vim--Grny'
+Bundle 'groenewege/vim-less'
 " MatchIt
 Bundle 'matchit.zip'
 Bundle 'kana/vim-textobj-user'
