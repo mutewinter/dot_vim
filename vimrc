@@ -507,6 +507,11 @@ call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 hi! link cssAttr Constant
 
 " ---------------
+" Ack.vim
+" ---------------
+nmap <silent> <leader>as :AckFromSearch<CR>
+
+" ---------------
 " Vundle
 " ---------------
 nmap <Leader>bi :BundleInstall<CR>
