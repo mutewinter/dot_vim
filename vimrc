@@ -607,6 +607,13 @@ command! QuickSpellingFix call QuickSpellingFix()
 nmap <silent> <leader>z :QuickSpellingFix<CR>
 
 " ---------------
+" Convert Ruby 1.8 hash rockets to 1.9 JSON style hashes.
+" From: http://git.io/cxmJDw
+" Note: Defaults to the entire file unless in visual mode.
+" ---------------
+command! -bar -range=% NotRocket execute '<line1>,<line2>s/:\(\w\+\)\s*=>/\1:/e' . (&gdefault ? '' : 'g')
+
+" ---------------
 " Strip Trailing White Space
 " ---------------
 " From http://vimbits.com/bits/377
