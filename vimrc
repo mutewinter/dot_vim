@@ -218,8 +218,8 @@ set complete=.,w,b,u,U
 " Bindings
 " ----------------------------------------
 " Fixes common typos
-command W w
-command Q q
+command! W w
+command! Q q
 map <F1> <Esc>
 imap <F1> <Esc>
 
