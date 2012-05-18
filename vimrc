@@ -281,25 +281,6 @@ nmap <silent> <leader>sv :vsplit<CR>
 nmap <silent> <leader>hs :split<CR>
 nmap <silent> <leader>vs :vsplit<CR>
 nmap <silent> <leader>sc :close<CR>
-
-" ----------------------------------------
-" Auto Commands
-" ----------------------------------------
-
-if has("autocmd")
-  " No formatting on o key newlines
-  autocmd BufNewFile,BufEnter * set formatoptions-=o
-
-  " No more complaining about untitled documents
-  autocmd FocusLost silent! :wa
-
-  " When editing a file, always jump to the last cursor position.
-  " This must be after the uncompress commands.
-  autocmd BufReadPost *
-        \ if line("'\"") > 1 && line ("'\"") <= line("$") |
-        \   exe "normal! g`\"" |
-        \ endif
-endif
 " ----------------------------------------
 " Plugin Configuration
 " ----------------------------------------
@@ -609,12 +590,6 @@ map <leader>pt :PasteURLTitle<CR>
 endif " endif has('ruby')
 
 " ---------------
-" Fix Trailing White Space
-" ---------------
-map <leader>ws :%s/\s\+$//e<CR>
-command! FixTrailingWhiteSpace :%s/\s\+$//e
-
-" ---------------
 " Quick spelling fix (first item in z= list)
 " ---------------
 function! QuickSpellingFix()
@@ -630,3 +605,44 @@ endfunction
 
 command! QuickSpellingFix call QuickSpellingFix()
 nmap <silent> <leader>z :QuickSpellingFix<CR>
+
+" ---------------
+" Strip Trailing White Space
+" ---------------
+" From http://vimbits.com/bits/377
+" Preserves/Saves the state, executes a command, and returns to the saved state
+function! Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+"strip all trailing white space
+command! StripTrailingWhiteSpace :call Preserve("%s/\\s\\+$//e")<CR>
+
+" ----------------------------------------
+" Auto Commands
+" ----------------------------------------
+
+if has("autocmd")
+  " No formatting on o key newlines
+  autocmd BufNewFile,BufEnter * set formatoptions-=o
+
+  " No more complaining about untitled documents
+  autocmd FocusLost silent! :wa
+
+  " When editing a file, always jump to the last cursor position.
+  " This must be after the uncompress commands.
+  autocmd BufReadPost *
+        \ if line("'\"") > 1 && line ("'\"") <= line("$") |
+        \   exe "normal! g`\"" |
+        \ endif
+
+  " Fix trailing whitespace in my most used programming langauges
+  autocmd BufWritePre *.py,*.js,*.coffee,*.rb silent! :StripTrailingWhiteSpace
+endif
