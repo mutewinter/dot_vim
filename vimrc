@@ -444,6 +444,9 @@ let g:ctrlp_map = ''
 let g:ctrlp_max_height = 10
 let g:CommandTMaxHeight = 10
 
+" Set the default escape keybinding to, you guessed it, escape.
+let g:CommandTCancelMap = '<esc>'
+
 " Dynamically use Command T or ctrlp.vim based on availability of Ruby.
 " We do this because Command T is much faster than ctrlp.vim.
 if has('ruby')
