@@ -652,5 +652,5 @@ if has("autocmd")
         \ endif
 
   " Fix trailing whitespace in my most used programming langauges
-  autocmd BufWritePre *.py,*.js,*.coffee,*.rb silent! :StripTrailingWhiteSpace
+  autocmd BufWritePre *.py,*.coffee,*.rb silent! :StripTrailingWhiteSpace
 endif
