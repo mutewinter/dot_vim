@@ -67,6 +67,9 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'leshill/vim-json'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'nono/vim-handlebars'
+"   TomDoc
+Bundle 'mutewinter/tomdoc.vim'
+Bundle 'jc00ke/vim-tomdoc'
 "   Other Languages
 Bundle 'msanders/cocoa.vim'
 Bundle 'mutewinter/taskpaper.vim'
