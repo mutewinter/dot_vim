@@ -278,8 +278,8 @@ nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
 "   6 Window Splits
 "   -------------
 "   g1 | gt | g2
-"   ---|----|---- 
-"   g3 | gb | g4 
+"   ---|----|----
+"   g3 | gb | g4
 "   -------------
 nmap <silent> gh :wincmd h<CR>
 nmap <silent> gj :wincmd j<CR>
@@ -287,7 +287,7 @@ nmap <silent> gk :wincmd k<CR>
 nmap <silent> gl :wincmd l<CR>
 " Upper left window
 nmap <silent> g1 :wincmd t<CR>
-" Upper right window 
+" Upper right window
 nmap <silent> g2 :wincmd b<Bar>:wincmd k<CR>
 " Lower left window
 nmap <silent> g3 :wincmd t<Bar>:wincmd j<CR>
