@@ -158,6 +158,13 @@ set encoding=utf-8
 if exists('+colorcolumn')
   set colorcolumn=80 " Color the 80th column differently
 endif
+" Disable tooltips for hovering keywords in Vim
+if exists('+ballooneval')
+  " This doesn't seem to stop tooltips for Ruby files
+  set noballooneval
+  " 100 second delay seems to be the only way to disable the tooltips
+  set balloondelay=100000
+endif
 
 " ---------------
 " Behaviors
