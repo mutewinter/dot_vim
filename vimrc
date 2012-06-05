@@ -48,6 +48,7 @@ Bundle 'gmarik/sudo-gui.vim'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'mutewinter/swap-parameters'
 Bundle 'scratch.vim'
+Bundle 'mattn/zencoding-vim'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
