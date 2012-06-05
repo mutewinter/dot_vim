@@ -48,6 +48,8 @@ Bundle 'gmarik/sudo-gui.vim'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'mutewinter/swap-parameters'
 Bundle 'keepcase.vim'
+Bundle 'scratch.vim'
+Bundle 'mattn/zencoding-vim'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
@@ -56,6 +58,10 @@ Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'gregsexton/MatchTag'
 Bundle 'Shougo/neocomplcache'
+" Snippets
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/snipmate-snippets'
+Bundle 'MarcWeber/vim-addon-mw-utils'
 " Language Additions
 "   Ruby
 Bundle 'vim-ruby/vim-ruby'
@@ -159,6 +165,13 @@ set encoding=utf-8
 if exists('+colorcolumn')
   set colorcolumn=80 " Color the 80th column differently
 endif
+" Disable tooltips for hovering keywords in Vim
+if exists('+ballooneval')
+  " This doesn't seem to stop tooltips for Ruby files
+  set noballooneval
+  " 100 second delay seems to be the only way to disable the tooltips
+  set balloondelay=100000
+endif
 
 " ---------------
 " Behaviors
@@ -227,6 +240,12 @@ command! W w
 command! Q q
 map <F1> <Esc>
 imap <F1> <Esc>
+" Crazy flying pinky
+cnoremap w' w<CR>
+" This mapping along with mapping ; to : allows for quick save with ;w;
+cnoremap w; w<CR>
+" Disable the ever-annoying Ex mode shortcut key. Type visual my ass.
+nmap Q <nop>
 
 " Removes doc lookup binding because it's easy to fat finger
 nmap K k
@@ -247,6 +266,9 @@ else
   nmap <M-f> <C-f>
   nmap <M-d> <C-b>
 endif
+
+" Overrides neocomplcache with regular keyword completion
+inoremap <expr><C-k>  "\<C-x><C-n>"
 
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
@@ -319,20 +341,46 @@ nmap <silent> <leader>sc :close<CR>
 " ----------------------------------------
 
 " ---------------
-" SuperTab
+" space.vim
 " ---------------
-" Set these up for cross-buffer completion (something Neocachecompl has a hard
-" time with)
-let g:SuperTabDefaultCompletionType="<c-x><c-n>"
-let g:SuperTabContextDefaultCompletionType="<c-x><c-n>"
+" Disables space mappings in select mode to fix snipMate.
+let g:space_disable_select_mode=1
+
+" ---------------
+" snipMate
+" ---------------
+" Sets up C-j as the snippet override command. If neocomplcache is completing
+" to something we don't want, we can force a snippet with c-j.
+ino <silent> <c-j> <c-g>u<c-r>=snipMate#TriggerSnippet()<cr>
+snor <silent> <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
+ino <silent> <c-r><c-j> <c-r>=snipMate#ShowAvailableSnips()<cr>
+
+" Backwards mapping to C-h
+ino <silent> <c-h> <c-r>=snipMate#BackwardsSnippet()<cr>
+snor <silent> <c-h> <esc>i<right><c-r>=snipMate#BackwardsSnippet()<cr>
+
+" These are bindings that don't behave the way you'd expect in select mode.
+" Note: Select mode is what snipMate uses when filling in a snippet.
+"
+" Idea for this fix from neocomplcache-snipmate http://git.io/uq64tQ.
+snoremap <CR> a<BS>
+snoremap <BS> a<BS>
+snoremap <right> <ESC>a
+snoremap <left> <ESC>bi
+snoremap ' a<BS>'
+snoremap ` a<BS>`
+snoremap % a<BS>%
+snoremap U a<BS>U
+snoremap ^ a<BS>^
+snoremap \ a<BS>\
+snoremap <C-x> a<BS><c-x>
 
 " ---------------
 " Neocachecompl
 " ---------------
 let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_enable_auto_select=1 "Select the first entry automatically
 let g:neocomplcache_enable_cursor_hold_i=1
-let g:neocomplcache_cursor_hold_i_time=300
+let g:neocomplcache_cursor_hold_i_time=200
 let g:neocomplcache_auto_completion_start_length=1
 
 " Tab / Shift-Tab to cycle completions
