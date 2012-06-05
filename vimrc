@@ -237,6 +237,8 @@ imap <F1> <Esc>
 cnoremap w' w<CR>
 " This mapping along with mapping ; to : allows for quick save with ;w;
 cnoremap w; w<CR>
+" Disable the ever-annoying Ex mode shortcut key. Type visual my ass.
+noremap Q <nop>
 
 " Removes doc lookup binding because it's easy to fat finger
 nmap K k
