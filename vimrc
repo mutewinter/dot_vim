@@ -247,6 +247,9 @@ else
   nmap <M-d> <C-b>
 endif
 
+" Overrides neocomplcache with regular keyword completion
+inoremap <expr><C-k>  "\<C-x><C-n>"
+
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
 vnoremap ; :
@@ -318,20 +321,11 @@ nmap <silent> <leader>sc :close<CR>
 " ----------------------------------------
 
 " ---------------
-" SuperTab
-" ---------------
-" Set these up for cross-buffer completion (something Neocachecompl has a hard
-" time with)
-let g:SuperTabDefaultCompletionType="<c-x><c-n>"
-let g:SuperTabContextDefaultCompletionType="<c-x><c-n>"
-
-" ---------------
 " Neocachecompl
 " ---------------
 let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_enable_auto_select=1 "Select the first entry automatically
 let g:neocomplcache_enable_cursor_hold_i=1
-let g:neocomplcache_cursor_hold_i_time=300
+let g:neocomplcache_cursor_hold_i_time=200
 let g:neocomplcache_auto_completion_start_length=1
 
 " Tab / Shift-Tab to cycle completions
