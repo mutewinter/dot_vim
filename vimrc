@@ -56,6 +56,10 @@ Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'gregsexton/MatchTag'
 Bundle 'Shougo/neocomplcache'
+" Snippets
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/snipmate-snippets'
+Bundle 'MarcWeber/vim-addon-mw-utils'
 " Language Additions
 "   Ruby
 Bundle 'vim-ruby/vim-ruby'
@@ -239,7 +243,7 @@ cnoremap w' w<CR>
 " This mapping along with mapping ; to : allows for quick save with ;w;
 cnoremap w; w<CR>
 " Disable the ever-annoying Ex mode shortcut key. Type visual my ass.
-noremap Q <nop>
+nmap Q <nop>
 
 " Removes doc lookup binding because it's easy to fat finger
 nmap K k
@@ -333,6 +337,41 @@ nmap <silent> <leader>sc :close<CR>
 " ----------------------------------------
 " Plugin Configuration
 " ----------------------------------------
+
+" ---------------
+" space.vim
+" ---------------
+" Disables space mappings in select mode to fix snipMate.
+let g:space_disable_select_mode=1
+
+" ---------------
+" snipMate
+" ---------------
+" Sets up C-j as the snippet override command. If neocomplcache is completing
+" to something we don't want, we can force a snippet with c-j.
+ino <silent> <c-j> <c-g>u<c-r>=snipMate#TriggerSnippet()<cr>
+snor <silent> <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
+ino <silent> <c-r><c-j> <c-r>=snipMate#ShowAvailableSnips()<cr>
+
+" Backwards mapping to C-h
+ino <silent> <c-h> <c-r>=snipMate#BackwardsSnippet()<cr>
+snor <silent> <c-h> <esc>i<right><c-r>=snipMate#BackwardsSnippet()<cr>
+
+" These are bindings that don't behave the way you'd expect in select mode.
+" Note: Select mode is what snipMate uses when filling in a snippet.
+"
+" Idea for this fix from neocomplcache-snipmate http://git.io/uq64tQ.
+snoremap <CR> a<BS>
+snoremap <BS> a<BS>
+snoremap <right> <ESC>a
+snoremap <left> <ESC>bi
+snoremap ' a<BS>'
+snoremap ` a<BS>`
+snoremap % a<BS>%
+snoremap U a<BS>U
+snoremap ^ a<BS>^
+snoremap \ a<BS>\
+snoremap <C-x> a<BS><c-x>
 
 " ---------------
 " Neocachecompl
