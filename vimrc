@@ -233,6 +233,10 @@ command! W w
 command! Q q
 map <F1> <Esc>
 imap <F1> <Esc>
+" Crazy flying pinky
+cnoremap w' w<CR>
+" This mapping along with mapping ; to : allows for quick save with ;w;
+cnoremap w; w<CR>
 
 " Removes doc lookup binding because it's easy to fat finger
 nmap K k
