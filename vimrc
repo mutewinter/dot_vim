@@ -480,7 +480,7 @@ vmap <Leader>t" :Tabularize /"<CR>
 " ---------------
 " Fugitive
 " ---------------
-nmap <Leader>gc :Gcommit<CR>
+nmap <Leader>gc :Gcommit -v<CR>
 nmap <Leader>gw :Gwrite<CR>
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gp :Git push<CR>
