@@ -4,6 +4,7 @@
 
 require 'open-uri'
 require 'openssl'
+require 'rubygems'
 require 'json'
 
 
