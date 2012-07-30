@@ -97,7 +97,8 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tomtom/tlib_vim'
 Bundle 'mathml.vim'
 
-filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
+" Automatically detect file types. (must turn on after Vundle)
+filetype plugin indent on  
 
 " Set leader to ,
 " Note: This line MUST come before any <leader> mappings
@@ -208,7 +209,8 @@ set ignorecase " Case insensitive search
 set smartcase  " Non-case sensitive search
 set incsearch
 set hlsearch
-set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
+set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
+  \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
 
 " ---------------
 " Visual
@@ -439,7 +441,8 @@ nnoremap <leader>nn :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") 
+  \&& b:NERDTreeType == "primary") | q | endif
 
 " ---------------
 " Indent Guides
@@ -605,7 +608,10 @@ ruby << EOF
   require 'openssl'
 
   def extract_url(url)
-    re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]\{\};:'".,<>?«»“”‘’]))}
+    re = %r{(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|
+    [a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]
+    +\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]\{\};:'"
+    .,<>?«»“”‘’]))}
 
     url.match(re).to_s
   end
@@ -632,11 +638,13 @@ ruby << EOF
     if RUBY_VERSION < '1.9'
       open(url).read.match(/<title>(.*?)<\/title>?/i)[1]
     else
-      open(url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read.match(/<title>(.*?)<\/title>?/i)[1]
+      open(url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
+        .match(/<title>(.*?)<\/title>?/i)[1]
     end
   end
 
-  # Paste the title and url for the url on the clipboard in markdown format: [Title](url)
+  # Paste the title and url for the url on the clipboard in markdown format:
+  #   [Title](url)
   # Note: Clobbers p register
   def paste_url_and_title
     clipboard = VIM::evaluate('@+')
@@ -700,7 +708,8 @@ nmap <silent> <leader>z :QuickSpellingFix<CR>
 " From: http://git.io/cxmJDw
 " Note: Defaults to the entire file unless in visual mode.
 " ---------------
-command! -bar -range=% NotRocket execute '<line1>,<line2>s/:\(\w\+\)\s*=>/\1:/e' . (&gdefault ? '' : 'g')
+command! -bar -range=% NotRocket execute 
+  \'<line1>,<line2>s/:\(\w\+\)\s*=>/\1:/e' . (&gdefault ? '' : 'g')
 
 " ---------------
 " Strip Trailing White Space
