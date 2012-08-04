@@ -99,7 +99,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'mathml.vim'
 
 " Automatically detect file types. (must turn on after Vundle)
-filetype plugin indent on  
+filetype plugin indent on
 
 " Set leader to ,
 " Note: This line MUST come before any <leader> mappings
@@ -442,7 +442,7 @@ nnoremap <leader>nn :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
   \&& b:NERDTreeType == "primary") | q | endif
 
 " ---------------
@@ -714,7 +714,7 @@ nmap <silent> <leader>z :QuickSpellingFix<CR>
 " From: http://git.io/cxmJDw
 " Note: Defaults to the entire file unless in visual mode.
 " ---------------
-command! -bar -range=% NotRocket execute 
+command! -bar -range=% NotRocket execute
   \'<line1>,<line2>s/:\(\w\+\)\s*=>/\1:/e' . (&gdefault ? '' : 'g')
 
 " ---------------
