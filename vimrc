@@ -50,6 +50,7 @@ Bundle 'mutewinter/swap-parameters'
 Bundle 'keepcase.vim'
 Bundle 'scratch.vim'
 Bundle 'mattn/zencoding-vim'
+Bundle 'mutewinter/GIFL'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
@@ -583,6 +584,11 @@ nmap <silent> <leader>as :AckFromSearch<CR>
 " ysiw#   Wrap the token under the cursor in #{}
 " Thanks to http://git.io/_XqKzQ
 let g:surround_35  = "#{\r}"
+
+" ---------------
+" Gifl - Google I'm Feeling Lucky URL Grabber
+" ---------------
+let g:LuckyOutputFormat='markdown'
 
 " ---------------
 " Vundle
