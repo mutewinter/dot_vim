@@ -644,8 +644,8 @@ ruby << EOF
     if RUBY_VERSION < '1.9'
       open(url).read.match(/<title>(.*?)<\/title>?/i)[1]
     else
-      open(url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
-        .match(/<title>(.*?)<\/title>?/i)[1]
+      open(url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read.
+        match(/<title>(.*?)<\/title>?/i)[1]
     end
   end
 
