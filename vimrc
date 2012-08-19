@@ -28,7 +28,6 @@ Bundle 'wincent/Command-T'
 " This fork is required due to remapping ; to :
 Bundle 'christoomey/vim-space'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'mutewinter/LustyJuggler'
 Bundle 'kien/ctrlp.vim'
 " UI Additions
 Bundle 'mutewinter/vim-indent-guides'
@@ -291,6 +290,8 @@ nmap gy :%y+<cr>
 nmap <silent> <leader>s :set spell!<CR>
 " Edit vimrc with ,v
 nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
+" Quickly switch to last buffer
+nnoremap <leader>, :e#<CR>
 
 " Window Movement
 " Here's a visual guide for moving between window splits.
@@ -409,19 +410,6 @@ function! s:on_insert_leave()
     let &updatetime = s:update_time_save
   endif
 endfunction
-
-" ---------------
-" Lusty Juggler
-" ---------------
-if has('unix')
-  " Allows for previous buffer on unix systems without most recent patch level
-  " that enable LustyJuggler to work
-  nnoremap <leader>, :e#<CR>
-else
-  nnoremap <leader>, :LustyJugglePrevious<CR>
-end
-let g:LustyJugglerShowKeys=1 " Show numbers for Lusty Buffers
-let g:LustyJugglerSuppressRubyWarning=1
 
 " ---------------
 " Syntastic
