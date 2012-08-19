@@ -357,6 +357,16 @@ nmap <silent> <leader>sv :vsplit<CR>
 nmap <silent> <leader>hs :split<CR>
 nmap <silent> <leader>vs :vsplit<CR>
 nmap <silent> <leader>sc :close<CR>
+
+" -----------------------------------------------------------
+" The following commands are from Janus, http://git.io/_GhulA
+" -----------------------------------------------------------
+
+" Underline the current line with '='
+nmap <silent> <leader>ul :t.\|s/./-/g\|:nohls<cr>
+" format the entire file
+nmap <leader>fef ggVG=
+
 " ----------------------------------------
 " Plugin Configuration
 " ----------------------------------------
