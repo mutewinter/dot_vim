@@ -200,7 +200,6 @@ set cindent
 set autoindent
 set smarttab
 set expandtab
-set backspace=2
 
 " ---------------
 " Searching
