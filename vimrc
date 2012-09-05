@@ -299,6 +299,10 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 " Yank entire buffer with gy
 nmap gy :%y+<cr>
 
+" Make Y behave like other capital commands.
+" Hat-tip http://vimbits.com/bits/11
+nnoremap Y y$
+
 " ---------------
 " Leader Commands
 " ---------------
