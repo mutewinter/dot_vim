@@ -613,6 +613,12 @@ let g:surround_35  = "#{\r}"
 let g:LuckyOutputFormat='markdown'
 
 " ---------------
+" swap-parameters
+" ---------------
+" I sometimes run vim without python support.
+let g:SwapParametersSuppressPythonWarning=1
+
+" ---------------
 " Vundle
 " ---------------
 nmap <Leader>bi :BundleInstall<CR>
