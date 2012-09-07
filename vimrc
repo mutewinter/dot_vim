@@ -611,6 +611,8 @@ let g:surround_35  = "#{\r}"
 " Gifl - Google I'm Feeling Lucky URL Grabber
 " ---------------
 let g:LuckyOutputFormat='markdown'
+" I sometimes run vim without ruby support.
+let g:GIFLSuppressRubyWarning=1
 
 " ---------------
 " swap-parameters
