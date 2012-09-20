@@ -50,6 +50,7 @@ Bundle 'keepcase.vim'
 Bundle 'scratch.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'mutewinter/GIFL'
+Bundle 'swaroopch/vim-markdown-preview'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
@@ -619,6 +620,12 @@ let g:GIFLSuppressRubyWarning=1
 " ---------------
 " I sometimes run vim without python support.
 let g:SwapParametersSuppressPythonWarning=1
+
+" ---------------
+" Markdown-Preview
+" ---------------
+nmap <Leader>md :MarkdownPreview<CR>
+vmap <Leader>md :MarkdownPreview<CR>
 
 " ---------------
 " Vundle
