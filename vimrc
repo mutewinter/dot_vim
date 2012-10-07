@@ -186,6 +186,7 @@ set timeoutlen=350     " Time to wait for a command (after leader for example)
 set foldlevelstart=99  " Remove folds
 set formatoptions=crql
 set iskeyword+=$,@     " Add extra characters that are valid parts of variables
+set nostartofline      " Don't go to the start of the line after some commands
 
 " ---------------
 " Text Format
