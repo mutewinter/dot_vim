@@ -313,6 +313,9 @@ noremap L $
 " Clear search
 map <silent><Leader>/ :nohls<CR>
 
+" Highlight search word under cursor without jumping to next
+nnoremap <leader>h *<C-O>
+
 " ---------------
 " Leader Commands
 " ---------------
@@ -580,6 +583,8 @@ hi! link cssAttr Constant
 " Ack.vim
 " ---------------
 nmap <silent> <leader>as :AckFromSearch<CR>
+" Highlight word at cursor and then Ack it.
+nnoremap <leader>H *<C-O>:AckFromSearch!<CR>
 
 " ---------------
 " surround.vim
