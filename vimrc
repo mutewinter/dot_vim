@@ -146,8 +146,8 @@ colorscheme jellybeans
 " Backups
 " ---------------
 set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
+set backupdir=~/.vim/.backup
+set directory=~/.vim/.tmp
 
 " ---------------
 " UI
