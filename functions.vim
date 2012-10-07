@@ -133,4 +133,3 @@ function! Preserve(command)
 endfunction
 "strip all trailing white space
 command! StripTrailingWhiteSpace :call Preserve("%s/\\s\\+$//e")<CR>
-

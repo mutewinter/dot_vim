@@ -132,4 +132,3 @@ def fetch_github_repo_description(user, name)
   repo = JSON.parse response
   repo['description']
 end
-

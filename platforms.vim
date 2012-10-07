@@ -30,4 +30,3 @@ elseif has('gui_macvim')
   " Use option (alt) as meta key.
   set macmeta
 endif
-
