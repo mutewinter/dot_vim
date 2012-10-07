@@ -44,7 +44,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
 Bundle 'gmarik/sudo-gui.vim'
 Bundle 'milkypostman/vim-togglelist'
-Bundle 'mutewinter/swap-parameters'
+Bundle 'AndrewRadev/sideways.vim'
 Bundle 'keepcase.vim'
 Bundle 'scratch.vim'
 Bundle 'mattn/zencoding-vim'
@@ -601,11 +601,11 @@ let g:LuckyOutputFormat='markdown'
 " I sometimes run vim without ruby support.
 let g:GIFLSuppressRubyWarning=1
 
-" ---------------
-" swap-parameters
-" ---------------
-" I sometimes run vim without python support.
-let g:SwapParametersSuppressPythonWarning=1
+" ------------
+" sideways.vim
+" ------------
+noremap gs :SidewaysRight<cr>
+noremap gS :SidewaysLeft<cr>
 
 " ---------------
 " Markdown-Preview
