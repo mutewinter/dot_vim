@@ -228,6 +228,11 @@ nmap <Leader>md :MarkdownPreview<CR>
 vmap <Leader>md :MarkdownPreview<CR>
 
 " ---------------
+" switch.vim
+" ---------------
+nnoremap - :Switch<cr>
+
+" ---------------
 " Vundle
 " ---------------
 nmap <Leader>bi :BundleInstall<CR>

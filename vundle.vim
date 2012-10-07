@@ -43,6 +43,7 @@ Bundle 'scratch.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'mutewinter/GIFL'
 Bundle 'swaroopch/vim-markdown-preview'
+Bundle 'AndrewRadev/switch.vim'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
