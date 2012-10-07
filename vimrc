@@ -306,6 +306,10 @@ nmap gy :%y+<cr>
 " Hat-tip http://vimbits.com/bits/11
 nnoremap Y y$
 
+" Just to beginning and end of lines easier. From http://vimbits.com/bits/16
+noremap H ^
+noremap L $
+
 " ---------------
 " Leader Commands
 " ---------------
