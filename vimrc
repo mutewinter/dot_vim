@@ -132,9 +132,9 @@ elseif has('gui_macvim')
   set macmeta
 endif
 
-" ----------------------------------------
+" ---------------------------------------------
 " Regular Vim Configuration (No Plugins Needed)
-" ----------------------------------------
+" ---------------------------------------------
 
 " ---------------
 " Color
@@ -142,12 +142,15 @@ endif
 set background=dark
 colorscheme jellybeans
 
-" ---------------
-" Backups
-" ---------------
+" -----------------------------
+" Backups, Tmp Files, and Undo
+" -----------------------------
 set backup
 set backupdir=~/.vim/.backup
 set directory=~/.vim/.tmp
+" Persistent Undo
+set undofile
+set undodir=~/.vim/.undo
 
 " ---------------
 " UI
