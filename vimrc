@@ -310,6 +310,9 @@ nnoremap Y y$
 noremap H ^
 noremap L $
 
+" Clear search
+map <silent><Leader>/ :nohls<CR>
+
 " ---------------
 " Leader Commands
 " ---------------
