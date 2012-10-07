@@ -265,8 +265,9 @@ imap <F1> <Esc>
 cnoremap w' w<CR>
 " This mapping along with mapping ; to : allows for quick save with ;w;
 cnoremap w; w<CR>
-" Disable the ever-annoying Ex mode shortcut key. Type visual my ass.
-nmap Q <nop>
+" Disable the ever-annoying Ex mode shortcut key. Type visual my ass. Make it
+" repeat the last macro instead. *hat tip* http://vimbits.com/bits/263
+nmap Q @@
 
 " Removes doc lookup binding because it's easy to fat finger
 nmap K k
