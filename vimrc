@@ -187,6 +187,7 @@ set foldlevelstart=99  " Remove folds
 set formatoptions=crql
 set iskeyword+=$,@     " Add extra characters that are valid parts of variables
 set nostartofline      " Don't go to the start of the line after some commands
+set scrolloff=3        " Keep three lines below the last line when scrolling
 
 " ---------------
 " Text Format
