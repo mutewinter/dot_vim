@@ -13,6 +13,9 @@ if has('win32') || has('win64')
   set lines=60
   set columns=120
 
+  " Disable quickfixsigns on Windows due to incredible slowdown.
+  let g:loaded_quickfixsigns=1
+
   " Windows has a nasty habit of launching gVim in the wrong working directory
   cd ~
 elseif has('gui_macvim')
