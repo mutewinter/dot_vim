@@ -117,11 +117,9 @@ nmap <silent> g= :wincmd =<CR>
 nmap <silent> gx :wincmd x<CR>
 
 " Window Splitting
-nmap <silent> <leader>sh :split<CR>
-nmap <silent> <leader>sv :vsplit<CR>
-" Because I'm dyslexic
 nmap <silent> <leader>hs :split<CR>
 nmap <silent> <leader>vs :vsplit<CR>
+" Close the current window
 nmap <silent> <leader>sc :close<CR>
 
 " -----------------------------------------------------------
