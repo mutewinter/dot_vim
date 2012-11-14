@@ -128,5 +128,9 @@ nmap <silent> <leader>sc :close<CR>
 
 " Underline the current line with '='
 nmap <silent> <leader>ul :t.\|s/./-/g\|:nohls<cr>
-" format the entire file
+
+" Format the entire file
 nmap <leader>fef ggVG=
+
+" Wrap the current line
+nmap <leader>fw Vgq
