@@ -78,6 +78,7 @@ Bundle 'mutewinter/vim-css3-syntax'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'hallison/vim-markdown'
 Bundle 'groenewege/vim-less'
+Bundle 'wavded/vim-stylus'
 " MatchIt
 Bundle 'matchit.zip'
 Bundle 'kana/vim-textobj-user'
