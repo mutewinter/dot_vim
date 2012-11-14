@@ -42,13 +42,16 @@ folder. Vim has a nasty habit of overriding symlinks.
 
 ## Plugin Installation / Requirements
 
-Here's a list of plugins that require further installation:
+Here's a list of plugins that require further installation or have
+dependancies.
 
- * [Command-T](https://github.com/wincent/Command-T) Needs compilation.
+ * [Command-T](https://github.com/wincent/Command-T) Needs compilation, see its
+ readme for more instructions.
  * [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be
  installed.
  * [syntastic](https://github.com/scrooloose/syntastic) Requires many different
- binaries installed depending on what filetypes you want it to check.
+ binaries installed depending on what filetypes you want it to check. See the
+ [FAQ](https://github.com/scrooloose/syntastic#faq) for more information.
  * [ack.vim](https://github.com/mileszs/ack.vim) Requires
  [ack](http://betterthangrep.com/) to be installed.
  * [Menlo for Powerline](https://gist.github.com/1627888) The custom font I'm
