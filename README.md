@@ -22,7 +22,7 @@
 
 **Mac**
 
- * [MacVim](https://github.com/b4winckler/macvim) - I'm currently using [snapshot 64](https://github.com/b4winckler/macvim/downloads)
+ * [MacVim](https://github.com/b4winckler/macvim) - I'm currently using [snapshot 65](https://github.com/b4winckler/macvim/downloads) on Mountain Lion.
 
 **Windows**
 
