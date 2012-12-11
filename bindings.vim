@@ -134,3 +134,8 @@ nmap <leader>fef ggVG=
 
 " Wrap the current line
 nmap <leader>fw Vgq
+
+" Let's make escape better, together.
+inoremap jk <Esc>
+inoremap kj <Esc>
+inoremap <Esc> <nop>
