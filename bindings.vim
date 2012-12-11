@@ -139,3 +139,6 @@ nmap <leader>fw Vgq
 inoremap jk <Esc>
 inoremap kj <Esc>
 inoremap <Esc> <nop>
+
+" Save in insert mode with ;;
+inoremap ;; <Esc>:update<CR>
