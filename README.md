@@ -35,6 +35,14 @@
  7.3.333](http://wyw.dcweb.cn/download.asp?path=vim&file=gvim73.zip) because it
  has Ruby support and the latest patches.
 
+## Bindings
+
+ * **Escape is not bound to Escape**, instead, pressing `jk` or `kj` in insert
+ mode escapes into normall mode. You can see these bindings
+ [here][escape_bindings].
+
+ [escape_bindings]: https://github.com/mutewinter/dot_vim/blob/master/bindings.vim#L138-144
+
 ## Notes
 
 Be sure to always edit the vimrc using `,v`, which opens the vimrc in the .vim
