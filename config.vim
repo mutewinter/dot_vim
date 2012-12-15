@@ -51,7 +51,7 @@ set history=768        " Number of things to remember in history.
 set cf                 " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
 set autowrite          " Writes on make/shell commands
-set timeoutlen=350     " Time to wait for a command (after leader for example).
+set timeoutlen=450     " Time to wait for a command (after leader for example).
 set nofoldenable       " Disable folding entirely.
 set foldlevelstart=99  " I really don't like folds.
 set formatoptions=crql
