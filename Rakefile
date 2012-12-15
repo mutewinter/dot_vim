@@ -123,10 +123,19 @@ end
 
 def fetch_github_repo_description(user, name)
   response = ''
+  api_url = "https://api.github.com/repos/#{user}/#{name}"
+
+  # Without a GitHub Client / Secret token you will only be able to make 60
+  # requests per hour, meaning you can only update the readme once.
+  # Read more here http://developer.github.com/v3/#rate-limiting.
+  if ENV['GITHUB_CLIENT_ID'] and ENV['GITHUB_CLIENT_SECRET']
+    api_url += "?client_id=#{ENV['GITHUB_CLIENT_ID']}&client_secret=#{ENV['GITHUB_CLIENT_SECRET']}"
+  end
+
   if RUBY_VERSION < '1.9'
-    response = open("https://api.github.com/repos/#{user}/#{name}").read
+    response = open(api_url).read
   else
-    response = open("https://api.github.com/repos/#{user}/#{name}", :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
+    response = open(api_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
   end
 
   repo = JSON.parse response
