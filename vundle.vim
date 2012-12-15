@@ -44,6 +44,7 @@ Bundle 'mutewinter/GIFL'
 Bundle 'swaroopch/vim-markdown-preview'
 Bundle 'AndrewRadev/switch.vim'
 Bundle 'tpope/vim-eunuch'
+Bundle 'itspriddle/vim-marked'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
