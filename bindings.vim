@@ -122,9 +122,24 @@ nmap <silent> <leader>vs :vsplit<CR>
 " Close the current window
 nmap <silent> <leader>sc :close<CR>
 
-" -----------------------------------------------------------
-" The following commands are from Janus, http://git.io/_GhulA
-" -----------------------------------------------------------
+" -----------------------
+" Escape / Write Bindings
+" -----------------------
+
+" Let's make escape better, together.
+inoremap jk <Esc>
+" Save in insert mode with kj.
+inoremap kj <Esc>:write<CR>
+" Write in normal mode with <enter>
+nnoremap <enter> :write<CR>
+
+" Disable Escape while learning new binding.
+inoremap <Esc> <nop>
+
+" -------------------------------------
+" The following commands are from Janus
+" http://git.io/_GhulA
+" -------------------------------------
 
 " Underline the current line with '='
 nmap <silent> <leader>ul :t.\|s/./-/g\|:nohls<cr>
@@ -134,11 +149,3 @@ nmap <leader>fef ggVG=
 
 " Wrap the current line
 nmap <leader>fw Vgq
-
-" Let's make escape better, together.
-inoremap jk <Esc>
-inoremap kj <Esc>
-inoremap <Esc> <nop>
-
-" Save in insert mode with ;;
-inoremap ;; <Esc>:update<CR>

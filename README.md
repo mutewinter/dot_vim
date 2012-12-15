@@ -37,11 +37,13 @@
 
 ## Bindings
 
- * **Escape is not bound to Escape**, instead, pressing `jk` or `kj` in insert
- mode escapes into normall mode. You can see these bindings
- [here][escape_bindings].
+ * **Escape is not bound to Escape**, instead, typing `jk`  in insert
+ mode escapes into normal mode. Typing `kj` escapes in saves the current buffer
+ and escapes into normal mode. See
+ [this section of `bindings.vim`][escape_bindings] for more details.
+ * Pressing `enter` in normal mode saves the current buffer.
 
- [escape_bindings]: https://github.com/mutewinter/dot_vim/blob/master/bindings.vim#L138-144
+ [escape_bindings]: https://github.com/mutewinter/dot_vim/blob/master/bindings.vim#L125-137
 
 ## Notes
 
