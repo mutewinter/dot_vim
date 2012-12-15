@@ -253,6 +253,11 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 " ---------------
+" vim-markdown
+" ---------------
+let g:vim_markdown_folding_disabled=1
+
+" ---------------
 " Vundle
 " ---------------
 nmap <Leader>bi :BundleInstall<CR>

@@ -76,7 +76,7 @@ Bundle 'mutewinter/nginx.vim'
 Bundle 'timcharper/textile.vim'
 Bundle 'mutewinter/vim-css3-syntax'
 Bundle 'acustodioo/vim-tmux'
-Bundle 'hallison/vim-markdown'
+Bundle 'mutewinter/vim-markdown'
 Bundle 'groenewege/vim-less'
 Bundle 'wavded/vim-stylus'
 " MatchIt
