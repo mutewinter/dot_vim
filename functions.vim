@@ -133,3 +133,22 @@ function! Preserve(command)
 endfunction
 "strip all trailing white space
 command! StripTrailingWhiteSpace :call Preserve("%s/\\s\\+$//e")<CR>
+
+" ---------------
+" Paste using Paste Mode
+"
+" Keeps indentation in source.
+" ---------------
+function! PasteWithPasteMode()
+  if &paste
+    normal p
+  else
+    " Enable paste mode and paste the text, then disable paste mode.
+    set paste
+    normal p
+    set nopaste
+  endif
+endfunction
+
+command! PasteWithPasteMode call PasteWithPasteMode()
+nmap <silent> <leader>p :PasteWithPasteMode<CR>
