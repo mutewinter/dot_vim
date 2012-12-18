@@ -13,3 +13,5 @@ if has('gui_macvim')
   " D-l
   macmenu &Tools.List\ Errors key=<nop>
 endif
+
+set visualbell " Keeps the audio bell from sounding in the GUI
