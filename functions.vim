@@ -152,3 +152,19 @@ endfunction
 
 command! PasteWithPasteMode call PasteWithPasteMode()
 nmap <silent> <leader>p :PasteWithPasteMode<CR>
+
+" ---------------
+" Write Buffer
+"
+" Writes the current buffer unless we're the in QuickFix mode.
+" ---------------
+
+function WriteBuffer()
+  if &filetype == "qf"
+    execute "normal! \<enter>"
+  else
+    :write
+  endif
+endfunction
+
+noremap <silent> <enter> :call WriteBuffer()<CR>

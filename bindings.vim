@@ -130,8 +130,6 @@ nmap <silent> <leader>sc :close<CR>
 inoremap jk <Esc>
 " Save in insert mode with kj.
 inoremap kj <Esc>:write<CR>
-" Write in normal mode with <enter>
-nnoremap <enter> :write<CR>
 
 " Disable Escape while learning new binding.
 inoremap <Esc> <nop>
