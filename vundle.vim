@@ -45,6 +45,7 @@ Bundle 'AndrewRadev/switch.vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'itspriddle/vim-marked'
 Bundle 'mutewinter/UnconditionalPaste'
+Bundle 'HelpClose'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
