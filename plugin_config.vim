@@ -216,6 +216,13 @@ let g:html_indent_style1 = "inc"
 let g:vim_markdown_folding_disabled=1
 
 " ---------------
+" Unconditional Paste
+" ---------------
+let g:UnconditionalPaste_NoDefaultMappings=1
+nmap gcP <Plug>UnconditionalPasteCharBefore
+nmap gcp <Plug>UnconditionalPasteCharAfter
+
+" ---------------
 " Vundle
 " ---------------
 nmap <Leader>bi :BundleInstall<CR>
