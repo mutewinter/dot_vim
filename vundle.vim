@@ -47,6 +47,7 @@ Bundle 'itspriddle/vim-marked'
 Bundle 'mutewinter/UnconditionalPaste'
 Bundle 'skalnik/vim-vroom'
 Bundle 'HelpClose'
+Bundle 'mattn/gist-vim'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
@@ -90,3 +91,4 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 " Libraries
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
+Bundle 'mattn/webapi-vim'
