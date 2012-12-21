@@ -128,8 +128,6 @@ nmap <silent> <leader>sc :close<CR>
 
 " Let's make escape better, together.
 inoremap jk <Esc>
-" Save in insert mode with kj.
-inoremap kj <Esc>:write<CR>
 
 " Disable Escape while learning new binding.
 inoremap <Esc> <nop>
