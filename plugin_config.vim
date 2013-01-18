@@ -223,6 +223,13 @@ nmap gcP <Plug>UnconditionalPasteCharBefore
 nmap gcp <Plug>UnconditionalPasteCharAfter
 
 " ---------------
+" Gist.vim
+" ---------------
+if has('macunix') || has('mac')
+  let g:gist_clip_command = 'pbcopy'
+endif
+
+" ---------------
 " Vundle
 " ---------------
 nmap <Leader>bi :BundleInstall<CR>
