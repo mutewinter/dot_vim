@@ -55,7 +55,7 @@ set timeoutlen=450     " Time to wait for a command (after leader for example).
 set nofoldenable       " Disable folding entirely.
 set foldlevelstart=99  " I really don't like folds.
 set formatoptions=crql
-set iskeyword+=$,@     " Add extra characters that are valid parts of variables
+set iskeyword+=$,@,-   " Add extra characters that are valid parts of variables
 set nostartofline      " Don't go to the start of the line after some commands
 set scrolloff=3        " Keep three lines below the last line when scrolling
 
