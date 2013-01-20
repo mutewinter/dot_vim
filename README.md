@@ -4,14 +4,13 @@
 
 ## Installation
 
-1. `git clone http://github.com/mutewinter/dot_vim.git` in your home folder.
-2. `mv dot_vim .vim`
-3. `cd .vim`
-4. `rake vim:link` to make the .vimrc symbolic link.
-5. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
+1. `git clone http://github.com/mutewinter/dot_vim.git ~/.vim`
+2. `cd ~/.vim`
+3. `rake vim:link` to make the .vimrc symbolic link.
+4. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
    http://github.com/gmarik/vundle.git bundle/vundle`
-6. Run Vim and type `:BundleInstall` to install the plugins with Vundle.
-7. Enjoy enhanced productivity, increased levitation, reduced
+5. Run Vim and type `:BundleInstall` to install the plugins with Vundle.
+6. Enjoy enhanced productivity, increased levitation, reduced
    watermelon-related accidents, and startling sex appeal.
 
 ## Screenshots
