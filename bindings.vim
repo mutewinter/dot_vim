@@ -128,6 +128,9 @@ nmap <silent> <leader>sc :close<CR>
 
 " Let's make escape better, together.
 inoremap jk <Esc>
+inoremap JK <Esc>
+inoremap Jk <Esc>
+inoremap jK <Esc>
 
 " Disable Escape while learning new binding.
 inoremap <Esc> <nop>
