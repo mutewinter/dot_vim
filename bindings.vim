@@ -12,8 +12,6 @@ map <F1> <Esc>
 imap <F1> <Esc>
 " Crazy flying pinky
 cnoremap w' w<CR>
-" This mapping along with mapping ; to : allows for quick save with ;w;
-cnoremap w; w<CR>
 
 " Disable the ever-annoying Ex mode shortcut key. Type visual my ass. Instead,
 " make Q repeat the last macro instead. *hat tip* http://vimbits.com/bits/263
