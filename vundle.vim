@@ -54,8 +54,8 @@ Bundle 'xolox/vim-session'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
-Bundle 'gregsexton/MatchTag'
-Bundle 'Shougo/neocomplcache'
+Bundle 'Valloric/MatchTagAlways'
+Bundle 'Valloric/YouCompleteMe'
 " Language Additions
 "   Ruby
 Bundle 'vim-ruby/vim-ruby'
