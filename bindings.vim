@@ -115,9 +115,10 @@ nmap <silent> g= :wincmd =<CR>
 " Swap Windows
 nmap <silent> gx :wincmd x<CR>
 
-" Window Splitting
-nmap <silent> <leader>hs :split<CR>
-nmap <silent> <leader>vs :vsplit<CR>
+" Split window vertically or horizontally *and* switch to the new split!
+nmap <silent> <leader>hs :split<Bar>:wincmd j<CR>
+nmap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
+
 " Close the current window
 nmap <silent> <leader>sc :close<CR>
 
