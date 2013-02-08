@@ -14,6 +14,8 @@ README_FILE = 'README.md'
 
 FILES_TO_LINK = %w{vimrc gvimrc}
 
+task :default => ['vim:link']
+
 namespace :vim do
   desc 'Create symlinks'
   task :link do
