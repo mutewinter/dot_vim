@@ -132,9 +132,6 @@ inoremap JK <Esc>
 inoremap Jk <Esc>
 inoremap jK <Esc>
 
-" Disable Escape while learning new binding.
-inoremap <Esc> <nop>
-
 " -------------------------------------
 " The following commands are from Janus
 " http://git.io/_GhulA
