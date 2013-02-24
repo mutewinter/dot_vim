@@ -49,8 +49,6 @@ folder. Vim has a nasty habit of overriding symlinks.
 Here's a list of plugins that require further installation or have
 dependencies.
 
- * [Command-T](https://github.com/wincent/Command-T) Needs compilation, see its
- readme for more instructions.
  * [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be
  installed.
  * [syntastic](https://github.com/scrooloose/syntastic) Requires many different
