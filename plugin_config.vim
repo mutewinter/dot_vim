@@ -131,11 +131,10 @@ let g:Powerline_mode_cs = 'SB'
 hi! link cssAttr Constant
 
 " ---------------
-" Ack.vim
+" Ag.vim
 " ---------------
-nmap <silent> <leader>as :AckFromSearch<CR>
-" Highlight word at cursor and then Ack it.
-nnoremap <leader>H *<C-O>:AckFromSearch!<CR>
+nmap <silent> <leader>as :AgFromSearch<CR>
+nmap <leader>ag :Ag<space>
 
 " ---------------
 " surround.vim
