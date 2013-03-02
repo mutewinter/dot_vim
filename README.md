@@ -9,7 +9,7 @@
 3. `rake vim:link` to make the .vimrc symbolic link.
 4. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
    http://github.com/gmarik/vundle.git bundle/vundle`
-5. Run Vim and type `:BundleInstall` to install the plugins with Vundle.
+5. `vim +BundleInstall +qall` _installs all of the plugins_
 6. Enjoy enhanced productivity, increased levitation, reduced
    watermelon-related accidents, and startling sex appeal.
 
