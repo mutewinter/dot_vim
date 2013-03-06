@@ -144,7 +144,7 @@ nmap <silent> <leader>ul :t.\|s/./-/g\|:nohls<cr>
 nmap <leader>fef ggVG=
 
 " Wrap the current line
-nmap <leader>fw Vgq
+nmap <leader>fl Vgq
 
 " Format a json file with Python's built in json.tool.
 " from https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
