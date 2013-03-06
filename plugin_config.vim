@@ -214,6 +214,7 @@ let g:mta_filetypes = {
 " YouCompleteMe
 " ---------------
 let g:ycm_complete_in_comments_and_strings=1
+let g:ycm_collect_identifiers_from_comments_and_strings=1
 
 " ---------------
 " Vundle
