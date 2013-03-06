@@ -217,6 +217,14 @@ let g:ycm_complete_in_comments_and_strings=1
 let g:ycm_collect_identifiers_from_comments_and_strings=1
 
 " ---------------
+" vim-signify
+" ---------------
+let g:signify_mapping_next_hunk="<leader>sn"
+let g:signify_mapping_prev_hunk="<leader>sp"
+let g:signify_mapping_toggle_highlight="<nop>"
+let g:signify_mapping_toggle="<nop>"
+
+" ---------------
 " Vundle
 " ---------------
 nmap <Leader>bi :BundleInstall<CR>
