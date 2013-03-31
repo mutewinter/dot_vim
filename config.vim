@@ -15,8 +15,10 @@ set backup
 set backupdir=~/.vim/.backup
 set directory=~/.vim/.tmp
 " Persistent Undo
-set undofile
-set undodir=~/.vim/.undo
+if has('persistent_undo')
+  set undofile
+  set undodir=~/.vim/.undo
+endif
 
 " ---------------
 " UI
