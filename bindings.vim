@@ -137,8 +137,11 @@ inoremap jK <Esc>
 " http://git.io/_GhulA
 " -------------------------------------
 
-" Underline the current line with '='
+" Underline the current line with '-'
 nmap <silent> <leader>ul :t.\|s/./-/g\|:nohls<cr>
+
+" Underline the current line with '='
+nmap <silent> <leader>uul :t.\|s/./=/g\|:nohls<cr>
 
 " Format the entire file
 nmap <leader>fef ggVG=
