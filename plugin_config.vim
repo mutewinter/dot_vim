@@ -228,5 +228,5 @@ let g:signify_mapping_toggle="<nop>"
 " Vundle
 " ---------------
 nmap <Leader>bi :BundleInstall<CR>
-nmap <Leader>bu :BundleInstall!<CR> " Because this also updates
+nmap <Leader>bu :BundleInstall!<CR>
 nmap <Leader>bc :BundleClean<CR>
