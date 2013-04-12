@@ -225,6 +225,12 @@ let g:signify_mapping_toggle_highlight="<nop>"
 let g:signify_mapping_toggle="<nop>"
 
 " ---------------
+" vim-abolish
+" ---------------
+nnoremap <leader>su :Subvert/
+nnoremap <leader>ss :%Subvert/
+
+" ---------------
 " Vundle
 " ---------------
 nmap <Leader>bi :BundleInstall<CR>
