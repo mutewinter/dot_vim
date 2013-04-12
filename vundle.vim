@@ -48,6 +48,7 @@ Bundle 'mutewinter/UnconditionalPaste'
 Bundle 'skalnik/vim-vroom'
 Bundle 'HelpClose'
 Bundle 'mattn/gist-vim'
+Bundle 'nelstrom/vim-visual-star-search'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
