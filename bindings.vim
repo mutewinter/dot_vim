@@ -144,7 +144,7 @@ nmap <silent> <leader>ul :t.\|s/./-/g\|:nohls<cr>
 nmap <silent> <leader>uul :t.\|s/./=/g\|:nohls<cr>
 
 " Format the entire file
-nmap <leader>fef ggVG=
+nmap <leader>fef mx=ggG='x
 
 " Wrap the current line
 nmap <leader>fl Vgq
