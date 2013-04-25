@@ -231,6 +231,20 @@ nnoremap <leader>su :Subvert/
 nnoremap <leader>ss :%Subvert/
 
 " ---------------
+" vim-startify
+" ---------------
+let g:startify_bookmarks = [ '~/.vim/vimrc',
+                            \'~/.vim/config.vim',
+                            \'~/.vim/bindings.vim',
+                            \'~/.vim/plugin_bindings.vim',
+                            \'~/.vim/vundle.vim',
+                            \'~/dot_files/_zshrc'
+                            \'~/dot_files/aliases.sh',
+                            \'~/dot_files/environment.sh',
+                            \'~/dot_files/system_environment.sh']
+let g:startify_show_files_number=20
+
+" ---------------
 " Vundle
 " ---------------
 nnoremap <Leader>bi :BundleInstall<CR>

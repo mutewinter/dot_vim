@@ -28,6 +28,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Rykka/colorv.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'mhinz/vim-signify'
+Bundle 'mhinz/vim-startify'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
