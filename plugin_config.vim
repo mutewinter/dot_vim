@@ -50,44 +50,44 @@ nnoremap <leader>os :OpenSession<CR>
 " SpeedDating
 " ---------------
 let g:speeddating_no_mappings=1 " Remove default mappings (C-a etc.)
-nmap <silent><leader>dm <Plug>SpeedDatingDown
-nmap <silent><leader>dp <Plug>SpeedDatingUp
-nmap <silent><leader>dn <Plug>SpeedDatingNowUTC
+nnoremap <silent><leader>dm <Plug>SpeedDatingDown
+nnoremap <silent><leader>dp <Plug>SpeedDatingUp
+nnoremap <silent><leader>dn <Plug>SpeedDatingNowUTC
 
 " ---------------
 " Tabular
 " ---------------
-nmap <Leader>t= :Tabularize /=<CR>
-vmap <Leader>t= :Tabularize /=<CR>
-nmap <Leader>t: :Tabularize /:\zs<CR>
-vmap <Leader>t: :Tabularize /:\zs<CR>
-nmap <Leader>t, :Tabularize /,\zs<CR>
-vmap <Leader>t, :Tabularize /,\zs<CR>
-nmap <Leader>t> :Tabularize /=>\zs<CR>
-vmap <Leader>t> :Tabularize /=>\zs<CR>
-nmap <Leader>t- :Tabularize /-<CR>
-vmap <Leader>t- :Tabularize /-<CR>
-nmap <Leader>t" :Tabularize /"<CR>
-vmap <Leader>t" :Tabularize /"<CR>
+nnoremap <Leader>t= :Tabularize /=<CR>
+vnoremap <Leader>t= :Tabularize /=<CR>
+nnoremap <Leader>t: :Tabularize /:\zs<CR>
+vnoremap <Leader>t: :Tabularize /:\zs<CR>
+nnoremap <Leader>t, :Tabularize /,\zs<CR>
+vnoremap <Leader>t, :Tabularize /,\zs<CR>
+nnoremap <Leader>t> :Tabularize /=>\zs<CR>
+vnoremap <Leader>t> :Tabularize /=>\zs<CR>
+nnoremap <Leader>t- :Tabularize /-<CR>
+vnoremap <Leader>t- :Tabularize /-<CR>
+nnoremap <Leader>t" :Tabularize /"<CR>
+vnoremap <Leader>t" :Tabularize /"<CR>
 
 " ---------------
 " Fugitive
 " ---------------
-nmap <Leader>gc :Gcommit -v<CR>
-nmap <Leader>gw :Gwrite<CR>
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gp :Git push<CR>
+nnoremap <Leader>gc :Gcommit -v<CR>
+nnoremap <Leader>gw :Gwrite<CR>
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gp :Git push<CR>
  " Mnemonic, gu = Git Update
-nmap <Leader>gu :Git pull<CR>
-nmap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gu :Git pull<CR>
+nnoremap <Leader>gd :Gdiff<CR>
 " Exit a diff by closing the diff window
-nmap <Leader>gx :wincmd h<CR>:q<CR>
+nnoremap <Leader>gx :wincmd h<CR>:q<CR>
 
 " ---------------
 " Zoomwin
 " ---------------
 " Zoom Window to Full Size
-nmap <silent> <leader>wo :ZoomWin<CR>
+nnoremap <silent> <leader>wo :ZoomWin<CR>
 
 " ---------------
 " ctrlp.vim
@@ -136,8 +136,8 @@ hi! link cssAttr Constant
 " ---------------
 " Ag.vim
 " ---------------
-nmap <silent> <leader>as :AgFromSearch<CR>
-nmap <leader>ag :Ag<space>
+nnoremap <silent> <leader>as :AgFromSearch<CR>
+nnoremap <leader>ag :Ag<space>
 
 " ---------------
 " surround.vim
@@ -163,8 +163,8 @@ noremap gS :SidewaysLeft<cr>
 " ---------------
 " Markdown-Preview
 " ---------------
-nmap <Leader>md :MarkdownPreview<CR>
-vmap <Leader>md :MarkdownPreview<CR>
+nnoremap <Leader>md :MarkdownPreview<CR>
+vnoremap <Leader>md :MarkdownPreview<CR>
 
 " ---------------
 " switch.vim
@@ -189,8 +189,8 @@ let g:vim_markdown_folding_disabled=1
 " Unconditional Paste
 " ---------------
 let g:UnconditionalPaste_NoDefaultMappings=1
-nmap gcP <Plug>UnconditionalPasteCharBefore
-nmap gcp <Plug>UnconditionalPasteCharAfter
+nnoremap gcP <Plug>UnconditionalPasteCharBefore
+nnoremap gcp <Plug>UnconditionalPasteCharAfter
 
 " ---------------
 " Gist.vim
@@ -233,6 +233,6 @@ nnoremap <leader>ss :%Subvert/
 " ---------------
 " Vundle
 " ---------------
-nmap <Leader>bi :BundleInstall<CR>
-nmap <Leader>bu :BundleInstall!<CR>
-nmap <Leader>bc :BundleClean<CR>
+nnoremap <Leader>bi :BundleInstall<CR>
+nnoremap <Leader>bu :BundleInstall!<CR>
+nnoremap <Leader>bc :BundleClean<CR>
