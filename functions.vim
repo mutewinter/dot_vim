@@ -133,6 +133,7 @@ function! Preserve(command)
 endfunction
 "strip all trailing white space
 command! StripTrailingWhiteSpace :call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap stw :StripTrailingWhiteSpace<CR>
 
 " ---------------
 " Paste using Paste Mode
