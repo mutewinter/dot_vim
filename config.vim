@@ -95,8 +95,8 @@ set list
 
 " Reset the listchars
 set listchars=""
-" a tab should display as "  ", trailing whitespace as "."
-set listchars=tab:\ \  " Indentended trailing whitespace
+" make tabs visible
+set listchars=tab:▸▸
 " show trailing spaces as dots
 set listchars+=trail:.
 " The character to show in the last column when wrap is off and the line
