@@ -51,6 +51,7 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'HelpClose'
 Bundle 'mattn/gist-vim'
 Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'sk1418/Join'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
