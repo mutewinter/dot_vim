@@ -223,6 +223,8 @@ let g:signify_mapping_next_hunk="<leader>sn"
 let g:signify_mapping_prev_hunk="<leader>sp"
 let g:signify_mapping_toggle_highlight="<nop>"
 let g:signify_mapping_toggle="<nop>"
+" Makes switching buffers in large repos have no delay
+let g:signify_update_on_bufenter=0
 
 " ---------------
 " vim-abolish
