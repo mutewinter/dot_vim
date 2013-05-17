@@ -262,6 +262,9 @@ let g:togglecursor_leave='line'
 " rails.vim
 " ---------------
 command! Remigrate :Rake! db:reset | Rake db:migrate | Rake test:prepare
+
+" Add custom commands for Rails.vim
+" Thanks to http://git.io/_cBVeA and http://git.io/xIKnCw
 let g:rails_projections = {
       \ 'app/models/*.rb': {'keywords': 'validates_conditional'},
       \ 'db/seeds/*.rb': {'command': 'seeds'},
