@@ -298,9 +298,4 @@ let g:rails_projections = {
       \ 'features/*.feature': {'command': 'feature'},
       \ 'features/step_definitions/*_steps.rb': {'command': 'steps'},
       \ 'features/support/*.rb': {'command': 'support'}}
-      \ },
-      \ 'spec/support/*.rb': {'command': 'support'},
-      \ 'features/*.feature': {'command': 'feature'},
-      \ 'features/step_definitions/*_steps.rb': {'command': 'steps'},
-      \ 'features/support/*.rb': {'command': 'support'}}
 
