@@ -254,6 +254,10 @@ let g:startify_bookmarks = [ '~/.vim/vimrc',
 let g:startify_show_files_number=20
 
 " ---------------
+" vim-togglecursor
+" ---------------
+let g:togglecursor_leave='line'
+
 " ---------------
 " rails.vim
 " ---------------

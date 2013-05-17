@@ -30,6 +30,7 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'mhinz/vim-signify'
 Bundle 'mhinz/vim-startify'
 Bundle 'mbbill/undotree'
+Bundle 'jszakmeister/vim-togglecursor'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
