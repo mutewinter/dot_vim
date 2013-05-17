@@ -3,6 +3,13 @@
 " ----------------------------------------
 
 " ---------------
+" Vundle
+" ---------------
+nnoremap <Leader>bi :BundleInstall<CR>
+nnoremap <Leader>bu :BundleInstall!<CR>
+nnoremap <Leader>bc :BundleClean<CR>
+
+" ---------------
 " space.vim
 " ---------------
 " Disables space mappings in select mode to fix snipMate.
@@ -247,8 +254,49 @@ let g:startify_bookmarks = [ '~/.vim/vimrc',
 let g:startify_show_files_number=20
 
 " ---------------
-" Vundle
 " ---------------
-nnoremap <Leader>bi :BundleInstall<CR>
-nnoremap <Leader>bu :BundleInstall!<CR>
-nnoremap <Leader>bc :BundleClean<CR>
+" rails.vim
+" ---------------
+command! Remigrate :Rake! db:reset | Rake db:migrate | Rake test:prepare
+let g:rails_projections = {
+      \ 'app/models/*.rb': {'keywords': 'validates_conditional'},
+      \ 'db/seeds/*.rb': {'command': 'seeds'},
+      \ 'db/seeds.rb': {'command': 'seeds'},
+      \ 'spec/factories.rb': {'command': 'factory'},
+      \ 'spec/factories/*_factory.rb': {
+      \   'command': 'factory',
+      \   'affinity': 'model',
+      \   'alternate': 'app/models/%s.rb',
+      \   'related': 'db/schema.rb#%p',
+      \   'test': 'spec/models/%s_spec.rb',
+      \   'template': "FactoryGirl.define do\n  factory :%s do\n  end\nend",
+      \   'keywords': 'factory sequence'
+      \ },
+      \ 'spec/factories/*.rb': {
+      \   'command': 'factory',
+      \   'affinity': 'collection',
+      \   'alternate': 'app/models/%o.rb',
+      \   'related': 'db/schema.rb#%s',
+      \   'test': 'spec/models/%o_spec.rb',
+      \   'template': "FactoryGirl.define do\n  factory :%o do\n  end\nend",
+      \   'keywords': 'factory sequence'
+      \ },
+      \ 'spec/fabricators/*_fabricator.rb': {
+      \   'command': 'fabricator',
+      \   'affinity': 'model',
+      \   'alternate': 'app/models/%s.rb',
+      \   'related': 'db/schema.rb#%p',
+      \   'test': 'spec/models/%s_spec.rb',
+      \   'template': "Fabricator(:%s) do\nend",
+      \   'keywords': 'sequence initialize_with on_init transient after_build before_validation after_validation before_save before_create after_create after_save'
+      \ },
+      \ 'spec/support/*.rb': {'command': 'support'},
+      \ 'features/*.feature': {'command': 'feature'},
+      \ 'features/step_definitions/*_steps.rb': {'command': 'steps'},
+      \ 'features/support/*.rb': {'command': 'support'}}
+      \ },
+      \ 'spec/support/*.rb': {'command': 'support'},
+      \ 'features/*.feature': {'command': 'feature'},
+      \ 'features/step_definitions/*_steps.rb': {'command': 'steps'},
+      \ 'features/support/*.rb': {'command': 'support'}}
+
