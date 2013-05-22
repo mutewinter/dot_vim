@@ -8,33 +8,33 @@ let mapleader=","
 " Fixes common typos
 command! W w
 command! Q q
-map <F1> <Esc>
-imap <F1> <Esc>
+noremap <F1> <Esc>
+inoremap <F1> <Esc>
 " Crazy flying pinky
 cnoremap w' w<CR>
 
 " Disable the ever-annoying Ex mode shortcut key. Type visual my ass. Instead,
 " make Q repeat the last macro instead. *hat tip* http://vimbits.com/bits/263
-nmap Q @@
+nnoremap Q @@
 
 " Removes doc lookup binding because it's easy to fat finger and never useful.
-nmap K k
-vmap K k
+nnoremap K k
+vnoremap K k
 
 " Make line completion easier.
-imap <C-l> <C-x><C-l>
+inoremap <C-l> <C-x><C-l>
 
 " Easier Scrolling (think j/k with left hand)
 " All variations are mapped for now until I get used to one
 " C/M/D + d (page up)
 " C/M/D + f (page down)
-nmap <C-d> <C-b>
+nnoremap <C-d> <C-b>
 if has("gui_macvim")
-  nmap <D-f> <C-f>
-  nmap <D-d> <C-b>
+  nnoremap <D-f> <C-f>
+  nnoremap <D-d> <C-b>
 else
-  nmap <M-f> <C-f>
-  nmap <M-d> <C-b>
+  nnoremap <M-f> <C-f>
+  nnoremap <M-d> <C-b>
 endif
 
 " Overrides neocomplcache with regular keyword completion
@@ -48,7 +48,7 @@ vnoremap ; :
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " Yank entire buffer with gy
-nmap gy :%y+<cr>
+nnoremap gy :%y+<cr>
 
 " Make Y behave like other capital commands.
 " Hat-tip http://vimbits.com/bits/11
@@ -59,7 +59,7 @@ noremap H ^
 noremap L $
 
 " Clear search
-map <silent><Leader>/ :nohls<CR>
+noremap <silent><Leader>/ :nohls<CR>
 
 " Highlight search word under cursor without jumping to next
 nnoremap <leader>h *<C-O>
@@ -69,9 +69,9 @@ nnoremap <leader>h *<C-O>
 " ---------------
 
 " Toggle spelling mode with ,s
-nmap <silent> <leader>s :set spell!<CR>
+nnoremap <silent> <leader>s :set spell!<CR>
 " Edit vimrc with ,v
-nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
+nnoremap <silent> <leader>v :e ~/.vim/vimrc<CR>
 " Quickly switch to last buffer
 nnoremap <leader>, :e#<CR>
 
@@ -90,37 +90,37 @@ nnoremap <leader>, :e#<CR>
 "   ---|----|----
 "   g3 | gb | g4
 "   -------------
-nmap <silent> gh :wincmd h<CR>
-nmap <silent> gj :wincmd j<CR>
-nmap <silent> gk :wincmd k<CR>
-nmap <silent> gl :wincmd l<CR>
+nnoremap <silent> gh :wincmd h<CR>
+nnoremap <silent> gj :wincmd j<CR>
+nnoremap <silent> gk :wincmd k<CR>
+nnoremap <silent> gl :wincmd l<CR>
 " Upper left window
-nmap <silent> g1 :wincmd t<CR>
+nnoremap <silent> g1 :wincmd t<CR>
 " Upper right window
-nmap <silent> g2 :wincmd b<Bar>:wincmd k<CR>
+nnoremap <silent> g2 :wincmd b<Bar>:wincmd k<CR>
 " Lower left window
-nmap <silent> g3 :wincmd t<Bar>:wincmd j<CR>
+nnoremap <silent> g3 :wincmd t<Bar>:wincmd j<CR>
 " Lower right window
-nmap <silent> g4 :wincmd b<CR>
+nnoremap <silent> g4 :wincmd b<CR>
 
 " Top Middle
-nmap <silent> gt g2<Bar>:wincmd h<CR>
+nnoremap <silent> gt g2<Bar>:wincmd h<CR>
 " Bottom Middle
-nmap <silent> gb g3<Bar>:wincmd l<CR>
+nnoremap <silent> gb g3<Bar>:wincmd l<CR>
 
 " Previous Window
-nmap <silent> gp :wincmd p<CR>
+nnoremap <silent> gp :wincmd p<CR>
 " Equal Size Windows
-nmap <silent> g= :wincmd =<CR>
+nnoremap <silent> g= :wincmd =<CR>
 " Swap Windows
-nmap <silent> gx :wincmd x<CR>
+nnoremap <silent> gx :wincmd x<CR>
 
 " Split window vertically or horizontally *and* switch to the new split!
-nmap <silent> <leader>hs :split<Bar>:wincmd j<CR>
-nmap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
+nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>
+nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
 
 " Close the current window
-nmap <silent> <leader>sc :close<CR>
+nnoremap <silent> <leader>sc :close<CR>
 
 " -----------------------
 " Escape / Write Bindings
@@ -138,17 +138,21 @@ inoremap jK <Esc>
 " -------------------------------------
 
 " Underline the current line with '-'
-nmap <silent> <leader>ul :t.\|s/./-/g\|:nohls<cr>
+nnoremap <silent> <leader>ul :t.\|s/./-/g\|:nohls<cr>
 
 " Underline the current line with '='
-nmap <silent> <leader>uul :t.\|s/./=/g\|:nohls<cr>
+nnoremap <silent> <leader>uul :t.\|s/./=/g\|:nohls<cr>
 
 " Format the entire file
-nmap <leader>fef ggVG=
+nnoremap <leader>fef mx=ggG='x
 
 " Wrap the current line
-nmap <leader>fl Vgq
+nnoremap <leader>fl Vgq
 
 " Format a json file with Python's built in json.tool.
 " from https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
-nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+nnoremap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+
+" Create newlines without entering insert mode
+nnoremap go o<Esc>k
+nnoremap gO O<Esc>j

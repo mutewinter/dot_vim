@@ -86,7 +86,7 @@ if !exists("*PasteURLTitle")
 endif
 
 command! PasteURLTitle call PasteURLTitle()
-map <leader>pt :PasteURLTitle<CR>
+noremap <leader>pt :PasteURLTitle<CR>
 
 endif " endif has('ruby')
 
@@ -105,7 +105,7 @@ function! QuickSpellingFix()
 endfunction
 
 command! QuickSpellingFix call QuickSpellingFix()
-nmap <silent> <leader>z :QuickSpellingFix<CR>
+nnoremap <silent> <leader>z :QuickSpellingFix<CR>
 
 " ---------------
 " Convert Ruby 1.8 hash rockets to 1.9 JSON style hashes.
@@ -133,6 +133,7 @@ function! Preserve(command)
 endfunction
 "strip all trailing white space
 command! StripTrailingWhiteSpace :call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap stw :StripTrailingWhiteSpace<CR>
 
 " ---------------
 " Paste using Paste Mode
@@ -151,7 +152,7 @@ function! PasteWithPasteMode()
 endfunction
 
 command! PasteWithPasteMode call PasteWithPasteMode()
-nmap <silent> <leader>p :PasteWithPasteMode<CR>
+nnoremap <silent> <leader>p :PasteWithPasteMode<CR>
 
 " ---------------
 " Write Buffer
@@ -167,4 +168,4 @@ function WriteBuffer()
   endif
 endfunction
 
-noremap <silent> <enter> :call WriteBuffer()<CR>
+nnoremap <silent> <enter> :call WriteBuffer()<CR>
