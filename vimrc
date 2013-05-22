@@ -22,3 +22,6 @@ source ~/.vim/plugin_config.vim
 source ~/.vim/functions.vim
 " Auto commands.
 source ~/.vim/autocmds.vim
+
+" KJ's configuration
+source ~/.vim/kj.vim
