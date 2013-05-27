@@ -20,6 +20,7 @@ Bundle 'ZoomWin'
 " This fork is required due to remapping ; to :
 Bundle 'christoomey/vim-space'
 Bundle 'kien/ctrlp.vim'
+Bundle 'JazzCore/ctrlp-cmatcher'
 " UI Additions
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Lokaltog/vim-powerline'

@@ -104,6 +104,7 @@ let g:ctrlp_map = ''
 
 " Ensure max height isn't too large. (for performance)
 let g:ctrlp_max_height = 10
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 " Leader Commands
 nnoremap <leader>t :CtrlPRoot<CR>
