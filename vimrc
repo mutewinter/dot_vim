@@ -16,7 +16,7 @@ source ~/.vim/platforms.vim
 source ~/.vim/config.vim
 " New commands
 source ~/.vim/commands.vim
-" All hotkeys, not depedant on plugins, are mapped here.
+" All hotkeys, not dependant on plugins, are mapped here.
 source ~/.vim/mappings.vim
 " Plugin-specific configuration.
 source ~/.vim/plugin_config.vim
