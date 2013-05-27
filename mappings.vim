@@ -5,9 +5,6 @@
 " Note: This line MUST come before any <leader> mappings
 let mapleader=","
 
-" Fixes common typos
-command! W w
-command! Q q
 noremap <F1> <Esc>
 inoremap <F1> <Esc>
 " Crazy flying pinky
@@ -162,5 +159,3 @@ nnoremap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
 nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
 
-" Restart Pow.cx for the Current App
-command! PowRestart :!touch tmp/restart.txt

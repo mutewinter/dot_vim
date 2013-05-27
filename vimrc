@@ -14,6 +14,8 @@ filetype plugin indent on
 source ~/.vim/platforms.vim
 " All of the Vim configuration.
 source ~/.vim/config.vim
+" New commands
+source ~/.vim/commands.vim
 " All hotkeys, not depedant on plugins, are mapped here.
 source ~/.vim/mappings.vim
 " Plugin-specific configuration.
