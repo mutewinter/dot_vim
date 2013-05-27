@@ -131,9 +131,12 @@ function! Preserve(command)
   let @/=_s
   call cursor(l, c)
 endfunction
-"strip all trailing white space
-command! StripTrailingWhiteSpace :call Preserve("%s/\\s\\+$//e")<CR>
-nnoremap stw :StripTrailingWhiteSpace<CR>
+function! StripTrailingWhiteSpaceAndSave()
+  :call Preserve("%s/\\s\\+$//e")<CR>
+  :write
+endfunction
+command! StripTrailingWhiteSpaceAndSave :call StripTrailingWhiteSpaceAndSave()<CR>
+nnoremap <silent>stw :silent! StripTrailingWhiteSpaceAndSave<CR>
 
 " ---------------
 " Paste using Paste Mode
