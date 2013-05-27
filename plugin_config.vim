@@ -215,6 +215,7 @@ let g:mta_filetypes = {
     \ 'xhtml' : 1,
     \ 'xml' : 1,
     \ 'handlebars' : 1,
+    \ 'eruby' : 1,
     \}
 
 " ---------------
