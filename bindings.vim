@@ -156,3 +156,6 @@ nnoremap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
+
+" Restart Pow.cx for the Current App
+command! PowRestart :!touch tmp/restart.txt
