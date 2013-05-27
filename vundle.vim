@@ -19,7 +19,6 @@ Bundle 'gmarik/vundle'
 Bundle 'ZoomWin'
 " This fork is required due to remapping ; to :
 Bundle 'christoomey/vim-space'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
 " UI Additions
 Bundle 'nathanaelkane/vim-indent-guides'
