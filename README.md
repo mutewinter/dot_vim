@@ -34,7 +34,7 @@
  7.3.333](http://wyw.dcweb.cn/download.asp?path=vim&file=gvim73.zip) because it
  has Ruby support and the latest patches.
 
-## Bindings
+## Mappings
 
 * Typing `jk` insert mode is equivalent to `Escape`.
 * Pressing `enter` in normal mode saves the current buffer.

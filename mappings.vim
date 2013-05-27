@@ -1,5 +1,5 @@
 " ----------------------------------------
-" Bindings
+" Mappings
 " ----------------------------------------
 " Set leader to ,
 " Note: This line MUST come before any <leader> mappings
@@ -17,7 +17,7 @@ cnoremap w' w<CR>
 " make Q repeat the last macro instead. *hat tip* http://vimbits.com/bits/263
 nnoremap Q @@
 
-" Removes doc lookup binding because it's easy to fat finger and never useful.
+" Removes doc lookup mapping because it's easy to fat finger and never useful.
 nnoremap K k
 vnoremap K k
 
@@ -123,7 +123,7 @@ nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
 nnoremap <silent> <leader>sc :close<CR>
 
 " -----------------------
-" Escape / Write Bindings
+" Escape / Write Mappings
 " -----------------------
 
 " Let's make escape better, together.
@@ -131,6 +131,11 @@ inoremap jk <Esc>
 inoremap JK <Esc>
 inoremap Jk <Esc>
 inoremap jK <Esc>
+" For the fat fingered
+inoremap kj <Esc>
+inoremap KJ <Esc>
+inoremap kJ <Esc>
+inoremap Kj <Esc>
 
 " -------------------------------------
 " The following commands are from Janus
