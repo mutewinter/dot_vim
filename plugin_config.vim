@@ -171,12 +171,6 @@ noremap gs :SidewaysRight<cr>
 noremap gS :SidewaysLeft<cr>
 
 " ---------------
-" Markdown-Preview
-" ---------------
-nnoremap <Leader>md :MarkdownPreview<CR>
-vnoremap <Leader>md :MarkdownPreview<CR>
-
-" ---------------
 " switch.vim
 " ---------------
 nnoremap - :Switch<cr>
