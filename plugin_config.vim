@@ -54,14 +54,6 @@ let g:session_autoload=0
 nnoremap <leader>os :OpenSession<CR>
 
 " ---------------
-" SpeedDating
-" ---------------
-let g:speeddating_no_mappings=1 " Remove default mappings (C-a etc.)
-nnoremap <silent><leader>dm <Plug>SpeedDatingDown
-nnoremap <silent><leader>dp <Plug>SpeedDatingUp
-nnoremap <silent><leader>dn <Plug>SpeedDatingNowUTC
-
-" ---------------
 " Tabular
 " ---------------
 nnoremap <Leader>t= :Tabularize /=<CR>
