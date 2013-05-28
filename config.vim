@@ -9,10 +9,11 @@ set background=dark
 colorscheme jellybeans
 
 " -----------------------------
-" Backups, Tmp Files, and Undo
+" File Locations
 " -----------------------------
 set backupdir=~/.vim/.backup
 set directory=~/.vim/.tmp
+set spellfile=~/.vim/spell/custom.en.utf-8.add
 " Persistent Undo
 if has('persistent_undo')
   set undofile

@@ -9,9 +9,10 @@
 3. `rake vim:link` to make the .vimrc symbolic link.
 4. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
    http://github.com/gmarik/vundle.git bundle/vundle`
-5. `vim +BundleInstall +qall` _installs all of the plugins_
+5. `vim "+mkspell ~/.vim/spell/custom.en.utf-8.add" +BundleInstall +qall`
+_installs all of the plugins and compiles custom spellings._
 6. Enjoy enhanced productivity, increased levitation, reduced
-   watermelon-related accidents, and startling sex appeal.
+watermelon-related accidents, and startling sex appeal.
 
 ## Screenshots
 
