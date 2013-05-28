@@ -11,7 +11,6 @@ colorscheme jellybeans
 " -----------------------------
 " Backups, Tmp Files, and Undo
 " -----------------------------
-set backup
 set backupdir=~/.vim/.backup
 set directory=~/.vim/.tmp
 " Persistent Undo
@@ -46,6 +45,7 @@ endif
 " Behaviors
 " ---------------
 syntax enable
+set backup             " Turn on backups
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
 set hidden             " Change buffer - without saving
