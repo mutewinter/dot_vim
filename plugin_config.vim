@@ -5,9 +5,16 @@
 " ---------------
 " Vundle
 " ---------------
-nnoremap <Leader>bi :BundleInstall<CR>
-nnoremap <Leader>bu :BundleInstall!<CR>
-nnoremap <Leader>bc :BundleClean<CR>
+command! ReloadVundle source ~/.vim/vundle.vim
+"nnoremap <Leader>br :ReloadVundle<CR>
+function BundleReloadAndRun(command)
+  :ReloadVundle
+  execute a:command
+endfunction
+
+nnoremap <Leader>bi :call BundleReloadAndRun("BundleInstall")<CR>
+nnoremap <Leader>bu :call BundleReloadAndRun("BundleInstall!")<CR>
+nnoremap <Leader>bc :call BundleReloadAndRun("BundleClean")<CR>
 
 " ---------------
 " space.vim
