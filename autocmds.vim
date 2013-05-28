@@ -18,4 +18,11 @@ if has("autocmd")
 
   " Fix trailing whitespace in my most used programming langauges
   autocmd BufWritePre *.py,*.coffee,*.rb silent! :StripTrailingWhiteSpace
+
+  " Help mode bindings
+  " <enter> to follow tag, <bs> to go back, and q to quit.
+  " From http://ctoomey.com/posts/an-incremental-approach-to-vim/
+  autocmd filetype help nnoremap <buffer><cr> <c-]>
+  autocmd filetype help nnoremap <buffer><bs> <c-T>
+  autocmd filetype help nnoremap <buffer>q :q<CR>
 endif
