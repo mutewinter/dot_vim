@@ -99,6 +99,12 @@ else
   nnoremap <M-d> <C-b>
 endif
 
+" Move lines up and down
+noremap <C-j> :m+<CR>==
+noremap <C-k> :m-2<CR>==
+vnoremap <C-j> :m'>+<CR>gv=gv
+vnoremap <C-k> :m-2<CR>gv=gv
+
 " ---------------
 " Insert Mode Mappings
 " ---------------
