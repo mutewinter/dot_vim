@@ -24,16 +24,16 @@ watermelon-related accidents, and startling sex appeal.
 
 **Mac**
 
- * [MacVim](https://github.com/b4winckler/macvim) - I'm currently using
- [snapshot 65](https://github.com/b4winckler/macvim/downloads) on Mountain
- Lion.
+* [MacVim](https://github.com/b4winckler/macvim) - I'm currently using
+[snapshot 65](https://github.com/b4winckler/macvim/downloads) on Mountain
+Lion.
 
 **Windows**
 
- * [gVim](http://www.vim.org/download.php#pc) - I'm using [Wu
- Yongwei's](http://wyw.dcweb.cn) pre-compiled [gVim
- 7.3.333](http://wyw.dcweb.cn/download.asp?path=vim&file=gvim73.zip) because it
- has Ruby support and the latest patches.
+* [gVim](http://www.vim.org/download.php#pc) - I'm using [Wu
+Yongwei's](http://wyw.dcweb.cn) pre-compiled [gVim
+7.3.333](http://wyw.dcweb.cn/download.asp?path=vim&file=gvim73.zip) because it
+has Ruby support and the latest patches.
 
 ## Mappings
 
@@ -42,8 +42,8 @@ watermelon-related accidents, and startling sex appeal.
 
 ## Notes
 
-Be sure to always edit the vimrc using `,v`, which opens the vimrc in the .vim
-folder. Vim has a nasty habit of overriding symlinks.
+Be sure to always edit the vimrc using `,v`, which opens the vimrc in the
+`.vim` folder. Vim has a nasty habit of overriding symlinks.
 
 ## Plugin Installation / Requirements
 
