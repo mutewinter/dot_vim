@@ -150,6 +150,9 @@ nnoremap <leader>ag :Ag<space>
 " ysiw#   Wrap the token under the cursor in #{}
 " Thanks to http://git.io/_XqKzQ
 let g:surround_35  = "#{\r}"
+" Expand {xyz} to { xyz }
+" pneumonic: Change to Open Brace
+nnoremap cob :normal cs{{<cr>
 
 " ---------------
 " Gifl - Google I'm Feeling Lucky URL Grabber
