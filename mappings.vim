@@ -118,11 +118,6 @@ inoremap jk <Esc>
 inoremap JK <Esc>
 inoremap Jk <Esc>
 inoremap jK <Esc>
-" For the fat fingered
-inoremap kj <Esc>
-inoremap KJ <Esc>
-inoremap kJ <Esc>
-inoremap Kj <Esc>
 
 " ---------------
 " Leader Mappings
