@@ -84,6 +84,8 @@ nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gx :wincmd h<CR>:q<CR>
 " Start git command
 nnoremap <leader>gi :Git<space>
+" Undo the last commit
+command! Gcundo :Git reset HEAD~1
 
 " ---------------
 " Zoomwin
