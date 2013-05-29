@@ -36,6 +36,10 @@ nnoremap <silent> <leader>sc :close<CR>
 nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
 
+" remap U to <C-r> for easier redo
+" from http://vimbits.com/bits/356
+nnoremap U <C-r>
+
 " ---------------
 " Window Movement
 " ---------------
