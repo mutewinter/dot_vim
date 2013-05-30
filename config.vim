@@ -61,6 +61,7 @@ set formatoptions=crql
 set iskeyword+=\$,-   " Add extra characters that are valid parts of variables
 set nostartofline      " Don't go to the start of the line after some commands
 set scrolloff=3        " Keep three lines below the last line when scrolling
+set gdefault           " this makes search/replace global by default
 
 " ---------------
 " Text Format
