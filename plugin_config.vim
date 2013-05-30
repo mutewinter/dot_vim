@@ -258,6 +258,10 @@ let g:togglecursor_leave='line'
 " rails.vim
 " ---------------
 command! Remigrate :Rake db:drop | Rake db:create | Rake db:migrate | Rake test:prepare
+nnoremap <leader>rm :Rmodel<space>
+nnoremap <leader>rs :Rspec<space>
+nnoremap <leader>rf :Rfactory<space>
+nnoremap <leader>rl :Rlocale<space>
 
 " Add custom commands for Rails.vim
 " Thanks to http://git.io/_cBVeA and http://git.io/xIKnCw
