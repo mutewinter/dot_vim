@@ -40,6 +40,12 @@ nnoremap gO O<Esc>j
 " from http://vimbits.com/bits/356
 nnoremap U <C-r>
 
+" Swap implementations of ` and ' jump to markers
+" By default, ' jumps to the marked line, ` jumps to the marked line and
+" column, so swap them
+nnoremap ' `
+nnoremap ` '
+
 " ---------------
 " Window Movement
 " ---------------
