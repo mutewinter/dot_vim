@@ -100,20 +100,8 @@ inoremap <C-l> <C-x><C-l>
 " All variations are mapped for now until I get used to one
 " C/M/D + d (page up)
 " C/M/D + f (page down)
-nnoremap <C-d> <C-b>
-if has("gui_macvim")
-  nnoremap <D-f> <C-f>
-  nnoremap <D-d> <C-b>
-else
-  nnoremap <M-f> <C-f>
-  nnoremap <M-d> <C-b>
-endif
-
-" Move lines up and down
-noremap <C-j> :m+<CR>==
-noremap <C-k> :m-2<CR>==
-vnoremap <C-j> :m'>+<CR>gv=gv
-vnoremap <C-k> :m-2<CR>gv=gv
+nnoremap <C-j> 15gj
+nnoremap <C-k> 15gk
 
 " ---------------
 " Insert Mode Mappings
