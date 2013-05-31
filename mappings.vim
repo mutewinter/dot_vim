@@ -142,7 +142,7 @@ nnoremap <silent> <leader>uul :t.\|s/./=/g\|:nohls<cr>
 nnoremap <leader>fef mx=ggG='x
 
 " Wrap the current line
-nnoremap <leader>fl Vgq
+nnoremap <leader>wl Vgq
 
 " Format a json file with Python's built in json.tool.
 " from https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
