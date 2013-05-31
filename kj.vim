@@ -1,8 +1,9 @@
-" ----------------------------------------
+" =============================================================================
 " KJ
-" ----------------------------------------
+" =============================================================================
 
 " Set color scheme
+" ----------------
 set t_Co=256
 
 " Set another leader for default \
@@ -31,7 +32,6 @@ autocmd InsertEnter * set cursorline
 
 " insert current date and time
 " ----------------------------
-"
 " If buffer modified, update any '@last' in the first 20 lines.
 " 'Last modified: ' can have up to 10 characters before (they are retained).
 " Restores cursor and window position using save_cursor variable.
@@ -47,14 +47,34 @@ function! LastModified()
 endfun
 autocmd BufWritePre * call LastModified()
 
+" fold option
+" -----------
+setlocal foldmethod=indent
+inoremap <leader>f <C-O>za
+nnoremap <leader>f za
+onoremap <leader>f <C-C>za
+vnoremap <leader>f zf
+
+
+" -----------------------------------------------------------------------------
 " Function keys
-" -------------
+" -----------------------------------------------------------------------------
 "
 "F2 = pastetoggle
 set pastetoggle=<F2>
+"F3 =
+"F4 =
+"F5 =
+"F6 =
+"F7 = checking the spell
+map <F7> :setlocal spell! spelllang=en_gb spell?<cr>
+"F8 =
+"F9 = fold 
+nmap <F9> <leader>f
 
+" -----------------------------------------------------------------------------
 " Plugin reconfiguration
-" ----------------------
+" -----------------------------------------------------------------------------
 "
 "NERDTree
 let g:NERDTreeMinimalUI=0
