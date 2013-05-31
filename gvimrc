@@ -1,4 +1,4 @@
-" Unbind these keys for different bindings in vimrc
+" Unmap these keys so they can be used for other mappings.
 if has('gui_macvim')
   " D-t
   macmenu &File.New\ Tab key=<nop>

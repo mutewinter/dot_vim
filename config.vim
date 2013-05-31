@@ -9,11 +9,11 @@ set background=dark
 colorscheme jellybeans
 
 " -----------------------------
-" Backups, Tmp Files, and Undo
+" File Locations
 " -----------------------------
-set backup
 set backupdir=~/.vim/.backup
 set directory=~/.vim/.tmp
+set spellfile=~/.vim/spell/custom.en.utf-8.add
 " Persistent Undo
 if has('persistent_undo')
   set undofile
@@ -46,6 +46,7 @@ endif
 " Behaviors
 " ---------------
 syntax enable
+set backup             " Turn on backups
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
 set hidden             " Change buffer - without saving
@@ -60,6 +61,7 @@ set formatoptions=crql
 set iskeyword+=\$,-   " Add extra characters that are valid parts of variables
 set nostartofline      " Don't go to the start of the line after some commands
 set scrolloff=3        " Keep three lines below the last line when scrolling
+set gdefault           " this makes search/replace global by default
 
 " ---------------
 " Text Format

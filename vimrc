@@ -14,8 +14,10 @@ filetype plugin indent on
 source ~/.vim/platforms.vim
 " All of the Vim configuration.
 source ~/.vim/config.vim
-" All hotkeys, not depedant on plugins, are bound here.
-source ~/.vim/bindings.vim
+" New commands
+source ~/.vim/commands.vim
+" All hotkeys, not dependant on plugins, are mapped here.
+source ~/.vim/mappings.vim
 " Plugin-specific configuration.
 source ~/.vim/plugin_config.vim
 " Small custom functions.

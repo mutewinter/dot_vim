@@ -5,9 +5,16 @@
 " ---------------
 " Vundle
 " ---------------
-nnoremap <Leader>bi :BundleInstall<CR>
-nnoremap <Leader>bu :BundleInstall!<CR>
-nnoremap <Leader>bc :BundleClean<CR>
+command! ReloadVundle source ~/.vim/vundle.vim
+"nnoremap <Leader>br :ReloadVundle<CR>
+function BundleReloadAndRun(command)
+  :ReloadVundle
+  execute a:command
+endfunction
+
+nnoremap <Leader>bi :call BundleReloadAndRun("BundleInstall")<CR>
+nnoremap <Leader>bu :call BundleReloadAndRun("BundleInstall!")<CR>
+nnoremap <Leader>bc :call BundleReloadAndRun("BundleClean")<CR>
 
 " ---------------
 " space.vim
@@ -24,11 +31,9 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['scss'] }
 
-" Platform-specific config files
-if has('win32') || has('win64')
-  let g:syntastic_jsl_conf=$HOME.'/.vim/config/windows/syntastic/jsl.conf'
-  let g:syntastic_disabled_filetypes=['sh'] " Disable .sh on Windows
-endif
+" Hat tip http://git.io/SPIBfg
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
 
 " ---------------
 " NERDTree
@@ -54,28 +59,14 @@ let g:session_autoload=0
 nnoremap <leader>os :OpenSession<CR>
 
 " ---------------
-" SpeedDating
-" ---------------
-let g:speeddating_no_mappings=1 " Remove default mappings (C-a etc.)
-nnoremap <silent><leader>dm <Plug>SpeedDatingDown
-nnoremap <silent><leader>dp <Plug>SpeedDatingUp
-nnoremap <silent><leader>dn <Plug>SpeedDatingNowUTC
-
-" ---------------
 " Tabular
 " ---------------
-nnoremap <Leader>t= :Tabularize /=<CR>
-vnoremap <Leader>t= :Tabularize /=<CR>
-nnoremap <Leader>t: :Tabularize /:\zs<CR>
-vnoremap <Leader>t: :Tabularize /:\zs<CR>
-nnoremap <Leader>t, :Tabularize /,\zs<CR>
-vnoremap <Leader>t, :Tabularize /,\zs<CR>
-nnoremap <Leader>t> :Tabularize /=>\zs<CR>
-vnoremap <Leader>t> :Tabularize /=>\zs<CR>
-nnoremap <Leader>t- :Tabularize /-<CR>
-vnoremap <Leader>t- :Tabularize /-<CR>
-nnoremap <Leader>t" :Tabularize /"<CR>
-vnoremap <Leader>t" :Tabularize /"<CR>
+nnoremap <Leader>t= :Tabularize assignment<CR>
+vnoremap <Leader>t= :Tabularize assignment<CR>
+nnoremap <Leader>t: :Tabularize symbol<CR>
+vnoremap <Leader>t: :Tabularize symbol<CR>
+nnoremap <Leader>t, :Tabularize comma<CR>
+vnoremap <Leader>t, :Tabularize comma<CR>
 
 " ---------------
 " Fugitive
@@ -89,6 +80,10 @@ nnoremap <Leader>gu :Git pull<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 " Exit a diff by closing the diff window
 nnoremap <Leader>gx :wincmd h<CR>:q<CR>
+" Start git command
+nnoremap <leader>gi :Git<space>
+" Undo the last commit
+command! Gcundo :Git reset HEAD~1
 
 " ---------------
 " Zoomwin
@@ -104,13 +99,13 @@ let g:ctrlp_map = ''
 
 " Ensure max height isn't too large. (for performance)
 let g:ctrlp_max_height = 10
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 " Leader Commands
 nnoremap <leader>t :CtrlPRoot<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
 
 " ---------------
 " Powerline
@@ -153,6 +148,9 @@ nnoremap <leader>ag :Ag<space>
 " ysiw#   Wrap the token under the cursor in #{}
 " Thanks to http://git.io/_XqKzQ
 let g:surround_35  = "#{\r}"
+" Expand {xyz} to { xyz }
+" pneumonic: Change to Open Brace
+nnoremap cob :normal cs{{<cr>
 
 " ---------------
 " Gifl - Google I'm Feeling Lucky URL Grabber
@@ -166,12 +164,6 @@ let g:GIFLSuppressRubyWarning=1
 " ------------
 noremap gs :SidewaysRight<cr>
 noremap gS :SidewaysLeft<cr>
-
-" ---------------
-" Markdown-Preview
-" ---------------
-nnoremap <Leader>md :MarkdownPreview<CR>
-vnoremap <Leader>md :MarkdownPreview<CR>
 
 " ---------------
 " switch.vim
@@ -215,6 +207,7 @@ let g:mta_filetypes = {
     \ 'xhtml' : 1,
     \ 'xml' : 1,
     \ 'handlebars' : 1,
+    \ 'eruby' : 1,
     \}
 
 " ---------------
@@ -222,6 +215,9 @@ let g:mta_filetypes = {
 " ---------------
 let g:ycm_complete_in_comments_and_strings=1
 let g:ycm_collect_identifiers_from_comments_and_strings=1
+let g:ycm_filetype_specific_completion_to_disable = {
+    \ 'ruby' : 1,
+    \}
 
 " ---------------
 " vim-signify
@@ -262,6 +258,10 @@ let g:togglecursor_leave='line'
 " rails.vim
 " ---------------
 command! Remigrate :Rake db:drop | Rake db:create | Rake db:migrate | Rake test:prepare
+nnoremap <leader>rm :Rmodel<space>
+nnoremap <leader>rs :Rspec<space>
+nnoremap <leader>rf :Rfactory<space>
+nnoremap <leader>rl :Rlocale<space>
 
 " Add custom commands for Rails.vim
 " Thanks to http://git.io/_cBVeA and http://git.io/xIKnCw
