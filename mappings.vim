@@ -102,6 +102,8 @@ inoremap <C-l> <C-x><C-l>
 " C/M/D + f (page down)
 nnoremap <C-j> 15gj
 nnoremap <C-k> 15gk
+vnoremap <C-j> 15gj
+vnoremap <C-k> 15gk
 
 " ---------------
 " Insert Mode Mappings
