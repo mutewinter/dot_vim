@@ -297,6 +297,7 @@ let g:rails_projections = {
       \   'template': "Fabricator(:%s) do\nend",
       \   'keywords': 'sequence initialize_with on_init transient after_build before_validation after_validation before_save before_create after_create after_save'
       \ },
+      \ 'app/concerns/*.rb': {'command': 'concern'},
       \ 'spec/support/*.rb': {'command': 'support'},
       \ 'features/*.feature': {'command': 'feature'},
       \ 'features/step_definitions/*_steps.rb': {'command': 'steps'},
