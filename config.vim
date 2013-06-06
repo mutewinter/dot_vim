@@ -67,7 +67,7 @@ set gdefault           " this makes search/replace global by default
 " Text Format
 " ---------------
 set tabstop=2
-set backspace=2  " Delete everything with backspace
+set backspace=indent,eol,start " Delete everything with backspace
 set shiftwidth=2 " Tabs under smart indent
 set cindent
 set autoindent
