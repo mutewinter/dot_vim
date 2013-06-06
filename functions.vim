@@ -171,7 +171,12 @@ function WriteBuffer()
   endif
 endfunction
 
-nnoremap <silent> <enter> :call WriteBuffer()<CR>
+" Clear the search buffer when hitting return
+" Idea for MapCR from http://git.io/pt8kjA
+function! MapCR()
+  nnoremap <silent> <enter> :call WriteBuffer()<CR>
+endfunction
+call MapCR()
 
 " ---------------
 " Make a scratch buffer with all of the leader keybindings.
