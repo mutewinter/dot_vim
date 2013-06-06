@@ -100,10 +100,10 @@ inoremap <C-l> <C-x><C-l>
 " All variations are mapped for now until I get used to one
 " C/M/D + d (page up)
 " C/M/D + f (page down)
-nnoremap <C-j> 15gj
-nnoremap <C-k> 15gk
-vnoremap <C-j> 15gj
-vnoremap <C-k> 15gk
+nnoremap <C-j> 15gjzz
+nnoremap <C-k> 15gkzz
+vnoremap <C-j> 15gjzz
+vnoremap <C-k> 15gkzz
 
 " ---------------
 " Insert Mode Mappings
