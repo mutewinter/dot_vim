@@ -25,13 +25,6 @@ nnoremap Y y$
 noremap H ^
 noremap L $
 
-" Split window vertically or horizontally *and* switch to the new split!
-nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>
-nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
-
-" Close the current window
-nnoremap <silent> <leader>sc :close<CR>
-
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
@@ -148,6 +141,12 @@ nnoremap <leader>wl Vgq
 " from https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
 nnoremap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
 
+" Split window vertically or horizontally *and* switch to the new split!
+nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>
+nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
+
+" Close the current window
+nnoremap <silent> <leader>sc :close<CR>
 " ---------------
 " Typo Fixes
 " ---------------
