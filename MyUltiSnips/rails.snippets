@@ -1,0 +1,28 @@
+snippet model "Create an ActiveRecord class" b
+class ${1:Model} < ActiveRecord::Base
+  attr_accessible $0
+end
+endsnippet
+
+snippet modelc "Create an ActiveRecord class with comments" b
+class ${1:Model} < ActiveRecord::Base
+  attr_accessible $0
+
+  # Associations
+
+  # Validations
+end
+endsnippet
+
+snippet valp "validates presence (ruby 1.9)"
+validates :${1:attribute}, presence: true
+endsnippet
+
+snippet it "create it statement for rspec"
+it '${1:test}' do
+end
+endsnippet
+
+snippet add_column "add column in a migration"
+add_column :${1:table}, :${2:column}, :${3: :boolean, :datetime, :float, :integer, :string, :text, :time}
+endsnippet
