@@ -303,3 +303,7 @@ let g:rails_projections = {
       \ 'features/step_definitions/*_steps.rb': {'command': 'steps'},
       \ 'features/support/*.rb': {'command': 'support'}}
 
+" ---------------
+" Voogle
+" ---------------
+let g:voogle_map="<leader>gg"

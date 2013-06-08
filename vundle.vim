@@ -52,6 +52,7 @@ Bundle 'HelpClose'
 Bundle 'mattn/gist-vim'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'sk1418/Join'
+Bundle 'g3orge/vim-voogle'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
