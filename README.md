@@ -39,6 +39,9 @@ has Ruby support and the latest patches.
 * Typing `jk` insert mode is equivalent to `Escape`.
 * Pressing `enter` in normal mode saves the current buffer.
 
+And many more. See `[mappings.vim](mappings.vim)` and
+`[plugin_config.vim](plugin_config.vim)` for more.
+
 ## Notes
 
 Be sure to always edit the vimrc using `,v`, which opens the vimrc in the
