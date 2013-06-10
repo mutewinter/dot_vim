@@ -17,6 +17,9 @@ vnoremap ; :
 " Yank entire buffer with gy
 nnoremap gy :%y+<cr>
 
+" Select entire buffer
+nnoremap vy ggVG
+
 " Make Y behave like other capital commands.
 " Hat-tip http://vimbits.com/bits/11
 nnoremap Y y$
