@@ -124,7 +124,7 @@ nnoremap <leader>h *<C-O>
 " Toggle spelling mode with ,s
 nnoremap <silent> <leader>s :set spell!<CR>
 " Edit vimrc with ,v
-nnoremap <silent> <leader>v :e ~/.vim/vimrc<CR>
+nnoremap <silent> <leader>v :e ~/.vim/<CR>
 " Quickly switch to last buffer
 nnoremap <leader>, :e#<CR>
 
