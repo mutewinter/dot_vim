@@ -341,3 +341,20 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 " Voogle
 " ---------------
 let g:voogle_map="<leader>gg"
+
+" ---------------
+" Vimux
+" ---------------
+let g:VimuxUseNearestPane = 1
+nnoremap <leader>j :silent! VimuxScrollDownInspect<CR>
+nnoremap <leader>k :silent! VimuxScrollUpInspect<CR>
+nnoremap <leader>a :call VimuxRunCommand("spring rspec")<CR>
+
+" ---------------
+" Turbux
+" ---------------
+let g:no_turbux_mappings = 1
+map <leader>e <Plug>SendTestToTmux
+map <leader>x <Plug>SendFocusedTestToTmux
+let g:turbux_command_rspec = 'spring rspec'
+let g:turbux_command_cucumber = 'spring cucumber'
