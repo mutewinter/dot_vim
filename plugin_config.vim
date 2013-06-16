@@ -258,7 +258,7 @@ let g:togglecursor_leave='line'
 " ---------------
 " rails.vim
 " ---------------
-command! Remigrate :Rake db:drop | Rake db:create | Rake db:migrate | Rake test:prepare
+command! Remigrate :Rake db:drop db:create db:migrate test:prepare
 nnoremap <leader>rm :Rmodel<space>
 nnoremap <leader>rs :Rspec<space>
 nnoremap <leader>rf :Rfabricator<space>
