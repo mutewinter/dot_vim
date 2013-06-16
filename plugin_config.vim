@@ -265,6 +265,7 @@ nnoremap <leader>rf :Rfabricator<space>
 nnoremap <leader>rl :Rlocale<space>
 nnoremap <leader>rc :Rcontroller<space>
 nnoremap <leader>rv :Rview<space>
+nnoremap <leader>re :Renvironment<space>
 
 " Add custom commands for Rails.vim
 " Thanks to http://git.io/_cBVeA and http://git.io/xIKnCw
