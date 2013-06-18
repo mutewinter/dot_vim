@@ -21,8 +21,8 @@ inoremap kJ <Esc>
 " --------------------
 nmap <C-Left> :tabp<CR>
 nmap <C-Right> :tabn<CR>
-nmap <C-j> :tabp<CR>
-nmap <C-k> :tabn<CR>
+nmap <C-h> :tabp<CR>
+nmap <C-l> :tabn<CR>
 nmap <C-t> :tabnew<CR>
 
 " highlight current line
@@ -77,7 +77,7 @@ nmap <F9> <leader>f
 " -----------------------------------------------------------------------------
 "
 "NERDTree
-let g:NERDTreeMinimalUI=0
+"let g:NERDTreeMinimalUI=0
 " vim-less
 nnoremap ,le :w <BAR> !lessc % > %:t:r.css<CR><space>
 
