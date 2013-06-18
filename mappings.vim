@@ -17,6 +17,9 @@ vnoremap ; :
 " Yank entire buffer with gy
 nnoremap gy :%y+<cr>
 
+" Select entire buffer
+nnoremap vy ggVG
+
 " Make Y behave like other capital commands.
 " Hat-tip http://vimbits.com/bits/11
 nnoremap Y y$
@@ -24,13 +27,6 @@ nnoremap Y y$
 " Just to beginning and end of lines easier. From http://vimbits.com/bits/16
 noremap H ^
 noremap L $
-
-" Split window vertically or horizontally *and* switch to the new split!
-nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>
-nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
-
-" Close the current window
-nnoremap <silent> <leader>sc :close<CR>
 
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
@@ -100,8 +96,10 @@ inoremap <C-l> <C-x><C-l>
 " All variations are mapped for now until I get used to one
 " C/M/D + d (page up)
 " C/M/D + f (page down)
-nnoremap <C-j> 15gj
-nnoremap <C-k> 15gk
+nnoremap <C-j> 15gjzz
+nnoremap <C-k> 15gkzz
+vnoremap <C-j> 15gjzz
+vnoremap <C-k> 15gkzz
 
 " ---------------
 " Insert Mode Mappings
@@ -125,8 +123,10 @@ nnoremap <leader>h *<C-O>
 
 " Toggle spelling mode with ,s
 nnoremap <silent> <leader>s :set spell!<CR>
-" Edit vimrc with ,v
-nnoremap <silent> <leader>v :e ~/.vim/vimrc<CR>
+
+" Begin to edit any file in .vim directory
+nnoremap <leader>v :e ~/.vim/
+
 " Quickly switch to last buffer
 nnoremap <leader>, :e#<CR>
 
@@ -140,12 +140,18 @@ nnoremap <silent> <leader>uul :t.\|s/./=/g\|:nohls<cr>
 nnoremap <leader>fef mx=ggG='x
 
 " Wrap the current line
-nnoremap <leader>fl Vgq
+nnoremap <leader>wl Vgq
 
 " Format a json file with Python's built in json.tool.
 " from https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
 nnoremap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
 
+" Split window vertically or horizontally *and* switch to the new split!
+nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>
+nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
+
+" Close the current window
+nnoremap <silent> <leader>sc :close<CR>
 " ---------------
 " Typo Fixes
 " ---------------

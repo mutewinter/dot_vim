@@ -7,6 +7,10 @@
 " ---------------
 set background=dark
 colorscheme jellybeans
+" Force 256 color mode if available
+if $TERM =~ "-256color"
+   set t_Co=256
+endif
 
 " -----------------------------
 " File Locations
@@ -62,12 +66,13 @@ set iskeyword+=\$,-   " Add extra characters that are valid parts of variables
 set nostartofline      " Don't go to the start of the line after some commands
 set scrolloff=3        " Keep three lines below the last line when scrolling
 set gdefault           " this makes search/replace global by default
+set switchbuf=useopen  " Switch to an existing buffer if one exists
 
 " ---------------
 " Text Format
 " ---------------
 set tabstop=2
-set backspace=2  " Delete everything with backspace
+set backspace=indent,eol,start " Delete everything with backspace
 set shiftwidth=2 " Tabs under smart indent
 set cindent
 set autoindent
@@ -79,8 +84,8 @@ set expandtab
 " ---------------
 set ignorecase " Case insensitive search
 set smartcase  " Non-case sensitive search
-set incsearch
-set hlsearch
+set incsearch  " Incremental search
+set hlsearch   " Highlight search results
 set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
   \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
 

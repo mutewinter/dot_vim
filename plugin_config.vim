@@ -20,13 +20,13 @@ nnoremap <Leader>bc :call BundleReloadAndRun("BundleClean")<CR>
 " space.vim
 " ---------------
 " Disables space mappings in select mode to fix snipMate.
-let g:space_disable_select_mode=1
+let g:space_disable_select_mode = 1
 
 " ---------------
 " Syntastic
 " ---------------
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_enable_signs = 1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['scss'] }
@@ -40,22 +40,22 @@ let g:syntastic_warning_symbol = '⚠'
 " ---------------
 nnoremap <leader>nn :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
-let g:NERDTreeShowBookmarks=1
-let g:NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
-let g:NERDTreeMinimalUI=1
+let g:NERDTreeShowBookmarks = 1
+let g:NERDTreeChDirMode = 2 " Change the NERDTree directory to the root node
+let g:NERDTreeMinimalUI = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
   \&& b:NERDTreeType == "primary") | q | endif
 
 " ---------------
 " Indent Guides
 " ---------------
-let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_enable_on_vim_startup = 1
 
 " ---------------
 " Session
 " ---------------
-let g:session_autosave=0
-let g:session_autoload=0
+let g:session_autosave = 0
+let g:session_autoload = 0
 nnoremap <leader>os :OpenSession<CR>
 
 " ---------------
@@ -157,7 +157,7 @@ nnoremap cob :normal cs{{<cr>
 " ---------------
 let g:LuckyOutputFormat='markdown'
 " I sometimes run vim without ruby support.
-let g:GIFLSuppressRubyWarning=1
+let g:GIFLSuppressRubyWarning = 1
 
 " ------------
 " sideways.vim
@@ -182,12 +182,12 @@ let g:html_indent_style1 = "inc"
 " ---------------
 " vim-markdown
 " ---------------
-let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_folding_disabled = 1
 
 " ---------------
 " Unconditional Paste
 " ---------------
-let g:UnconditionalPaste_NoDefaultMappings=1
+let g:UnconditionalPaste_NoDefaultMappings = 1
 nnoremap gcP <Plug>UnconditionalPasteCharBefore
 nnoremap gcp <Plug>UnconditionalPasteCharAfter
 
@@ -197,7 +197,7 @@ nnoremap gcp <Plug>UnconditionalPasteCharAfter
 if has('macunix') || has('mac')
   let g:gist_clip_command = 'pbcopy'
 endif
-let g:gist_post_private=1
+let g:gist_post_private = 1
 
 " ---------------
 " MatchTagAlways
@@ -213,8 +213,8 @@ let g:mta_filetypes = {
 " ---------------
 " YouCompleteMe
 " ---------------
-let g:ycm_complete_in_comments_and_strings=1
-let g:ycm_collect_identifiers_from_comments_and_strings=1
+let g:ycm_complete_in_comments_and_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_filetype_specific_completion_to_disable = {
     \ 'ruby' : 1,
     \}
@@ -227,7 +227,8 @@ let g:signify_mapping_prev_hunk="<leader>sp"
 let g:signify_mapping_toggle_highlight="<nop>"
 let g:signify_mapping_toggle="<nop>"
 " Makes switching buffers in large repos have no delay
-let g:signify_update_on_bufenter=0
+let g:signify_update_on_bufenter = 0
+let g:signify_sign_overwrite = 0
 
 " ---------------
 " vim-abolish
@@ -247,7 +248,7 @@ let g:startify_bookmarks = [ '~/.vim/vimrc',
                             \'~/dot_files/aliases.sh',
                             \'~/dot_files/environment.sh',
                             \'~/dot_files/system_environment.sh']
-let g:startify_show_files_number=20
+let g:startify_show_files_number = 20
 
 " ---------------
 " vim-togglecursor
@@ -257,48 +258,106 @@ let g:togglecursor_leave='line'
 " ---------------
 " rails.vim
 " ---------------
-command! Remigrate :Rake db:drop | Rake db:create | Rake db:migrate | Rake test:prepare
+command! Remigrate :Rake db:drop db:create db:migrate test:prepare
 nnoremap <leader>rm :Rmodel<space>
 nnoremap <leader>rs :Rspec<space>
-nnoremap <leader>rf :Rfactory<space>
+nnoremap <leader>rf :Rfabricator<space>
 nnoremap <leader>rl :Rlocale<space>
+nnoremap <leader>rc :Rcontroller<space>
+nnoremap <leader>rv :Rview<space>
+nnoremap <leader>re :Renvironment<space>
 
 " Add custom commands for Rails.vim
 " Thanks to http://git.io/_cBVeA and http://git.io/xIKnCw
 let g:rails_projections = {
       \ 'app/models/*.rb': {'keywords': 'validates_conditional'},
       \ 'db/seeds/*.rb': {'command': 'seeds'},
-      \ 'db/seeds.rb': {'command': 'seeds'},
-      \ 'spec/factories.rb': {'command': 'factory'},
-      \ 'spec/factories/*_factory.rb': {
-      \   'command': 'factory',
-      \   'affinity': 'model',
-      \   'alternate': 'app/models/%s.rb',
-      \   'related': 'db/schema.rb#%p',
-      \   'test': 'spec/models/%s_spec.rb',
-      \   'template': "FactoryGirl.define do\n  factory :%s do\n  end\nend",
-      \   'keywords': 'factory sequence'
-      \ },
-      \ 'spec/factories/*.rb': {
-      \   'command': 'factory',
-      \   'affinity': 'collection',
-      \   'alternate': 'app/models/%o.rb',
-      \   'related': 'db/schema.rb#%s',
-      \   'test': 'spec/models/%o_spec.rb',
-      \   'template': "FactoryGirl.define do\n  factory :%o do\n  end\nend",
-      \   'keywords': 'factory sequence'
-      \ },
-      \ 'spec/fabricators/*_fabricator.rb': {
-      \   'command': 'fabricator',
-      \   'affinity': 'model',
-      \   'alternate': 'app/models/%s.rb',
-      \   'related': 'db/schema.rb#%p',
-      \   'test': 'spec/models/%s_spec.rb',
-      \   'template': "Fabricator(:%s) do\nend",
-      \   'keywords': 'sequence initialize_with on_init transient after_build before_validation after_validation before_save before_create after_create after_save'
-      \ },
+      \ 'app/concerns/*.rb': {'command': 'concern'},
       \ 'spec/support/*.rb': {'command': 'support'},
-      \ 'features/*.feature': {'command': 'feature'},
-      \ 'features/step_definitions/*_steps.rb': {'command': 'steps'},
-      \ 'features/support/*.rb': {'command': 'support'}}
+      \ 'db/seeds.rb': {'command': 'seeds'}}
 
+let g:rails_gem_projections = {
+      \ 'factory_girl_rails': {
+      \   'spec/factories.rb': {'command': 'factory'},
+      \   'spec/factories/*_factory.rb': {
+      \     'command': 'factory',
+      \     'affinity': 'model',
+      \     'alternate': 'app/models/%s.rb',
+      \     'related': 'db/schema.rb#%p',
+      \     'test': 'spec/models/%s_spec.rb',
+      \     'template': "FactoryGirl.define do\n  factory :%s do\n  end\nend",
+      \     'keywords': 'factory sequence'
+      \   },
+      \   'spec/factories/*.rb': {
+      \     'command': 'factory',
+      \     'affinity': 'collection',
+      \     'alternate': 'app/models/%o.rb',
+      \     'related': 'db/schema.rb#%s',
+      \     'test': 'spec/models/%o_spec.rb',
+      \     'template': "FactoryGirl.define do\n  factory :%o do\n  end\nend",
+      \     'keywords': 'factory sequence'
+      \   },
+      \  },
+      \ 'fabrication': {
+      \   'spec/fabricators/*_fabricator.rb': {
+      \     'command': 'fabricator',
+      \     'affinity': 'model',
+      \     'alternate': 'app/models/%s.rb',
+      \     'related': 'db/schema.rb#%p',
+      \     'test': 'spec/models/%s_spec.rb',
+      \     'template': "Fabricator(:%s) do\nend",
+      \     'keywords': 'sequence initialize_with on_init transient after_build before_validation after_validation before_save before_create after_create after_save'
+      \   },
+      \ },
+      \ 'cucumber-rails': {
+      \   'features/*.feature': {'command': 'feature'},
+      \   'features/step_definitions/*_steps.rb': {'command': 'steps'},
+      \   'features/support/*.rb': {'command': 'support'}
+      \ }}
+
+" ---------------
+" UltiSnips
+" ---------------
+let g:UltiSnipsSnippetDirectories=["MyUltiSnips"]
+function! g:UltiSnips_Complete()
+  call UltiSnips_JumpForwards()
+  if g:ulti_jump_forwards_res == 0
+    call UltiSnips_ExpandSnippet()
+    if g:ulti_expand_res == 0
+      if pumvisible()
+        return "\<C-n>"
+      else
+        return "\<TAB>"
+      endif
+    endif
+  endif
+  return ""
+endfunction
+
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+
+" ---------------
+" Voogle
+" ---------------
+let g:voogle_map="<leader>gg"
+
+" ---------------
+" Vimux
+" ---------------
+let g:VimuxUseNearestPane = 1
+nnoremap <leader>j :silent! VimuxScrollDownInspect<CR>
+nnoremap <leader>k :silent! VimuxScrollUpInspect<CR>
+nnoremap <leader>a :call VimuxRunCommand("spring rspec --fail-fast")<CR>
+nnoremap <leader>A :call VimuxRunCommand("spring rspec")<CR>
+nnoremap <leader>c :VimuxPromptCommand<CR>
+
+" ---------------
+" Turbux
+" ---------------
+let g:no_turbux_mappings = 1
+map <leader>e <Plug>SendTestToTmux
+map <leader>x <Plug>SendFocusedTestToTmux
+let g:turbux_command_rspec = 'spring rspec'
+let g:turbux_command_cucumber = 'spring cucumber'
