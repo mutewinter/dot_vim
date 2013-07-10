@@ -32,7 +32,7 @@ Bundle 'mhinz/vim-startify'
 Bundle 'mbbill/undotree'
 Bundle 'jszakmeister/vim-togglecursor'
 " Commands
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'

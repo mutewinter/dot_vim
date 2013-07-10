@@ -361,3 +361,10 @@ map <leader>e <Plug>SendTestToTmux
 map <leader>x <Plug>SendFocusedTestToTmux
 let g:turbux_command_rspec = 'spring rspec'
 let g:turbux_command_cucumber = 'spring cucumber'
+
+" ---------------
+" tcomment_vim
+" ---------------
+let g:tcommentMaps = 0
+nnoremap <silent><leader>cc :TComment<CR>
+vnoremap <silent><leader>cc :TComment<CR>
