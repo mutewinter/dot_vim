@@ -258,14 +258,17 @@ let g:togglecursor_leave='line'
 " ---------------
 " rails.vim
 " ---------------
-command! Remigrate :Rake db:drop db:create db:migrate test:prepare
-nnoremap <leader>rm :Rmodel<space>
-nnoremap <leader>rs :Rspec<space>
-nnoremap <leader>rf :Rfabricator<space>
-nnoremap <leader>rl :Rlocale<space>
-nnoremap <leader>rc :Rcontroller<space>
-nnoremap <leader>rv :Rview<space>
-nnoremap <leader>re :Renvironment<space>
+command! REmigrate :call VimuxRunCommand("rake db:drop db:create db:migrate test:prepare")
+command! Rmigrate :call VimuxRunCommand("rake db:migrate test:prepare")
+nnoremap <leader>a <CR>
+nnoremap <leader>r  :R
+nnoremap <leader>rmm :Rmodel<space>
+nnoremap <leader>rss :Rspec<space>
+nnoremap <leader>rff :Rfabricator<space>
+nnoremap <leader>rll :Rlocale<space>
+nnoremap <leader>rcc :Rcontroller<space>
+nnoremap <leader>rvv :Rview<space>
+nnoremap <leader>ree :Renvironment<space>
 
 " Add custom commands for Rails.vim
 " Thanks to http://git.io/_cBVeA and http://git.io/xIKnCw
