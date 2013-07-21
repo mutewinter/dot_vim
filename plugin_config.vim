@@ -260,7 +260,7 @@ let g:togglecursor_leave='line'
 " rails.vim
 " ---------------
 command! REmigrate :call VimuxRunCommand("rake db:drop db:create db:migrate test:prepare")
-command! Rmigrate :call VimuxRunCommand("rake db:migrate test:prepare")
+command! Migrate :call VimuxRunCommand("rake db:migrate test:prepare")
 nnoremap <leader>a <CR>
 nnoremap <leader>r  :R
 nnoremap <leader>rmm :Rmodel<space>
