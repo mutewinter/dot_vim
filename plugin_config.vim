@@ -223,8 +223,8 @@ let g:ycm_filetype_specific_completion_to_disable = {
 " ---------------
 " vim-signify
 " ---------------
-let g:signify_mapping_next_hunk="<leader>sn"
-let g:signify_mapping_prev_hunk="<leader>sp"
+let g:signify_mapping_next_hunk = '<leader>gj'
+let g:signify_mapping_prev_hunk = '<leader>gk'
 let g:signify_mapping_toggle_highlight="<nop>"
 let g:signify_mapping_toggle="<nop>"
 " Makes switching buffers in large repos have no delay
