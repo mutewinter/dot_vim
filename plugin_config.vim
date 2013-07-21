@@ -355,7 +355,7 @@ nnoremap <leader>j :silent! VimuxScrollDownInspect<CR>
 nnoremap <leader>k :silent! VimuxScrollUpInspect<CR>
 nnoremap <leader>a :call VimuxRunCommand("spring rspec --fail-fast")<CR>
 nnoremap <leader>A :call VimuxRunCommand("spring rspec")<CR>
-nnoremap <leader>c :VimuxPromptCommand<CR>
+nnoremap <leader>cm :VimuxPromptCommand<CR>
 
 " ---------------
 " Turbux
