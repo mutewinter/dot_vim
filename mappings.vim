@@ -131,10 +131,10 @@ nnoremap <leader>v :e ~/.vim/
 nnoremap <leader>, :e#<CR>
 
 " Underline the current line with '-'
-nnoremap <silent> <leader>ul :t.\|s/./-/g\|:nohls<cr>
+nnoremap <silent> <leader>ul :t.\|s/./-/\|:nohls<cr>
 
 " Underline the current line with '='
-nnoremap <silent> <leader>uul :t.\|s/./=/g\|:nohls<cr>
+nnoremap <silent> <leader>uul :t.\|s/./=/\|:nohls<cr>
 
 " Format the entire file
 nnoremap <leader>fef mx=ggG='x
