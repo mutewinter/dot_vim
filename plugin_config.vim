@@ -6,7 +6,6 @@
 " Vundle
 " ---------------
 command! ReloadVundle source ~/.vim/vundle.vim
-"nnoremap <Leader>br :ReloadVundle<CR>
 function BundleReloadAndRun(command)
   :ReloadVundle
   execute a:command
