@@ -108,26 +108,20 @@ nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 
 " ---------------
-" Powerline
+" airline
 " ---------------
-" Keep ^B from showing on Windows in Powerline
-if has('win32') || has('win64')
-  let g:Powerline_symbols = 'compatible'
-elseif has('gui_macvim')
-  let g:Powerline_symbols = 'fancy'
-endif
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
-
-" Abbreviate All of the Mode Names
-let g:Powerline_mode_n = 'N'
-let g:Powerline_mode_i = 'I'
-let g:Powerline_mode_R = 'R'
-let g:Powerline_mode_v = 'V'
-let g:Powerline_mode_V = 'VL'
-let g:Powerline_mode_cv = 'VB'
-let g:Powerline_mode_s = 'S'
-let g:Powerline_mode_S = 'SL'
-let g:Powerline_mode_cs = 'SB'
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts=1
+let g:airline_detect_modified=1
+let g:airline_mode_map = {
+      \ 'n'  : 'N',
+      \ 'i'  : 'I',
+      \ 'R'  : 'R',
+      \ 'v'  : 'V',
+      \ 'V'  : 'VL',
+      \ 'c'  : 'CMD',
+      \ '' : 'VB',
+      \ }
 
 " ---------------
 " jellybeans.vim colorscheme tweaks
