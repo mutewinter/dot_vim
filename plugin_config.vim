@@ -236,7 +236,7 @@ nnoremap <leader>ss :%Subvert/
 " ---------------
 let g:startify_bookmarks = [ '~/.vim/vimrc',
                             \'~/.vim/config.vim',
-                            \'~/.vim/bindings.vim',
+                            \'~/.vim/mappings.vim',
                             \'~/.vim/plugin_bindings.vim',
                             \'~/.vim/vundle.vim',
                             \'~/dot_files/_zshrc'
