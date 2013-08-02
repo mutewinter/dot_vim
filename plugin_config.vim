@@ -236,7 +236,7 @@ let g:startify_bookmarks = [ '~/.vim/vimrc',
                             \'~/dot_files/aliases.sh',
                             \'~/dot_files/environment.sh',
                             \'~/dot_files/system_environment.sh']
-let g:startify_show_files_number = 20
+let g:startify_show_files_number = 5
 
 " ---------------
 " vim-togglecursor
