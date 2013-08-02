@@ -225,12 +225,6 @@ let g:signify_update_on_bufenter = 0
 let g:signify_sign_overwrite = 0
 
 " ---------------
-" vim-abolish
-" ---------------
-nnoremap <leader>su :Subvert/
-nnoremap <leader>ss :%Subvert/
-
-" ---------------
 " vim-startify
 " ---------------
 let g:startify_bookmarks = [ '~/.vim/vimrc',
