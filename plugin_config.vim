@@ -6,7 +6,6 @@
 " Vundle
 " ---------------
 command! ReloadVundle source ~/.vim/vundle.vim
-"nnoremap <Leader>br :ReloadVundle<CR>
 function BundleReloadAndRun(command)
   :ReloadVundle
   execute a:command
@@ -41,7 +40,7 @@ let g:syntastic_warning_symbol = '⚠'
 nnoremap <leader>nn :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 let g:NERDTreeShowBookmarks = 1
-let g:NERDTreeChDirMode = 2 " Change the NERDTree directory to the root node
+let g:NERDTreeChDirMode = 1
 let g:NERDTreeMinimalUI = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
   \&& b:NERDTreeType == "primary") | q | endif
@@ -108,26 +107,20 @@ nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 
 " ---------------
-" Powerline
+" airline
 " ---------------
-" Keep ^B from showing on Windows in Powerline
-if has('win32') || has('win64')
-  let g:Powerline_symbols = 'compatible'
-elseif has('gui_macvim')
-  let g:Powerline_symbols = 'fancy'
-endif
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
-
-" Abbreviate All of the Mode Names
-let g:Powerline_mode_n = 'N'
-let g:Powerline_mode_i = 'I'
-let g:Powerline_mode_R = 'R'
-let g:Powerline_mode_v = 'V'
-let g:Powerline_mode_V = 'VL'
-let g:Powerline_mode_cv = 'VB'
-let g:Powerline_mode_s = 'S'
-let g:Powerline_mode_S = 'SL'
-let g:Powerline_mode_cs = 'SB'
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts=1
+let g:airline_detect_modified=1
+let g:airline_mode_map = {
+      \ 'n'  : 'N',
+      \ 'i'  : 'I',
+      \ 'R'  : 'R',
+      \ 'v'  : 'V',
+      \ 'V'  : 'VL',
+      \ 'c'  : 'CMD',
+      \ '' : 'VB',
+      \ }
 
 " ---------------
 " jellybeans.vim colorscheme tweaks
@@ -213,17 +206,18 @@ let g:mta_filetypes = {
 " ---------------
 " YouCompleteMe
 " ---------------
-let g:ycm_complete_in_comments_and_strings = 1
+let g:ycm_complete_in_comments = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_filetype_specific_completion_to_disable = {
     \ 'ruby' : 1,
+    \ 'javascript' : 1,
     \}
 
 " ---------------
 " vim-signify
 " ---------------
-let g:signify_mapping_next_hunk="<leader>sn"
-let g:signify_mapping_prev_hunk="<leader>sp"
+let g:signify_mapping_next_hunk = '<leader>gj'
+let g:signify_mapping_prev_hunk = '<leader>gk'
 let g:signify_mapping_toggle_highlight="<nop>"
 let g:signify_mapping_toggle="<nop>"
 " Makes switching buffers in large repos have no delay
@@ -231,24 +225,18 @@ let g:signify_update_on_bufenter = 0
 let g:signify_sign_overwrite = 0
 
 " ---------------
-" vim-abolish
-" ---------------
-nnoremap <leader>su :Subvert/
-nnoremap <leader>ss :%Subvert/
-
-" ---------------
 " vim-startify
 " ---------------
 let g:startify_bookmarks = [ '~/.vim/vimrc',
                             \'~/.vim/config.vim',
-                            \'~/.vim/bindings.vim',
+                            \'~/.vim/mappings.vim',
                             \'~/.vim/plugin_bindings.vim',
                             \'~/.vim/vundle.vim',
                             \'~/dot_files/_zshrc'
                             \'~/dot_files/aliases.sh',
                             \'~/dot_files/environment.sh',
                             \'~/dot_files/system_environment.sh']
-let g:startify_show_files_number = 20
+let g:startify_show_files_number = 5
 
 " ---------------
 " vim-togglecursor
@@ -258,14 +246,28 @@ let g:togglecursor_leave='line'
 " ---------------
 " rails.vim
 " ---------------
-command! Remigrate :Rake db:drop db:create db:migrate test:prepare
-nnoremap <leader>rm :Rmodel<space>
-nnoremap <leader>rs :Rspec<space>
-nnoremap <leader>rf :Rfabricator<space>
-nnoremap <leader>rl :Rlocale<space>
-nnoremap <leader>rc :Rcontroller<space>
-nnoremap <leader>rv :Rview<space>
-nnoremap <leader>re :Renvironment<space>
+command! REmigrate :call VimuxRunCommand("rake db:drop db:create db:migrate test:prepare")
+command! Migrate :call VimuxRunCommand("rake db:migrate test:prepare")
+nnoremap <leader>a <CR>
+nnoremap <leader>r   :R
+nnoremap <leader>rmm :Rmodel<space>
+
+nnoremap <leader>rff :Rfabricator<space>
+nnoremap <leader>rll :Rlayout<space>
+nnoremap <leader>rla :Rlayout<space>
+nnoremap <leader>rlo :Rlocale<space>
+nnoremap <leader>rlb :Rlib<space>
+nnoremap <leader>rcc :Rcontroller<space>
+nnoremap <leader>rvv :Rview<space>
+nnoremap <leader>ree :Renvironment<space>
+nnoremap <leader>rhh :Rhelper<space>
+nnoremap <leader>rii :Rinitializer<space>
+
+nnoremap <leader>rss :Rspec<space>
+nnoremap <leader>rsm :Rspec models/
+nnoremap <leader>rsc :Rspec controllers/
+nnoremap <leader>rsv :Rspec views/
+nnoremap <leader>rsl :Rspec lib/
 
 " Add custom commands for Rails.vim
 " Thanks to http://git.io/_cBVeA and http://git.io/xIKnCw
@@ -351,7 +353,9 @@ nnoremap <leader>j :silent! VimuxScrollDownInspect<CR>
 nnoremap <leader>k :silent! VimuxScrollUpInspect<CR>
 nnoremap <leader>a :call VimuxRunCommand("spring rspec --fail-fast")<CR>
 nnoremap <leader>A :call VimuxRunCommand("spring rspec")<CR>
-nnoremap <leader>c :VimuxPromptCommand<CR>
+nnoremap <leader>cu :call VimuxRunCommand("spring cucumber")<CR>
+nnoremap <leader>ca :call VimuxRunCommand("spring cucumber; spring rspec")<CR>
+nnoremap <leader>cm :VimuxPromptCommand<CR>
 
 " ---------------
 " Turbux
@@ -361,3 +365,12 @@ map <leader>e <Plug>SendTestToTmux
 map <leader>x <Plug>SendFocusedTestToTmux
 let g:turbux_command_rspec = 'spring rspec'
 let g:turbux_command_cucumber = 'spring cucumber'
+
+" ---------------
+" tcomment_vim
+" ---------------
+let g:tcommentMaps = 0
+nnoremap <silent><leader>cc :TComment<CR>
+vnoremap <silent><leader>cc :TComment<CR>
+nnoremap <silent><leader>cb :TCommentBlock<CR>
+vnoremap <silent><leader>cb :TCommentBlock<CR>
