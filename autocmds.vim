@@ -21,7 +21,8 @@ if has("autocmd")
           \ endif
 
     " Fix trailing whitespace in my most used programming langauges
-    autocmd BufWritePre *.py,*.coffee,*.rb silent! :StripTrailingWhiteSpace
+    autocmd BufWritePre *.py,*.coffee,*.rb,*.erb,*.md,*.scss
+          \ silent! :StripTrailingWhiteSpace
 
     " Help mode bindings
     " <enter> to follow tag, <bs> to go back, and q to quit.
