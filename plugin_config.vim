@@ -246,8 +246,6 @@ let g:togglecursor_leave='line'
 " ---------------
 " rails.vim
 " ---------------
-command! REmigrate :call VimuxRunCommand("rake db:drop db:create db:migrate test:prepare")
-command! Migrate :call VimuxRunCommand("rake db:migrate test:prepare")
 nnoremap <leader>a <CR>
 nnoremap <leader>r   :R
 nnoremap <leader>rmm :Rmodel<space>
@@ -357,6 +355,8 @@ nnoremap <leader>A :call VimuxRunCommand("spring rspec")<CR>
 nnoremap <leader>cu :call VimuxRunCommand("spring cucumber")<CR>
 nnoremap <leader>ca :call VimuxRunCommand("spring cucumber; spring rspec")<CR>
 nnoremap <leader>cm :VimuxPromptCommand<CR>
+command! REmigrate :call VimuxRunCommand("rake db:drop db:create db:migrate test:prepare")
+command! Migrate :call VimuxRunCommand("rake db:migrate test:prepare")
 
 " ---------------
 " Turbux
