@@ -122,6 +122,8 @@ let g:airline_mode_map = {
       \ 'c'  : 'CMD',
       \ '' : 'VB',
       \ }
+let g:airline_section_b = '%{substitute(getcwd(), ".*\/", "", "g")} '
+let g:airline_section_x = '#%{expand("#:t")} | %{&filetype}'
 
 " ---------------
 " jellybeans.vim colorscheme tweaks
