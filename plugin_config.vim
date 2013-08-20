@@ -355,6 +355,11 @@ nnoremap <leader>A :call VimuxRunCommand("spring rspec")<CR>
 nnoremap <leader>cu :call VimuxRunCommand("spring cucumber")<CR>
 nnoremap <leader>ca :call VimuxRunCommand("spring cucumber; spring rspec")<CR>
 nnoremap <leader>cm :VimuxPromptCommand<CR>
+function WriteAndVimuxRunLastCommand()
+  :silent! write
+  :call VimuxRunLastCommand()
+endfunction
+nnoremap <leader>w :call WriteAndVimuxRunLastCommand()<CR>
 command! REmigrate :call VimuxRunCommand("rake db:drop db:create db:migrate test:prepare")
 command! Migrate :call VimuxRunCommand("rake db:migrate test:prepare")
 
