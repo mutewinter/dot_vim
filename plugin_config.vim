@@ -371,7 +371,7 @@ nnoremap <leader>cu :call VimuxRunCommand("spring cucumber")<CR>
 nnoremap <leader>ca :call VimuxRunCommand("spring cucumber; spring rspec")<CR>
 nnoremap <leader>cm :VimuxPromptCommand<CR>
 function WriteAndVimuxRunLastCommand()
-  :silent! write
+  :call WriteBufferIfNecessary()
   :call VimuxRunLastCommand()
 endfunction
 nnoremap <leader>w :call WriteAndVimuxRunLastCommand()<CR>
