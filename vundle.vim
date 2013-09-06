@@ -55,6 +55,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'g3orge/vim-voogle'
 Bundle 'benmills/vimux'
 Bundle 'jgdavey/vim-turbux'
+Bundle 'ecomba/vim-ruby-refactoring'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
