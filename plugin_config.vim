@@ -316,6 +316,15 @@ let g:rails_gem_projections = {
       \     'keywords': 'sequence initialize_with on_init transient after_build before_validation after_validation before_save before_create after_create after_save'
       \   },
       \ },
+      \ 'draper': {
+      \   'app/decorators/*_decorator.rb': {
+      \     'command': 'decorator',
+      \     'affinity': 'model',
+      \     'test': 'spec/decorators/%s_spec.rb',
+      \     'related': 'app/models/%s.rb',
+      \     'template': 'class %SDecorator < Draper::Decorator\nend'
+      \   }
+      \ },
       \ 'cucumber-rails': {
       \   'features/*.feature': {'command': 'feature'},
       \   'features/step_definitions/*_steps.rb': {'command': 'steps'},
