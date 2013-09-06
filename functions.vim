@@ -163,18 +163,20 @@ nnoremap <silent> <leader>p :PasteWithPasteMode<CR>
 " Writes the current buffer unless we're the in QuickFix mode.
 " ---------------
 
-function WriteBuffer()
+function WriteBufferIfNecessary()
   if &filetype == "qf"
     execute "normal! \<enter>"
   else
-    :write
+    if &modified
+      :write
+    endif
   endif
 endfunction
 
 " Clear the search buffer when hitting return
 " Idea for MapCR from http://git.io/pt8kjA
 function! MapCR()
-  nnoremap <silent> <enter> :call WriteBuffer()<CR>
+  nnoremap <silent> <enter> :call WriteBufferIfNecessary()<CR>
 endfunction
 call MapCR()
 
