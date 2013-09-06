@@ -123,8 +123,10 @@ let g:airline_mode_map = {
       \ 'c'  : 'CMD',
       \ '' : 'VB',
       \ }
+" Show the current working directory folder name
 let g:airline_section_b = '%{substitute(getcwd(), ".*\/", "", "g")} '
-let g:airline_section_x = '#%{expand("#:t")} | %{&filetype}'
+" Just show the file name
+let g:airline_section_c = '%t'
 
 " ---------------
 " jellybeans.vim colorscheme tweaks
