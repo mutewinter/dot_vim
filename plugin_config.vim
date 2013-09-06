@@ -377,6 +377,7 @@ endfunction
 nnoremap <leader>w :call WriteAndVimuxRunLastCommand()<CR>
 command! REmigrate :call VimuxRunCommand("rake db:drop db:create db:migrate test:prepare")
 command! Migrate :call VimuxRunCommand("rake db:migrate test:prepare")
+command! Rollback :call VimuxRunCommand("rake db:rollback")
 
 " ---------------
 " Turbux
