@@ -52,21 +52,21 @@ Be sure to always edit the vimrc using `,v`, which opens the vimrc in the
 Here's a list of plugins that require further installation or have
 dependencies.
 
- * [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be
- installed.
- * [syntastic](https://github.com/scrooloose/syntastic) Requires many different
- binaries installed depending on what filetypes you want it to check. See the
- [FAQ](https://github.com/scrooloose/syntastic#faq) for more information.
- * [Ag.vim](https://github.com/rking/ag.vim) Requires
- [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) to be
- installed.
- * [Source Code for Powerline](http://git.io/H3fYBg) The custom font I'm using
- for vim-airline.
- * [CtrlP C Matching Extension](https://github.com/JazzCore/ctrlp-cmatcher)
- requires compilation. See the steps [in its
- readme](https://github.com/JazzCore/ctrlp-cmatcher).
- * [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
- formatting.
+* [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be
+  installed.
+* [syntastic](https://github.com/scrooloose/syntastic) Requires many different
+  binaries installed depending on what filetypes you want it to check. See the
+  [FAQ](https://github.com/scrooloose/syntastic#faq) for more information.
+* [Ag.vim](https://github.com/rking/ag.vim) Requires
+  [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) to be
+  installed.
+* [Source Code for Powerline](http://git.io/H3fYBg) The custom font I'm using
+  for vim-airline.
+* [CtrlP C Matching Extension](https://github.com/JazzCore/ctrlp-cmatcher)
+  requires compilation. See the steps [in its
+  readme](https://github.com/JazzCore/ctrlp-cmatcher).
+* [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
+  formatting.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mutewinter/dot_vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
