@@ -1,0 +1,4 @@
+" -----------------
+" vim-autoreadwatch
+" -----------------
+:silent! WatchForChangesAllFile
