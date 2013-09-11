@@ -65,6 +65,8 @@ dependencies.
  * [CtrlP C Matching Extension](https://github.com/JazzCore/ctrlp-cmatcher)
  requires compilation. See the steps [in its
  readme](https://github.com/JazzCore/ctrlp-cmatcher).
+ * [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
+ formatting.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mutewinter/dot_vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
