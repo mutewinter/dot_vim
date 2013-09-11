@@ -141,5 +141,5 @@ def fetch_github_repo_description(user, name)
   end
 
   repo = JSON.parse response
-  repo['description']
+  repo['description'].strip
 end
