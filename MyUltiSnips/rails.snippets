@@ -1,25 +1,9 @@
-snippet model "Create an ActiveRecord class" b
-class ${1:Model} < ActiveRecord::Base
-  attr_accessible $0
-end
-endsnippet
-
-snippet modelc "Create an ActiveRecord class with comments" b
-class ${1:Model} < ActiveRecord::Base
-  attr_accessible $0
-
-  # Associations
-
-  # Validations
-end
-endsnippet
-
 snippet valp "validates presence (ruby 1.9)"
 validates :${1:attribute}, presence: true
 endsnippet
 
 snippet it "create it statement for rspec"
-it 'should ${1:test}' do
+it '${1:test}' do
 end
 endsnippet
 
@@ -29,7 +13,7 @@ endsnippet
 
 snippet describe "create describe and it statement for rspec"
 describe '${1:something}' do
-  it 'should ${2:test}' do
+  it '${2:test}' do
     $0
   end
 end
