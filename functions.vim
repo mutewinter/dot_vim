@@ -158,16 +158,17 @@ command! PasteWithPasteMode call PasteWithPasteMode()
 nnoremap <silent> <leader>p :PasteWithPasteMode<CR>
 
 " ---------------
-" Write Buffer
+" Write Buffer if Necessary
 "
-" Writes the current buffer unless we're the in QuickFix mode.
+" Writes the current buffer if it's needed, unless we're the in QuickFix mode.
 " ---------------
 
 function WriteBufferIfNecessary()
   if &filetype == "qf"
     execute "normal! \<enter>"
   else
-    if &modified
+    " File is modified or doesn't exist yet.
+    if &modified || !filereadable(expand('%'))
       :write
     endif
   endif
