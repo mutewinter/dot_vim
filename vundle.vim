@@ -65,6 +65,7 @@ Bundle 'ervandew/supertab'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'kballenegger/vim-autoreadwatch'
+Bundle 'christoomey/vim-tmux-navigator'
 " Language Additions
 "   Ruby
 Bundle 'vim-ruby/vim-ruby'
