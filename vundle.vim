@@ -56,6 +56,7 @@ Bundle 'g3orge/vim-voogle'
 Bundle 'benmills/vimux'
 Bundle 'jgdavey/vim-turbux'
 Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'christoomey/vim-tmux-navigator'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
@@ -65,7 +66,6 @@ Bundle 'ervandew/supertab'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'kballenegger/vim-autoreadwatch'
-Bundle 'christoomey/vim-tmux-navigator'
 " Language Additions
 "   Ruby
 Bundle 'vim-ruby/vim-ruby'
