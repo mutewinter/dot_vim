@@ -323,7 +323,7 @@ let g:rails_gem_projections = {
       \     'affinity': 'model',
       \     'test': 'spec/decorators/%s_spec.rb',
       \     'related': 'app/models/%s.rb',
-      \     'template': 'class %SDecorator < Draper::Decorator\nend'
+      \     'template': "class %SDecorator < Draper::Decorator\nend"
       \   }
       \ },
       \ 'cucumber-rails': {
