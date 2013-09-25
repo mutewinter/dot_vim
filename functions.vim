@@ -115,6 +115,15 @@ nnoremap <silent> <leader>z :QuickSpellingFix<CR>
 command! -bar -range=% NotRocket execute
   \'<line1>,<line2>s/:\(\w\+\)\s*=>/\1:/e' . (&gdefault ? '' : 'g')
 
+" ------------------------------------
+" Convert .should rspec syntax to expect.
+" From: https://coderwall.com/p/o2oyrg
+" ------------------------------------
+command! -bar -range=% Expect execute
+  \'<line1>,<line2>s/\(\S\+\).should\(\s\+\)==\s*\(.\+\)' .
+  \'/expect(\1).to\2eq(\3)/e' .
+  \(&gdefault ? '' : 'g')
+
 " ---------------
 " Strip Trailing White Space
 " ---------------
