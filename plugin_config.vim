@@ -233,16 +233,9 @@ let g:signify_sign_overwrite = 0
 " ---------------
 " vim-startify
 " ---------------
-let g:startify_bookmarks = [ '~/.vim/vimrc',
-                            \'~/.vim/config.vim',
-                            \'~/.vim/mappings.vim',
-                            \'~/.vim/plugin_bindings.vim',
-                            \'~/.vim/vundle.vim',
-                            \'~/dot_files/_zshrc'
-                            \'~/dot_files/aliases.sh',
-                            \'~/dot_files/environment.sh',
-                            \'~/dot_files/system_environment.sh']
-let g:startify_show_files_number = 5
+let g:startify_list_order = ['files', 'dir', 'bookmarks', 'sessions']
+let g:startify_files_number = 5
+let g:startify_session_dir = '~/.vim/sessions'
 
 " ---------------
 " vim-togglecursor
