@@ -2,20 +2,23 @@
 
 ## Installation
 
-`git clone http://github.com/mutewinter/dot_vim.git ~/.vim`.
+1. `git clone http://github.com/mutewinter/dot_vim.git ~/.vim`.
+1. `cd ~/.vim`.
+
+Now you have a choice. The automated script or the manual process.
 
 1. Run `scripts/setup`.
 
 **or**
 
-1. `cd ~/.vim`.
-2. `rake vim:link` to make the .vimrc symbolic link.
-3. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
+1. `rake vim:link` to make the .vimrc symbolic link.
+2. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
    http://github.com/gmarik/vundle.git bundle/vundle`
-4. `vim "+mkspell ~/.vim/spell/custom.en.utf-8.add" +BundleInstall +qall`
+3. `vim "+mkspell ~/.vim/spell/custom.en.utf-8.add" +BundleInstall +qall`
 _installs all of the plugins and compiles custom spellings._
-5. Enjoy enhanced productivity, increased levitation, reduced
-watermelon-related accidents, and startling sex appeal.
+
+Enjoy enhanced productivity, increased levitation, reduced watermelon-related
+accidents, and startling sex appeal.
 
 ## Screenshots
 
