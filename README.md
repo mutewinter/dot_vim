@@ -1,17 +1,20 @@
 # The Vim Configuration of Champions
 
-[See dot_vim's Stats on GitEgo](http://gitego.com/mutewinter/dot_vim)
-
 ## Installation
 
-1. `git clone http://github.com/mutewinter/dot_vim.git ~/.vim`
-2. `cd ~/.vim`
-3. `rake vim:link` to make the .vimrc symbolic link.
-4. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
+`git clone http://github.com/mutewinter/dot_vim.git ~/.vim`.
+
+1. Run `scripts/setup`.
+
+**or**
+
+1. `cd ~/.vim`.
+2. `rake vim:link` to make the .vimrc symbolic link.
+3. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
    http://github.com/gmarik/vundle.git bundle/vundle`
-5. `vim "+mkspell ~/.vim/spell/custom.en.utf-8.add" +BundleInstall +qall`
+4. `vim "+mkspell ~/.vim/spell/custom.en.utf-8.add" +BundleInstall +qall`
 _installs all of the plugins and compiles custom spellings._
-6. Enjoy enhanced productivity, increased levitation, reduced
+5. Enjoy enhanced productivity, increased levitation, reduced
 watermelon-related accidents, and startling sex appeal.
 
 ## Screenshots
