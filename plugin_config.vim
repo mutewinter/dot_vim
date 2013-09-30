@@ -260,7 +260,10 @@ nnoremap <leader>ree :Renvironment<space>
 nnoremap <leader>rhh :Rhelper<space>
 nnoremap <leader>rii :Rinitializer<space>
 nnoremap <leader>rjj :Rjavascript<space>
+" Ember
 nnoremap <leader>rtt :Rtemplate<space>
+nnoremap <leader>rrr :Rroute<space>
+nnoremap <leader>raa :Rasset<space>
 
 nnoremap <leader>rss :Rspec<space>
 nnoremap <leader>rsm :Rspec models/
