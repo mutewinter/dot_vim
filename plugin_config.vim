@@ -33,6 +33,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " Hat tip http://git.io/SPIBfg
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_full_redraws = 1
 
 " ---------------
 " NERDTree
