@@ -410,4 +410,4 @@ nnoremap <silent> <M-i> :TmuxNavigatePrevious<cr>
 " ------
 " ColorV
 " ------
-let g:colorv_preview_ftype = 'css,html,javascript,scss,stylus'
+let g:colorv_preview_ftype = 'css,javascript,scss,stylus'
