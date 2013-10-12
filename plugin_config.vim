@@ -243,34 +243,35 @@ let g:startify_session_dir = '~/.vim/sessions'
 " ---------------
 let g:togglecursor_leave='line'
 
-" ---------------
-" rails.vim
-" ---------------
-nnoremap <leader>a <CR>
-nnoremap <leader>r   :R
-nnoremap <leader>rmm :Rmodel<space>
+" -----------------------
+" rails.vim and ember.vim
+" -----------------------
+nnoremap <leader>e   :E
+nnoremap <leader>emm :Emodel<space>
+nnoremap <leader>evv :Eview<space>
+nnoremap <leader>ecc :Econtroller<space>
 
-nnoremap <leader>rff :Rfabricator<space>
-nnoremap <leader>rll :Rlayout<space>
-nnoremap <leader>rla :Rlayout<space>
-nnoremap <leader>rlo :Rlocale<space>
-nnoremap <leader>rlb :Rlib<space>
-nnoremap <leader>rcc :Rcontroller<space>
-nnoremap <leader>rvv :Rview<space>
-nnoremap <leader>ree :Renvironment<space>
-nnoremap <leader>rhh :Rhelper<space>
-nnoremap <leader>rii :Rinitializer<space>
-nnoremap <leader>rjj :Rjavascript<space>
-" Ember
-nnoremap <leader>rtt :Rtemplate<space>
-nnoremap <leader>rrr :Rroute<space>
-nnoremap <leader>raa :Rasset<space>
+" Rails Only
+nnoremap <leader>eff :Efabricator<space>
+nnoremap <leader>ell :Elayout<space>
+nnoremap <leader>ela :Elayout<space>
+nnoremap <leader>elo :Elocale<space>
+nnoremap <leader>elb :Elib<space>
+nnoremap <leader>eee :Eenvironment<space>
+nnoremap <leader>ehh :Ehelper<space>
+nnoremap <leader>eii :Einitializer<space>
+nnoremap <leader>ejj :Ejavascript<space>
+nnoremap <leader>ess :Espec<space>
+nnoremap <leader>esm :Espec models/
+nnoremap <leader>esc :Espec controllers/
+nnoremap <leader>esv :Espec views/
+nnoremap <leader>esl :Espec lib/
 
-nnoremap <leader>rss :Rspec<space>
-nnoremap <leader>rsm :Rspec models/
-nnoremap <leader>rsc :Rspec controllers/
-nnoremap <leader>rsv :Rspec views/
-nnoremap <leader>rsl :Rspec lib/
+" Ember Only
+nnoremap <leader>eaa :Easset<space>
+nnoremap <leader>err :Eroute<space>
+nnoremap <leader>ett :Etemplate<space>
+
 
 " Add custom commands for Rails.vim
 " Thanks to http://git.io/_cBVeA and http://git.io/xIKnCw
@@ -381,7 +382,7 @@ command! Rollback :call VimuxRunCommand("rake db:rollback")
 " Turbux
 " ---------------
 let g:no_turbux_mappings = 1
-map <leader>e <Plug>SendTestToTmux
+map <leader>X <Plug>SendTestToTmux
 map <leader>x <Plug>SendFocusedTestToTmux
 let g:turbux_command_rspec = 'spring rspec'
 let g:turbux_command_cucumber = 'spring cucumber'
