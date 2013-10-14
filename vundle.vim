@@ -57,6 +57,8 @@ Bundle 'benmills/vimux'
 Bundle 'jgdavey/vim-turbux'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'dsawardekar/portkey'
+Bundle 'dsawardekar/ember.vim'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
