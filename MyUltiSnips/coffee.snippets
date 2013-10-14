@@ -1,0 +1,15 @@
+snippet property "Create a computed property"
+${1:propertyName}: (->
+  $0
+).property('${2:propertyName}')
+endsnippet
+
+snippet observes "Create an observer"
+observes${1:observerName}: (->
+  $0
+).observes('${2:observerName}')
+endsnippet
+
+snippet get "This getter"
+@get('${1:propertyName}')
+endsnippet
