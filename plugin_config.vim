@@ -269,12 +269,6 @@ nnoremap <leader>esc :Espec controllers/
 nnoremap <leader>esv :Espec views/
 nnoremap <leader>esl :Espec lib/
 
-" Ember Only
-nnoremap <leader>eaa :Easset<space>
-nnoremap <leader>err :Eroute<space>
-nnoremap <leader>ett :Etemplate<space>
-
-
 " Add custom commands for Rails.vim
 " Thanks to http://git.io/_cBVeA and http://git.io/xIKnCw
 let g:rails_projections = {
@@ -419,3 +413,10 @@ let g:colorv_preview_ftype = 'css,javascript,scss,stylus'
 " -------
 
 let g:portkey_autostart = 1
+
+" ---------
+" Ember.vim
+" ---------
+nnoremap <leader>eaa :Easset<space>
+nnoremap <leader>err :Eroute<space>
+nnoremap <leader>ett :Etemplate<space>
