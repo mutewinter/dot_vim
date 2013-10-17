@@ -420,3 +420,12 @@ let g:portkey_autostart = 1
 nnoremap <leader>eaa :Easset<space>
 nnoremap <leader>err :Eroute<space>
 nnoremap <leader>ett :Etemplate<space>
+
+" --------
+" vim-anzu
+" --------
+nmap n <Plug>(anzu-n)
+nmap N <Plug>(anzu-N)
+nmap * <Plug>(anzu-star)
+nmap # <Plug>(anzu-sharp)
+let g:airline#extensions#anzu#enabled = 1

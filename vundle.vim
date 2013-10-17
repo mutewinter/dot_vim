@@ -17,8 +17,6 @@ Bundle 'gmarik/vundle'
 
 " Navigation
 Bundle 'ZoomWin'
-" This fork is required due to remapping ; to :
-Bundle 'christoomey/vim-space'
 Bundle 'kien/ctrlp.vim'
 Bundle 'JazzCore/ctrlp-cmatcher'
 " UI Additions
@@ -61,7 +59,7 @@ Bundle 'dsawardekar/portkey'
 Bundle 'dsawardekar/ember.vim'
 Bundle 'rizzatti/dash.vim'
 " Automatic Helpers
-Bundle 'IndexedSearch'
+Bundle 'osyo-manga/vim-anzu'
 Bundle 'xolox/vim-session'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
