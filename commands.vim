@@ -14,3 +14,4 @@ command! W w
 command! Q q
 " Restart Pow.cx for the Current App
 command! PowRestart :SilentCmd touch tmp/restart.txt; touch tmp/.livereload.rb
+command! Deploy :call VimuxRunCommand("mina deploy")
