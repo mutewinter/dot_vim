@@ -324,6 +324,16 @@ let g:rails_gem_projections = {
       \   'features/*.feature': {'command': 'feature'},
       \   'features/step_definitions/*_steps.rb': {'command': 'steps'},
       \   'features/support/*.rb': {'command': 'support'}
+      \ },
+      \ 'active_model_serializers': {
+      \   'app/serializers/*_serializer.rb': {
+      \     'command': 'serializer',
+      \     'affinity': 'model',
+      \     'test': 'spec/serializers/%s_spec.rb',
+      \     'related': 'app/models/%s.rb',
+      \     'template': 'class %SSerializer < ActiveModel::Serializer\n  attributes :id\nend',
+      \     'keywords': 'attributes embed has_many has_one'
+      \   }
       \ }}
 
 " ---------------
