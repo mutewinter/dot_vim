@@ -330,24 +330,9 @@ let g:rails_gem_projections = {
 " UltiSnips
 " ---------------
 let g:UltiSnipsSnippetDirectories=["MyUltiSnips"]
-function! g:UltiSnips_Complete()
-  call UltiSnips_JumpForwards()
-  if g:ulti_jump_forwards_res == 0
-    call UltiSnips_ExpandSnippet()
-    if g:ulti_expand_res == 0
-      if pumvisible()
-        return "\<C-n>"
-      else
-        return "\<TAB>"
-      endif
-    endif
-  endif
-  return ""
-endfunction
-
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " ---------------
 " Voogle
