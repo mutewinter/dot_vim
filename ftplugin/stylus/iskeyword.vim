@@ -6,9 +6,9 @@ function! s:set_stylus_iskeyword(stylus_iskeyword)
   execute "setlocal iskeyword=" . a:stylus_iskeyword
 endfunction
 
-if exists("g:stylus_loaded_iskeyword")
+if exists("g:loaded_iskeyword_stylus")
   finish
 endif
 
-let g:stylus_loaded_iskeyword = 1
+let g:loaded_iskeyword_stylus = 1
 autocmd FileType stylus call s:set_stylus_iskeyword(s:stylus_iskeyword())
