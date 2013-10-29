@@ -20,25 +20,16 @@ _installs all of the plugins and compiles custom spellings._
 Enjoy enhanced productivity, increased levitation, reduced watermelon-related
 accidents, and startling sex appeal.
 
-## Screenshots
+## Screenshot
 
-**MacVim** / **Windows gVim**
+[![MacVim][ss]][ss]
 
-[![MacVim](https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim1_small.png)](https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim1.png) [![Windows gVim](https://github.com/mutewinter/dot_vim/raw/master/screenshots/Windows1_small.png)](https://github.com/mutewinter/dot_vim/raw/master/screenshots/Windows1.png)
+[ss]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim1.png
 
 ## Requirements
 
-**Mac**
-
 * [MacVim](https://github.com/b4winckler/macvim) - I'm currently using
-[snapshot 65](https://github.com/b4winckler/macvim/downloads) on Mountain Lion.
-
-**Windows**
-
-* [gVim](http://www.vim.org/download.php#pc) - I'm using [Wu
-Yongwei's](http://wyw.dcweb.cn) pre-compiled [gVim
-7.3.333](http://wyw.dcweb.cn/download.asp?path=vim&file=gvim73.zip) because it
-has Ruby support and the latest patches.
+[snapshot 72](https://github.com/b4winckler/macvim/releases) on Mavericks.
 
 ## Mappings
 
