@@ -24,7 +24,7 @@ accidents, and startling sex appeal.
 
 [![MacVim][ss]][ss]
 
-[ss]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim1.png
+[ss]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim.png
 
 ## Requirements
 
