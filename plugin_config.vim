@@ -353,8 +353,6 @@ let g:voogle_map="<leader>gg"
 " Vimux
 " ---------------
 let g:VimuxUseNearestPane = 1
-nnoremap <leader>j :silent! VimuxScrollDownInspect<CR>
-nnoremap <leader>k :silent! VimuxScrollUpInspect<CR>
 nnoremap <leader>a :call VimuxRunCommand("spring rspec --fail-fast")<CR>
 nnoremap <leader>A :call VimuxRunCommand("spring rspec")<CR>
 nnoremap <leader>cu :call VimuxRunCommand("spring cucumber")<CR>
@@ -396,7 +394,6 @@ nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <M-i> :TmuxNavigatePrevious<cr>
 
 " ------
 " ColorV
