@@ -19,7 +19,7 @@ source ~/.vim/commands.vim
 " All hotkeys, not dependant on plugins, are mapped here.
 source ~/.vim/mappings.vim
 " Plugin-specific configuration.
-source ~/.vim/plugin_config.vim
+source ~/.vim/plugins.vim
 " Small custom functions.
 source ~/.vim/functions.vim
 " Auto commands.
