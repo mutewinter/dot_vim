@@ -175,6 +175,8 @@ nnoremap <silent> <leader>p :PasteWithPasteMode<CR>
 function WriteBufferIfNecessary()
   if &filetype == "qf"
     execute "normal! \<enter>"
+  elseif &filetype == "nerdtree"
+    " Do nothing in NERDTree
   else
     " File is modified or doesn't exist yet.
     if &modified || !filereadable(expand('%'))
