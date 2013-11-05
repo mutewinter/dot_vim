@@ -182,6 +182,7 @@ function WriteBufferIfNecessary()
     endif
   endif
 endfunction
+command! WriteBufferIfNecessary call WriteBufferIfNecessary()
 
 " Clear the search buffer when hitting return
 " Idea for MapCR from http://git.io/pt8kjA
