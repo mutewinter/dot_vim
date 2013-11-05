@@ -1,3 +1,4 @@
+# Snippets for Ember Handlebars
 snippet link-to "{{#link-to}} with block"
 {{#link-to '${1:routeName}'${2: ${3:this}}}}
   $0
@@ -16,4 +17,30 @@ snippet ife "{{#if}} with {{else}}"
 {{else}}
   $0
 {{/if}}
+endsnippet
+
+snippet each "{{#each}}"
+{{#each${1: ${2:model}}}}
+  $0
+{{/each}}
+endsnippet
+
+snippet bind-attr "{{bind-attr}}"
+{{bind-attr ${1:attribute}=${2:value}}}
+endsnippet
+
+snippet action "{{action}}"
+{{action '${1:actionName}'${2: ${3:value}}}}
+endsnippet
+
+snippet partial "{{partial}}"
+{{partial '${1:name}'}}
+endsnippet
+
+snippet outlet "{{outlet}}"
+{{outlet '${1:name}'}}
+endsnippet
+
+snippet input "{{input}}"
+{{input value=${1:value}}}
 endsnippet
