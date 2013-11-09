@@ -10,10 +10,26 @@ observes${1:observerName}: (->
 ).observes('${2:observerName}')
 endsnippet
 
-snippet get "This getter"
+snippet @g "This getter"
 @get('${1:propertyName}')
+endsnippet
+
+snippet @s "This setter"
+@get('${1:propertyName}', ${2:value})
 endsnippet
 
 snippet alias "Create a computed property alias"
 ${1:propertyName}: Ember.computed.alias '${2:alias}'
+endsnippet
+
+snippet edb "Ember debug log"
+Ember.Logger.debug ${1:value}
+endsnippet
+
+snippet ein "Ember info log"
+Ember.Logger.info ${1:value}
+endsnippet
+
+snippet eer "Ember error log"
+Ember.Logger.error ${1:value}
 endsnippet
