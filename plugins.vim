@@ -269,6 +269,8 @@ autocmd VimEnter *
             \   NERDTree |
             \   execute "normal \<c-w>w" |
             \ endif
+" Keep NERDTree from opening a split when startify is open
+autocmd FileType startify setlocal buftype=
 
 " ---------------
 " vim-togglecursor
