@@ -15,21 +15,29 @@ snippet @g "This getter"
 endsnippet
 
 snippet @s "This setter"
-@get('${1:propertyName}', ${2:value})
+@set('${1:propertyName}', ${2:value})
+endsnippet
+
+snippet @t "This toggleProperty"
+@toggleProperty('${1:propertyName}')
 endsnippet
 
 snippet alias "Create a computed property alias"
 ${1:propertyName}: Ember.computed.alias '${2:alias}'
 endsnippet
 
-snippet edb "Ember debug log"
+snippet eld "Ember debug log"
 Ember.Logger.debug ${1:value}
 endsnippet
 
-snippet ein "Ember info log"
+snippet elda "Ember debug log arguments"
+Ember.Logger.debug arguments
+endsnippet
+
+snippet eli "Ember info log"
 Ember.Logger.info ${1:value}
 endsnippet
 
-snippet eer "Ember error log"
+snippet ele "Ember error log"
 Ember.Logger.error ${1:value}
 endsnippet
