@@ -256,6 +256,7 @@ let g:startify_skiplist = [
             \ ]
 let g:startify_files_number = 10
 let g:startify_custom_indices = ['a', 'd', 'f', 'g', 'h']
+let g:startify_change_to_dir = 0
 
 hi StartifyBracket ctermfg=240
 hi StartifyFooter  ctermfg=111
