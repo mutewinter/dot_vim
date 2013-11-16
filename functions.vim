@@ -173,24 +173,25 @@ nnoremap <silent> <leader>p :PasteWithPasteMode<CR>
 " ---------------
 
 function WriteBufferIfNecessary()
-  if &filetype == "qf"
-    execute "normal! \<enter>"
-  elseif &buftype == "nofile" || &buftype == "quickfix"
-        \|| &filetype == "startify" || &filetype == ""
-    " Do nothing in filetypes that don't support saving
-  else
-    " File is modified or doesn't exist yet.
-    if &modified || !filereadable(expand('%'))
-      :write
-    endif
+  if &modified && filewritable(expand('%')) !&readonly
+    :write
   endif
 endfunction
 command! WriteBufferIfNecessary call WriteBufferIfNecessary()
 
+function CRWriteIfNecessary()
+  if &filetype == "qf"
+    " Execute a normal enter when in Quickfix list.
+    execute "normal! \<enter>"
+  else
+    WriteBufferIfNecessary
+  endif
+endfunction
+
 " Clear the search buffer when hitting return
 " Idea for MapCR from http://git.io/pt8kjA
 function! MapCR()
-  nnoremap <silent> <enter> :call WriteBufferIfNecessary()<CR>
+  nnoremap <silent> <enter> :call CRWriteIfNecessary()<CR>
 endfunction
 call MapCR()
 
