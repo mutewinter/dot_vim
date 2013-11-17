@@ -22,10 +22,6 @@ snippet @t "This toggleProperty"
 @toggleProperty('${1:propertyName}')
 endsnippet
 
-snippet alias "Create a computed property alias"
-${1:propertyName}: Ember.computed.alias '${2:alias}'
-endsnippet
-
 snippet eld "Ember debug log"
 Ember.Logger.debug ${1:value}
 endsnippet
@@ -40,4 +36,16 @@ endsnippet
 
 snippet ele "Ember error log"
 Ember.Logger.error ${1:value}
+endsnippet
+
+# -------------------------
+# Computed Property Aliases
+# -------------------------
+
+snippet alias "Computed property alias"
+Ember.computed.alias '${1:alias}'
+endsnippet
+
+snippet computed "Any computed macro"
+Ember.computed.${1:name} '${2:property}'
 endsnippet
