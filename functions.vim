@@ -173,7 +173,7 @@ nnoremap <silent> <leader>p :PasteWithPasteMode<CR>
 " ---------------
 
 function WriteBufferIfNecessary()
-  if &modified && filewritable(expand('%')) && !&readonly
+  if &modified && !&readonly
     :write
   endif
 endfunction
