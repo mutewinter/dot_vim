@@ -159,3 +159,6 @@ nnoremap Q @@
 " Removes doc lookup mapping because it's easy to fat finger and never useful.
 nnoremap K k
 vnoremap K k
+
+" Toggle paste mode with F5
+nnoremap <silent> <F5> :set paste!<CR>
