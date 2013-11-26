@@ -1,5 +1,5 @@
 snippet property "Create a computed property"
-${1:propertyName}: (->
+(->
   $0
 ).property('${2:propertyName}')
 endsnippet
@@ -10,8 +10,8 @@ observes${1:observerName}: (->
 ).observes('${2:observerName}')
 endsnippet
 
-snippet @g "This getter"
-@get('${1:propertyName}')
+snippet @g "This getter" i
+@get('${1:propertyName}')$0
 endsnippet
 
 snippet @s "This setter"
@@ -36,6 +36,18 @@ endsnippet
 
 snippet ele "Ember error log"
 Ember.Logger.error ${1:value}
+endsnippet
+
+snippet map "Map" w
+(${2:itemName}) ->
+  $0
+endsnippet
+
+snippet reduce "Reduce" w
+((memo, ${2:itemName}) ->
+  $0
+  memo
+, ${3:memo})
 endsnippet
 
 # -------------------------
