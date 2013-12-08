@@ -66,7 +66,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'kballenegger/vim-autoreadwatch'
+Bundle 'mutewinter/vim-autoreadwatch'
 " Language Additions
 "   Ruby
 Bundle 'vim-ruby/vim-ruby'
