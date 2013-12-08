@@ -4,22 +4,36 @@ snippet property "Create a computed property"
 ).property('${2:propertyName}')
 endsnippet
 
+snippet p "Create a computed property (p)"
+(->
+  $0
+).property('${2:propertyName}')
+endsnippet
+
 snippet observes "Create an observer"
 observes${1:observerName}: (->
   $0
 ).observes('${2:observerName}')
 endsnippet
 
-snippet @g "This getter" i
-@get('${1:propertyName}')$0
+snippet get "Getter" i
+get('${1:propertyName}')$0
 endsnippet
 
-snippet @s "This setter"
-@set('${1:propertyName}', ${2:value})
+snippet g "Getter (g)" i
+get('${1:propertyName}')$0
 endsnippet
 
-snippet @t "This toggleProperty"
-@toggleProperty('${1:propertyName}')
+snippet set "Setter"
+set('${1:propertyName}', ${2:value})
+endsnippet
+
+snippet s "Setter (s)"
+set('${1:propertyName}', ${2:value})
+endsnippet
+
+snippet toggle "toggleProperty"
+toggleProperty('${1:propertyName}')
 endsnippet
 
 snippet eld "Ember debug log"
@@ -39,12 +53,12 @@ Ember.Logger.error ${1:value}
 endsnippet
 
 snippet map "Map" w
-(${2:itemName}) ->
+map (${2:itemName}) ->
   $0
 endsnippet
 
 snippet reduce "Reduce" w
-((memo, ${2:itemName}) ->
+reduce((memo, ${2:itemName}) ->
   $0
   memo
 , ${3:memo})
