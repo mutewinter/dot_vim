@@ -20,11 +20,11 @@ snippet g "Getter" i
 get('${1:propertyName}')$0
 endsnippet
 
-snippet vg "Visual this getter" i
-@get('${VISUAL}')$0
+snippet gv "Visual this getter" i
+@get('${VISUAL:${1:propertyName}}')$0
 endsnippet
 
-snippet @gp "Get this and assign" i
+snippet @ga "Get this and assign" i
 $1 = @get('${1:propertyName}')$0
 endsnippet
 
