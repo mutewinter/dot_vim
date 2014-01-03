@@ -16,12 +16,16 @@ observes${1:observerName}: (->
 ).observes('${2:observerName}')
 endsnippet
 
-snippet get "Getter" i
+snippet g "Getter" i
 get('${1:propertyName}')$0
 endsnippet
 
-snippet g "Getter (g)" i
-get('${1:propertyName}')$0
+snippet vg "Visual this getter" i
+@get('${VISUAL}')$0
+endsnippet
+
+snippet @gp "Get this and assign" i
+$1 = @get('${1:propertyName}')$0
 endsnippet
 
 snippet set "Setter"
