@@ -75,6 +75,7 @@ vnoremap <Leader>t, :Tabularize comma<CR>
 " Fugitive
 " ---------------
 nnoremap <Leader>gc :Gcommit -v<CR>
+nnoremap <Leader>gca :Gcommit -a -v<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gp :Git push<CR>
