@@ -108,9 +108,6 @@ nnoremap <leader>h *<C-O>
 " Toggle spelling mode with ,s
 nnoremap <silent> <leader>s :set spell!<CR>
 
-" Begin to edit any file in .vim directory
-nnoremap <leader>v :e ~/.vim/
-
 " Quickly switch to last buffer
 nnoremap <leader>, :e#<CR>
 
