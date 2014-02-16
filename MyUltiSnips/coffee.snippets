@@ -28,6 +28,10 @@ snippet @ga "Get this and assign" i
 $1 = @get('${1:propertyName}')$0
 endsnippet
 
+snippet @_s "Super with arguments" i
+@_super(${1:arguments...})
+endsnippet
+
 snippet set "Setter"
 set('${1:propertyName}', ${2:value})
 endsnippet
