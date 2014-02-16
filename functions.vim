@@ -145,7 +145,7 @@ function! StripTrailingWhiteSpaceAndSave()
   :write
 endfunction
 command! StripTrailingWhiteSpaceAndSave :call StripTrailingWhiteSpaceAndSave()<CR>
-nnoremap <silent>stw :silent! StripTrailingWhiteSpaceAndSave<CR>
+nnoremap <silent> <leader>stw :silent! StripTrailingWhiteSpaceAndSave<CR>
 
 " ---------------
 " Paste using Paste Mode
