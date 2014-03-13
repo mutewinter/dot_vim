@@ -1,5 +1,10 @@
 # Snippets for Ember Handlebars
-snippet link-to "{{#link-to}} with block"
+
+snippet link-to "link-to with name"
+{{link-to '${1:name}' '${2:routeName}'}}
+endsnippet
+
+snippet link-tob "{{#link-to}} with block"
 {{#link-to '${1:routeName}'${2: ${3:this}}}}
   $0
 {{/link-to}}

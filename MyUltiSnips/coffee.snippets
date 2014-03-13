@@ -16,6 +16,12 @@ observes${1:observerName}: (->
 ).observes('${2:observerName}')
 endsnippet
 
+snippet o "Create an observer"
+observes${1:observerName}: (->
+  $0
+).observes('${2:observerName}')
+endsnippet
+
 snippet g "Getter" i
 get('${1:propertyName}')$0
 endsnippet
@@ -28,12 +34,12 @@ snippet @ga "Get this and assign" i
 $1 = @get('${1:propertyName}')$0
 endsnippet
 
-snippet @_s "Super with arguments" i
-@_super(${1:arguments...})
+snippet ag "Get this and assign" i
+$1 = @get('${1:propertyName}')$0
 endsnippet
 
-snippet set "Setter"
-set('${1:propertyName}', ${2:value})
+snippet @_s "Super with arguments" i
+@_super(${1:arguments...})
 endsnippet
 
 snippet s "Setter (s)"
