@@ -18,7 +18,6 @@ Bundle 'gmarik/vundle'
 " Navigation
 Bundle 'ZoomWin'
 Bundle 'kien/ctrlp.vim'
-Bundle 'JazzCore/ctrlp-cmatcher'
 " UI Additions
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'bling/vim-airline'
