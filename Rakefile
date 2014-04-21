@@ -90,11 +90,11 @@ def write_lines_to_readme(lines)
   readme_file.close
 end
 
-# Returns an array of plugins denoted with Bundle
+# Returns an array of plugins denoted with Plugin
 def parse_plugins_from_vimrc
   plugins = []
   File.new('vundle.vim').each do |line|
-    if line =~ /^Bundle\s+["'](.+)["']/
+    if line =~ /^Plugin\s+["'](.+)["']/
       plugins << convert_to_link_hash($1)
       print '.'
     end

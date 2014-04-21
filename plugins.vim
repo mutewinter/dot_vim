@@ -6,14 +6,14 @@
 " Vundle
 " ---------------
 command! ReloadVundle source ~/.vim/vundle.vim
-function BundleReloadAndRun(command)
+function PluginReloadAndRun(command)
   :ReloadVundle
   execute a:command
 endfunction
 
-nnoremap <Leader>bi :call BundleReloadAndRun("BundleInstall")<CR>
-nnoremap <Leader>bu :call BundleReloadAndRun("BundleInstall!")<CR>
-nnoremap <Leader>bc :call BundleReloadAndRun("BundleClean")<CR>
+nnoremap <Leader>pi :call PluginReloadAndRun("PluginInstall")<CR>
+nnoremap <Leader>pu :call PluginReloadAndRun("PluginInstall!")<CR>
+nnoremap <Leader>pc :call PluginReloadAndRun("PluginClean")<CR>
 
 " ---------------
 " space.vim
