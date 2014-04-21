@@ -256,10 +256,10 @@ let g:signify_sign_overwrite = 0
 " vim-startify
 " ---------------
 let g:startify_list_order = [
-        \ ['   Recent'],
-        \ 'files',
         \ ['   Last modified'],
         \ 'dir',
+        \ ['   Recent'],
+        \ 'files',
         \ ]
 let g:startify_skiplist = [
             \ 'COMMIT_EDITMSG',
