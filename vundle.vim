@@ -65,6 +65,7 @@ Plugin 'ervandew/supertab'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'mutewinter/vim-autoreadwatch'
+Plugin 'yssl/QFEnter'
 " Language Additions
 "   Ruby
 Plugin 'vim-ruby/vim-ruby'
