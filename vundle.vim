@@ -11,9 +11,9 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 
-" ---------------
-" Plugin Bundles
-" ---------------
+" -------
+" Plugins
+" -------
 
 " Navigation
 Plugin 'ZoomWin'

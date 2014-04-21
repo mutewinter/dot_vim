@@ -38,11 +38,11 @@ info 'Installing plugins and compiling custom spellings'
 info '-------------------------------------------------'
 if test $(which mvim)
 then
-  mvim -v "+mkspell ~/.vim/spell/custom.en.utf-8.add" +BundleInstall +qall
+  mvim -v "+mkspell ~/.vim/spell/custom.en.utf-8.add" +PluginInstall +qall
 else
   if test $(which vim)
   then
-    vim "+mkspell ~/.vim/spell/custom.en.utf-8.add" +BundleInstall +qall
+    vim "+mkspell ~/.vim/spell/custom.en.utf-8.add" +PluginInstall +qall
   else
     fail 'mvim or vim not found in path.'
   fi
