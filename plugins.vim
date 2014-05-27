@@ -30,7 +30,6 @@ let g:syntastic_loc_list_height = 5
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': [] }
-let g:syntastic_html_checkers = ['handlebars']
 
 " Hat tip http://git.io/SPIBfg
 let g:syntastic_error_symbol = '✗'
