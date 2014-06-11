@@ -39,11 +39,6 @@ accidents, and startling sex appeal.
 And many more. See [`mappings.vim`](mappings.vim) and
 [`plugins.vim`](plugins.vim) for more.
 
-## Notes
-
-Be sure to always edit the vimrc using `,v`, which opens the vimrc in the
-`.vim` folder. Vim has a nasty habit of overriding symlinks.
-
 ## Plugin Installation / Requirements
 
 Here's a list of plugins that require further installation or have
