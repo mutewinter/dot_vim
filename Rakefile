@@ -1,6 +1,6 @@
 # Rakefile
 #
-# Simple tasks for managing my .vim files
+# Tasks for managing dot_vim.
 
 require 'open-uri'
 require 'openssl'
@@ -63,7 +63,7 @@ def add_plugins_to_readme(plugins = [])
   lines = File.readlines(README_FILE).map{|l| l.chomp}
   index = lines.index(PLUGIN_LIST_TAG)
   unless index.nil?
-    lines.insert(index+1, PLUGINS_HEADER)
+    lines.insert(index+1, "\n#{PLUGINS_HEADER}")
     plugin_rows = plugins.sort_by {|p| p[:stars] }
       .reverse
       .map{|p| table_row(p) }

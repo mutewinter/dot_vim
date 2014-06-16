@@ -27,20 +27,12 @@ _installs all of the plugins and compiles custom spellings._
 Enjoy enhanced productivity, increased levitation, reduced watermelon-related
 accidents, and startling sex appeal.
 
-## Requirements
+## Vim Requirements
 
 * [MacVim](https://github.com/b4winckler/macvim) - I'm currently using
 [snapshot 72](https://github.com/b4winckler/macvim/releases) on Mavericks.
 
-## Mappings
-
-* Typing `jk` insert mode is equivalent to `Escape`.
-* Pressing `enter` in normal mode saves the current buffer.
-
-And many more. See [`mappings.vim`](mappings.vim) and
-[`vundle_plugins`](vundle_plugins) for more.
-
-## Plugin Installation / Requirements
+## Plugin Requirements
 
 Here's a list of plugins that require further installation or have
 dependencies.
@@ -61,7 +53,16 @@ dependencies.
 * [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
   formatting.
 
+## Mappings
+
+* Typing `jk` insert mode is equivalent to `Escape`.
+* Pressing `enter` in normal mode saves the current buffer.
+
+And many more. See [`mappings.vim`](mappings.vim) and
+[`vundle_plugins`](vundle_plugins) for more.
+
 ## Plugin List
+
 | Stars___ | **Plugin** | **Description** |
 | -------: | :--------- | :-------------- |
 | 4,991 :star: |[YouCompleteMe](https://github.com/Valloric/YouCompleteMe) [:page_facing_up:](vundle_plugins/YouCompleteMe.vim)|A code-completion engine for Vim |
