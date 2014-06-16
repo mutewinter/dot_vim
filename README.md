@@ -30,7 +30,7 @@ accidents, and startling sex appeal.
 ## Vim Requirements
 
 * [MacVim](https://github.com/b4winckler/macvim) - I'm currently using
-[snapshot 72](https://github.com/b4winckler/macvim/releases) on Mavericks.
+[snapshot 73](https://github.com/b4winckler/macvim/releases) on Mavericks.
 
 ## Plugin Requirements
 
