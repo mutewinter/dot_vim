@@ -1,7 +1,7 @@
 " =============================================================================
 " Who: Jeremy Mack (@mutewinter)
 " Description: The Vim Configuration of Champions
-" Version: 3.0 - Plugin definition and configuration in the same file!
+" Version: 3.0 - Now each plugin is included and managed in its own file!
 " =============================================================================
 
 " All of the plugins are installed with Vundle from this file.
@@ -18,7 +18,7 @@ source ~/.vim/config.vim
 source ~/.vim/commands.vim
 " All hotkeys, not dependant on plugins, are mapped here.
 source ~/.vim/mappings.vim
-" Plugin-specific configuration.
+" Load plugin-specific configuration.
 source ~/.vim/plugins.vim
 " Small custom functions.
 source ~/.vim/functions.vim
