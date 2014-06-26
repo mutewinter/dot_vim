@@ -20,13 +20,3 @@ endfor
 unlet g:vundle_installing_plugins
 
 call vundle#end()
-
-command! ReloadVundle source ~/.vim/vundle.vim
-function PluginReloadAndRun(command)
-  :ReloadVundle
-  execute a:command
-endfunction
-
-nnoremap <Leader>pi :call PluginReloadAndRun("PluginInstall")<CR>
-nnoremap <Leader>pu :call PluginReloadAndRun("PluginInstall!")<CR>
-nnoremap <Leader>pc :call PluginReloadAndRun("PluginClean")<CR>
