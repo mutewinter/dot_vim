@@ -103,6 +103,7 @@ And many more. See [`mappings.vim`](mappings.vim) and
 | 257 :star: |[vim-eunuch](https://github.com/tpope/vim-eunuch)|eunuch.vim: helpers for UNIX |
 | 234 :star: |[vim-textobj-user](https://github.com/kana/vim-textobj-user)|Vim plugin: Create your own text objects |
 | 203 :star: |[webapi-vim](https://github.com/mattn/webapi-vim)|vim interface to Web API |
+| 239 :star: |[vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)|Add CSS3 syntax support to vim's built-in `syntax/css.vim`. |
 | 192 :star: |[cocoa.vim](https://github.com/msanders/cocoa.vim)|Vim plugin for Cocoa/Objective-C development. |
 | 192 :star: |[undotree](https://github.com/mbbill/undotree)|Display your undo history in a graph. |
 | 187 :star: |[vim-bundler](https://github.com/tpope/vim-bundler)|bundler.vim: Lightweight support for Ruby's Bundler |
@@ -138,7 +139,6 @@ And many more. See [`mappings.vim`](mappings.vim) and
 | 3 :star: |[swap-parameters](https://github.com/mutewinter/swap-parameters)|Swap parameters of a function or a comma separated list with a single command. |
 | 3 :star: |[GIFL](https://github.com/mutewinter/GIFL) [:page_facing_up:](vundle_plugins/GIFL.vim)|Add "wrap terms in google I'm feeling lucky url" à la Textmate |
 | 2 :star: |[taskpaper.vim](https://github.com/mutewinter/taskpaper.vim)|This package contains a syntax file and a file-type plugin for the simple format used by the TaskPaper application. |
-| 1 :star: |[vim-css3-syntax](https://github.com/mutewinter/vim-css3-syntax)|Add CSS3 syntax support to vim's built-in `syntax/css.vim`. |
 | 1 :star: |[HelpClose](https://github.com/vim-scripts/HelpClose)|Close all help windows |
 | 1 :star: |[tomdoc.vim](https://github.com/mutewinter/tomdoc.vim)|A simple syntax add-on for vim that highlights your TomDoc comments. |
 | 0 :star: |[vim-space](https://github.com/zhaocai/vim-space) [:page_facing_up:](vundle_plugins/vim-space.vim)|space.vim - Smart Space key for Vim |
