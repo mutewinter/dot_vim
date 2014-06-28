@@ -101,3 +101,13 @@ endsnippet
 snippet oneWay "oneWay computed macro"
 Ember.computed.oneWay '${2:property}'
 endsnippet
+
+# ---
+# Run
+# ---
+
+snippet later "Ember.run.later macro"
+Ember.run.later(=>
+  , ${2:function}
+, ${1:time})
+endsnippet
