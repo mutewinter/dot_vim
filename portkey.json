@@ -1,0 +1,15 @@
+{
+  "portkeys": [],
+  "vundle_plugins/*.vim": {
+    "type": "plugin"
+  },
+  "after/**": {
+    "type": "after"
+  },
+  "MyUltiSnips/**": {
+    "type": "snippet"
+  },
+  "ftplugin/**": {
+    "type": "ftplugin"
+  }
+}
