@@ -67,7 +67,6 @@ And many more. See [`mappings.vim`](mappings.vim) and
 | -------: | :--------- | :-------------- |
 | 5,072 :star: |[YouCompleteMe](https://github.com/Valloric/YouCompleteMe) [:page_facing_up:](vundle_plugins/YouCompleteMe.vim)|A code-completion engine for Vim |
 | 4,343 :star: |[vim-fugitive](https://github.com/tpope/vim-fugitive) [:page_facing_up:](vundle_plugins/vim-fugitive.vim)|fugitive.vim: a Git wrapper so awesome, it should be illegal |
-| 3,485 :star: |[nerdtree](https://github.com/scrooloose/nerdtree) [:page_facing_up:](vundle_plugins/nerdtree.vim)|A tree explorer plugin for vim. |
 | 3,474 :star: |[syntastic](https://github.com/scrooloose/syntastic) [:page_facing_up:](vundle_plugins/syntastic.vim)|Syntax checking hacks for vim |
 | 3,384 :star: |[vim-airline](https://github.com/bling/vim-airline) [:page_facing_up:](vundle_plugins/vim-airline.vim)|lean & mean status/tabline for vim that's light as air |
 | 3,304 :star: |[ctrlp.vim](https://github.com/kien/ctrlp.vim) [:page_facing_up:](vundle_plugins/ctrlp.vim)|Fuzzy file, buffer, mru, tag, etc finder. |
@@ -121,6 +120,7 @@ And many more. See [`mappings.vim`](mappings.vim) and
 | 67 :star: |[ember.vim](https://github.com/dsawardekar/ember.vim) [:page_facing_up:](vundle_plugins/ember.vim)|Vim plugin for the Emberjs frontend framework |
 | 66 :star: |[vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search)|Start a * or # search from a visual block |
 | 65 :star: |[vim-misc](https://github.com/xolox/vim-misc)|Miscellaneous auto-load Vim scripts |
+| 47 :star: |[git-nerdtree](https://github.com/Xuyuanp/git-nerdtree) [:page_facing_up:](vundle_plugins/git-nerdtree.vim)|NERDTree with git status support |
 | 45 :star: |[L9](https://github.com/vim-scripts/L9)|Vim-script library |
 | 45 :star: |[vim-json](https://github.com/leshill/vim-json)|Syntax highlighting for JSON in Vim |
 | 44 :star: |[textile.vim](https://github.com/timcharper/textile.vim)|Textile for VIM |
