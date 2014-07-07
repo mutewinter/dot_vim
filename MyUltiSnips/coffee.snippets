@@ -66,8 +66,27 @@ snippet ele "Ember error log"
 Ember.Logger.error ${1:value}
 endsnippet
 
+snippet all "App logger log"
+App.Logger.log ${1:value}
+endsnippet
+
+snippet ald "App debug log"
+App.Logger.debug ${1:value}
+endsnippet
+
+snippet alda "App arguments log"
+App.Logger.debug arguments
+endsnippet
+
 snippet ale "App error log"
 App.Logger.error ${1:value}
+endsnippet
+
+snippet ll "LOG.log"
+LOG.log
+  event: '${1:event}'
+  ${2:secondary: ${3:event}}
+  ${4:args: [${5:args}]}
 endsnippet
 
 snippet map "Map" w
