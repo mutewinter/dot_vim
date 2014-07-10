@@ -61,6 +61,25 @@ dependencies.
 And many more. See [`mappings.vim`](mappings.vim) and
 [`vundle_plugins`](vundle_plugins) for more.
 
+## Installing Custom Plugins
+
+Create a new `.vim` file with the same name as the plugin you'd like to install
+in [`vundle_plugins/custom`](vundle_plugins/custom). Then add the installation
+block. For example:
+
+`vundle_plugins/custom/vim-move.vim`
+
+```viml
+if exists('g:vundle_installing_plugins')
+  Plugin 'matze/vim-move.vim'
+  finish
+endif
+
+let g:move_key_modifier = 'C'
+```
+
+This example installs [`vim-move`](https://github.com/matze/vim-move).
+
 ## Plugin List
 
 | Stars___ | **Plugin** | **Description** |
