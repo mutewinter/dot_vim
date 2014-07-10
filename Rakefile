@@ -64,7 +64,10 @@ def add_plugins_to_readme(plugins = [])
   index = lines.index(PLUGIN_LIST_TAG)
   unless index.nil?
     lines.insert(index+1, "\n#{PLUGINS_HEADER}")
-    plugin_rows = plugins.sort_by {|p| p[:stars] }
+    plugin_rows = plugins
+      .sort {|x,y| 
+        x[:stars] <=> y[:stars] or x[:name].downcase <=> y[:name].downcase
+      }
       .reverse
       .map{|p| table_row(p) }
     lines.insert(index+2, plugin_rows)
