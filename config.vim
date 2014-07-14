@@ -109,7 +109,7 @@ set listchars=""
 " make tabs visible
 set listchars=tab:▸▸
 " show trailing spaces as dots
-set listchars+=trail:.
+set listchars+=trail:•
 " The character to show in the last column when wrap is off and the line
 " continues beyond the right of the screen
 set listchars+=extends:>
