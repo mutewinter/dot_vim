@@ -4,6 +4,16 @@ snippet p "Create a computed property"
 ).property('${2:propertyName}')
 endsnippet
 
+snippet ps "Create a computed property"
+((key, newValue)->
+  if arguments.length > 1
+    # Setter
+    ${1:@set('${2:key}', newValue)}
+
+  $0
+).property('${2:propertyName}')
+endsnippet
+
 snippet observes "Create an observer"
 observes${1:observerName}: (->
   $0
@@ -19,7 +29,13 @@ endsnippet
 snippet on "Create an 'on' function"
 (->
   $0
-).on('${2:propertyName}')
+).on('${2:didInsertElement}')
+endsnippet
+
+snippet oni "Create an 'on' init function"
+(->
+  $0
+).on('init')
 endsnippet
 
 snippet g "Getter" i
@@ -42,7 +58,7 @@ snippet @_s "Super with arguments" i
 @_super(${1:arguments...})
 endsnippet
 
-snippet s "Setter (s)"
+snippet s "Setter (s)" i
 set('${1:propertyName}', ${2:value})
 endsnippet
 
@@ -101,6 +117,19 @@ reduce((memo, ${2:itemName}) ->
 , ${3:memo})
 endsnippet
 
+snippet ie "Ember.isEmpty" w
+Ember.isEmpty($0)
+endsnippet
+
+snippet rp "RSVP Promise" w
+new Ember.RSVP.Promise (resolve, reject) =>
+  $0
+endsnippet
+
+snippet eoc "Create Ember Object" w
+Ember.Object.create($0)
+endsnippet
+
 # -------------------------
 # Computed Property Aliases
 # -------------------------
@@ -121,6 +150,14 @@ snippet oneWay "oneWay computed macro"
 Ember.computed.oneWay '${2:property}'
 endsnippet
 
+snippet readOnly "readOnly computed macro"
+Ember.computed.readOnly '${2:property}'
+endsnippet
+
+snippet notEmpty "notEmpty computed macro"
+Ember.computed.notEmpty '${2:property}'
+endsnippet
+
 # ---
 # Run
 # ---
@@ -129,4 +166,25 @@ snippet later "Ember.run.later macro"
 Ember.run.later(=>
   , ${2:function}
 , ${1:time})
+endsnippet
+
+snippet so "Ember.run.scheduleOnce"
+Ember.run.scheduleOnce '${1:afterRender}', =>
+  $0
+endsnippet
+
+# ------
+# TomDoc
+# ------
+
+snippet #p "TomDoc Public"
+# Public: ${1:Description}
+#
+# Returns ${2: nothing.}
+endsnippet
+
+snippet #i "TomDoc Internal"
+# Internal: ${1:Description}
+#
+# Returns ${2: nothing.}
 endsnippet
