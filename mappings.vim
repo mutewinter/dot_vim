@@ -162,3 +162,19 @@ nnoremap <silent> <F5> :set paste!<CR>
 
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
+
+" copy current file name (relative/absolute) to system clipboard
+" from http://stackoverflow.com/a/17096082/22423
+if has("mac") || has("gui_macvim") || has("gui_mac")
+  " relative path  (src/foo.txt)
+  nnoremap <silent> <leader>yp :let @*=expand("%")<CR>
+
+  " absolute path  (/something/src/foo.txt)
+  nnoremap <silent> <leader>yP :let @*=expand("%:p")<CR>
+
+  " filename       (foo.txt)
+  nnoremap <silent> <leader>yf :let @*=expand("%:t")<CR>
+
+  " directory name (/something/src)
+  nnoremap <silent> <leader>yd :let @*=expand("%:p:h")<CR>
+endif
