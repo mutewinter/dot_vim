@@ -55,54 +55,54 @@ $1 = @get('${1:propertyName}')$0
 endsnippet
 
 snippet @_s "Super with arguments" i
-@_super(${1:arguments...})
+@_super(${1:arguments...})$0
 endsnippet
 
 snippet s "Setter (s)" i
-set('${1:propertyName}', ${2:value})
+set('${1:propertyName}', ${2:value})$0
 endsnippet
 
 snippet toggle "toggleProperty"
-toggleProperty('${1:propertyName}')
+toggleProperty('${1:propertyName}')$0
 endsnippet
 
 snippet eld "Ember debug log"
-Ember.Logger.debug ${1:value}
+Ember.Logger.debug ${1:value}$0
 endsnippet
 
 snippet elda "Ember debug log arguments"
-Ember.Logger.debug arguments
+Ember.Logger.debug arguments$0
 endsnippet
 
 snippet eli "Ember info log"
-Ember.Logger.info ${1:value}
+Ember.Logger.info ${1:value}$0
 endsnippet
 
 snippet ele "Ember error log"
-Ember.Logger.error ${1:value}
+Ember.Logger.error ${1:value}$0
 endsnippet
 
 snippet all "App logger log"
-App.Logger.log ${1:value}
+App.Logger.log ${1:value}$0
 endsnippet
 
 snippet ald "App debug log"
-App.Logger.debug ${1:value}
+App.Logger.debug ${1:value}$0
 endsnippet
 
 snippet alda "App arguments log"
-App.Logger.debug arguments
+App.Logger.debug arguments$0
 endsnippet
 
 snippet ale "App error log"
-App.Logger.error ${1:value}
+App.Logger.error ${1:value}$0
 endsnippet
 
 snippet ll "LOG.log"
 LOG.log
   event: '${1:event}'
   ${2:secondary: ${3:event}}
-  ${4:args: [${5:args}]}
+  ${4:args: [${5:args}]}$0
 endsnippet
 
 snippet map "Map" w
@@ -118,7 +118,7 @@ reduce((memo, ${2:itemName}) ->
 endsnippet
 
 snippet ie "Ember.isEmpty" w
-Ember.isEmpty($0)
+Ember.isEmpty(${1:variable})$0
 endsnippet
 
 snippet rp "RSVP Promise" w
@@ -135,27 +135,27 @@ endsnippet
 # -------------------------
 
 snippet computed "Any computed macro"
-Ember.computed.${1:name} '${2:property}'
+Ember.computed.${1:name} '${2:property}'$0
 endsnippet
 
 snippet c "Any computed macro (c)"
-Ember.computed.${1:name} '${2:property}'
+Ember.computed.${1:name} '${2:property}'$0
 endsnippet
 
 snippet alias "Computed property alias"
-Ember.computed.alias '${1:alias}'
+Ember.computed.alias '${1:alias}'$0
 endsnippet
 
 snippet oneWay "oneWay computed macro"
-Ember.computed.oneWay '${2:property}'
+Ember.computed.oneWay '${2:property}'$0
 endsnippet
 
 snippet readOnly "readOnly computed macro"
-Ember.computed.readOnly '${2:property}'
+Ember.computed.readOnly '${2:property}'$0
 endsnippet
 
 snippet notEmpty "notEmpty computed macro"
-Ember.computed.notEmpty '${2:property}'
+Ember.computed.notEmpty '${2:property}'$0
 endsnippet
 
 # ---
@@ -165,7 +165,7 @@ endsnippet
 snippet later "Ember.run.later macro"
 Ember.run.later(=>
   , ${2:function}
-, ${1:time})
+, ${1:time})$0
 endsnippet
 
 snippet so "Ember.run.scheduleOnce"
@@ -180,11 +180,11 @@ endsnippet
 snippet #p "TomDoc Public"
 # Public: ${1:Description}
 #
-# Returns ${2: nothing.}
+# Returns ${2: nothing.}$0
 endsnippet
 
 snippet #i "TomDoc Internal"
 # Internal: ${1:Description}
 #
-# Returns ${2: nothing.}
+# Returns ${2: nothing.}$0
 endsnippet
