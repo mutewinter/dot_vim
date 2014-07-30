@@ -40,5 +40,9 @@ if has("autocmd")
     " to run commands there.
     autocmd! CmdwinEnter * :unmap <cr>
     autocmd! CmdwinLeave * :call MapCR()
+
+    " Resize splits when the window is resized
+    " from https://bitbucket.org/sjl/dotfiles/src/tip/vim/vimrc
+    au VimResized * :wincmd =
   augroup END
 endif
