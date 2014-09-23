@@ -1,5 +1,5 @@
 if exists('g:vundle_installing_plugins')
-  Plugin 'Xuyuanp/git-nerdtree'
+  Plugin 'scrooloose/nerdtree'
   finish
 endif
 
