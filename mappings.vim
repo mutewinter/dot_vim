@@ -91,10 +91,7 @@ nnoremap <silent> gx :wincmd x<CR>
 " Make line completion easier.
 inoremap <C-l> <C-x><C-l>
 
-" Easier Scrolling (think j/k with left hand)
-" All variations are mapped for now until I get used to one
-" C/M/D + d (page up)
-" C/M/D + f (page down)
+" Scroll larger amounts with C-j / C-k
 nnoremap <C-j> 15gjzz
 nnoremap <C-k> 15gkzz
 vnoremap <C-j> 15gjzz
