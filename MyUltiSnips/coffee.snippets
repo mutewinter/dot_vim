@@ -5,7 +5,7 @@ snippet p "Create a computed property"
 endsnippet
 
 snippet ps "Create a computed property"
-((key, newValue)->
+((key, newValue) ->
   if arguments.length > 1
     # Setter
     ${1:@set('${2:key}', newValue)}
