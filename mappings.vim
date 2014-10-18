@@ -111,7 +111,7 @@ inoremap jK <Esc>
 " ---------------
 
 " Clear search
-noremap <silent><leader>/ :nohls<CR>
+noremap <silent><leader>/ :nohls<CR>:call clearmatches()<cr>
 
 " Highlight search word under cursor without jumping to next
 nnoremap <leader>h *<C-O>
