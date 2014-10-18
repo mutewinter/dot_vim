@@ -7,6 +7,14 @@
 let mapleader=","
 let maplocalleader = "\\"
 
+" -----------------------
+" Unmapped While Learning
+" -----------------------
+
+" No-op ^ and $ while learning H and L
+noremap ^ <nop>
+noremap $ <nop>
+
 " ---------------
 " Regular Mappings
 " ---------------
@@ -28,10 +36,6 @@ nnoremap Y y$
 " Just to beginning and end of lines easier. From http://vimbits.com/bits/16
 noremap H ^
 noremap L $
-
-" No-op ^ and $ while learning H and L
-noremap ^ <nop>
-noremap $ <nop>
 
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
