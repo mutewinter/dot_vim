@@ -47,6 +47,10 @@ nnoremap U <C-r>
 nnoremap ' `
 nnoremap ` '
 
+" Use very magic (Perl-like) regex style
+nnoremap / /\v
+vnoremap / /\v
+
 " Don't move on *
 nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
 
