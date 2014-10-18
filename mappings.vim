@@ -29,6 +29,10 @@ nnoremap Y y$
 noremap H ^
 noremap L $
 
+" No-op ^ and $ while learning H and L
+noremap ^ <nop>
+noremap $ <nop>
+
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
