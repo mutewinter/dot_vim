@@ -157,7 +157,7 @@ def fetch_plugin_info(vundle_link)
   plugin_info = repo_info(github_user, github_repo)
   info[:description] = plugin_info['description'].strip
   info[:stars] = plugin_info['stargazers_count']
-  info[:stars_text] = "#{comma_number(plugin_info['stargazers_count'])} :star:"
+  info[:stars_text] = "#{comma_number(plugin_info['stargazers_count'])} ★"
 
   info
 end
