@@ -42,15 +42,7 @@ snippet g "Getter" i
 get('${1:propertyName}')$0
 endsnippet
 
-snippet gv "Visual this getter" i
-@get('${VISUAL}')$0
-endsnippet
-
-snippet @ga "Get this and assign" i
-$1 = @get('${1:propertyName}')$0
-endsnippet
-
-snippet ag "Get this and assign" i
+snippet ga "Get this and assign" i
 $1 = @get('${1:propertyName}')$0
 endsnippet
 
@@ -58,8 +50,15 @@ snippet @_s "Super with arguments" i
 @_super(${1:arguments...})$0
 endsnippet
 
-snippet st "Setter (s)" i
+snippet ps "Setter for Computed Property" i
 set('${1:propertyName}', ${2:value})$0
+endsnippet
+
+snippet sp "Setter Properties" i
+setProperties(
+  ${1:propertyName}: ${2:value},
+  $0
+)
 endsnippet
 
 snippet toggle "toggleProperty"
@@ -98,7 +97,7 @@ snippet ale "App error log"
 App.Logger.error ${1:value}$0
 endsnippet
 
-snippet ll "LOG.log"
+snippet LOG "LOG.log"
 LOG.log
   event: '${1:event}'
   ${2:secondary: ${3:event}}
