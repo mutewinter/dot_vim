@@ -177,8 +177,9 @@ nnoremap <silent> <F5> :set paste!<CR>
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
 
-" Insert a console.log
+" Insert a console statements
 iabbrev clg console.log
+iabbrev cld console.debug
 
 " copy current file name (relative/absolute) to system clipboard
 " from http://stackoverflow.com/a/17096082/22423
