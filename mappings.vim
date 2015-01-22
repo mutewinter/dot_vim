@@ -25,7 +25,7 @@ nnoremap ; :
 vnoremap ; :
 
 " Yank entire buffer with gy
-nnoremap gy :%y+<cr>
+nnoremap gy :0,$ y<cr>
 
 " Select entire buffer
 nnoremap vy ggVG
@@ -155,6 +155,7 @@ nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
 
 " Close the current window
 nnoremap <silent> <m-w> :close<CR>
+
 " ---------------
 " Typo Fixes
 " ---------------
