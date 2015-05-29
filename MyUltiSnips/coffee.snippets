@@ -98,10 +98,14 @@ App.Logger.error ${1:value}$0
 endsnippet
 
 snippet LOG "LOG.log"
-LOG.log
+LOG.error
   event: '${1:event}'
   ${2:secondary: ${3:event}}
   ${4:args: [${5:args}]}$0
+endsnippet
+
+snippet t "Translate" w
+Ember.I18n.t('$0')
 endsnippet
 
 snippet map "Map" w
