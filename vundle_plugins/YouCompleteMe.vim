@@ -9,4 +9,5 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_filetype_specific_completion_to_disable = {
     \ 'ruby' : 1,
     \ 'javascript' : 1,
+    \ 'jsx' : 1,
     \}
