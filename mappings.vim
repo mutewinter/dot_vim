@@ -176,11 +176,6 @@ nnoremap <silent> <F5> :set paste!<CR>
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
 
-" Insert a console statements
-iabbrev clg console.log
-iabbrev cld console.debug
-iabbrev clda console.debug(arguments)
-
 " copy current file name (relative/absolute) to system clipboard
 " from http://stackoverflow.com/a/17096082/22423
 if has("mac") || has("gui_macvim") || has("gui_mac")
