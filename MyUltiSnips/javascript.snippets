@@ -1,0 +1,13 @@
+snippet p "Create a computed property"
+Ember.computed('${1:propertyName}', function() {
+  $0
+})
+endsnippet
+
+snippet g "Getter" i
+get('${1:propertyName}')$0
+endsnippet
+
+snippet gt "This Getter" i
+this.get('${1:propertyName}')$0
+endsnippet
