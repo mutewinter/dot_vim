@@ -3,7 +3,4 @@ if exists('g:vundle_installing_plugins')
   finish
 endif
 
-nnoremap <leader>eaa :Easset<space>
-nnoremap <leader>err :Eroute<space>
-nnoremap <leader>ert :Econfig router<CR>
-nnoremap <leader>ett :Etemplate<space>
+nnoremap <leader>ert :Eapp router.coffee<CR>
