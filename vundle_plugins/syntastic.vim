@@ -14,4 +14,17 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_full_redraws = 1
 
-autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['standard']
+function! SetJavaScriptCheckers()
+  if findfile('.eslintrc', '.;') != ''
+    " Use eslint for projects w/ eslintrc
+    let b:syntastic_checkers = ['eslint']
+  elseif finddir('ProjectSettings', '.;') != ''
+    " Use nothing for Unity projects.
+    let b:syntastic_checkers = ['unityscript']
+  else
+    " Default to jshint
+    let b:syntastic_checkers = ['jshint']
+  endif
+endfunction
+
+autocmd FileType javascript call SetJavaScriptCheckers()
