@@ -12,18 +12,26 @@ snippet gt "This Getter" i
 this.get('${1:propertyName}')$0
 endsnippet
 
-snippet clg "Console log" b
-console.log($0);
+snippet clg "Console log a variable" b
+console.log("$1", ${1:variable});
+endsnippet
+
+snippet clss "Console log a string" b
+console.log('$0');
 endsnippet
 
 snippet clga "Console log arguments" b
 console.log(arguments);
 endsnippet
 
-snippet cld "Console debug" b
-console.debug($0);
+snippet cld "Console debug a variable" b
+console.debug("$1", ${1:variable});
+endsnippet
+
+snippet clds "Console debug a string" b
+console.debug('$0');
 endsnippet
 
 snippet clda "Console log arguments" b
-console.log(arguments);
+console.debug(arguments);
 endsnippet
