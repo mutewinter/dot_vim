@@ -24,11 +24,10 @@ hi StartifyHeader  ctermfg=203
 hi StartifyPath    ctermfg=245
 hi StartifySlash   ctermfg=240
 
-" Show Startify and NERDTree on start
+" Show Startify
 autocmd VimEnter *
             \ if !argc() |
             \   Startify |
-            \   NERDTree |
             \   execute "normal \<c-w>w" |
             \ endif
 " Keep NERDTree from opening a split when startify is open
