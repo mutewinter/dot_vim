@@ -1,22 +1,12 @@
-snippet p "Create a computed property"
-Ember.computed('${1:propertyName}', function() {
-  $0
-})
-endsnippet
-
-snippet gg "Getter" i
-get('${1:propertyName}')$0
-endsnippet
-
-snippet gt "This Getter" i
-this.get('${1:propertyName}')$0
-endsnippet
+# ---------------
+# Console Logging
+# ---------------
 
 snippet clg "Console log a variable" b
 console.log("$1", ${1:variable});
 endsnippet
 
-snippet clss "Console log a string" b
+snippet clgs "Console log a string" b
 console.log('$0');
 endsnippet
 
@@ -34,4 +24,38 @@ endsnippet
 
 snippet clda "Console log arguments" b
 console.debug(arguments);
+endsnippet
+
+# -----
+# Ember
+# -----
+
+snippet p "Create a computed property"
+Ember.computed('${1:propertyName}', function() {
+  $0
+})
+endsnippet
+
+snippet gg "Getter" i
+get('${1:propertyName}')$0
+endsnippet
+
+snippet gt "This Getter" i
+this.get('${1:propertyName}')$0
+endsnippet
+
+# -----
+# Unity
+# -----
+
+snippet dls "Debug Log a String" b
+Debug.Log('$0');
+endsnippet
+
+snippet dl "Debug Log a Variable" b
+Debug.Log(String.Format("$0$1: {0}", ${1:variable}));
+endsnippet
+
+snippet sf "String format" w
+String.Format("$2$1: {0}$0", ${2:variable});
 endsnippet

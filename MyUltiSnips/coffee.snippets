@@ -1,3 +1,23 @@
+# -------
+# Console
+# -------
+
+snippet cld "Console debug a variable" b
+console.debug "$1", ${1:variable}
+endsnippet
+
+snippet clds "Console debug a string" b
+console.debug '$0'
+endsnippet
+
+snippet clda "Console log arguments" b
+console.debug arguments
+endsnippet
+
+# -----
+# Ember
+# -----
+
 snippet p "Create a computed property"
 (->
   $0
@@ -108,34 +128,12 @@ snippet t "Translate" w
 Ember.I18n.t('$0')
 endsnippet
 
-snippet map "Map" w
-map (${2:itemName}) ->
-  $0
-endsnippet
-
-snippet reduce "Reduce" w
-reduce((memo, ${2:itemName}) ->
-  $0
-  memo
-, ${3:memo})
-endsnippet
-
-snippet ie "Ember.isEmpty" w
-Ember.isEmpty(${1:variable})$0
-endsnippet
-
 snippet rp "RSVP Promise" w
 new Ember.RSVP.Promise (resolve, reject) =>
   $0
 endsnippet
 
-snippet eoc "Create Ember Object" w
-Ember.Object.create($0)
-endsnippet
-
-# -------------------------
 # Computed Property Aliases
-# -------------------------
 
 snippet computed "Any computed macro"
 Ember.computed.${1:name} '${2:property}'$0
@@ -161,9 +159,7 @@ snippet notEmpty "notEmpty computed macro"
 Ember.computed.notEmpty '${2:property}'$0
 endsnippet
 
-# ---
 # Run
-# ---
 
 snippet later "Ember.run.later macro"
 Ember.run.later(=>
