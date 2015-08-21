@@ -77,8 +77,6 @@ nnoremap <silent> g3 :WriteBufferIfNecessary<CR>:wincmd t<bar>:wincmd l<bar>
       \:wincmd l<CR>
 nnoremap <silent> g4 :WriteBufferIfNecessary<CR>:wincmd b<CR>
 
-" Previous Window
-nnoremap <silent> gp :wincmd p<CR>
 " Equal Size Windows
 nnoremap <silent> g= :wincmd =<CR>
 " Swap Windows
@@ -172,6 +170,12 @@ vnoremap K k
 
 " Toggle paste mode with F5
 nnoremap <silent> <F5> :set paste!<CR>
+
+" Paste and select pasted
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+
+" Paste and select pasted
+nnoremap gp :normal pglp<cr>
 
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
