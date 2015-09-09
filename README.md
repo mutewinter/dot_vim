@@ -1,5 +1,7 @@
 # The Vim Configuration of Champions
 
+[Jump to Plugin List](#plugin-list)
+
 Version 3! Now each plugin is included and managed in its
 [own file](vundle_plugins)!
 
