@@ -3,4 +3,4 @@ if exists('g:vundle_installing_plugins')
   finish
 endif
 
-autocmd FileType javascript let g:jsx_ext_required = findfile('.eslintrc', '.;') != '' ? 0 : 1
+autocmd FileType javascript let g:jsx_ext_required = findfile('.jsx', '.;') != '' ? 0 : 1
