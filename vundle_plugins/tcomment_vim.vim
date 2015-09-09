@@ -3,7 +3,9 @@ if exists('g:vundle_installing_plugins')
   finish
 endif
 
-let g:tcommentMaps = 0
+let g:tcommentMapLeader1 = ''
+let g:tcommentMapLeader2 = ''
+let g:tcommentMapLeaderOp1 = 'tc'
 nnoremap <silent><leader>cc :TComment<CR>
 vnoremap <silent><leader>cc :TComment<CR>
 nnoremap <silent><leader>cb :TCommentBlock<CR>
