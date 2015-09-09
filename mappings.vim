@@ -171,10 +171,10 @@ vnoremap K k
 nnoremap <silent> <F5> :set paste!<CR>
 
 " Paste and select pasted
-nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+nnoremap <expr> gpp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " Paste and select pasted
-nnoremap gp :normal pglp<cr>
+nnoremap gp :normal pgp<cr>
 
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
