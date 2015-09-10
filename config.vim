@@ -8,7 +8,7 @@
 set background=dark
 colorscheme jellybeans
 " Force 256 color mode if available
-if $TERM =~ "-256color"
+if $TERM =~ '-256color'
    set t_Co=256
 endif
 
@@ -57,7 +57,7 @@ set wildmenu           " Turn on WiLd menu
 set wildmode=longest,full
 set hidden             " Change buffer - without saving
 set history=768        " Number of things to remember in history.
-set cf                 " Enable error files & error jumping.
+set confirm            " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
 set autowrite          " Writes on make/shell commands
 set timeoutlen=400     " Time to wait for a command (after leader for example).

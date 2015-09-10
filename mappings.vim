@@ -4,8 +4,8 @@
 
 " Set leader to ,
 " Note: This line MUST come before any <leader> mappings
-let mapleader=","
-let maplocalleader = "\\"
+let mapleader=','
+let maplocalleader = '\\'
 
 " -----------------------
 " Unmapped While Learning
@@ -181,7 +181,7 @@ iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
 
 " copy current file name (relative/absolute) to system clipboard
 " from http://stackoverflow.com/a/17096082/22423
-if has("mac") || has("gui_macvim") || has("gui_mac")
+if has('mac') || has('gui_macvim') || has('gui_mac')
   " relative path  (src/foo.txt)
   nnoremap <silent> <leader>yp :let @*=expand("%")<CR>
 
