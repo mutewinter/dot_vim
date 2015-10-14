@@ -5,7 +5,6 @@ endif
 
 autocmd! BufWritePost * Neomake
 
-let g:neomake_open_list = 1
 let g:neomake_list_height = 5
 
 function! SetJavaScriptCheckers()
