@@ -15,7 +15,7 @@ function! SetJavaScriptCheckers()
     call add(checkers, 'eslint')
   endif
 
-  if findfile('.jshint', '.;') != ''
+  if findfile('.jshintrc', '.;') != ''
     call add(checkers, 'jshint')
   endif
 
