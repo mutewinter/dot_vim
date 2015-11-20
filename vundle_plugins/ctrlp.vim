@@ -1,5 +1,5 @@
 if exists('g:vundle_installing_plugins')
-  Plugin 'kien/ctrlp.vim'
+  Plugin 'ctrlpvim/ctrlp.vim'
   finish
 endif
 
