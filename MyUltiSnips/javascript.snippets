@@ -15,7 +15,7 @@ console.log(arguments);
 endsnippet
 
 snippet cld "Console debug a variable" b
-console.debug('$1', ${1:variable});
+console.debug("$1", ${1:variable});
 endsnippet
 
 snippet clds "Console debug a string" b
@@ -35,7 +35,7 @@ snippet fnn "Arrow Function" i
 endsnippet
 
 snippet fna "Arrow Function with Arguments" i
-($1) => {$0}
+($1) => {$2}$0
 endsnippet
 
 # -----------
@@ -78,4 +78,45 @@ endsnippet
 
 snippet sf "String format" w
 String.Format("$2$1: {0}$0", ${2:variable});
+endsnippet
+
+# -----
+# React
+# -----
+
+snippet props "get property" i
+this.props.${1}
+endsnippet
+
+snippet state "get state" i
+this.state.${1}
+endsnippet
+
+snippet sst "set state" b
+this.setState({
+  ${1}: ${2}
+});$0
+endsnippet
+
+snippet render
+render() {
+  return (
+    ${1:<div />}
+  );
+}$0
+endsnippet
+
+snippet constructor
+constructor(props) {
+  super(props);
+  this.state = {
+    ${1}: ${2}
+  };
+}$0
+endsnippet
+
+snippet ptt "propTypes" b
+static propTypes = {
+  ${1}: PropTypes.${2:string}
+}
 endsnippet
