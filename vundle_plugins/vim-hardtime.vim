@@ -3,7 +3,7 @@ if exists('g:vundle_installing_plugins')
   finish
 endif
 
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 let g:hardtime_ignore_buffer_patterns = ["NERD.*", "Help"]
 let g:hardtime_allow_different_key = 1
 let g:hardtime_ignore_quickfix = 1
