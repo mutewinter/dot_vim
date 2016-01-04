@@ -115,8 +115,8 @@ noremap <silent><leader>/ :nohls<CR>
 " Highlight search word under cursor without jumping to next
 nnoremap <leader>h *<C-O>
 
-" Toggle spelling mode with ,s
-nnoremap <silent> <leader>s :set spell!<CR>
+" Toggle spelling mode
+nnoremap <silent> <leader>sp :set spell!<CR>
 
 " Quickly switch to last buffer
 nnoremap <leader>, :e#<CR>
@@ -142,7 +142,7 @@ nnoremap <leader>fef mx=ggG='x
 
 " Format a json file with Underscore CLI
 " Inspirited by https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
-nnoremap <leader>gj <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
+nnoremap <leader>fj <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
 
 " Split window vertically or horizontally *and* switch to the new split!
 nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>:wincmd =<CR>
@@ -172,9 +172,6 @@ nnoremap <silent> <F5> :set paste!<CR>
 
 " Paste and select pasted
 nnoremap <expr> gpp '`[' . strpart(getregtype(), 0, 1) . '`]'
-
-" Paste and select pasted
-nnoremap gp :normal pgp<cr>
 
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
