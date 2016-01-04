@@ -3,7 +3,7 @@
 # ---------------
 
 snippet clg "Console log a variable" b
-console.log("$1", ${1:variable});
+console.log(\`$1\`, ${1:variable});
 endsnippet
 
 snippet clgs "Console log a string" b
@@ -15,7 +15,7 @@ console.log(arguments);
 endsnippet
 
 snippet cld "Console debug a variable" b
-console.debug("$1", ${1:variable});
+console.debug(\`$1\`, ${1:variable});
 endsnippet
 
 snippet clds "Console debug a string" b
@@ -43,7 +43,7 @@ endsnippet
 # -----------
 
 snippet ii "Import" w
-import $1 from '$1$0';
+import $1 from '$0$1';
 endsnippet
 
 # -----
@@ -119,4 +119,76 @@ snippet ptt "propTypes" b
 static propTypes = {
   ${1}: PropTypes.${2:string}
 }
+endsnippet
+
+snippet pts "propTypes" b
+${1}: PropTypes.string$0
+endsnippet
+
+snippet pto "propTypes" b
+${1}: PropTypes.shape({
+  ${2}: PropTypes.${3:string},$0
+})
+endsnippet
+
+snippet rj "return JSX" b
+return (
+  <${1:div}>
+    $0
+  </$1>
+);
+endsnippet
+
+snippet r "return JSX" b
+return (
+  $0
+);
+endsnippet
+
+snippet component "new component" b
+import React, { Component, PropTypes } from 'react';
+import { autobind } from 'core-decorators';
+
+export default class ${1:Name} extends Component {
+  static propTypes = {
+    ${2:prop}: ${3:PropTypes.string},
+  }
+
+  static defaultProps = {
+    ${4:onThing}: ${5:function() {}},
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      ${6:prop}: ${7:true},
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        $0
+      </div>
+    );
+  }
+}
+endsnippet
+
+snippet functional "new functional component" b
+import React, { PropTypes } from 'react';
+
+const ${1:Name} = ({ ${2:props} }) => {
+  return (
+    <div>
+      $0
+    </div>
+  );
+};
+
+$1.propTypes = {
+  prop: PropTypes.string,
+};
+
+export default $1;
 endsnippet
