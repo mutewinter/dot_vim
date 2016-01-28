@@ -15,13 +15,13 @@ endif
 " -----------------------------
 " File Locations
 " -----------------------------
-set backupdir=~/.vim/.backup// " Double // causes backups to use full file path
-set directory=~/.vim/.tmp//
-set spellfile=~/.vim/spell/custom.en.utf-8.add
+let &backupdir=expand('<sfile>:p:h') . '/.backup/'
+let &directory=expand('<sfile>:p:h') . '/.tmp/'
+let &spellfile=expand('<sfile>:p:h') . '/spell/custom.en.utf-8.add'
 " Persistent Undo
 if has('persistent_undo')
   set undofile
-  set undodir=~/.vim/.undo
+  let &undodir=expand('<sfile>:p:h') . '/.undo'
 endif
 
 " ---------------

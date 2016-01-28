@@ -2,7 +2,7 @@ if exists('g:vundle_installing_plugins')
   finish
 endif
 
-command! ReloadVundle source ~/.vim/vundle.vim
+execute 'command! ReloadVundle source' expand('<sfile>:p:h:h') . '/vundle.vim'
 function PluginReloadAndRun(command)
   :ReloadVundle
   execute a:command
