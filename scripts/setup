@@ -23,26 +23,26 @@ echo ''
 
 info 'Installing Vundle'
 info '-----------------'
-git clone git://github.com/gmarik/vundle.git bundle/vundle
+git clone https://github.com/VundleVim/Vundle.vim.git bundle/vundle
 
-info 'Setting up Symlinks'
-info '--------------'
-if test $(which rake)
-then
-  rake vim:link
-else
-  fail 'Install Ruby and Rake to continue'
-fi
+# info 'Setting up Symlinks'
+# info '--------------'
+# if test $(which rake)
+# then
+#   rake vim:link
+# else
+#   fail 'Install Ruby and Rake to continue'
+# fi
 
 info 'Installing plugins'
 info '-------------------------------------------------'
 if test $(which mvim)
 then
-  mvim -v +PluginInstall +qall
+  mvim -u $(dirname $(dirname $0))/vimrc -v +PluginInstall +qall
 else
   if test $(which vim)
   then
-    vim +PluginInstall +qall
+    vim -u $(dirname $(dirname $0))/vimrc  +PluginInstall +qall
   else
     fail 'mvim or vim not found in path.'
   fi
