@@ -165,3 +165,39 @@ function! WordFrequency() range
   sort i
 endfunction
 command! -range=% WordFrequency <line1>,<line2>call WordFrequency()
+
+" ---------------
+" Sort attributes inside <> in html.
+" E.g.
+" <div
+"   b="1"
+"   a="1"
+"   c="1"
+" />
+"
+" becomes
+"
+" <div
+"   a="1"
+"   b="1"
+"   c="1"
+" />
+" ---------------
+function! SortAttributes()
+  normal vi>kojV
+  :'<,'>sort
+endfunction
+
+command! SortAttributes call SortAttributes()
+nnoremap <silent> <leader>sa :SortAttributes<CR>
+
+" ---------------
+" Sort values inside a curl block
+" ---------------
+function! SortBlock()
+  normal vi}
+  :'<,'>sort
+endfunction
+
+command! SortBlock call SortBlock()
+nnoremap <silent> <leader>sb :SortBlock<CR>
