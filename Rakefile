@@ -18,7 +18,7 @@ PLUGINS_HEADER = <<-HEADER.chomp
 | -------: | :--------- | :-------------- |
 HEADER
 
-FILES_TO_LINK = %w{vimrc gvimrc nvimrc}
+FILES_TO_LINK = %w{vimrc gvimrc}
 
 task :default => ['vim:link']
 
@@ -34,6 +34,14 @@ namespace :vim do
           File.symlink(".vim/#{file}", dot_file)
           puts "Created link for #{file} in your home folder."
         end
+      end
+      neovim_config_file = File.expand_path("~/.vim/nvimrc");
+      neovim_dot_file = File.expand_path("~/.config/nvim/init.vim")
+      if File.exists? neovim_dot_file
+          puts "#{neovim_dot_file} already exists, skipping link."
+        else
+          File.symlink(neovim_config_file, neovim_dot_file)
+          puts "Created link for nvimrc in your home folder."
       end
     rescue NotImplementedError
       puts "File.symlink not supported, you must do it manually."
