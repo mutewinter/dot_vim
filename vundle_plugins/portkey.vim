@@ -4,3 +4,4 @@ if exists('g:vundle_installing_plugins')
 endif
 
 let g:portkey_autostart = 1
+nnoremap <LocalLeader>a :Alternate<CR>
