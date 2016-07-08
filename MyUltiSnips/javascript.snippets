@@ -106,6 +106,12 @@ render() {
 }$0
 endsnippet
 
+snippet componentWillUnmount
+componentWillUnmount() {
+  $0
+}
+endsnippet
+
 snippet constructor
 constructor(props) {
   super(props);
@@ -147,23 +153,19 @@ endsnippet
 
 snippet component "new component" b
 import React, { Component, PropTypes } from 'react';
-import { autobind } from 'core-decorators';
 
 export default class ${1:Name} extends Component {
   static propTypes = {
     ${2:prop}: ${3:PropTypes.string},
   }
 
-  static defaultProps = {
-    ${4:onThing}: ${5:function() {}},
-  }
+  ${4:static defaultProps = {
+    ${5:onThing}: ${6:function() {}},
+  }}
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      ${6:prop}: ${7:true},
-    };
-  }
+  ${7:state = {
+    ${8:prop}: ${9:true},
+  }}
 
   render() {
     return (
@@ -191,4 +193,13 @@ $1.propTypes = {
 };
 
 export default $1;
+endsnippet
+
+snippet switch "switch statement" b
+switch (${1:variable}) {
+  case ${2:case1}:
+    $0
+    break;
+  default:
+}
 endsnippet
