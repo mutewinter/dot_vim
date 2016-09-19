@@ -1,7 +1,8 @@
 {
   "portkeys": [],
   "vundle_plugins/*.vim": {
-    "type": "plugin"
+    "type": "plugin",
+    "template": "if exists('g:vundle_installing_plugins')\n  Plugin '%s'\n  finish\nendif"
   },
   "after/**": {
     "type": "after"
