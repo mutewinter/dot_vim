@@ -14,6 +14,14 @@ function! SetJavaScriptCheckers()
     call add(checkers, 'eslint')
   endif
 
+  if findfile('.eslintrc.json', '.;') != ''
+    call add(checkers, 'eslint')
+  endif
+
+  if findfile('config/eslint.js', '.;') != ''
+    call add(checkers, 'eslint')
+  endif
+
   if findfile('.jshintrc', '.;') != ''
     call add(checkers, 'jshint')
   endif
