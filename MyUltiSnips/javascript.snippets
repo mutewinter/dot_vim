@@ -6,6 +6,10 @@ snippet clg "Console log a variable" b
 console.log(\`$1\`, ${1:variable});
 endsnippet
 
+snippet clJ "Console log json" b
+console.log('$1', JSON.stringify(${1:variable}, null, 2));
+endsnippet
+
 snippet clgs "Console log a string" b
 console.log('$0');
 endsnippet
