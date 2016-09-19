@@ -34,7 +34,7 @@ elseif has('gui_macvim')
   set macmeta
 endif
 
-if has('macunix') || has('mac')
+if !has('nvim') && (has('macunix') || has('mac'))
   " Fix meta key for Mac
   let c='a'
   while c <= 'z'

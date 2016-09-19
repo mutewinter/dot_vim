@@ -11,8 +11,8 @@ Version 3! Now each plugin is included and managed in its
 
 ## Installation
 
-1. `git clone http://github.com/mutewinter/dot_vim.git ~/.vim`.
-1. `cd ~/.vim`.
+1. `git clone http://github.com/mutewinter/dot_vim.git ~/.config/nvim`.
+1. `cd ~/.config/nvim`.
 
 Now you have a choice. The automated script or the manual process.
 
@@ -21,7 +21,7 @@ Now you have a choice. The automated script or the manual process.
 **or**
 
 1. `rake vim:link` to make the `.vimrc` and `.nvimrc` symbolic links.
-2. Install [Vundle](https://github.com/VundleVim/Vundle.vim) with `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+2. Install [Vundle](https://github.com/VundleVim/Vundle.vim) with `git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim`
 3. `vim +PluginInstall +qall`
 
 Enjoy enhanced productivity, increased levitation, reduced watermelon-related

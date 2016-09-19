@@ -23,7 +23,7 @@ echo ''
 
 info 'Installing Vundle'
 info '-----------------'
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/config/nvim/bundle/Vundle.vim
 
 
 info 'Setting up Symlinks'
@@ -37,15 +37,15 @@ fi
 
 info 'Installing plugins'
 info '-------------------------------------------------'
-if test $(which mvim)
+if test $(which nvim)
 then
-  mvim -v +PluginInstall +qall
+  nvim -v +PluginInstall +qall
 else
   if test $(which vim)
   then
     vim +PluginInstall +qall
   else
-    fail 'mvim or vim not found in path.'
+    fail 'nvim or vim not found in path.'
   fi
 fi
 

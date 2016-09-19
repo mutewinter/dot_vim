@@ -4,23 +4,30 @@
 " Version: 3.0 - Now each plugin is included and managed in its own file!
 " =============================================================================
 
+
+if has('nvim')
+  let g:vimdir = "~/.config/nvim"
+else
+  let g:vimdir = "~/.vim"
+endif
+
 " All of the plugins are installed with Vundle from this file.
-source ~/.vim/vundle.vim
+exec "source " . g:vimdir . "/vundle.vim"
 
 " Automatically detect file types. (must turn on after Vundle)
 filetype plugin indent on
 
 " Platform (Windows, Mac, etc.) configuration.
-source ~/.vim/platforms.vim
+exec "source " . g:vimdir . "/platforms.vim"
 " All of the Vim configuration.
-source ~/.vim/config.vim
+exec "source " . g:vimdir . "/config.vim"
 " New commands
-source ~/.vim/commands.vim
+exec "source " . g:vimdir . "/commands.vim"
 " All hotkeys, not dependant on plugins, are mapped here.
-source ~/.vim/mappings.vim
+exec "source " . g:vimdir . "/mappings.vim"
 " Load plugin-specific configuration.
-source ~/.vim/plugins.vim
+exec "source " . g:vimdir . "/plugins.vim"
 " Small custom functions.
-source ~/.vim/functions.vim
+exec "source " . g:vimdir . "/functions.vim"
 " Auto commands.
-source ~/.vim/autocmds.vim
+exec "source " . g:vimdir . "/autocmds.vim"
