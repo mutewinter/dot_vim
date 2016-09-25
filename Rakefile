@@ -14,7 +14,7 @@ README_FILE = 'README.md'
 VUNDLE_PLUGINS_FOLDER = 'vundle_plugins'
 LINES_WITHOUT_CONFIG = 4
 PLUGINS_HEADER = <<-HEADER.chomp
-| Stars___ | **Plugin** | **Description** |
+| Stars#{9.times.map{'&nbsp;'}.join('')} | **Plugin** | **Description** |
 | -------: | :--------- | :-------------- |
 HEADER
 
@@ -165,7 +165,7 @@ def fetch_plugin_info(vundle_link)
   plugin_info = repo_info(github_user, github_repo)
   info[:description] = plugin_info['description'].strip
   info[:stars] = plugin_info['stargazers_count']
-  info[:stars_text] = "#{comma_number(plugin_info['stargazers_count'])} ★"
+  info[:stars_text] = "★ #{comma_number(plugin_info['stargazers_count'])}"
 
   info
 end
