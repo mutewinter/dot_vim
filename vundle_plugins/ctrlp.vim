@@ -13,10 +13,6 @@ let g:ctrlp_reuse_window = 'startify'
 let g:ctrlp_mruf_max = 350
 let g:ctrlp_mruf_default_order = 0
 
-" Leader Commands
-nnoremap <leader>. :CtrlPRoot<CR>
-nnoremap <leader>m :CtrlPMRUFiles<CR>
-
 if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   " HatTip: http://robots.thoughtbot.com/faster-grepping-in-vim and
