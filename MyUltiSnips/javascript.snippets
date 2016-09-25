@@ -2,70 +2,83 @@
 # Console Logging
 # ---------------
 
-snippet clg "Console log a variable" b
-console.log(\`$1\`, ${1:variable});
-endsnippet
-
-snippet clJ "Console log json" b
-console.log('$1', JSON.stringify(${1:variable}, null, 2));
-endsnippet
-
-snippet clgs "Console log a string" b
+snippet cs "console.log('string')" b
 console.log('$0');
 endsnippet
 
-snippet clga "Console log arguments" b
+snippet cv "console.log('var', var)" b
+console.log(\`$1\`, ${1:variable});
+endsnippet
+
+snippet cjs "console.log(JSON)" b
+console.log('$1', JSON.stringify(${1:variable}, null, 2));
+endsnippet
+
+snippet ca "console.log(arguments)" b
 console.log(arguments);
 endsnippet
 
-snippet cld "Console debug a variable" b
-console.debug(\`$1\`, ${1:variable});
+# ----------------
+# Plain JavaScript
+# ----------------
+
+snippet switch "switch statement" b
+switch (${1:variable}) {
+  case ${2:case1}:
+    $0
+    break;
+  default:
+}
 endsnippet
 
-snippet clds "Console debug a string" b
-console.debug('$0');
-endsnippet
-
-snippet clda "Console log arguments" b
-console.debug(arguments);
-endsnippet
-
-# ---------
-# Functions
-# ---------
-
-snippet fnn "Arrow Function" i
-() => {$0}
-endsnippet
-
-snippet fna "Arrow Function with Arguments" i
-($1) => {$2}$0
-endsnippet
-
-# -----------
-# ES6 Imports
-# -----------
-
-snippet ii "Import" w
-import $1 from '$0$1';
-endsnippet
-
-# -----
-# Ember
-# -----
-
-snippet p "Create a computed property"
-Ember.computed('${1:propertyName}', function() {
+snippet constructor
+constructor() {
   $0
-})
+}
 endsnippet
 
-snippet gg "Getter" i
-get('${1:propertyName}')$0
+snippet ii "magic import" b
+import `!p
+def formatVariableName(path):
+  parts = path.split('/')
+  module = parts[0]
+  if len(parts) > 1:
+    return parts[-1]
+  else:
+    return re.sub(r'[_\-]', '', module.title())
+snip.rv = formatVariableName(t[1])
+` from '${1}';$0
 endsnippet
 
-snippet gt "This Getter" i
-this.get('${1:propertyName}')$0
+# Arrow function
+snippet => "Arrow function" i
+(${1}) => {
+  ${2}
+}
+endsnippet
+
+snippet bcf "bound class function" b
+$1 = (${2:e}) => {
+  $3
+};
+endsnippet
+
+snippet exp "Export from location" b
+export $1 from '${2:./}$1';
+endsnippet
+
+snippet expn "Export nested" b
+export { $1 } from '${2:./}';
+endsnippet
+
+snippet expf "Export function" b
+export ${1:default }function($2) {
+  $3
+}
+endsnippet
+
+snippet expc "Export constant" b
+export const $1 = $0
 endsnippet
 
 # -----
@@ -92,53 +105,10 @@ snippet props "get property" i
 this.props.${1}
 endsnippet
 
-snippet state "get state" i
-this.state.${1}
-endsnippet
-
 snippet sst "set state" b
 this.setState({
   ${1}: ${2}
 });$0
-endsnippet
-
-snippet render
-render() {
-  return (
-    ${1:<div />}
-  );
-}$0
-endsnippet
-
-snippet componentWillUnmount
-componentWillUnmount() {
-  $0
-}
-endsnippet
-
-snippet constructor
-constructor(props) {
-  super(props);
-  this.state = {
-    ${1}: ${2}
-  };
-}$0
-endsnippet
-
-snippet ptt "propTypes" b
-static propTypes = {
-  ${1}: PropTypes.${2:string}
-}
-endsnippet
-
-snippet pts "propTypes" b
-${1}: PropTypes.string$0
-endsnippet
-
-snippet pto "propTypes" b
-${1}: PropTypes.shape({
-  ${2}: PropTypes.${3:string},$0
-})
 endsnippet
 
 snippet rj "return JSX" b
@@ -199,11 +169,192 @@ $1.propTypes = {
 export default $1;
 endsnippet
 
-snippet switch "switch statement" b
-switch (${1:variable}) {
-  case ${2:case1}:
-    $0
-    break;
-  default:
+# Lifecycle
+
+snippet defaultProps "get default props" b
+static defaultProps = {
+  $1
+};
+endsnippet
+
+
+snippet pt "React prop types definition" b
+static propTypes = {
+  ${1:className}: ${2:PropTypes.string},${0}
+};
+endsnippet
+
+snippet componentWillMount "componentWillMount()" b
+componentWillMount() {
+  $1
 }
+endsnippet
+
+snippet componentDidMount "componentDidMount()" b
+componentDidMount() {
+  $1
+}
+endsnippet
+
+snippet componentWillReceiveProps "componentWillReceiveProps(nextProps)" b
+componentWillReceiveProps(nextProps) {
+  $1
+}
+endsnippet
+
+snippet shouldComponentUpdate "shouldComponentUpdate(nextProps, nextState)" b
+shouldComponentUpdate(nextProps, nextState) {
+  return $1;
+}
+endsnippet
+
+snippet componentWillUpdate "componentWillUpdate(nextProps, nextState)" b
+componentWillUpdate(nextProps, nextState) {
+  $3
+}
+endsnippet
+
+snippet componentDidUpdate "componentDidUpdate(prevProps, prevState)" b
+componentDidUpdate(prevProps, prevState) {
+  $1
+}
+endsnippet
+
+snippet componentWillUnmount "componentWillUpdate()" b
+componentWillUnmount() {
+  $1
+}
+endsnippet
+
+snippet render "render" b
+render() {
+  return (
+    ${1:<div />}
+  );
+}$0
+endsnippet
+
+# ==========================================
+# Prop Types Section
+#
+
+# Inline prop types
+snippet pt.a "React PropTypes array" w
+PropTypes.array,
+endsnippet
+
+snippet pt.ar "React PropTypes array required" w
+PropTypes.array.isRequired,
+endsnippet
+
+snippet pt.b "React PropTypes boolean" w
+PropTypes.bool,
+endsnippet
+
+snippet pt.br "React PropTypes boolean required" w
+PropTypes.bool.isRequired,
+endsnippet
+
+snippet pt.f "React PropTypes function" w
+PropTypes.func,
+endsnippet
+
+snippet pt.fr "React PropTypes function required" w
+PropTypes.func.isRequired,
+endsnippet
+
+snippet pt.nu "React PropTypes number" w
+PropTypes.number,
+endsnippet
+
+snippet pt.nur "React PropTypes number required" w
+PropTypes.number.isRequired,
+endsnippet
+
+snippet pt.o "React PropTypes object" w
+PropTypes.object,
+endsnippet
+
+snippet pt.or "React PropTypes object required" w
+PropTypes.object.isRequired,
+endsnippet
+
+snippet pt.s "React PropType string" w
+PropTypes.string,
+endsnippet
+
+snippet pt.sr "React PropType string required" w
+PropTypes.string.isRequired,
+endsnippet
+
+snippet pt.no "React PropTypes node" w
+PropTypes.node,
+endsnippet
+
+snippet pt.nor "React PropTypes node required" w
+PropTypes.node.isRequired,
+endsnippet
+
+snippet pt.e "React PropTypes element" w
+PropTypes.element,
+endsnippet
+
+snippet pt.er "React PropTypes element required" w
+PropTypes.element.isRequired,
+endsnippet
+
+snippet pt.ao "React PropTypes arrayOf" w
+PropTypes.arrayOf(${1:PropTypes.string}),
+endsnippet
+
+snippet pt.aor "React PropTypes arrayOf required" w
+PropTypes.arrayOf(${1:PropTypes.string}).isRequired,
+endsnippet
+
+snippet pt.io "React PropTypes instanceOf" w
+PropTypes.instanceOf(${1:PropTypes.string}),
+endsnippet
+
+snippet pt.ior "React PropTypes instanceOf required" w
+PropTypes.instanceOf(${1:PropTypes.string}).isRequired,
+endsnippet
+
+snippet pt.oo "React PropTypes objectOf" w
+PropTypes.objectOf(${1:PropTypes.string}),
+endsnippet
+
+snippet pt.oor "React PropTypes objectOf required" w
+PropTypes.objectOf(${1:PropTypes.string}).isRequired,
+endsnippet
+
+snippet pt.one "React PropTypes oneOf" w
+PropTypes.oneOf(['$1'$2]),
+endsnippet
+
+snippet pt.oner "React PropTypes oneOf required" w
+PropTypes.oneOf(['$1'$2]).isRequired,
+endsnippet
+
+snippet pt.onet "React PropTypes onOfType" w
+PropTypes.oneOfType([
+  $1
+]),
+endsnippet
+
+snippet pt.onetr "React PropTypes onOfType required" w
+PropTypes.oneOfType([
+  $1
+]).isRequired,
+endsnippet
+
+snippet pt.sh "React PropTyes shape" w
+PropTypes.shape({
+  $1
+}),
+endsnippet
+
+snippet pt.shr "React PropTypes shape required" w
+PropTypes.shape({
+  $1
+}).isRequired,
 endsnippet
