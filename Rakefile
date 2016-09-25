@@ -15,7 +15,7 @@ VUNDLE_PLUGINS_FOLDER = 'vundle_plugins'
 LINES_WITHOUT_CONFIG = 4
 PLUGINS_HEADER = <<-HEADER.chomp
 | Stars#{9.times.map{'&nbsp;'}.join('')} | **Plugin** | **Description** |
-| -------: | :--------- | :-------------- |
+| :------- | :--------- | :-------------- |
 HEADER
 
 FILES_TO_LINK = %w{vimrc gvimrc}
