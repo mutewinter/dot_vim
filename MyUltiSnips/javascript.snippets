@@ -101,6 +101,10 @@ endsnippet
 # React
 # -----
 
+snippet cp "destructure props" i
+const { $0 } = this.props;
+endsnippet
+
 snippet props "get property" i
 this.props.${1}
 endsnippet
@@ -174,14 +178,13 @@ endsnippet
 snippet defaultProps "get default props" b
 static defaultProps = {
   $1
-};
+}
 endsnippet
 
-
-snippet pt "React prop types definition" b
+snippet propTypes "React prop types definition" b
 static propTypes = {
-  ${1:className}: ${2:PropTypes.string},${0}
-};
+  ${1:prop}: ${2:PropTypes.string.isRequired},${0}
+}
 endsnippet
 
 snippet componentWillMount "componentWillMount()" b
