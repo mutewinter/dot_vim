@@ -1,4 +1,4 @@
 if exists('g:vundle_installing_plugins')
-  Plugin 'mutewinter/swap-parameters'
+  Plugin 'machakann/vim-swap'
   finish
 endif
