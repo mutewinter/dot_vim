@@ -7,6 +7,10 @@ endif
 " ysiw#   Wrap the token under the cursor in #{}
 " Thanks to http://git.io/_XqKzQ
 let g:surround_35  = "#{\r}"
+let g:surround_36  = "${\r}"
 
 " Shortcuts for common surrounds
 map <leader>y# ysi"#
+
+" Surround with ${} then ``, for a ES6 variable interpolation.
+map <silent> <leader>y$ ysw`lysw$
