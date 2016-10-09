@@ -2,12 +2,13 @@
 
 [Jump to Plugin List](#plugin-list)
 
-Version 3! Now each plugin is included and managed in its
-[own file](vundle_plugins)!
+[![Screenshot][ss]][ss]
 
-[![iTerm][ss]][ss]
+[ss]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/screenshot_1.png
 
-[ss]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/iTerm.png
+## Plugins and Configuration in their Own File
+
+Each plugin is included and managed in its [own file](/vundle_plugins).
 
 ## Installation
 

@@ -1,7 +1,7 @@
 " =============================================================================
 " Who: Jeremy Mack (@mutewinter)
 " Description: The Vim Configuration of Champions
-" Version: 3.0 - Now each plugin is included and managed in its own file!
+" Version: Ever-evolving.
 " =============================================================================
 
 
