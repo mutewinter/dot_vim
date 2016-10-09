@@ -5,4 +5,4 @@ endif
 let g:ackprg = 'ag --vimgrep --smart-case'
 
 nnoremap <silent> <leader>a/ :AckFromSearch<CR>
-nnoremap <leader>aq :Ack<space>
+nnoremap <leader>ag :Ack<space>
