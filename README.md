@@ -31,8 +31,7 @@ accidents, and startling sex appeal.
 
 * [NeoVim](https://github.com/neovim/neovim) or
   [MacVim](https://github.com/b4winckler/macvim) - I'm currently using NeoVim
-  [via Homebrew](https://github.com/neovim/neovim/wiki/Installing) on OS X
-  Yosemite.
+  [via Homebrew](https://github.com/neovim/neovim/wiki/Installing) on OS X.
 
 ## Plugin Requirements
 
@@ -41,24 +40,20 @@ dependencies.
 
 * [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be
   installed.
-* [syntastic](https://github.com/scrooloose/syntastic) Requires many different
-  binaries installed depending on what filetypes you want it to check. See the
-  [FAQ](https://github.com/scrooloose/syntastic#faq) for more information.
+* [Neomake](https://github.com/neomake/neomake) Uses various linding and style
+  checking tools that are sepately installed.
 * [Ag.vim](https://github.com/rking/ag.vim) Requires
   [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) to be
   installed.
-* [Source Code for Powerline](http://git.io/H3fYBg) The custom font I'm using
-  for vim-airline.
-* [CtrlP C Matching Extension](https://github.com/JazzCore/ctrlp-cmatcher)
-  requires compilation. See the steps [in its
-  readme](https://github.com/JazzCore/ctrlp-cmatcher).
+* [Source Code Nerd Font Complete](https://git.io/vPBU6) The custom font I'm using
+  for vim-airline and vim-devicons.
 * [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
   formatting.
 
 ## Mappings
 
 * Typing `jk` insert mode is equivalent to `Escape`.
-* Pressing `enter` in normal mode saves the current buffer.
+* Pressing `enter` in normal mode saves the current buffer, if needed.
 
 And many more. See [`mappings.vim`](mappings.vim) and
 [`vundle_plugins`](vundle_plugins) for more.
