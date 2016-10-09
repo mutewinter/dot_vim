@@ -1,5 +1,5 @@
 if exists('g:vundle_installing_plugins')
-  Plugin 'AndrewRadev/splitjoin.vim'
+  Plugin 'mutewinter/splitjoin.vim'
   finish
 endif
 
