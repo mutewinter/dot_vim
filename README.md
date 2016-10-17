@@ -31,7 +31,7 @@ accidents, and startling sex appeal.
 ## Vim Requirements
 
 * I'm using [NeoVim](https://github.com/neovim/neovim)
-  [via Homebrew](https://github.com/neovim/neovim/wiki/Installing) on OS X.
+  [via Homebrew](https://github.com/neovim/neovim/wiki/Installing-Neovim) on OS X.
 
 ## Plugin Requirements
 
