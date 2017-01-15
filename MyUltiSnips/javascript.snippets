@@ -2,7 +2,7 @@
 # Console Logging
 # ---------------
 
-snippet cs "console.log('string')" b
+snippet cl "console.log('string')" b
 console.log('$0');
 endsnippet
 
@@ -21,6 +21,18 @@ endsnippet
 # ----------------
 # Plain JavaScript
 # ----------------
+
+snippet esd "eslint disable" b
+/* eslint-disable $0 */
+endsnippet
+
+snippet ese "eslint enable" b
+/* eslint-enable $0 */
+endsnippet
+
+snippet esl "eslint disable line" i
+// eslint-line-disable $0
+endsnippet
 
 snippet switch "switch statement" b
 switch (${1:variable}) {
@@ -57,10 +69,10 @@ snippet => "Arrow function" i
 }
 endsnippet
 
-snippet bcf "bound class function" b
+snippet cf "bound class function" b
 $1 = (${2:e}) => {
   $3
-};
+}
 endsnippet
 
 snippet exp "Export from location" b
@@ -103,6 +115,10 @@ endsnippet
 
 snippet cp "destructure props" b
 const { $0 } = this.props;
+endsnippet
+
+snippet cs "destructure state" b
+const { $0 } = this.state;
 endsnippet
 
 snippet cn "class name" i
