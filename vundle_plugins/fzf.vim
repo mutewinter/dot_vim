@@ -7,7 +7,7 @@ endif
 nnoremap <leader>af :Ag<space>
 
 " Leader Commands
-nnoremap <leader>. :call Fzf_dev()<CR>
+nnoremap <silent><leader>. :call Fzf_dev()<CR>
 nnoremap <leader>gf :GFiles<CR>
 nnoremap <leader>gm :GFiles?<CR>
 nnoremap <leader>bl :BLines<CR>
