@@ -178,13 +178,11 @@ endsnippet
 snippet functional "new functional component" b
 import React, { PropTypes } from 'react';
 
-const ${1:Name} = ({ ${2:props} }) => {
-  return (
-    <div>
-      $0
-    </div>
-  );
-};
+const ${1:Name} = ({ ${2:props} }) => (
+  <div>
+    $0
+  </div>
+);
 
 $1.propTypes = {
   prop: PropTypes.string,
