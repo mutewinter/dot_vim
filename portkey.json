@@ -1,16 +1,10 @@
 {
   "portkeys": [],
-  "vundle_plugins/*.vim": {
+  "plug_plugins/*.vim": {
     "type": "plugin",
-    "template": "if exists('g:vundle_installing_plugins')\n  Plugin '%s'\n  finish\nendif"
-  },
-  "after/**": {
-    "type": "after"
+    "template": "if exists('g:plug_installing_plugins')\n  Plug '%s'\n  finish\nendif"
   },
   "MyUltiSnips/**": {
     "type": "snippet"
-  },
-  "ftplugin/**": {
-    "type": "ftplugin"
   }
 }

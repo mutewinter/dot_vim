@@ -21,11 +21,6 @@ info 'Setting up the Vim Configuration of Champions'
 info '============================================='
 echo ''
 
-info 'Installing Vundle'
-info '-----------------'
-git clone https://github.com/VundleVim/Vundle.vim.git ~/config/nvim/bundle/Vundle.vim
-
-
 info 'Setting up Symlinks'
 info '--------------'
 if test $(which rake)

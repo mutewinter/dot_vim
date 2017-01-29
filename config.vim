@@ -52,6 +52,8 @@ endif
 " Behaviors
 " ---------------
 syntax enable
+set nocompatible " be iMproved
+filetype plugin indent on
 set backup             " Turn on backups
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
