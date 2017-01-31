@@ -140,10 +140,6 @@ nnoremap <silent> <leader>cul :normal "lyy"lpwvLr-^"lyyk"lP<cr>
 " Format the entire file
 nnoremap <leader>fef mx=ggG='x
 
-" Format a json file with Underscore CLI
-" Inspirited by https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
-nnoremap <leader>fj <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
-
 " Split window vertically or horizontally *and* switch to the new split!
 nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>:wincmd =<CR>
 nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>

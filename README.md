@@ -46,8 +46,6 @@ dependencies.
   installed.
 * [Source Code Nerd Font Complete](https://git.io/vPBU6) The custom font I'm using
   for vim-airline and vim-devicons.
-* [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
-  formatting.
 
 ## Mappings
 
