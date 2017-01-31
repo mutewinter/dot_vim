@@ -19,6 +19,6 @@ unlet g:plug_installing_plugins
 " Initialize plugin system
 call plug#end()
 
-nnoremap <Leader>pi :call PlugInstall<CR>
-nnoremap <Leader>pu :call PlugUpgrade<CR>
-nnoremap <Leader>pc :call PlugClean<CR>
+nnoremap <leader>pi :PlugInstall<CR>
+nnoremap <leader>pu :PlugUpdate<CR>
+nnoremap <leader>pc :PlugClean<CR>
