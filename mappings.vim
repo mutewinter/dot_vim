@@ -147,6 +147,11 @@ nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
 " Close the current window
 nnoremap <silent> <m-w> :close<CR>
 
+" Plug mappings here because they don't work in plug.vim
+nnoremap <leader>pi :PlugInstall<CR>
+nnoremap <leader>pu :PlugUpdate<CR>
+nnoremap <leader>pc :PlugClean<CR>
+
 " ---------------
 " Typo Fixes
 " ---------------
