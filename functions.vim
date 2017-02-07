@@ -201,3 +201,44 @@ endfunction
 
 command! SortBlock call SortBlock()
 nnoremap <silent> <leader>sb :SortBlock<CR>
+
+
+" -------
+" Profile
+" from https://github.com/vheon/dotvim/blob/fb2db22c552365389acd8962a71685f9eedf80e3/autoload/profile.vim#L18
+" -------
+function! ProfileSort()
+  let timings = []
+  g/^SCRIPT/call add(
+        \   timings,
+        \   [
+        \    getline('.')[len('SCRIPT  '):],
+        \    matchstr(getline(line('.')+1),
+        \    '^Sourced \zs\d\+')
+        \   ] + map(getline(line('.')+2, line('.')+3), 'matchstr(v:val, ''\d\+\.\d\+$'')')
+        \ )
+  enew
+  setl ft=vim
+  call setline('.',
+        \      ['count total (s)   self (s)  script']+map(copy(timings), 'printf("%5u %9s   %8s  %s", v:val[1], v:val[2], v:val[3], v:val[0])'))
+  2,$sort! /\d\s\+\zs\d\.\d\{6}/ r
+endfunction
+
+function! ProfileStop()
+  profdel func *
+  profdel file *
+  qa!
+endfunction
+
+function! ProfileStart()
+  profile start vim.profile
+  profile func *
+  profile file *
+endfunction
+
+" this is for stop profiling after starting vim with
+" vi --cmd 'profile start vimrc.profile' --cmd 'profile func *' --cmd 'profile file *'
+" I have a script in ~/bin which start vim like this
+command! -nargs=0 StopProfiling call ProfileStop()
+" If I want to profile something after that vim started
+command! -nargs=0 StartProfiling call ProfileStart()
