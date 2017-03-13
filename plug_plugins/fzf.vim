@@ -44,6 +44,5 @@ function! Fzf_dev()
   call fzf#run({
         \ 'source': <sid>files(),
         \ 'sink':   function('s:edit_file'),
-        \ 'options': '-m -x +s',
         \ 'down':    '40%' })
 endfunction
