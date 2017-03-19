@@ -46,6 +46,7 @@ dependencies.
   installed.
 * [Source Code Nerd Font Complete](https://git.io/vPBU6) The custom font I'm using
   for vim-airline and vim-devicons.
+* [Editorconfig.vim](https://github.com/editorconfig/editorconfig-vim) Requires [editorconfig](http://editorconfig.org/) to be installed.
 
 ## Mappings
 
