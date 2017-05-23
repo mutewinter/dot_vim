@@ -125,14 +125,16 @@ snippet cn "class name" i
 className="${0}"
 endsnippet
 
+snippet cna "aprhodite class name" i
+className={css(styles.${0})}
+endsnippet
+
 snippet props "get property" i
 this.props.${1}
 endsnippet
 
 snippet sst "set state" i
-this.setState({
-  ${1}: ${2}
-});$0
+this.setState({ ${1}: ${2} });$0
 endsnippet
 
 snippet rj "return JSX" b
@@ -378,4 +380,33 @@ snippet pt.shr "React PropTypes shape required" w
 PropTypes.shape({
   $1
 }).isRequired,
+endsnippet
+
+snippet handleChange "Handle change function" i
+handleChange = ({ target: { value } }) => {
+  this.setState({ value });
+}
+endsnippet
+
+snippet handleSubmit "Handle submit function" i
+handleSubmit = (event) => {
+  event.preventDefault();
+  $0
+}
+endsnippet
+
+snippet ulr "ul to react component" i
+<ul>
+  {
+    $1.map(({ $2 }) => (
+      <li key={$3}>$4</li>
+    ))
+  }
+</ul>
+endsnippet
+
+snippet handleClick "Handle click function" i
+handleClick = (event) => {
+  $0
+}
 endsnippet
