@@ -41,7 +41,7 @@ dependencies.
   installed.
 * [Ale](https://github.com/w0rp/ale) Uses various linding and style
   checking tools that are sepately installed.
-* [Ag.vim](https://github.com/rking/ag.vim) Requires
+* [fzf.vim](https://github.com/junegunn/fzf.vim) Requires
   [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) to be
   installed.
 * [Source Code Nerd Font Complete](https://git.io/vPBU6) The custom font I'm using
