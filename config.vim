@@ -114,6 +114,8 @@ set list
 set listchars=""
 " make tabs visible
 set listchars=tab:▸▸
+" make non-breakable spaces visible
+set listchars+=nbsp:¬
 " show trailing spaces as dots
 set listchars+=trail:•
 " The character to show in the last column when wrap is off and the line
