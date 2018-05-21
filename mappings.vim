@@ -89,7 +89,7 @@ nnoremap <silent> gx :wincmd x<CR>
 " Make line completion easier.
 inoremap <C-l> <C-x><C-l>
 
-" Scroll larger amounts with C-j / C-k
+" Scroll larger amounts with gj / gk
 nnoremap gj 15gjzz
 nnoremap gk 15gkzz
 vnoremap gj 15gjzz
