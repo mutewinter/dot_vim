@@ -6,7 +6,7 @@ endif
 nnoremap <leader>ag :Grepper -tool ag<cr>
 
 let g:grepper = {
-    \ 'tools': ['ag', 'git'],
+    \ 'tools': ['ag'],
     \ 'ag': {
     \   'grepprg':    'ag --vimgrep --smart-case',
     \ }}
