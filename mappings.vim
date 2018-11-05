@@ -39,8 +39,8 @@ noremap H ^
 noremap L $
 
 " Create newlines without entering insert mode
-nnoremap go o<Esc>k
-nnoremap gO O<Esc>j
+nnoremap go m`o<Esc>``
+nnoremap gO m`O<Esc>``
 
 " remap U to <C-r> for easier redo
 " from http://vimbits.com/bits/356
