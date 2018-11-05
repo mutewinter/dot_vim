@@ -9,10 +9,6 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
-" map z/ <Plug>(incsearch-easymotion-/)
-" map z? <Plug>(incsearch-easymotion-?)
-" map zg/ <Plug>(incsearch-easymotion-stay)
-
 function! s:config_easyfuzzymotion(...) abort
   return extend(copy({
   \   'converters': [incsearch#config#fuzzy#converter()],
