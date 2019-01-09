@@ -12,7 +12,7 @@ Each plugin is included and managed in its [own file](/plug_plugins).
 
 ## Installation
 
-1. `git clone http://github.com/mutewinter/dot_vim.git ~/.config/nvim`.
+1. `git clone git@github.com:mutewinter/dot_vim.git ~/.config/nvim`.
 1. `cd ~/.config/nvim`.
 
 Now you have a choice. The automated script or the manual process.
