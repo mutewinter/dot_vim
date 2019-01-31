@@ -5,4 +5,4 @@ endif
 
 let g:Illuminate_ftblacklist = ['nerdtree']
 
-highlight illuminatedWord ctermbg=235
+highlight illuminatedWord ctermbg=237
