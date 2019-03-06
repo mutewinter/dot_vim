@@ -7,7 +7,6 @@ endif
 nnoremap <leader>af :Ag<space>
 
 " Leader Commands
-nnoremap <silent><leader>. :call Fzf_dev()<CR>
 nnoremap <leader>gf :GFiles<CR>
 nnoremap <leader>gm :GFiles?<CR>
 nnoremap <leader>bl :BLines<CR>
@@ -28,7 +27,6 @@ function! Fzf_dev()
     let result = []
     for candidate in a:candidates
       let filename = fnamemodify(candidate, ':p:t')
-      let icon = WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
       call add(result, printf("%s %s", icon, candidate))
     endfor
 

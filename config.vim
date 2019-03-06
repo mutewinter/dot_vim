@@ -5,8 +5,8 @@
 " ---------------
 " Color
 " ---------------
-set background=dark
-colorscheme jellybeans
+set background=light
+colorscheme solarized
 " Force 256 color mode if available
 if $TERM =~ '-256color'
    set t_Co=256

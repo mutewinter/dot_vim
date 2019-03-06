@@ -12,8 +12,6 @@ let maplocalleader = ' '
 " -----------------------
 
 " No-op ^ and $ while learning H and L
-noremap ^ <nop>
-noremap $ <nop>
 nnoremap <leader>sc <nop>
 
 " ---------------
@@ -24,12 +22,6 @@ nnoremap <leader>sc <nop>
 nnoremap ; :
 vnoremap ; :
 
-" Yank entire buffer with gy
-nnoremap gy :0,$ y<cr>
-
-" Select entire buffer
-nnoremap vy ggVG
-
 " Make Y behave like other capital commands.
 " Hat-tip http://vimbits.com/bits/11
 nnoremap Y y$
@@ -38,19 +30,9 @@ nnoremap Y y$
 noremap H ^
 noremap L $
 
-" Create newlines without entering insert mode
-nnoremap go m`o<Esc>``
-nnoremap gO m`O<Esc>``
-
 " remap U to <C-r> for easier redo
 " from http://vimbits.com/bits/356
 nnoremap U <C-r>
-
-" Swap implementations of ` and ' jump to markers
-" By default, ' jumps to the marked line, ` jumps to the marked line and
-" column, so swap them
-nnoremap ' `
-nnoremap ` '
 
 " Don't move on *
 nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
