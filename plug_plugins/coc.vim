@@ -5,7 +5,7 @@ endif
 
 let g:coc_global_extensions = [
       \'coc-emmet', 'coc-pairs', 'coc-ultisnips', 'coc-json', 'coc-tabnine',
-      \'coc-tsserver', 'coc-highlight', 'coc-css'
+      \'coc-tsserver', 'coc-highlight', 'coc-css', 'coc-git'
       \]
 
 " Use tab for trigger completion with characters ahead and navigate.
