@@ -4,6 +4,6 @@ if exists('g:plug_installing_plugins')
 endif
 
 let g:UltiSnipsSnippetDirectories=['MyUltiSnips']
-let g:UltiSnipsExpandTrigger='<C-j>'
-let g:UltiSnipsJumpForwardTrigger='<C-j>'
+let g:UltiSnipsExpandTrigger='<C-0>' " Unused
+let g:UltiSnipsJumpForwardTrigger='<C-g>'
 let g:UltiSnipsJumpBackwardTrigger='<C-h>'
