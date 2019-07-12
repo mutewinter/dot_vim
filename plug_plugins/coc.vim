@@ -40,7 +40,9 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" TODO Broken right now. Try this again in the future to replace
+" vim-illuminate.
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
@@ -49,3 +51,19 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>cpp :call CocAction('pickColor')<CR>
 " Change color presentation
 nmap <leader>c22 :call CocAction('colorPresentation')<CR>
+
+" Use `[c` and `]c` to navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Autofix problem of current line
+nmap <leader>ff  <Plug>(coc-fix-current)
+
+" Search workspace symbols
+nnoremap <silent> <leader>ss  :<C-u>CocList -I symbols<cr>
