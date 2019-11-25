@@ -181,9 +181,10 @@ def repo_info(user, name)
   # Without a GitHub Client / Secret token you will only be able to make 60
   # requests per hour, meaning you can only update the readme once.
   # Read more here http://developer.github.com/v3/#rate-limiting.
-  if ENV['GITHUB_TOKEN']
-    api_url += "?access_token=#{ENV['GITHUB_TOKEN']}"
+  if not ENV['GITHUB_TOKEN']
+    throw "Missing GITHUB_TOKEN"
   end
+  api_url += "?access_token=#{ENV['GITHUB_TOKEN']}"
 
   begin
     if RUBY_VERSION < '1.9'
