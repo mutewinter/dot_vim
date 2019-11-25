@@ -18,5 +18,12 @@ let g:airline_mode_map = {
       \ '' : 'VB',
       \ }
 
-let g:airline_section_b = '%{substitute(getcwd(), ".*\/", "", "g")} '
+let g:airline_skip_empty_sections = 1
+let g:airline_section_b = ''
 let g:airline_section_c = '%{expand("%:p:h:t")}/%t'
+let g:airline_section_x = ''
+" Bring this back if we ever want to see file encoding
+" let g:airline_section_y = '%{WebDevIconsGetFileFormatSymbol()}'
+let g:airline_section_y = ''
+" Remove column position and simplify percentage display
+let g:airline_section_z = '%4l%#__restore__#%#__accent_bold#/%L %3p%%%{g:airline_symbols.maxlinenr}%#__restore__#'
