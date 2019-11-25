@@ -17,3 +17,6 @@ let g:airline_mode_map = {
       \ 'c'  : 'CMD',
       \ '' : 'VB',
       \ }
+
+let g:airline_section_b = '%{substitute(getcwd(), ".*\/", "", "g")} '
+let g:airline_section_c = '%{expand("%:p:h:t")}/%t'
