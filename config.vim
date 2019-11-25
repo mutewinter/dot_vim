@@ -44,6 +44,9 @@ set cursorline     " Highlight current line
 set encoding=utf-8
 set noshowmode     " Don't show the mode since Powerline shows it
 set title          " Set the title of the window in the terminal to the file
+set updatetime=400 " Added based on guidance from coc.nvim
+set signcolumn=yes " Ensures no flickering for coc-git
+set shortmess+=c   " don't give |ins-completion-menu| messages.
 if exists('+colorcolumn')
   set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
 endif

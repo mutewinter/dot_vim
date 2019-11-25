@@ -17,15 +17,13 @@ let g:airline_mode_map = {
       \ 'c'  : 'CMD',
       \ '' : 'VB',
       \ }
-" Show the current working directory folder name
-let g:airline_section_b = '%{substitute(getcwd(), ".*\/", "", "g")} '
-" Just show the file name
-let g:airline_section_c = '%{expand("%:p:h:t")}/%t'
-let g:airline_section_y = ''
-let g:airline_section_z = '%3p%% %#__accent_bold#%4l%#__restore__#:%3'
-let g:airline_section_z = '%3p%% %{substitute(line("."), "\\v(\\d)((\\d\\d\\d)+\\d@!)@=", "\\1,", "g")}|%{substitute(line("$"), "\\v(\\d)((\\d\\d\\d)+\\d@!)@=", "\\1,", "g")}'
 
-let g:airline#extensions#default#layout = [
-  \ [ 'a', 'b', 'warning', 'c' ],
-  \ [ 'x', 'y', 'z' ]
-  \ ]
+let g:airline_skip_empty_sections = 1
+let g:airline_section_b = ''
+let g:airline_section_c = '%{expand("%:p:h:t")}/%t'
+let g:airline_section_x = ''
+" Bring this back if we ever want to see file encoding
+" let g:airline_section_y = '%{WebDevIconsGetFileFormatSymbol()}'
+let g:airline_section_y = ''
+" Remove column position and simplify percentage display
+let g:airline_section_z = '%4l%#__restore__#%#__accent_bold#/%L %3p%%%{g:airline_symbols.maxlinenr}%#__restore__#'
