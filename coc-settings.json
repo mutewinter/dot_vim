@@ -1,5 +1,6 @@
 {
   "tabnine.priority": 99,
   "codeLens.enable": true,
-  "diagnostic.displayByAle": true
+  "diagnostic.displayByAle": true,
+  "javascript.suggestionActions.enabled": false
 }
