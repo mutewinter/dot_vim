@@ -137,9 +137,6 @@ nnoremap <silent> <leader>uul :t.\|s/./=/\|:nohls<cr>
 "          # --------
 nnoremap <silent> <leader>cul :normal "lyy"lpwvLr-^"lyyk"lP<cr>
 
-" Format the entire file
-nnoremap <leader>fef mx=ggG='x
-
 " Split window vertically or horizontally *and* switch to the new split!
 nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>:wincmd =<CR>
 nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
