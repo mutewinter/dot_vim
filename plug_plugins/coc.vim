@@ -67,3 +67,21 @@ nmap <leader>ff  <Plug>(coc-fix-current)
 
 " Search workspace symbols
 nnoremap <silent> <leader>ss  :<C-u>CocList -I symbols<cr>
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Map keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gtd <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+
+function! s:organize_imports()
+  call CocAction('runCommand', 'tsserver.organizeImports')
+  normal gF
+endfunction
+
+nmap <silent> <leader>if :call <SID>organize_imports()<CR>
