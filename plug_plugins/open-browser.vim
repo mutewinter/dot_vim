@@ -3,5 +3,5 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
-nmap <leader>o <Plug>(openbrowser-smart-search)
-vmap <leader>o <Plug>(openbrowser-smart-search)
+nmap <leader>oo <Plug>(openbrowser-smart-search)
+vmap <leader>oo <Plug>(openbrowser-smart-search)
