@@ -1,5 +1,5 @@
 if exists('g:plug_installing_plugins')
-  Plug 'mutewinter/splitjoin.vim'
+  Plug 'AndrewRadev/splitjoin.vim'
   finish
 endif
 
