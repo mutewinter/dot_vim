@@ -1,4 +1,6 @@
 if exists('g:plug_installing_plugins')
-  Plug 'mutewinter/vim-tmux'
+  Plug 'tmux-plugins/vim-tmux'
   finish
 endif
+
+autocmd BufNewFile,BufRead {.,_}tmux*.conf set ft=tmux | compiler tmux
