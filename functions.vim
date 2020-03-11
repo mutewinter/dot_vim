@@ -100,7 +100,7 @@ function CRWriteIfNecessary()
   endif
 endfunction
 
-" Clear the search buffer when hitting return
+" Save the file if necessary when hitting enter
 " Idea for MapCR from http://git.io/pt8kjA
 function! MapCR()
   nnoremap <silent> <enter> :call CRWriteIfNecessary()<CR>
