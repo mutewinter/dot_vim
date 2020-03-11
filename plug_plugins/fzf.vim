@@ -1,6 +1,7 @@
 if exists('g:plug_installing_plugins')
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
+  Plug 'pbogut/fzf-mru.vim'
   finish
 endif
 
@@ -11,6 +12,7 @@ nnoremap <silent><leader>. :call Fzf_dev()<CR>
 nnoremap <leader>gf :GFiles<CR>
 nnoremap <leader>gm :GFiles?<CR>
 nnoremap <leader>bl :BLines<CR>
+nnoremap <leader>m :FZFMru<CR>
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
