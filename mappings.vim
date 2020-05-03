@@ -58,12 +58,9 @@ nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(st
 " ---------------
 " Window Movement
 " ---------------
-nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
 nnoremap <silent> <M-h> :wincmd h<CR>
-nnoremap <silent> gj :WriteBufferIfNecessary<CR>:wincmd j<CR>
-nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
+nnoremap <silent> <M-j> :wincmd j<CR>
 nnoremap <silent> <M-k> :wincmd k<CR>
-nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
 nnoremap <silent> <M-l> :wincmd l<CR>
 
 "   4 Window Splits
