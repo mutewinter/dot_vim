@@ -8,4 +8,11 @@ let g:ale_sign_warning = '⚠'
 " Otherwise huge files might get linted and freeze.
 let g:ale_lint_on_enter = 0
 
-nmap <leader>ad <Plug>(ale_detail)
+" Disabled because coc is handling
+let g:ale_linters = {
+\   'javascript': [],
+\   'javascriptreact': [],
+\   'typescript': [],
+\   'typescriptreact': [],
+\}
+

@@ -5,21 +5,9 @@ endif
 
 let g:coc_global_extensions = [
       \'coc-emmet', 'coc-pairs', 'coc-ultisnips', 'coc-json', 'coc-tabnine',
-      \'coc-tsserver', 'coc-highlight', 'coc-css', 'coc-git'
+      \'coc-tsserver', 'coc-highlight', 'coc-css', 'coc-git', 'coc-tailwindcss',
+      \'coc-eslint'
       \]
-
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
 
 " Use K to show documentation in preview window
 nnoremap <silent>gD :call <SID>show_documentation()<CR>
@@ -32,17 +20,15 @@ function! s:show_documentation()
   endif
 endfunction
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+" Use <tab> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm. Note that
+" arrow keys navigate completions (but I have a fancy keyboard).
+inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Highlight symbol under cursor on CursorHold
 " TODO Broken right now. Try this again in the future to replace
 " vim-illuminate.
-" autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
@@ -64,6 +50,8 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Autofix problem of current line
 nmap <leader>ff  <Plug>(coc-fix-current)
+" Search workspace symbols
+nnoremap <leader>al  :<C-u>CocList actions<cr>
 
 " Search workspace symbols
 nnoremap <silent> <leader>ss  :<C-u>CocList -I symbols<cr>
@@ -78,10 +66,22 @@ nmap <silent> gtd <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-
 function! s:organize_imports()
   call CocAction('runCommand', 'tsserver.organizeImports')
   normal gF
 endfunction
 
 nmap <silent> <leader>if :call <SID>organize_imports()<CR>
+
+" Introduce function text object
+" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+xmap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap if <Plug>(coc-funcobj-i)
+omap af <Plug>(coc-funcobj-a)
+
+" Use <TAB> for selections ranges.
+" NOTE: Requires 'textDocument/selectionRange' support from the language server.
+" coc-tsserver, coc-python are the examples of servers that support it.
+nmap <silent> <TAB> <Plug>(coc-range-select)
+xmap <silent> <TAB> <Plug>(coc-range-select)

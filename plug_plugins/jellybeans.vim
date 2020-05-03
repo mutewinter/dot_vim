@@ -19,20 +19,6 @@ let g:jellybeans_overrides = {
 \                    'ctermfg': 'Yellow',
 \                    'ctermbg': 'Black',
 \                    'attr': ''
-\                },
-\    'Search':   {
-\                    'guifg': '2A0014',
-\                    'guibg': 'FFABD0',
-\                    'ctermfg': 'Magenta',
-\                    'ctermbg': '',
-\                    'attr': ''
-\                },
-\    'Comment':  {
-\                    'guifg': '888888',
-\                    'guibg': '',
-\                    'ctermfg': 'Grey',
-\                    'ctermbg': '',
-\                    'attr': ''
 \                }
 \}
 
@@ -43,3 +29,6 @@ hi! CocErrorSign guifg=#FF5656
 
 " Make cssAttrs (center, block, etc.) the same color as units
 hi! link cssAttr Constant
+
+" Without this, coc-highlight's CursorHold highlight doesn't work
+hi! CocHighlightText guibg=#333333 gui=underline

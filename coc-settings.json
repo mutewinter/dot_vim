@@ -1,8 +1,10 @@
 {
-  "tabnine.priority": 99,
   "codeLens.enable": true,
-  "diagnostic.displayByAle": true,
   "javascript.suggestionActions.enabled": false,
+  "javascript.referencesCodeLens.enable": false,
   "typescript.referencesCodeLens.enable": false,
-  "typescript.implementationsCodeLens.enable": false
+  "typescript.implementationsCodeLens.enable": false,
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.noselect": false,
+  "diagnostic.errorSign": "✖"
 }
