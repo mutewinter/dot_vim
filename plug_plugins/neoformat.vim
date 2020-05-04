@@ -14,6 +14,6 @@ let g:neoformat_enabled_typescriptreact = ['tsfmt', 'prettier']
 
 let g:neoformat_sql = {
         \ 'exe': 'pg_format',
-        \ 'args': ['--keyword-case 2 --spaces 2 -'],
+        \ 'args': ['--keyword-case 2 --spaces 2 --maxlength 80 -'],
         \ 'stdin': 1,
         \ }
