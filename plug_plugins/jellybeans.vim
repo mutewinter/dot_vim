@@ -32,3 +32,5 @@ hi! link cssAttr Constant
 
 " Without this, coc-highlight's CursorHold highlight doesn't work
 hi! CocHighlightText guibg=#333333 gui=underline
+
+hi! CocInfoSign guifg=LightBlue
