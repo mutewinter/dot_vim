@@ -1,50 +1,34 @@
 if exists('g:plug_installing_plugins')
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
-  Plug 'pbogut/fzf-mru.vim'
+  Plug 'yuki-ycino/fzf-preview.vim'
+  Plug 'antoinemadec/coc-fzf'
   finish
 endif
 
-nnoremap <leader>af :Ag<space>
+" Base
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
 
-" Leader Commands
-nnoremap <silent><leader>. :call Fzf_dev()<CR>
-nnoremap <leader>gf :GFiles<CR>
-nnoremap <leader>gm :GFiles?<CR>
-nnoremap <leader>bl :BLines<CR>
-nnoremap <leader>m :FZFMru<CR>
+" FZF Preview
+let g:fzf_preview_use_dev_icons = 1
+let g:fzf_preview_grep_cmd = 'rg --line-number --no-heading --color=always --smart-case'
+let g:fzf_preview_floating_window_winblend = 0
 
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" Coc Fzf
+let g:coc_fzf_preview = 'up:50%'
 
-" ----------------------------------------------------------
-" Files + devicons
-" From: https://github.com/ryanoasis/vim-devicons/issues/106
-" ----------------------------------------------------------
-function! Fzf_dev()
-  function! s:files()
-    let files = split(system($FZF_DEFAULT_COMMAND), '\n')
-    return s:prepend_icon(files)
-  endfunction
+" Base search commands I use a bunch
+nnoremap <leader>. :FzfPreviewProjectFiles<CR>
+nnoremap <leader>m :FzfPreviewProjectMruFiles<CR>
+nnoremap <leader>fr :FzfPreviewProjectGrep<space>
 
-  function! s:prepend_icon(candidates)
-    let result = []
-    for candidate in a:candidates
-      let filename = fnamemodify(candidate, ':p:t')
-      let icon = WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
-      call add(result, printf("%s %s", icon, candidate))
-    endfor
+" Find X commands
+nnoremap <leader>fg :FzfPreviewGitStatus<CR>
+nnoremap <leader>fw :FzfPreviewProjectMrwFiles<CR>
+nnoremap <leader>fb :FzfPreviewAllBuffers<CR>
+nnoremap <leader>fl :FzfPreviewLocationList<CR>
+nnoremap <leader>fq :FzfPreviewQuickFix<CR>
 
-    return result
-  endfunction
-
-  function! s:edit_file(item)
-    let parts = split(a:item, ' ')
-    let file_path = get(parts, 1, '')
-    execute 'silent e' file_path
-  endfunction
-
-  call fzf#run({
-        \ 'source': <sid>files(),
-        \ 'sink':   function('s:edit_file'),
-        \ 'down':    '40%' })
-endfunction
+nnoremap <leader>fd :CocFzfList diagnostics --current-buf<CR>
+nnoremap <leader>fD :CocFzfList diagnostics<CR>
+nnoremap <leader>fa :CocFzfList actions<CR>
