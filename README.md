@@ -100,6 +100,7 @@ This example installs [`vim-move`](https://github.com/matze/vim-move).
 | ![Star count](https://flat.badgen.net/github/stars/tpope/vim-unimpaired?label=★&color=black) |[vim-unimpaired](https://github.com/tpope/vim-unimpaired)|unimpaired.vim: Pairs of handy bracket mappings |
 | ![Star count](https://flat.badgen.net/github/stars/godlygeek/tabular?label=★&color=black) |[tabular](https://github.com/godlygeek/tabular) [:page_facing_up:](plug_plugins/tabular.vim)|Vim script for text filtering and alignment |
 | ![Star count](https://flat.badgen.net/github/stars/tpope/vim-abolish?label=★&color=black) |[vim-abolish](https://github.com/tpope/vim-abolish)|abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word |
+| ![Star count](https://flat.badgen.net/github/stars/tpope/vim-dadbod?label=★&color=black) |[vim-dadbod](https://github.com/tpope/vim-dadbod) [:page_facing_up:](plug_plugins/vim-dadbod.vim)|dadbod.vim: Modern database interface for Vim |
 | ![Star count](https://flat.badgen.net/github/stars/tpope/vim-repeat?label=★&color=black) |[vim-repeat](https://github.com/tpope/vim-repeat)|repeat.vim: enable repeating supported plugin maps with "." |
 | ![Star count](https://flat.badgen.net/github/stars/wellle/targets.vim?label=★&color=black) |[targets.vim](https://github.com/wellle/targets.vim)|Vim plugin that provides additional text objects |
 | ![Star count](https://flat.badgen.net/github/stars/Xuyuanp/nerdtree-git-plugin?label=★&color=black) |[nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)|A plugin of NERDTree showing git status |
@@ -132,27 +133,30 @@ This example installs [`vim-move`](https://github.com/matze/vim-move).
 | ![Star count](https://flat.badgen.net/github/stars/jeffkreeftmeijer/vim-numbertoggle?label=★&color=black) |[vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle)|Toggles between hybrid and absolute line numbers automatically |
 | ![Star count](https://flat.badgen.net/github/stars/wellle/tmux-complete.vim?label=★&color=black) |[tmux-complete.vim](https://github.com/wellle/tmux-complete.vim)|Vim plugin for insert mode completion of words in adjacent tmux panes |
 | ![Star count](https://flat.badgen.net/github/stars/xolox/vim-misc?label=★&color=black) |[vim-misc](https://github.com/xolox/vim-misc)|Miscellaneous auto-load Vim scripts |
-| ![Star count](https://flat.badgen.net/github/stars/tpope/vim-ragtag?label=★&color=black) |[vim-ragtag](https://github.com/tpope/vim-ragtag)|ragtag.vim: ghetto HTML/XML mappings (formerly allml.vim) |
 | ![Star count](https://flat.badgen.net/github/stars/tyru/open-browser.vim?label=★&color=black) |[open-browser.vim](https://github.com/tyru/open-browser.vim) [:page_facing_up:](plug_plugins/open-browser.vim)|Open URI with your favorite browser from your most favorite editor |
+| ![Star count](https://flat.badgen.net/github/stars/tpope/vim-ragtag?label=★&color=black) |[vim-ragtag](https://github.com/tpope/vim-ragtag)|ragtag.vim: ghetto HTML/XML mappings (formerly allml.vim) |
 | ![Star count](https://flat.badgen.net/github/stars/jparise/vim-graphql?label=★&color=black) |[vim-graphql](https://github.com/jparise/vim-graphql)|A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation. |
 | ![Star count](https://flat.badgen.net/github/stars/tmux-plugins/vim-tmux-focus-events?label=★&color=black) |[vim-tmux-focus-events](https://github.com/tmux-plugins/vim-tmux-focus-events)|Make terminal vim and tmux work better together. |
 | ![Star count](https://flat.badgen.net/github/stars/tmux-plugins/vim-tmux?label=★&color=black) |[vim-tmux](https://github.com/tmux-plugins/vim-tmux) [:page_facing_up:](plug_plugins/vim-tmux.vim)|vim plugin for tmux.conf |
+| ![Star count](https://flat.badgen.net/github/stars/yuki-ycino/fzf-preview.vim?label=★&color=black) |[fzf-preview.vim](https://github.com/yuki-ycino/fzf-preview.vim) [:page_facing_up:](plug_plugins/fzf-preview.vim)|Dark powered fzf plugin |
 | ![Star count](https://flat.badgen.net/github/stars/osyo-manga/vim-anzu?label=★&color=black) |[vim-anzu](https://github.com/osyo-manga/vim-anzu) [:page_facing_up:](plug_plugins/vim-anzu.vim)|Vim search status. |
 | ![Star count](https://flat.badgen.net/github/stars/nelstrom/vim-visual-star-search?label=★&color=black) |[vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search)|Start a * or # search from a visual block |
 | ![Star count](https://flat.badgen.net/github/stars/lifepillar/pgsql.vim?label=★&color=black) |[pgsql.vim](https://github.com/lifepillar/pgsql.vim) [:page_facing_up:](plug_plugins/pgsql.vim)|The best PostgreSQL plugin for Vim! |
-| ![Star count](https://flat.badgen.net/github/stars/machakann/vim-swap?label=★&color=black) |[vim-swap](https://github.com/machakann/vim-swap)|Reorder delimited items. |
+| ![Star count](https://flat.badgen.net/github/stars/christoomey/vim-sort-motion?label=★&color=black) |[vim-sort-motion](https://github.com/christoomey/vim-sort-motion)|Vim mapping for sorting a range of text |
+| ![Star count](https://flat.badgen.net/github/stars/machakann/vim-swap?label=★&color=black) |[vim-swap](https://github.com/machakann/vim-swap) [:page_facing_up:](plug_plugins/vim-swap.vim)|Reorder delimited items. |
 | ![Star count](https://flat.badgen.net/github/stars/rhysd/github-complete.vim?label=★&color=black) |[github-complete.vim](https://github.com/rhysd/github-complete.vim)|Vim input completion for GitHub |
 | ![Star count](https://flat.badgen.net/github/stars/yssl/QFEnter?label=★&color=black) |[QFEnter](https://github.com/yssl/QFEnter) [:page_facing_up:](plug_plugins/QFEnter.vim)|Open a Quickfix item in a window you choose. (Vim plugin) |
 | ![Star count](https://flat.badgen.net/github/stars/Valloric/ListToggle?label=★&color=black) |[ListToggle](https://github.com/Valloric/ListToggle) [:page_facing_up:](plug_plugins/ListToggle.vim)|A vim plugin for toggling the display of the quickfix list and the location-list. |
+| ![Star count](https://flat.badgen.net/github/stars/kristijanhusak/vim-dadbod-ui?label=★&color=black) |[vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui) [:page_facing_up:](plug_plugins/vim-dadbod-ui.vim)|Simple UI for https://github.com/tpope/vim-dadbod |
 | ![Star count](https://flat.badgen.net/github/stars/jszakmeister/vim-togglecursor?label=★&color=black) |[vim-togglecursor](https://github.com/jszakmeister/vim-togglecursor) [:page_facing_up:](plug_plugins/vim-togglecursor.vim)|Toggle the cursor shape in the terminal for Vim. |
 | ![Star count](https://flat.badgen.net/github/stars/haya14busa/incsearch-fuzzy.vim?label=★&color=black) |[incsearch-fuzzy.vim](https://github.com/haya14busa/incsearch-fuzzy.vim) [:page_facing_up:](plug_plugins/incsearch-fuzzy.vim)| |
 | ![Star count](https://flat.badgen.net/github/stars/itspriddle/vim-marked?label=★&color=black) |[vim-marked](https://github.com/itspriddle/vim-marked)|Open the current Markdown buffer in Marked.app |
 | ![Star count](https://flat.badgen.net/github/stars/AndrewRadev/tagalong.vim?label=★&color=black) |[tagalong.vim](https://github.com/AndrewRadev/tagalong.vim)|Change an HTML(ish) opening tag and take the closing one along as well |
+| ![Star count](https://flat.badgen.net/github/stars/antoinemadec/coc-fzf?label=★&color=black) |[coc-fzf](https://github.com/antoinemadec/coc-fzf) [:page_facing_up:](plug_plugins/coc-fzf.vim)|fzf :heart: coc.nvim |
 | ![Star count](https://flat.badgen.net/github/stars/nono/vim-handlebars?label=★&color=black) |[vim-handlebars](https://github.com/nono/vim-handlebars)|[deprecated] Vim plugin for Handlebars |
 | ![Star count](https://flat.badgen.net/github/stars/sk1418/Join?label=★&color=black) |[Join](https://github.com/sk1418/Join)|a better (hopefully) :Join command in vim |
 | ![Star count](https://flat.badgen.net/github/stars/haya14busa/incsearch-easymotion.vim?label=★&color=black) |[incsearch-easymotion.vim](https://github.com/haya14busa/incsearch-easymotion.vim) [:page_facing_up:](plug_plugins/incsearch-easymotion.vim)| |
 | ![Star count](https://flat.badgen.net/github/stars/dsawardekar/portkey?label=★&color=black) |[portkey](https://github.com/dsawardekar/portkey) [:page_facing_up:](plug_plugins/portkey.vim)|Navigate files at the speed of Vim. |
-| ![Star count](https://flat.badgen.net/github/stars/pbogut/fzf-mru.vim?label=★&color=black) |[fzf-mru.vim](https://github.com/pbogut/fzf-mru.vim) [:page_facing_up:](plug_plugins/fzf-mru.vim)|Vim plugin that allows using awesome CtrlP MRU plugin with even more amazing FZF |
 | ![Star count](https://flat.badgen.net/github/stars/vim-scripts/scratch.vim?label=★&color=black) |[scratch.vim](https://github.com/vim-scripts/scratch.vim)|Plugin to create and use a scratch Vim buffer |
 | ![Star count](https://flat.badgen.net/github/stars/henrik/vim-reveal-in-finder?label=★&color=black) |[vim-reveal-in-finder](https://github.com/henrik/vim-reveal-in-finder)|Reveal the current file in the OS X Finder. |
 | ![Star count](https://flat.badgen.net/github/stars/papanikge/vim-voogle?label=★&color=black) |[vim-voogle](https://github.com/papanikge/vim-voogle) [:page_facing_up:](plug_plugins/vim-voogle.vim)|google for the word under the cursor to a browser because 2013 |
@@ -160,7 +164,7 @@ This example installs [`vim-move`](https://github.com/matze/vim-move).
 | ![Star count](https://flat.badgen.net/github/stars/vim-scripts/HelpClose?label=★&color=black) |[HelpClose](https://github.com/vim-scripts/HelpClose)|Close all help windows |
 | ![Star count](https://flat.badgen.net/github/stars/mutewinter/vim-autoreadwatch?label=★&color=black) |[vim-autoreadwatch](https://github.com/mutewinter/vim-autoreadwatch)|A forked script for vim auto reloading of buffers when changed on disk. |
 
-_That's 80 plugins, holy crap._
+_That's 84 plugins, holy crap._
 
-_Generated by `rake update_readme` on 2020/05/03._
+_Generated by `rake update_readme` on 2020/05/05._
 
