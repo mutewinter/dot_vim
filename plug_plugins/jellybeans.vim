@@ -8,7 +8,7 @@ endif
 let g:jellybeans_overrides = {
 \    'Pmenu':    {
 \                    'guifg': 'D6D6D6',
-\                    'guibg': '232323',
+\                    'guibg': '303030',
 \                    'ctermfg': 'Black',
 \                    'ctermbg': 'Yellow',
 \                    'attr': ''
