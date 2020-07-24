@@ -9,7 +9,7 @@ let g:coc_global_extensions = [
       \'coc-eslint', 'coc-vimlsp', 'coc-html', 'coc-db'
       \]
 
-" Use K to show documentation in preview window
+" Show documentation in preview window
 nnoremap <silent>gD :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
@@ -62,7 +62,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Map keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gtd <Plug>(coc-type-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
