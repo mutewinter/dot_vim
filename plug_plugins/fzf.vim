@@ -32,3 +32,5 @@ nnoremap <leader>fq :FzfPreviewQuickFix<CR>
 nnoremap <leader>fd :CocFzfList diagnostics --current-buf<CR>
 nnoremap <leader>fD :CocFzfList diagnostics<CR>
 nnoremap <leader>fa :CocFzfList actions<CR>
+nnoremap <leader>fo :CocFzfList outline<CR>
+nnoremap <leader>fc :CocFzfList commands<CR>

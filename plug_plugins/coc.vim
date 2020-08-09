@@ -6,8 +6,11 @@ endif
 let g:coc_global_extensions = [
       \'coc-emmet', 'coc-pairs', 'coc-ultisnips', 'coc-json', 'coc-tabnine',
       \'coc-tsserver', 'coc-highlight', 'coc-css', 'coc-git', 'coc-tailwindcss',
-      \'coc-eslint', 'coc-vimlsp', 'coc-html', 'coc-db'
+      \'coc-eslint', 'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml'
       \]
+
+" I have to restart Coc sometimes because outdated error stick around.
+nnoremap <leader>cr :CocRestart<cr>
 
 " Show documentation in preview window
 nnoremap <silent>gD :call <SID>show_documentation()<CR>
@@ -19,6 +22,12 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 
 " Use <tab> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm. Note that
@@ -50,11 +59,6 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Autofix problem of current line
 nmap <leader>ff  <Plug>(coc-fix-current)
-" Search workspace symbols
-nnoremap <leader>al  :<C-u>CocList actions<cr>
-
-" Search workspace symbols
-nnoremap <silent> <leader>ss  :<C-u>CocList -I symbols<cr>
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
