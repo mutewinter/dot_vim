@@ -1,0 +1,14 @@
+snippet insert "Insert into" b
+INSERT INTO ${1:table} (${2:columns}) VALUES (${3:values});
+endsnippet
+
+snippet join "Join" b
+SELECT
+  ${1:*}
+FROM
+  ${2:table1} ${3:T1}
+JOIN
+  ${4:table2} ${5:T2}
+ON
+  T1.${6:column1} = T2.${7:column2}
+endsnippet
