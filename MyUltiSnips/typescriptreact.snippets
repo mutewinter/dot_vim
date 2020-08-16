@@ -1,11 +1,26 @@
 extends typescript
 
-snippet fc "Functional component (fc)" b
+snippet fc "functional component" b
 import React from 'react';
 
 const ${1:name}: React.FC = () => (
-  <div />
+  ${2:<div />}
 );
 
 export default $1;
+endsnippet
+
+
+# -----
+# React
+# -----
+
+snippet useS "useState()" b
+const [${1}, set`!p snip.rv=t[1].title()`] = useState${5:<${6:Type} | null>}(${3:"${4}"});
+endsnippet
+
+snippet useE "useEffect()" b
+useEffect(() => {
+  $1$0
+}$2);
 endsnippet

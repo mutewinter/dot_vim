@@ -4,7 +4,7 @@ if exists('g:plug_installing_plugins')
 endif
 
 let g:coc_global_extensions = [
-      \'coc-emmet', 'coc-pairs', 'coc-ultisnips', 'coc-json', 'coc-tabnine',
+      \'coc-emmet', 'coc-pairs', 'coc-snippets', 'coc-json', 'coc-tabnine',
       \'coc-tsserver', 'coc-highlight', 'coc-css', 'coc-git', 'coc-tailwindcss',
       \'coc-eslint', 'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml'
       \]

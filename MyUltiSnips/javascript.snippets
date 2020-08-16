@@ -2,39 +2,19 @@ snippet cl "console.log('string')" b
 console.log('$0');
 endsnippet
 
-# ------
-# ESLint
-# ------
-
-snippet esd "eslint disable (esd)" b
-/* eslint-disable $0 */
-endsnippet
-
-snippet ese "eslint enable (ese)" b
-/* eslint-enable $0 */
-endsnippet
-
-snippet esl "eslint disable line (edl)" i
-// eslint-disable-line $0
-endsnippet
-
-snippet esl "eslint disable next line (ednl)" i
-// eslint-disable-next-line $0
-endsnippet
-
 # ---------
 # Functions
 # ---------
 
-snippet af "arrow function (af)"
+snippet af "arrow function"
 (${1:argument}) => {
   ${VISUAL}$0
 }
 endsnippet
 
-snippet fn "function literal (fn)"
-function (${1:argument}) {
-	${VISUAL}$0
+snippet fn "function literal"
+function ${1:name}(${2:argument}) {
+  ${VISUAL}$0
 }
 endsnippet
 
@@ -51,30 +31,16 @@ switch (${1:variable}) {
 }
 endsnippet
 
-snippet exp "Export from location (exp)" b
+snippet exp "export from location" b
 export $1 from '${2:./}$1';
 endsnippet
 
-snippet expn "Export nested (expn)" b
+snippet expn "export nested" b
 export { $1 } from '${2:./}';
 endsnippet
 
-snippet expf "Export function (expf)" b
+snippet expf "Export function" b
 export default function ${1:name}(${2:arguments}) {
   $0
 }
-endsnippet
-
-# -----
-# React
-# -----
-
-snippet useS "useState() (useS)" b
-const [$1, set$4`!p snip.rv=upperfirst(t[1])`] = useState$3($2);$0
-endsnippet
-
-snippet useE "useEffect() (useE)" b
-useEffect(() => {
-  $1$0
-}$2);
 endsnippet

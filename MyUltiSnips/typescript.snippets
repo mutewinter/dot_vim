@@ -1,1 +1,8 @@
 extends javascript
+
+snippet reduce "reduce()" b
+reduce<$3>((result, $1) => {
+  $0
+  return result;
+}, $2)
+endsnippet
