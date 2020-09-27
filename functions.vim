@@ -92,8 +92,8 @@ endfunction
 command! WriteBufferIfNecessary call WriteBufferIfNecessary()
 
 function CRWriteIfNecessary()
-  if &filetype == "qf"
-    " Execute a normal enter when in Quickfix list.
+  if &filetype == "qf" || &filetype == "ctrlsf"
+    " Execute a normal enter when in Quickfix or Ctrlsf plugin.
     execute "normal! \<enter>"
   else
     WriteBufferIfNecessary
