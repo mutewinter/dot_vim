@@ -100,20 +100,11 @@ inoremap jK <Esc>
 " Clear search
 noremap <silent><leader>/ :nohls<CR>
 
-" Highlight search word under cursor without jumping to next
-nnoremap <leader>h *<C-O>
-
 " Toggle spelling mode
 nnoremap <silent> <leader>sp :set spell!<CR>
 
 " Quickly switch to last buffer
 nnoremap <leader>, :e#<CR>
-
-" Underline the current line with '-'
-nnoremap <silent> <leader>ul :t.\|s/./-/\|:nohls<cr>
-
-" Underline the current line with '='
-nnoremap <silent> <leader>uul :t.\|s/./=/\|:nohls<cr>
 
 " Surround the commented line with lines.
 "
