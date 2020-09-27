@@ -24,6 +24,9 @@ nnoremap <leader>sc <nop>
 nnoremap ; :
 vnoremap ; :
 
+" Quit with one key
+nnoremap <C-x> :qa<cr>
+
 " Yank entire buffer with gy
 nnoremap gy :0,$ y<cr>
 
@@ -55,6 +58,8 @@ nnoremap ` '
 " ---------------
 " Window Movement
 " ---------------
+
+" Move windows directionally
 nnoremap <silent> <M-h> :wincmd h<CR>
 nnoremap <silent> <M-j> :wincmd j<CR>
 nnoremap <silent> <M-k> :wincmd k<CR>
@@ -146,7 +151,7 @@ vnoremap K k
 nnoremap <silent> <F5> :set paste!<CR>
 
 " Paste and select pasted
-nnoremap <expr> gpp '`[' . strpart(getregtype(), 0, 1) . '`]'
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
