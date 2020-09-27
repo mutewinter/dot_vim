@@ -83,12 +83,6 @@ nnoremap <silent> gx :wincmd x<CR>
 " Make line completion easier.
 inoremap <C-l> <C-x><C-l>
 
-" Scroll larger amounts with gj / gk
-nnoremap gj 15gjzz
-nnoremap gk 15gkzz
-vnoremap gj 15gjzz
-vnoremap gk 15gkzz
-
 " ---------------
 " Insert Mode Mappings
 " ---------------
