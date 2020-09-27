@@ -52,9 +52,6 @@ nnoremap U <C-r>
 nnoremap ' `
 nnoremap ` '
 
-" Don't move on *
-nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
-
 " ---------------
 " Window Movement
 " ---------------
