@@ -16,11 +16,11 @@ endsnippet
 # -----
 
 snippet useS "useState()" b
-const [${1}, set`!p snip.rv=t[1].title()`] = useState${5:<${6:Type} | null>}(${3:"${4}"});
+const [$1, set$2] = useState($3);
 endsnippet
 
 snippet useE "useEffect()" b
 useEffect(() => {
-  $1$0
-}$2);
+  $0
+}, []);
 endsnippet
