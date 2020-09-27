@@ -4,9 +4,9 @@ if exists('g:plug_installing_plugins')
 endif
 
 let g:coc_global_extensions = [
-      \'coc-emmet', 'coc-pairs', 'coc-snippets', 'coc-json', 'coc-tabnine',
-      \'coc-tsserver', 'coc-highlight', 'coc-css', 'coc-git', 'coc-tailwindcss',
-      \'coc-eslint', 'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml'
+      \'coc-emmet', 'coc-pairs', 'coc-snippets', 'coc-json', 'coc-tsserver',
+      \'coc-highlight', 'coc-css', 'coc-git', 'coc-tailwindcss', 'coc-eslint',
+      \'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml', 'coc-prettier'
       \]
 
 " I have to restart Coc sometimes because outdated error stick around.
@@ -19,7 +19,7 @@ function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
-    call CocAction('doHover')
+    call CocActionAsync('doHover')
   endif
 endfunction
 
@@ -35,57 +35,70 @@ endif
 inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Highlight symbol under cursor on CursorHold
-" TODO Broken right now. Try this again in the future to replace
-" vim-illuminate.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
 " Pick a new color
-nmap <leader>cpp :call CocAction('pickColor')<CR>
+nmap <leader>CP :call CocAction('pickColor')<CR>
 " Change color presentation
-nmap <leader>c22 :call CocAction('colorPresentation')<CR>
+nmap <leader>CX :call CocAction('colorPresentation')<CR>
 
-" Use `[c` and `]c` to navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
+" Navigate diagnostic
+nmap <silent> gp <Plug>(coc-diagnostic-prev)
+nmap <silent> gn <Plug>(coc-diagnostic-next)
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>aa  <Plug>(coc-codeaction-line)
 " Autofix problem of current line
-nmap <leader>ff  <Plug>(coc-fix-current)
+nmap <leader>ac  <Plug>(coc-fix-current)
 
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" Map keys for gotos
+" Map keys for go-tos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 function! s:organize_imports()
-  call CocAction('runCommand', 'tsserver.organizeImports')
-  normal gF
+  call CocActionAsync()('runCommand', 'tsserver.organizeImports')
 endfunction
 
 nmap <silent> <leader>if :call <SID>organize_imports()<CR>
 
-" Introduce function text object
-" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+" Map function and class text objects
 xmap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
 omap af <Plug>(coc-funcobj-a)
 
-" Use <TAB> for selections ranges.
-" NOTE: Requires 'textDocument/selectionRange' support from the language server.
-" coc-tsserver, coc-python are the examples of servers that support it.
-nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
+" Use CTRL-S for selections ranges.
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
+
+" ------------
+" coc-snippets
+" ------------
+
+imap <C-j> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" -------
+" coc-git
+" -------
+
+" navigate chunks of current buffer
+nmap <leader>gn <Plug>(coc-git-prevchunk)
+nmap <leader>gp <Plug>(coc-git-nextchunk)
