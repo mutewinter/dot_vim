@@ -41,9 +41,9 @@ set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
 set cursorline     " Highlight current line
 set encoding=utf-8
-set noshowmode     " Don't show the mode since Powerline shows it
+set noshowmode     " Don't show the mode since status line shows it
 set title          " Set the title of the window in the terminal to the file
-set updatetime=400 " Added based on guidance from coc.nvim
+set updatetime=300 " Added based on guidance from coc.nvim
 set signcolumn=yes " Ensures no flickering for coc-git
 set shortmess+=c   " don't give |ins-completion-menu| messages.
 if exists('+colorcolumn')
@@ -107,6 +107,7 @@ set hlsearch   " Highlight search results
 set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
   \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc,*/node_modules/*,
   \rake-pipeline-*
+set inccommand=nosplit " Preview replace as you type
 
 " ---------------
 " Visual
