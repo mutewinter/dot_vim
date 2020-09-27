@@ -2,7 +2,7 @@ if exists('g:plug_installing_plugins')
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'yuki-ycino/fzf-preview.vim', { 'tag': 'version_1' }
-  Plug 'antoinemadec/coc-fzf'
+  Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
   finish
 endif
 
