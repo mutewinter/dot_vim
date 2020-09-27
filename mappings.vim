@@ -150,8 +150,6 @@ nnoremap <leader>pc :PlugClean<CR>
 " Typo Fixes
 " ---------------
 
-noremap <F1> <Esc>
-inoremap <F1> <Esc>
 cnoremap w' w<CR>
 
 " Disable the ever-annoying Ex mode shortcut key. Type visual my ass. Instead,
