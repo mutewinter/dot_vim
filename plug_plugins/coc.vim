@@ -47,8 +47,8 @@ nmap <leader>CP :call CocAction('pickColor')<CR>
 nmap <leader>CX :call CocAction('colorPresentation')<CR>
 
 " Navigate diagnostic
-nmap <silent> gp <Plug>(coc-diagnostic-prev)
-nmap <silent> gn <Plug>(coc-diagnostic-next)
+nmap <silent> gp <Plug>(coc-diagnostic-next)
+nmap <silent> gn <Plug>(coc-diagnostic-prev)
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
@@ -101,5 +101,5 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " -------
 
 " navigate chunks of current buffer
-nmap <leader>gn <Plug>(coc-git-prevchunk)
-nmap <leader>gp <Plug>(coc-git-nextchunk)
+nmap <leader>gn <Plug>(coc-git-nextchunk)
+nmap <leader>gp <Plug>(coc-git-prevchunk)
