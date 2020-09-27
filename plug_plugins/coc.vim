@@ -6,7 +6,8 @@ endif
 let g:coc_global_extensions = [
       \'coc-emmet', 'coc-pairs', 'coc-snippets', 'coc-json', 'coc-tsserver',
       \'coc-highlight', 'coc-css', 'coc-git', 'coc-tailwindcss', 'coc-eslint',
-      \'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml', 'coc-prettier'
+      \'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml', 'coc-prettier',
+      \'coc-fzf-preview',
       \]
 
 " I have to restart Coc sometimes because outdated error stick around.
