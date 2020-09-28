@@ -14,7 +14,7 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
 
 let g:fzf_preview_use_dev_icons = 1
 let g:fzf_preview_grep_cmd = 'rg --line-number --no-heading --color=always --smart-case'
-let g:fzf_preview_fzf_color_option = 'fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104,info:183,prompt:110,spinner:107,pointer:167,marker:215'
+let g:fzf_preview_fzf_color_option = 'hl:211,hl+:211'
 let $BAT_THEME = 'Monokai Extended Origin'
 let $FZF_PREVIEW_PREVIEW_BAT_THEME = 'Monokai Extended Origin'
 
