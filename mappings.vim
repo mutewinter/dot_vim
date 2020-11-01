@@ -25,7 +25,7 @@ nnoremap ; :
 vnoremap ; :
 
 " Quit with one key
-nnoremap <C-x> :qa<cr>
+nnoremap <M-x> :qa<cr>
 
 " Yank entire buffer with gy
 nnoremap gy :0,$ y<cr>
