@@ -3,7 +3,9 @@ extends typescript
 snippet fc "functional component" b
 import React from 'react';
 
-const ${1:name}: React.FC = () => (
+interface Props {};
+
+const ${1:name}: React.FC<Props> = () => (
   ${2:<div />}
 );
 
