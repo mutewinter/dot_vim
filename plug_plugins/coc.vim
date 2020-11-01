@@ -1,13 +1,13 @@
 if exists('g:plug_installing_plugins')
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Locked version due to 0.0.79 causing leftover popups to show in TS code.
+  Plug 'neoclide/coc.nvim', {'tag': 'v0.0.78'}
   finish
 endif
 
 let g:coc_global_extensions = [
-      \'coc-emmet', 'coc-pairs', 'coc-snippets', 'coc-json', 'coc-tsserver',
+      \'coc-pairs', 'coc-snippets', 'coc-json', 'coc-tsserver',
       \'coc-highlight', 'coc-css', 'coc-git', 'coc-tailwindcss', 'coc-eslint',
-      \'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml', 'coc-prettier',
-      \'coc-fzf-preview',
+      \'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml', 'coc-prettier'
       \]
 
 " I have to restart Coc sometimes because outdated error stick around.
@@ -20,20 +20,15 @@ function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
-    call CocActionAsync('doHover')
+    call CocAction('doHover')
   endif
 endfunction
 
-if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
-
-" Use <tab> to confirm completion, `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm. Note that
-" arrow keys navigate completions (but I have a fancy keyboard).
+" Use <cr> or <tab> to confirm completion, `<C-g>u` means break undo chain at
+" current position. Coc only does snippet and additional edit on confirm. Note
+" that arrow keys navigate completions (but I have a fancy keyboard).
 inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -47,22 +42,24 @@ nmap <leader>CP :call CocAction('pickColor')<CR>
 nmap <leader>CX :call CocAction('colorPresentation')<CR>
 
 " Navigate diagnostic
-nmap <silent> gp <Plug>(coc-diagnostic-next)
-nmap <silent> gn <Plug>(coc-diagnostic-prev)
+nmap <silent> gn <Plug>(coc-diagnostic-next)
+nmap <silent> gN <Plug>(coc-diagnostic-prev)
 
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" Do codeAction of selected region, ex: `<leader>fp` for current paragraph
+xmap <leader>b  <Plug>(coc-codeaction-selected)
+nmap <leader>b  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader>aa  <Plug>(coc-codeaction-line)
+nmap <leader>bb  <Plug>(coc-codeaction)
+" TODO switch for this when 0.7.9 becomes stable
+" nmap <leader>bb  <Plug>(coc-codeaction-line)
 " Autofix problem of current line
-nmap <leader>ac  <Plug>(coc-fix-current)
+nmap <leader>bc  <Plug>(coc-fix-current)
 
 " Map keys for go-tos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gi <Plug>(coc-diagnostic-info)
 nmap <silent> gr <Plug>(coc-references)
 
 function! s:organize_imports()
@@ -102,4 +99,4 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " navigate chunks of current buffer
 nmap <leader>gn <Plug>(coc-git-nextchunk)
-nmap <leader>gp <Plug>(coc-git-prevchunk)
+nmap <leader>gN <Plug>(coc-git-prevchunk)
