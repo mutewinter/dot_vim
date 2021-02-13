@@ -2,10 +2,11 @@ extends typescript
 
 snippet fc "functional component" b
 import React from 'react';
+import 'twin.macro';
 
-interface Props {};
+interface $1Props {};
 
-const ${1:name}: React.FC<Props> = () => (
+const ${1:name} = ({}: $1Props) => (
   ${2:<div />}
 );
 
