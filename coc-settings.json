@@ -9,6 +9,7 @@
   "suggest.labelMaxLength": 70,
   "diagnostic.errorSign": "✖",
   "diagnostic.infoSign": "ⓘ",
+  "prettier.onlyUseLocalVersion": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "graphql",
     "typescript",
@@ -27,13 +28,6 @@
     "smallint",
     "unoptimized",
     "uuid"
-  ],
-  "eslint.filetypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "graphql"
   ],
   "coc.preferences.rootPatterns": [
     ".git",
@@ -78,5 +72,13 @@
     "sql"
   ],
   "tailwindCSS.headwind.runOnSave": false,
+  "tailwindCSS.colorDecorators": "on",
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)",
+    "tw=\"([^\"]*)",
+    "tw={\"([^\"}]*)",
+    "tw\\.\\w+`([^`]*)",
+    "tw\\(.*?\\)`([^`]*)"
+  ],
   "snippets.userSnippetsDirectory": "~/.config/nvim/MyUltiSnips"
 }

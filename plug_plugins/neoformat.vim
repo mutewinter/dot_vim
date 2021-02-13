@@ -3,4 +3,4 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
-nnoremap gF :Neoformat<CR>
+nnoremap <leader>gF :Neoformat<CR>

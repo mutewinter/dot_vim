@@ -1,12 +1,12 @@
 if exists('g:plug_installing_plugins')
-  " Locked version due to 0.0.79 causing leftover popups to show in TS code.
-  Plug 'neoclide/coc.nvim', {'tag': 'v0.0.78'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
   finish
 endif
 
 let g:coc_global_extensions = [
       \'coc-pairs', 'coc-snippets', 'coc-json', 'coc-tsserver',
-      \'coc-highlight', 'coc-css', 'coc-git', 'coc-tailwindcss', 'coc-eslint',
+      \'coc-highlight', 'coc-css', 'coc-git', 'coc-eslint',
       \'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml', 'coc-prettier'
       \]
 
@@ -61,6 +61,9 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-diagnostic-info)
 nmap <silent> gr <Plug>(coc-references)
+
+" Format current buffer
+nmap <silent> gF :call CocAction('format')<CR>
 
 function! s:organize_imports()
   call CocActionAsync()('runCommand', 'tsserver.organizeImports')
