@@ -35,6 +35,7 @@ endif
 " UI
 " ---------------
 set ruler          " Ruler on
+set number         " Line numbers on
 set relativenumber " Relative numbers on
 set nowrap         " Line wrapping off
 set laststatus=2   " Always show the statusline
