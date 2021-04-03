@@ -10,6 +10,17 @@
   "diagnostic.errorSign": "✖",
   "diagnostic.infoSign": "ⓘ",
   "prettier.onlyUseLocalVersion": true,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "graphql"
+  ],
+  "eslint.validate": ["graphql"],
   "coc.preferences.formatOnSaveFiletypes": [
     "graphql",
     "typescript",

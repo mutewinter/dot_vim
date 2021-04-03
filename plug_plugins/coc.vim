@@ -4,6 +4,7 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
+" coc-prettier locked to 1.1.20 due to it not using plugins on .21
 let g:coc_global_extensions = [
       \'coc-pairs', 'coc-snippets', 'coc-json', 'coc-tsserver',
       \'coc-highlight', 'coc-css', 'coc-git', 'coc-eslint',
