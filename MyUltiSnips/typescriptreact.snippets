@@ -6,24 +6,13 @@ import 'twin.macro';
 
 interface $1Props {};
 
-const ${1:name} = ({}: $1Props) => (
-  ${2:<div />}
-);
+const ${1:name} = ({}: $1Props) => {
+  return (
+    <div>
+      ${2}
+    </div>
+  );
+}
 
 export default $1;
-endsnippet
-
-
-# -----
-# React
-# -----
-
-snippet useS "useState()" b
-const [$1, set$2] = useState($3);
-endsnippet
-
-snippet useE "useEffect()" b
-useEffect(() => {
-  $0
-}, []);
 endsnippet
