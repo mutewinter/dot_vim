@@ -20,7 +20,9 @@
     "markdown",
     "graphql"
   ],
-  "eslint.validate": ["graphql"],
+  "eslint.validate": [
+    "graphql"
+  ],
   "coc.preferences.formatOnSaveFiletypes": [
     "graphql",
     "typescript",
@@ -28,15 +30,21 @@
   ],
   "cSpell.userWords": [
     "Postgres",
+    "bookmarklet",
     "browserslist",
     "cocstatus",
     "codegen",
     "concat",
     "graphql",
+    "hotspot",
     "jsonb",
+    "ldquo",
     "mutewinter",
     "pbcopy",
+    "rdquo",
+    "semibold",
     "smallint",
+    "svgs",
     "unoptimized",
     "uuid"
   ],
@@ -91,5 +99,21 @@
     "tw\\.\\w+`([^`]*)",
     "tw\\(.*?\\)`([^`]*)"
   ],
-  "snippets.userSnippetsDirectory": "~/.config/nvim/MyUltiSnips"
+  "snippets.userSnippetsDirectory": "~/.config/nvim/MyUltiSnips",
+  "languageserver": {
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": [
+        "server",
+        "-m",
+        "stream"
+      ],
+      // customize filetypes to your needs
+      "filetypes": [
+        "typescript",
+        "typescriptreact",
+        "graphql"
+      ]
+    }
+  }
 }
