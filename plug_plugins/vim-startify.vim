@@ -35,7 +35,5 @@ autocmd VimEnter *
             \   Startify |
             \   execute "normal \<c-w>w" |
             \ endif
-" Keep NERDTree from opening a split when startify is open
-autocmd FileType startify setlocal buftype=
 
 let g:startify_recursive_dir = 1

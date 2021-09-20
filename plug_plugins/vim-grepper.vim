@@ -1,12 +1,9 @@
-if exists('g:plug_installing_plugins')
-  Plug 'mhinz/vim-grepper'
-  finish
-endif
+" TODO move these to mappings if we're moving entirely away from vim-grepper
+set grepprg=rg\ --vimgrep\ --smart-case
+set grepformat=%f:%l:%c:%m,%f:%l:%m
 
-nnoremap <leader>rg :Grepper -tool rg<cr>
+command! -nargs=+ QGrep execute 'silent grep! "<args>"' | copen
 
-let g:grepper = {
-    \ 'tools': ['rg'],
-    \ 'rg': {
-    \   'grepprg':    'rg --vimgrep --smart-case',
-    \ }}
+nnoremap <leader>rg :QGrep<Space>
+nnoremap <leader>rw :silent grep <C-r><C-w><CR>:copen<CR>
+xnoremap <leader>rw "sy:silent grep <C-r>s<CR>:copen<CR>
