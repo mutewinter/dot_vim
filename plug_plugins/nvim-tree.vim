@@ -3,6 +3,8 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
+lua require 'nvim-tree'.setup()
+
 nnoremap <silent><leader>nn :NvimTreeToggle<CR>
 nnoremap <silent><leader>nf :NvimTreeFindFile<CR>
 
