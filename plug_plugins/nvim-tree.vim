@@ -6,6 +6,11 @@ endif
 nnoremap <silent><leader>nn :NvimTreeToggle<CR>
 nnoremap <silent><leader>nf :NvimTreeFindFile<CR>
 
-let g:nvim_tree_auto_close = 1
+lua << EOF
+require'nvim-tree'.setup {
+  auto_close = true,
+  open_on_setup = true,
+}
+EOF
+
 let g:nvim_tree_indent_markers = 1
-let g:nvim_tree_auto_open = 1
