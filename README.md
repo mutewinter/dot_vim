@@ -32,25 +32,8 @@ accidents, and startling sex appeal.
 * I'm using [NeoVim](https://github.com/neovim/neovim)
   [via Homebrew](https://github.com/neovim/neovim/wiki/Installing-Neovim) on OS X.
 
-## Plugin Requirements
-
-Here's a list of plugins that require further installation or have
-dependencies.
-
-* [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be
-  installed.
-* [Ale](https://github.com/w0rp/ale) Uses various linding and style
-  checking tools that are sepately installed.
-* [fzf.vim](https://github.com/junegunn/fzf.vim) Requires
-  [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) to be
-  installed.
-* [Source Code Nerd Font Complete](https://git.io/vPBU6) The custom font I'm using
-  for vim-airline and vim-devicons.
-* [Editorconfig.vim](https://github.com/editorconfig/editorconfig-vim) Requires [editorconfig](http://editorconfig.org/) to be installed.
-
 ## Mappings
 
-* Typing `jk` insert mode is equivalent to `Escape`.
 * Pressing `enter` in normal mode saves the current buffer, if needed.
 
 And many more. See [`mappings.vim`](mappings.vim) and
