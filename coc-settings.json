@@ -29,24 +29,31 @@
     "typescriptreact"
   ],
   "cSpell.userWords": [
+    "PDFs",
     "Postgres",
     "bookmarklet",
     "browserslist",
     "cocstatus",
     "codegen",
     "concat",
+    "deserialization",
     "graphql",
     "hotspot",
     "jsonb",
     "ldquo",
+    "lsquo",
+    "minmax",
     "mutewinter",
     "pbcopy",
     "rdquo",
+    "rsquo",
     "semibold",
     "smallint",
     "svgs",
     "unoptimized",
-    "uuid"
+    "uuid",
+    "webhook",
+    "webhooks"
   ],
   "coc.preferences.rootPatterns": [
     ".git",
