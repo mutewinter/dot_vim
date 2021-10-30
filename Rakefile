@@ -187,14 +187,12 @@ def repo_info(user, name)
   api_url += "?access_token=#{ENV['GITHUB_TOKEN']}"
 
   begin
-    if RUBY_VERSION < '1.9'
-      response = open(api_url).read
-    else
-      response = open(api_url, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE).read
-    end
-  rescue Exception => e
+    response = open(api_url, "Authorization" => "token #{ENV['GITHUB_TOKEN']}").read
+  rescue OpenURI::HTTPError => error
     message = "Problem fetching #{user}/#{name}."
-    puts message + e.message
+    puts message + error.message
+    response = error.io
+    puts response.string
     return {'description' => message}
   end
 
