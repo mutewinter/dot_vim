@@ -1,4 +1,4 @@
 if exists('g:plug_installing_plugins')
-  Plug 'tpope/vim-unimpaired'
+  Plug 'dstein64/nvim-scrollview'
   finish
 endif

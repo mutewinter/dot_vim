@@ -1,4 +1,4 @@
 if exists('g:plug_installing_plugins')
-  Plug 'justinj/vim-textobj-reactprop'
+  Plug 'ggandor/lightspeed.nvim'
   finish
 endif

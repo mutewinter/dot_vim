@@ -3,10 +3,6 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
-function! StartifyEntryFormat()
-  return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-endfunction
-
 let g:startify_list_order = [
         \ ['   Last modified'],
         \ 'dir',

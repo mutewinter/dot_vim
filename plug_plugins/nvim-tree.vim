@@ -3,11 +3,24 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
-lua require 'nvim-tree'.setup()
+
+lua << EOF
+require 'nvim-tree'.setup({
+  auto_open = true,
+  auto_close = true,
+  diagnostics = {
+    enable = true,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    }
+  }
+})
+EOF
 
 nnoremap <silent><leader>nn :NvimTreeToggle<CR>
 nnoremap <silent><leader>nf :NvimTreeFindFile<CR>
 
-let g:nvim_tree_auto_close = 1
 let g:nvim_tree_indent_markers = 1
-let g:nvim_tree_auto_open = 1
