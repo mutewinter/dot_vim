@@ -2,8 +2,9 @@
 
 [Jump to Plugin List](#plugin-list)
 
-[![Screenshot](https://github.com/mutewinter/dot_vim/raw/master/screenshots/screenshot_1.png)](https://github.com/mutewinter/dot_vim/raw/master/screenshots/screenshot_1.png)
+[![Screenshot][ss]][ss]
 
+[ss]: https://github.com/mutewinter/dot_vim/raw/main/screenshots/screenshot_1.png
 
 ## Plugins and Configuration in their Own File
 
