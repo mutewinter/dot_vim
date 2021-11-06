@@ -128,7 +128,7 @@ def plugins
     lines = File.new(filename).readlines
     sub_plugins = lines.reduce([]) do |memo, line|
       if line =~ /^\s*Plug\s+["'](.+)["']/
-        plugin_info = fetch_plugin_info($1)
+        plugin_info = fetch_plugin_info($1, File.basename(filename))
         plugin_info[:config?] = lines.length > LINES_WITHOUT_CONFIG
         memo << plugin_info
       end
@@ -142,7 +142,7 @@ end
 
 
 # Returns a hash of info for a plugin based on it's Plug link.
-def fetch_plugin_info(plug_link)
+def fetch_plugin_info(plug_link, filename)
   info = {}
   github_user = ''
   github_repo = ''
@@ -160,7 +160,7 @@ def fetch_plugin_info(plug_link)
   info[:uri] = "https://github.com/#{github_user}/#{github_repo}"
   info[:config_file_name] =
     /\.vim$/ =~ github_repo ? github_repo : "#{github_repo}.vim"
-  info[:config_file] = "#{PLUGINS_FOLDER}/#{info[:config_file_name]}"
+  info[:config_file] = "#{PLUGINS_FOLDER}/#{filename}"
 
   plugin_info = repo_info(github_user, github_repo)
   info[:description] = plugin_info['description'] && plugin_info['description'].strip
