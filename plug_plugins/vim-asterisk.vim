@@ -3,4 +3,5 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
-" Mappings are defined in hlslens
+map *   <Plug>(asterisk-z*)
+map #   <Plug>(asterisk-z#)

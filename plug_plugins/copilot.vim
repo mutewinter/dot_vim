@@ -1,4 +1,4 @@
 if exists('g:plug_installing_plugins')
-  Plug 'chrisbra/csv.vim'
+  Plug 'github/copilot.vim'
   finish
 endif
