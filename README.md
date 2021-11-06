@@ -1,4 +1,10 @@
-# The Vim Configuration of Champions
+# My 10 Year-Old (Neo)Vim Configuration
+
+## About
+
+I've been iterating on this configuration for more than 10 years and 1,000
+commits. **It's very unlikely you'd want to use it directly.** Instead, feel
+free to learn and take snippets from it.
 
 [Jump to Plugin List](#plugin-list)
 
@@ -8,9 +14,13 @@
 
 ## Plugins and Configuration in their Own File
 
+_This is one of the things I'm most proud of, definitely steal it._
+
 Each plugin is included and managed in its [own file](/plug_plugins).
 
 ## Installation
+
+_Be sure you read the About section above._
 
 1. `git clone git@github.com:mutewinter/dot_vim.git ~/.config/nvim`.
 1. `cd ~/.config/nvim`.
@@ -22,19 +32,16 @@ Now you have a choice. The automated script or the manual process.
 **or**
 
 1. `rake vim:link` to make the `.vimrc` and `.nvimrc` symbolic links.
-3. `vim +PlugInstall +qall`
-
-Enjoy enhanced productivity, increased levitation, reduced watermelon-related
-accidents, and startling sex appeal.
+1. `vim +PlugInstall +qall`
 
 ## Vim Requirements
 
-* I'm using [NeoVim](https://github.com/neovim/neovim)
-  [via Homebrew](https://github.com/neovim/neovim/wiki/Installing-Neovim) on OS X.
+- I'm using [NeoVim](https://github.com/neovim/neovim)
+  [via Homebrew](https://github.com/neovim/neovim/wiki/Installing-Neovim) on macOS.
 
 ## Mappings
 
-* Pressing `enter` in normal mode saves the current buffer, if needed.
+- Pressing `enter` in normal mode saves the current buffer, if needed.
 
 And many more. See [`mappings.vim`](mappings.vim) and
 [`plug_plugins`](plug_plugins) for more.
