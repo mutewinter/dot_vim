@@ -1,6 +1,6 @@
 " =============================================================================
 " Who: Jeremy Mack (@mutewinter)
-" Description: The Vim Configuration of Champions
+" Description: My 10 Year-Old (Neo)Vim Configuration
 " Version: Ever-evolving.
 " =============================================================================
 
