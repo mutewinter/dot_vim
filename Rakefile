@@ -73,7 +73,8 @@ def add_plugins_to_readme(plugins = [])
   unless index.nil?
     lines.insert(index+1, "\n#{PLUGINS_HEADER}")
     plugin_rows = plugins
-      .sort {|x,y| 
+      .uniq { |p| p[:name] }
+      .sort {|x,y|
         x[:stars] <=> y[:stars] or x[:name].downcase <=> y[:name].downcase
       }
       .reverse
