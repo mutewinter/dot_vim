@@ -1,5 +1,5 @@
 if exists('g:plug_installing_plugins')
-  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground' " For debugging tree-sitter
   Plug 'p00f/nvim-ts-rainbow'
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
