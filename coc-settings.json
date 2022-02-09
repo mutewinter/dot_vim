@@ -26,11 +26,14 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "graphql",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "python"
   ],
   "cSpell.userWords": [
+    "Neovim",
     "PDFs",
     "Postgres",
+    "autosave",
     "bookmarklet",
     "browserslist",
     "cocstatus",
@@ -43,6 +46,7 @@
     "ldquo",
     "lsquo",
     "minmax",
+    "mkdir",
     "mutewinter",
     "nvim",
     "nvimrc",
@@ -57,12 +61,6 @@
     "vimrc",
     "webhook",
     "webhooks"
-  ],
-  "coc.preferences.rootPatterns": [
-    ".git",
-    ".hg",
-    ".projections.json",
-    "tsconfig.json"
   ],
   "cSpell.enabledLanguageIds": [
     "vim",
@@ -100,8 +98,6 @@
     "yml",
     "sql"
   ],
-  "tailwindCSS.headwind.runOnSave": false,
-  "tailwindCSS.colorDecorators": "on",
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)",
     "tw=\"([^\"]*)",
@@ -125,5 +121,8 @@
         "graphql"
       ]
     }
-  }
+  },
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length=80"],
+  "python.linting.flake8Enabled": true
 }
