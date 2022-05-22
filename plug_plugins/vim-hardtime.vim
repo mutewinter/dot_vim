@@ -4,7 +4,7 @@ if exists('g:plug_installing_plugins')
 endif
 
 let g:hardtime_default_on = 1
-let g:hardtime_ignore_buffer_patterns = ["NERD.*", "Help"]
+let g:hardtime_ignore_buffer_patterns = ["NvimTree", "Help", "NeogitStatus"]
 let g:hardtime_allow_different_key = 1
 let g:hardtime_ignore_quickfix = 1
 " Hard, but not that hard
