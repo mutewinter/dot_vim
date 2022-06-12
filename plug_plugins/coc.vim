@@ -20,16 +20,20 @@ nnoremap <silent>gD :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
   else
-    call CocAction('doHover')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
 
-" Use <cr> or <tab> to confirm completion, `<C-g>u` means break undo chain at
-" current position. Coc only does snippet and additional edit on confirm. Note
-" that arrow keys navigate completions (but I have a fancy keyboard).
-inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" " Use <cr> or <tab> to confirm completion, `<C-g>u` means break undo chain at
+" " current position. Coc only does snippet and additional edit on confirm. Note
+" " that arrow keys navigate completions (but I have a fancy keyboard).
+inoremap <expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+" inoremap <expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
