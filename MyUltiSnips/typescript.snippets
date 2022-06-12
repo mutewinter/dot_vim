@@ -1,38 +1,5 @@
-extends javascript
-
-snippet reduce "reduce()" b
-reduce<$3>((result, $1) => {
-  $0
-  return result;
-}, $2)
-endsnippet
-
-snippet f "arrow function" w
-($1) => {
-  $0
-}
-endsnippet
-
-snippet fd "arrow function with destructure" w
-({ $1 }) => {
-  $0
-}
-endsnippet
-
 snippet edf "export default function" w
 export default function $1() {
   return $0;
 }
-endsnippet
-
-snippet ssr "server side rendering check" w
-typeof window === 'undefined'
-endsnippet
-
-snippet ssr! "not server side rendering check" w
-typeof window !== 'undefined'
-endsnippet
-
-snippet cap "Sentry captureException" w
-captureError(new Error('$0'))
 endsnippet
