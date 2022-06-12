@@ -5,7 +5,7 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
-nnoremap <leader>. <cmd>Telescope find_files<cr>
+nnoremap <s-enter> <cmd>Telescope find_files<cr>
 nnoremap <leader>m <cmd>Telescope oldfiles<cr>
 nnoremap <leader>fr <cmd>Telescope live_grep<cr>
 
