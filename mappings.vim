@@ -115,9 +115,6 @@ nnoremap <leader>pc :PlugClean<CR>
 " ---------------
 " Typo Fixes
 " ---------------
-
-cnoremap w' w<CR>
-
 " Disable the ever-annoying Ex mode shortcut key. Type visual my ass. Instead,
 " make Q repeat the last macro instead. *hat tip* http://vimbits.com/bits/263
 nnoremap Q @@
