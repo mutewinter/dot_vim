@@ -11,17 +11,16 @@ local spec = lush.extends({jellybeans}).with(function()
     Normal { fg = "#e8e8d3", bg = "#090909", },
 
     -- Better colors for popup menus
-    Pmenu { bg = "#303030", fg = "#D6D6D6" },
+    Pmenu { bg = "#202020", fg = "#D6D6D6" },
     PmenuSel { bg = "#D6D6D6", fg = "#2B2B2B" },
 
     CocErrorSign { fg = nice_red },
 
     -- Treesitter
-    TSMethod { fg = "#b0d0f0" },
-    TSConstructor { fg = "#fad07a" },
-    TSType { fg = "#fad07a" },
     TSTagAttribute { fg = "#ffb964" },
-    TSConstBuiltin { jellybeans.Constant },
+
+    -- Fixes issue with template strings
+    TSVariable { fg=Normal.fg },
 
     -- Git Signs
     GitSignsAdd { fg = "#70b950" },
