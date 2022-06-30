@@ -142,6 +142,8 @@
     }
   },
   "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["--line-length=80"],
+  "python.formatting.blackArgs": [
+    "--line-length=80"
+  ],
   "python.linting.flake8Enabled": true
 }
