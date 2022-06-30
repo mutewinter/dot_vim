@@ -30,7 +30,8 @@
     "javascript",
     "python",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "prisma"
   ],
   "cSpell.userWords": [
     "Alacritty",
