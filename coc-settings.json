@@ -11,6 +11,13 @@
   "diagnostic.infoSign": "ⓘ",
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
+  "workspace.workspaceFolderCheckCwd": true,
+  "workspace.bottomUpFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "prettier.onlyUseLocalVersion": true,
   "eslint.probe": [
     "javascript",
@@ -32,6 +39,10 @@
     "typescript",
     "typescriptreact",
     "prisma"
+  ],
+  "coc.preferences.rootPatterns": [
+    "tsconfig.json",
+    ".git"
   ],
   "cSpell.userWords": [
     "Alacritty",
