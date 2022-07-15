@@ -30,9 +30,6 @@ nnoremap <M-x> :qa<cr>
 " Yank entire buffer with gy
 nnoremap gy :0,$ y<cr>
 
-" Select entire buffer
-nnoremap vy ggVG
-
 " Make Y behave like other capital commands.
 " Hat-tip http://vimbits.com/bits/11
 nnoremap Y y$
@@ -65,8 +62,6 @@ nnoremap <silent> <M-j> :wincmd j<CR>
 nnoremap <silent> <M-k> :wincmd k<CR>
 nnoremap <silent> <M-l> :wincmd l<CR>
 
-" Equal Size Windows
-nnoremap <silent> g= :wincmd =<CR>
 " Swap Windows
 nnoremap <silent> gx :wincmd x<CR>
 
