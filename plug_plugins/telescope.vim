@@ -12,8 +12,14 @@ lua << EOF
         i = {
           ["<C-j>"] = require('telescope.actions').cycle_history_next,
           ["<C-k>"] = require('telescope.actions').cycle_history_prev,
+          ["<C-q>"] = require('telescope.actions').send_to_qflist + require('telescope.actions').open_qflist,
+          ["<M-q>"] = require('telescope.actions').send_selected_to_qflist + require('telescope.actions').open_qflist,
+          ["<C-c>"] = require('telescope.actions').close,
         },
       },
+      preview = {
+        treesitter = false, -- For fastest performance displaying preview
+      }
     },
   })
 EOF
@@ -30,4 +36,5 @@ nnoremap <Leader>fs :lua require'telescope.builtin'.search_history{}<cr>
 " Coc commands
 nnoremap <leader>fc <cmd>Telescope coc commands<cr>
 nnoremap <leader>fd <cmd>Telescope coc diagnostics<cr>
+nnoremap <leader>fD <cmd>Telescope coc workspace_diagnostics<cr>
 nnoremap <leader>fR <cmd>Telescope coc references<cr>
