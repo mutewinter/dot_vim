@@ -79,9 +79,6 @@ inoremap <C-l> <C-x><C-l>
 " Clear search
 noremap <silent><leader>/ :nohls<CR>
 
-" Toggle spelling mode
-nnoremap <silent> <leader>sp :set spell!<CR>
-
 " Quickly switch to last buffer
 nnoremap <leader>, :e#<CR>
 
@@ -142,3 +139,14 @@ if has('mac') || has('gui_macvim') || has('gui_mac')
   " directory name (/something/src)
   nnoremap <silent> <leader>yd :let @*=expand("%:p:h")<CR>
 endif
+
+" ------------
+" Tab Movement
+" ------------
+nnoremap <silent> <M-1> :tabnext 1<CR>
+nnoremap <silent> <M-2> :tabnext 2<CR>
+nnoremap <silent> <M-3> :tabnext 3<CR>
+nnoremap <silent> <M-4> :tabnext 4<CR>
+nnoremap <silent> <M-5> :tabnext 5<CR>
+
+nnoremap <silent> <M-.> :tabprevious<CR>
