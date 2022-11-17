@@ -4,10 +4,9 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
-" coc-prettier locked to 1.1.20 due to it not using plugins on .21
 let g:coc_global_extensions = [
-      \'coc-pairs', 'coc-snippets', 'coc-json', 'coc-tsserver',
-      \'coc-css', 'coc-eslint', 'coc-emoji', 'coc-react-refactor',
+      \'coc-snippets', 'coc-json', 'coc-tsserver',
+      \'coc-css', 'coc-eslint', 'coc-react-refactor',
       \'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml', 'coc-prettier',
       \'coc-prisma']
 
@@ -27,21 +26,10 @@ function! s:show_documentation()
   endif
 endfunction
 
-" " Use <cr> or <tab> to confirm completion, `<C-g>u` means break undo chain at
-" " current position. Coc only does snippet and additional edit on confirm. Note
-" " that arrow keys navigate completions (but I have a fancy keyboard).
-inoremap <expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-" inoremap <expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
-
-" Pick a new color
-nmap <leader>CP :call CocAction('pickColor')<CR>
-" Change color presentation
-nmap <leader>CX :call CocAction('colorPresentation')<CR>
 
 " Navigate diagnostic
 nmap <silent> gn <Plug>(coc-diagnostic-next)
@@ -60,9 +48,6 @@ nmap <leader>bc  <Plug>(coc-fix-current)
 
 " Map keys for go-tos
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gt <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-diagnostic-info)
-nmap <silent> gr <Plug>(coc-references)
 
 " Format current buffer
 nmap <silent> gF :call CocAction('format')<CR>
@@ -83,6 +68,8 @@ omap af <Plug>(coc-funcobj-a)
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
+" Manual trigger completion.
+inoremap <silent><expr> <S-enter> coc#refresh()
 
 " Scroll floating window, taken from Coc help docs
 if has('nvim-0.4.0') || has('patch-8.2.0750')
