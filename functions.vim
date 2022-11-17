@@ -60,25 +60,6 @@ command! StripTrailingWhiteSpaceAndSave :call StripTrailingWhiteSpaceAndSave()<C
 nnoremap <silent> <leader>stw :silent! StripTrailingWhiteSpaceAndSave<CR>
 
 " ---------------
-" Paste using Paste Mode
-"
-" Keeps indentation in source.
-" ---------------
-function! PasteWithPasteMode()
-  if &paste
-    normal p
-  else
-    " Enable paste mode and paste the text, then disable paste mode.
-    set paste
-    normal p
-    set nopaste
-  endif
-endfunction
-
-command! PasteWithPasteMode call PasteWithPasteMode()
-nnoremap <silent> <leader>p :PasteWithPasteMode<CR>
-
-" ---------------
 " Write Buffer if Necessary
 "
 " Writes the current buffer if it's needed, unless we're the in QuickFix mode.
