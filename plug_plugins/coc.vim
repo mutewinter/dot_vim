@@ -4,6 +4,7 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
+" tsserver currently locked due to not picking up local tsdk after 1.11.12
 let g:coc_global_extensions = [
       \'coc-snippets', 'coc-json', 'coc-tsserver',
       \'coc-css', 'coc-eslint', 'coc-react-refactor',
