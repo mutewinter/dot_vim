@@ -223,3 +223,44 @@ endfunction
 command! -nargs=0 StopProfiling call ProfileStop()
 " If I want to profile something after that vim started
 command! -nargs=0 StartProfiling call ProfileStart()
+
+" Rewrite twind.dev classes to Typewind function style
+function! TwindToTypewind()
+  let line = getline('.')
+  let tw_match = match(line, '\ctw`.*`\ze')
+  if tw_match >= 0
+    let tw_string = matchstr(line, '\ctw`.\{-}`\ze')
+    let tw_string = substitute(tw_string, '`', '', 'g')
+    let tw_string = substitute(tw_string, ' ', '.', 'g')
+    let tw_string = substitute(tw_string, '-', '_', 'g')
+    let tw_string = substitute(tw_string, '\v(\w+)\:(\w+)', '\1(tw.\2)', 'g')
+    let tw_string = substitute(tw_string, '^tw', '', '')
+    let line = substitute(line, '\ctw`.\{-}`\ze', 'tw.' . tw_string, '')
+    call setline('.', line)
+  else
+    echo "No string inside backticks following 'tw' found."
+  endif
+endfunction
+
+command! TwindToTypewind call TwindToTypewind()
+
+" Rewrite Tailwind classes to Typewind function style
+function! TailwindToTypewind()
+  let line = getline('.')
+  let class_match = match(line, '\c".*"\ze')
+  if class_match >= 0
+    let class_string = matchstr(line, '\c"\zs.*\ze"')
+    let class_string = substitute(class_string, '\"', '', 'g')
+    let class_string = substitute(class_string, ' ', '.', 'g')
+    let class_string = substitute(class_string, '-', '_', 'g')
+    let class_string = substitute(class_string, '\v(\w+)\:(\w+)', '\1(tw.\2)', 'g')
+    let line = substitute(line, '\c"\zs.*\ze"', '{tw.' . class_string . '}', '')
+    " Remove double quotes
+    let line = substitute(line, '"', '', 'g')
+    call setline('.', line)
+  else
+    echo "No double quoted string found."
+  endif
+endfunction
+
+command! TailwindToTypewind call TailwindToTypewind()
