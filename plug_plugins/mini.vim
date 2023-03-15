@@ -27,8 +27,6 @@ require('mini.jump2d').setup({
   }
 })
 
-require('mini.starter').setup()
-
 require('mini.sessions').setup({
   directory = '~/.local/share/nvim/session', -- for global sessions
   file = '', -- disable local sessions
