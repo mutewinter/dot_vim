@@ -247,19 +247,37 @@ command! TwindToTypewind call TwindToTypewind()
 " Rewrite Tailwind classes to Typewind function style
 function! TailwindToTypewind()
   let line = getline('.')
-  let class_match = match(line, '\c".*"\ze')
-  if class_match >= 0
-    let class_string = matchstr(line, '\c"\zs.*\ze"')
+  let has_class_name = match(line, 'className=')
+  let double_quote_match = match(line, '\c".*"\ze')
+  let single_quote_match = match(line, '\c''\zs.*\ze''')
+
+  if double_quote_match >= 0 || single_quote_match >= 0
+    if double_quote_match >= 0
+      let quote_delimiter = '"'
+    else
+      let quote_delimiter = "'"
+    endif
+
+    let class_match_pattern = '\c' . quote_delimiter . '\zs.*\ze' . quote_delimiter
+    let class_string = matchstr(line, class_match_pattern)
     let class_string = substitute(class_string, '\"', '', 'g')
+    let class_string = substitute(class_string, "'", '', 'g')
     let class_string = substitute(class_string, ' ', '.', 'g')
     let class_string = substitute(class_string, '-', '_', 'g')
     let class_string = substitute(class_string, '\v(\w+)\:(\w+)', '\1(tw.\2)', 'g')
-    let line = substitute(line, '\c"\zs.*\ze"', '{tw.' . class_string . '}', '')
-    " Remove double quotes
-    let line = substitute(line, '"', '', 'g')
+    let tw_string = 'tw.' . class_string
+
+    " Wrap in { } if there is className=
+    if has_class_name >= 0
+      let tw_string = '{' . tw_string . '}'
+    endif
+
+    let line = substitute(line, class_match_pattern, tw_string, '')
+    " Remove double and single quotes
+    let line = substitute(line, quote_delimiter, '', 'g')
     call setline('.', line)
   else
-    echo "No double quoted string found."
+    echo "No double or single quoted string found."
   endif
 endfunction
 
