@@ -96,3 +96,9 @@ let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" A shorthand command to quickly restart the coc spell checker so it can pick
+" up the presence of the workspace.
+command! -nargs=0 CocSpellRestart :call CocAction('reloadExtension', 'coc-spell-checker')
+" The act of binding this key seems to actually fix the issue
+nnoremap <leader>cs :CocSpellRestart<cr>
