@@ -11,8 +11,11 @@ let g:coc_global_extensions = [
       \'coc-vimlsp', 'coc-html', 'coc-db', 'coc-yaml', 'coc-prettier',
       \'coc-prisma']
 
-" I have to restart Coc sometimes because outdated error stick around.
-nnoremap <leader>cr :CocRestart<cr>
+" Manual restarts are often needed when large project or tsconfig changes
+" happen
+nnoremap <leader>crr :CocRestart<cr>
+" Sometimes restart is needed to allow spelling to be added to local folder.
+nnoremap <leader>crs :CocSpellRestart<cr>
 
 " Show documentation in preview window
 nnoremap <silent>gD :call <SID>show_documentation()<CR>
@@ -100,5 +103,3 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " A shorthand command to quickly restart the coc spell checker so it can pick
 " up the presence of the workspace.
 command! -nargs=0 CocSpellRestart :call CocAction('reloadExtension', 'coc-spell-checker')
-" The act of binding this key seems to actually fix the issue
-nnoremap <leader>cs :CocSpellRestart<cr>

@@ -19,9 +19,10 @@ local spec = lush.extends({jellybeans}).with(function(injected_functions)
     -- Darker background for entire window
     Normal { fg = "#e8e8d3", bg = "#090909", },
 
-    -- Better colors for popup menus
-    Pmenu { bg = "#202020", fg = "#D6D6D6" },
-    CocMenuSel { bg = "#D6D6D6", fg = "#2B2B2B" },
+    -- Coc.vim colored undercurl support
+    CocErrorHighlight { gui = "undercurl", sp = nice_red },
+    CocInfoHighlight { gui = "undercurl", sp = morning_glory  },
+    CocWarningHighlight { gui = "undercurl", sp = koromiko  },
 
     -- Fixes due to Jellybeans being out of date with latest Treesitter symbol
     -- syntax
@@ -38,9 +39,6 @@ local spec = lush.extends({jellybeans}).with(function(injected_functions)
     sym("@tag.attribute.tsx") { fg = koromiko },
     -- This used to be this color before an update, not sure why it changed
     sym("@variable.builtin")  { fg = "#7bc3a9" },
-
-    -- Better error color
-    CocErrorSign { fg = nice_red },
 
     -- Git Signs
     GitSignsAdd { fg = mantis },
