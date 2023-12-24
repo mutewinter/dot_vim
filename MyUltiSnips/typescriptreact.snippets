@@ -1,5 +1,17 @@
 extends typescript
 
+snippet efc "function declaration component" b
+interface $1Props {};
+
+export default function ${1:name}({}: $1Props) {
+  return (
+    <div>
+      ${2}
+    </div>
+  );
+}
+endsnippet
+
 snippet fc "functional component" b
 import React from 'react';
 import 'twin.macro';
