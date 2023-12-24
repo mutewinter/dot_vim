@@ -171,22 +171,6 @@
     "tw\\(.*?\\)`([^`]*)"
   ],
   "snippets.userSnippetsDirectory": "~/.config/nvim/MyUltiSnips",
-  "languageserver": {
-    "graphql": {
-      "command": "graphql-lsp",
-      "args": [
-        "server",
-        "-m",
-        "stream"
-      ],
-      // customize filetypes to your needs
-      "filetypes": [
-        "typescript",
-        "typescriptreact",
-        "graphql"
-      ]
-    }
-  },
   "python.formatting.provider": "black",
   "python.formatting.blackArgs": [
     "--line-length=80"
