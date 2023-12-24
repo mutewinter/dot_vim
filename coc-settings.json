@@ -1,9 +1,6 @@
 {
   "codeLens.enable": true,
   "javascript.suggestionActions.enabled": false,
-  "javascript.referencesCodeLens.enable": false,
-  "typescript.referencesCodeLens.enable": false,
-  "typescript.implementationsCodeLens.enable": false,
   "suggest.triggerAfterInsertEnter": true,
   "suggest.noselect": false,
   "suggest.labelMaxLength": 70,
