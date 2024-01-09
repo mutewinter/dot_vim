@@ -1,8 +1,8 @@
-# My 10 Year-Old (Neo)Vim Configuration
+# My 12 Year-Old (Neo)Vim Configuration
 
 ## About
 
-I've been iterating on this configuration for more than 10 years and 1,000
+I've been iterating on this configuration for more than 12 years and 1,000
 commits. **It's very unlikely you'd want to use it directly.** Instead, feel
 free to learn and take snippets from it.
 

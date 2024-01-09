@@ -1,6 +1,6 @@
 " =============================================================================
 " Who: Jeremy Mack (@mutewinter)
-" Description: My 10 Year-Old (Neo)Vim Configuration
+" Description: My 12 Year-Old (Neo)Vim Configuration
 " Version: Ever-evolving.
 " =============================================================================
 
