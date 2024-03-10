@@ -4,4 +4,8 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
-lua require('package-info').setup()
+lua << EOF
+require('package-info').setup({
+  hide_up_to_date = true
+})
+EOF
