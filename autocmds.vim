@@ -50,5 +50,8 @@ if has('autocmd')
 
     " Highlight .mdx files as markdown
     autocmd BufRead,BufNewFile *.mdx set filetype=markdown
+
+    " Set conceallevel to 2 for json files
+    autocmd FileType json setlocal conceallevel=2
   augroup END
 endif
