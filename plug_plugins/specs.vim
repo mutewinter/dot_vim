@@ -1,5 +1,5 @@
 if exists('g:plug_installing_plugins')
-  Plug 'edluffy/specs.nvim'
+  Plug 'cxwx/specs.nvim'
   finish
 endif
 
