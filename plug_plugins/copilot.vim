@@ -3,4 +3,5 @@ if exists('g:plug_installing_plugins')
   finish
 endif
 
-let g:copilot_node_command = "`fnm exec --using=16 which node`"
+" Ensures we use a compatible version of node
+let g:copilot_node_command = "`fnm exec --using=20 which node`"
