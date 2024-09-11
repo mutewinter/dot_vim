@@ -29,6 +29,7 @@ local spec = lush.extends({jellybeans}).with(function(injected_functions)
     sym("@variable")  { Normal },
     sym("@namespace")  { Normal },
     sym("@include")  { fg = morning_glory },
+    sym("@conditional")  { fg = morning_glory },
     sym("@tag.delimiter") { fg = bayoux_blue },
     sym("@text.emphasis") { gui = "italic" },
     sym("@text.underline") { gui = "underline" },
