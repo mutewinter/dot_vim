@@ -25,6 +25,8 @@ lua << EOF
 EOF
 
 nnoremap <s-enter> <cmd>Telescope find_files<cr>
+" For terminal without shift enter
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>m <cmd>Telescope oldfiles<cr>
 nnoremap <leader>fr <cmd>Telescope live_grep<cr>
 
