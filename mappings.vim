@@ -124,6 +124,9 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
 
+" Insert ellipsis
+iabbrev '..ell' …
+
 " copy current file name (relative/absolute) to system clipboard
 " from http://stackoverflow.com/a/17096082/22423
 if has('mac') || has('gui_macvim') || has('gui_mac')
