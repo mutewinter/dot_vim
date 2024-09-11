@@ -5,9 +5,15 @@ endif
 
 
 lua << EOF
-  require('neoscroll').setup()
-  local t = {}
-  t['<up>'] = {'scroll', {'-vim.wo.scroll', 'true', '200'}}
-  t['<down>'] = {'scroll', { 'vim.wo.scroll', 'true', '200'}}
-  require('neoscroll.config').set_mappings(t)
+  neoscroll = require('neoscroll')
+  neoscroll.setup()
+
+  local keymap = {
+    ["<up>"] = function() neoscroll.scroll(-vim.wo.scroll, { move_cursor=true, duration = 200 }) end;
+    ["<down>"] = function() neoscroll.scroll(vim.wo.scroll, {  move_cursor=true, duration = 200 }) end;
+  }
+  local modes = { 'n', 'v', 'x' }
+  for key, func in pairs(keymap) do
+    vim.keymap.set(modes, key, func)
+  end
 EOF
