@@ -49,6 +49,7 @@
     "Shopify",
     "autoprefix",
     "autosave",
+    "bigserial",
     "bookmarklet",
     "browserslist",
     "callout",
@@ -95,6 +96,7 @@
     "pgdown",
     "pgup",
     "postbuild",
+    "postgresql",
     "rdquo",
     "repos",
     "rsquo",
@@ -128,6 +130,7 @@
     "untracked",
     "uuid",
     "valibot",
+    "varchar",
     "vercel",
     "vimrc",
     "vite",
@@ -137,6 +140,7 @@
     "webhook",
     "webhooks",
     "xstate",
+    "youtube",
     "zustand"
   ],
   "cSpell.enabledLanguageIds": [
