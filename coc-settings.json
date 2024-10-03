@@ -32,6 +32,7 @@
   "[typescript][typescriptreact][graphql][javascript][python][prisma]": {
     "coc.preferences.formatOnSave": true,
   },
+  "eslint.autoFixOnSave": true,
   "workspace.rootPatterns": [
     "tsconfig.json",
     ".git"
