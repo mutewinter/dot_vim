@@ -6,6 +6,7 @@ if exists('g:plug_installing_plugins')
   Plug 'nvim-treesitter/playground' " For debugging tree-sitter
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
   Plug 'hiphish/rainbow-delimiters.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter-context'
   finish
 endif
 
