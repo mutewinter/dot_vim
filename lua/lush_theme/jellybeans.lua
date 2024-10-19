@@ -9,6 +9,8 @@ local koromiko = "#ffb964" -- From Jellybeans
 local wewak = "#f0a0c0"
 local morning_glory = "#8fbfdc"
 local bayoux_blue = "#556779"
+local highland = hsl("#799d6a")
+local biloba_flower = hsl("#c6b6ee")
 
 -- List of Treesitter symbols:
 -- https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md
@@ -26,13 +28,13 @@ local spec = lush.extends({jellybeans}).with(function(injected_functions)
 
     -- Fixes due to Jellybeans being out of date with latest Treesitter symbol
     -- syntax
-    sym("@variable")  { Normal },
+    sym("@variable")  { fg = highland },
+    sym("@variable.member")  { fg = biloba_flower },
     sym("@namespace")  { Normal },
     sym("@include")  { fg = morning_glory },
     sym("@conditional")  { fg = morning_glory },
     sym("@repeat")  { fg = morning_glory },
     sym("@exception")  { fg = morning_glory },
-    sym("@tag.delimiter") { fg = bayoux_blue },
     sym("@text.emphasis") { gui = "italic" },
     sym("@text.underline") { gui = "underline" },
     sym("@text.strike") { gui="strikethrough" },
