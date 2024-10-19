@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 if exists('g:plug_installing_plugins')
   Plug 'ziontee113/color-picker.nvim'
   finish

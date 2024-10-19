@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 if exists('g:plug_installing_plugins')
   Plug 'hoob3rt/lualine.nvim'
   finish

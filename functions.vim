@@ -86,7 +86,10 @@ endfunction
 function! MapCR()
   nnoremap <silent> <enter> :call CRWriteIfNecessary()<CR>
 endfunction
-call MapCR()
+
+if !exists('g:vscode')
+  call MapCR()
+endif
 
 " ---------------
 " Make a scratch buffer with all of the leader keybindings.

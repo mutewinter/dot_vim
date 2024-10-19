@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 " Ensure this isn't causing performance issues (it was before)
 if exists('g:plug_installing_plugins')
   Plug 'yamatsum/nvim-cursorline'

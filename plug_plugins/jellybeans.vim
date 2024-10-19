@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 if exists('g:plug_installing_plugins')
   Plug 'rktjmp/lush.nvim'
   Plug 'metalelf0/jellybeans-nvim'

@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 if exists('g:plug_installing_plugins')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'sindrets/diffview.nvim'

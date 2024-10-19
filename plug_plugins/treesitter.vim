@@ -1,9 +1,13 @@
 if exists('g:plug_installing_plugins')
-  Plug 'nvim-treesitter/playground' " For debugging tree-sitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate' }
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-  Plug 'hiphish/rainbow-delimiters.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter-context'
+
+  if !exists('g:vscode')
+    Plug 'nvim-treesitter/playground' " For debugging tree-sitter
+    Plug 'hiphish/rainbow-delimiters.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter-context'
+  endif
+
   finish
 endif
 

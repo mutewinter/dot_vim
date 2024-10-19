@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 if exists('g:plug_installing_plugins')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}

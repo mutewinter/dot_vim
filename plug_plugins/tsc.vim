@@ -3,10 +3,12 @@ if exists('g:vscode')
 endif
 
 if exists('g:plug_installing_plugins')
-  Plug 'rcarriga/nvim-notify'
+  Plug 'dmmulroy/tsc.nvim'
   finish
 endif
 
 lua << EOF
-  vim.notify = require("notify")
+  require('tsc').setup({
+    use_trouble_qflist = true,
+  })
 EOF

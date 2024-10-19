@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 if exists('g:plug_installing_plugins')
   Plug 'vuki656/package-info.nvim'
   Plug 'MunifTanjim/nui.nvim'

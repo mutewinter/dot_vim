@@ -4,11 +4,13 @@ if exists('g:plug_installing_plugins')
 endif
 
 lua << EOF
-require('mini.indentscope').setup({
-  draw = {
-    animation = require('mini.indentscope').gen_animation.none()
-  }
-})
+if not vim.g.vscode then
+  require('mini.indentscope').setup({
+    draw = {
+      animation = require('mini.indentscope').gen_animation.none()
+    }
+  })
+end
 
 require('mini.jump2d').setup({
   mappings = {
@@ -27,8 +29,10 @@ require('mini.jump2d').setup({
   }
 })
 
-require('mini.sessions').setup({
-  directory = '~/.local/share/nvim/session', -- for global sessions
-  file = '', -- disable local sessions
-})
+if not vim.g.vscode then
+  require('mini.sessions').setup({
+    directory = '~/.local/share/nvim/session', -- for global sessions
+    file = '', -- disable local sessions
+  })
+end
 EOF

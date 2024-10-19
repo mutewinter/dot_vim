@@ -22,6 +22,10 @@ exec "source " . g:vimdir . "/config.vim"
 exec "source " . g:vimdir . "/commands.vim"
 " All hotkeys, not dependant on plugins, are mapped here.
 exec "source " . g:vimdir . "/mappings.vim"
+" VSCode / Cursor Mappings
+if exists('g:vscode')
+  exec "source " . g:vimdir . "/vscode.vim"
+endif
 " Load plugin-specific configuration.
 exec "source " . g:vimdir . "/plugin_config.vim"
 " Small custom functions.
