@@ -1,6 +1,4 @@
-if exists('g:vscode')
-  finish
-endif
+" Enabled for VSCode because their highlighting is not as this plugin
 
 " Ensure this isn't causing performance issues (it was before)
 if exists('g:plug_installing_plugins')
