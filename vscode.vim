@@ -29,6 +29,11 @@ vim.keymap.set('n', '<leader>fR', action('editor.action.goToReferences'))
 vim.keymap.set('n', '<enter>', action('workbench.action.files.save'))
 vim.keymap.set('n', 'gF', action('editor.action.formatDocument'))
 vim.keymap.set('n', '<leader>gd', action('git.openChange'))
+-- Keep undo/redo in sync with VSCode (for persistent undo and fixes auto
+-- write happening with undo)
+-- https://github.com/vscode-neovim/vscode-neovim/issues/1139
+vim.keymap.set('n', 'u', action('undo'))
+vim.keymap.set('n', 'U', action('redo'))
 
 -- LSP
 vim.keymap.set('n', '<leader>rn', action('editor.action.rename'))
