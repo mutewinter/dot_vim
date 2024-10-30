@@ -21,9 +21,13 @@ end
 
 
 -- Search
-vim.keymap.set('n', '<leader>,', action('workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup'))
+vim.keymap.set('n', '<leader>,', actions(
+  {'workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup',
+  'workbench.action.acceptSelectedQuickOpenItem'}
+))
 vim.keymap.set('n', '<leader>fd', action('workbench.actions.view.problems'))
 vim.keymap.set('n', '<leader>fR', action('editor.action.goToReferences'))
+vim.keymap.set('n', '<leader>m', action('workbench.action.showAllEditorsByMostRecentlyUsed'))
 
 -- Basic
 vim.keymap.set('n', '<enter>', action('workbench.action.files.save'))
