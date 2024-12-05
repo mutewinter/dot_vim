@@ -38,6 +38,7 @@ vim.keymap.set('n', '<leader>gd', action('git.openChange'))
 -- https://github.com/vscode-neovim/vscode-neovim/issues/1139
 vim.keymap.set('n', 'u', action('undo'))
 vim.keymap.set('n', 'U', action('redo'))
+vim.keymap.set('n', '<leader>ss', action('workbench.scm.focus'))
 
 -- LSP
 vim.keymap.set('n', '<leader>rn', action('editor.action.rename'))
