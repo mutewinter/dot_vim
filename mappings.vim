@@ -124,8 +124,6 @@ if !exists('g:vscode')
   nnoremap <silent> <M-4> :tabnext 4<CR>
   nnoremap <silent> <M-5> :tabnext 5<CR>
 
-  nnoremap <silent> <M-.> :tabprevious<CR>
-
   " Plug mappings here because they don't work in plug.vim
   nnoremap <leader>pi :PlugInstall<CR>
   nnoremap <leader>pu :PlugUpdate<CR>
