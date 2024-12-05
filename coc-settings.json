@@ -9,6 +9,7 @@
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
   "workspace.workspaceFolderCheckCwd": true,
+  "tsserver.experimental.enableProjectDiagnostics": true,
   "workspace.bottomUpFiletypes": [
     "javascript",
     "javascriptreact",
