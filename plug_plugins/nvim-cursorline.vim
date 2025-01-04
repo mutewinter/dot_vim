@@ -1,4 +1,7 @@
-" Enabled for VSCode because their highlighting is not as this plugin
+if exists('g:vscode')
+  finish
+endif
+
 
 " Ensure this isn't causing performance issues (it was before)
 if exists('g:plug_installing_plugins')

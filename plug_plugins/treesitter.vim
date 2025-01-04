@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 if exists('g:plug_installing_plugins')
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate' }
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
