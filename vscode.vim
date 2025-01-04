@@ -62,6 +62,18 @@ vim.keymap.set('n', 'gN', actions({'editor.action.marker.prev', 'closeMarkersNav
 vim.keymap.set('n', '<leader>gn', action('workbench.action.editor.nextChange'))
 vim.keymap.set('n', '<leader>gN', action('workbench.action.editor.previousChange'))
 
+-- Unmap q because I keep getting stuck in macro recording accidentally
+vim.keymap.set('n', 'q', '<nop>', { noremap = true })
+
+-- Testing
+vim.keymap.set('n', '<leader>tt', action('testing.runAtCursor'))
+vim.keymap.set('n', '<leader>td', action('testing.debugAtCursor'))
+vim.keymap.set('n', '<leader>tT', action('testing.runCurrentFile'))
+vim.keymap.set('n', '<leader>tn', action('testing.goToNextMessage'))
+vim.keymap.set('n', '<leader>tN', action('testing.goToPreviousMessage'))
+vim.keymap.set('n', '<leader>tc', action('testing.toggleContinuousRunForTest'))
+vim.keymap.set('n', '<leader>tf', action('workbench.view.testing.focus'))
+
 -- ----------
 -- Extensions
 -- ----------
