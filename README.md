@@ -1,4 +1,4 @@
-# My 12 Year-Old (Neo)Vim Configuration
+# My 13 Year-Old (Neo)Vim Configuration
 
 ## About
 
