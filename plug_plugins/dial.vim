@@ -32,6 +32,11 @@ require("dial.config").augends:register_group{
       word = true,
       cyclic = true,
     },
+    augend.constant.new{
+      elements = {"off", "on"},
+      word = true,
+      cyclic = true,
+    },
   },
 }
 
