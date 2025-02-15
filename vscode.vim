@@ -38,6 +38,10 @@ vim.keymap.set('n', '<leader>gd', action('git.openChange'))
 -- https://github.com/vscode-neovim/vscode-neovim/issues/1139
 vim.keymap.set('n', 'u', action('undo'))
 vim.keymap.set('n', 'U', action('redo'))
+ -- VSCode undo can create visual selections, so we have to remap it in visual
+ -- mode as well to avoid accidentally changing case.
+vim.keymap.set('v', 'u', action('undo'))
+vim.keymap.set('v', 'U', action('redo'))
 vim.keymap.set('n', '<leader>ss', action('workbench.scm.focus'))
 
 -- LSP
