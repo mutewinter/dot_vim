@@ -61,6 +61,8 @@ vim.keymap.set('n', '<leader>nn', action('workbench.action.toggleSidebarVisibili
 vim.keymap.set('n', '<leader>nf', action('workbench.files.action.showActiveFileInExplorer'))
 vim.keymap.set('n', '<up>', '17k', { noremap = true, silent = true })
 vim.keymap.set('n', '<down>', '17j', { noremap = true, silent = true })
+vim.keymap.set('v', '<up>', '17k', { noremap = true, silent = true })
+vim.keymap.set('v', '<down>', '17j', { noremap = true, silent = true })
 vim.keymap.set('n', 'gn', actions({'editor.action.marker.next', 'closeMarkersNavigation'}))
 vim.keymap.set('n', 'gN', actions({'editor.action.marker.prev', 'closeMarkersNavigation'}))
 vim.keymap.set('n', '<leader>gn', action('workbench.action.editor.nextChange'))
