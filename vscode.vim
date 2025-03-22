@@ -92,4 +92,6 @@ vim.keymap.set('n', '<leader>fr', action('periscope.search'))
 
 -- LazyGit
 vim.keymap.set('n', '<leader>gg', action('lazygit-vscode.toggle'))
+-- Find It Faster
+vim.keymap.set('n', '<leader>fr', action('find-it-faster.findWithinFiles'))
 EOF
