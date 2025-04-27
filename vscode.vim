@@ -2,6 +2,9 @@
 " VSCode / Cursor Mappings
 " ------------------------
 
+" For testing VSCode environment.
+" finish
+
 lua << EOF
 local vscode = require('vscode')
 

@@ -4,6 +4,9 @@
 " Version: Ever-evolving.
 " =============================================================================
 
+" For testing VSCode environment.
+" let g:vscode = 1
+
 
 if has('nvim')
   let g:vimdir = "~/.config/nvim"
