@@ -97,4 +97,13 @@ vim.keymap.set('n', '<leader>fr', action('periscope.search'))
 vim.keymap.set('n', '<leader>gg', action('lazygit-vscode.toggle'))
 -- Find It Faster
 vim.keymap.set('n', '<leader>fr', action('find-it-faster.findWithinFiles'))
+
+-- FileUtils
+vim.api.nvim_create_user_command('Remove', function()
+  vscode.action('fileutils.removeFile')
+end, {})
+vim.keymap.set('n', '<leader>rN', action('fileutils.renameFile'))
+
+-- Fzf Picker
+vim.keymap.set('n', '<leader>fg', action('fzf-picker.pickFileFromGitStatus'))
 EOF
