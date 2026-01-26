@@ -31,11 +31,22 @@ vim.keymap.set('n', '<leader>,', actions(
 vim.keymap.set('n', '<leader>fd', action('workbench.actions.view.problems'))
 vim.keymap.set('n', '<leader>fR', action('editor.action.goToReferences'))
 vim.keymap.set('n', '<leader>m', action('workbench.action.showAllEditorsByMostRecentlyUsed'))
+-- Go to next it()/describe() in test files
+vim.keymap.set('n', '<leader>gt', function()
+  vim.fn.search('\\v^\\s*(it|describe)\\(')
+end)
+vim.keymap.set('n', '<leader>gT', function()
+  vim.fn.search('\\v^\\s*(it|describe)\\(', 'b')
+end)
 
 -- Basic
 vim.keymap.set('n', '<enter>', action('workbench.action.files.save'))
 vim.keymap.set('n', 'gF', action('editor.action.formatDocument'))
 vim.keymap.set('n', '<leader>gd', action('git.openChange'))
+vim.keymap.set('n', '<leader>fn', action('search.action.focusNextSearchResult'))
+vim.keymap.set('n', '<leader>fn', action('search.action.focusNextSearchResult'))
+vim.keymap.set('n', '<leader>cn', action('editor.action.inlineDiffs.nextDiffFile'))
+vim.keymap.set('n', '<leader>fN', action('editor.action.inlineDiffs.previousDiffFile'))
 -- Keep undo/redo in sync with VSCode (for persistent undo and fixes auto
 -- write happening with undo)
 -- https://github.com/vscode-neovim/vscode-neovim/issues/1139
@@ -91,7 +102,7 @@ vim.keymap.set('n', '<leader>tf', action('workbench.view.testing.focus'))
 vim.keymap.set('n', '<leader>nr', action('vscode-neovim.restart'))
 
 -- Periscope
-vim.keymap.set('n', '<leader>fr', action('periscope.search'))
+-- vim.keymap.set('n', '<leader>fr', action('periscope.search'))
 
 -- LazyGit
 vim.keymap.set('n', '<leader>gg', action('lazygit-vscode.toggle'))

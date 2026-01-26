@@ -12,7 +12,7 @@ if $TERM =~ '-256color'
 endif
 
 " Enable true color
-if exists('+termguicolors')
+if exists('+termguicolors') && !exists('g:vscode')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
@@ -22,13 +22,15 @@ endif
 " File Locations
 " -----------------------------
 " Double // causes backups to use full file path
-exec 'set backupdir=' . g:vimdir . '/.backup//'
-exec 'set directory=' . g:vimdir . '/.tmp//'
-exec 'set spellfile=' . g:vimdir . '/spell/custom.en.utf-8.add'
-" Persistent Undo
-if has('persistent_undo')
-  set undofile
-  exec 'set undodir=' . g:vimdir . '/.undo'
+if !exists('g:vscode')
+  exec 'set backupdir=' . g:vimdir . '/.backup//'
+  exec 'set directory=' . g:vimdir . '/.tmp//'
+  exec 'set spellfile=' . g:vimdir . '/spell/custom.en.utf-8.add'
+  " Persistent Undo
+  if has('persistent_undo')
+    set undofile
+    exec 'set undodir=' . g:vimdir . '/.undo'
+  endif
 endif
 
 " ---------------
@@ -73,16 +75,18 @@ set hidden             " Change buffer - without saving
 set history=768        " Number of things to remember in history.
 set confirm            " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
-set autowrite          " Writes on make/shell commands
-set timeoutlen=400     " Time to wait for a command (after leader for example).
+"  set autowrite          " Writes on make/shell commands
+"  set timeoutlen=400     " Time to wait for a command (after leader for example).
 set ttimeout
-set ttimeoutlen=100    " Time to wait for a key sequence.
+"  set ttimeoutlen=100    " Time to wait for a key sequence.
 set nofoldenable       " Disable folding entirely.
 set foldlevelstart=99  " I really don't like folds.
-set formatoptions=crql
-set iskeyword+=\$,-   " Add extra characters that are valid parts of variables
+set formatoptions=tcql
+set iskeyword+=-   " Add extra characters that are valid parts of variables
 set nostartofline      " Don't go to the start of the line after some commands
-set scrolloff=3        " Keep three lines below the last line when scrolling
+if !exists('g:vscode')
+  set scrolloff=3        " Keep three lines below the last line when scrolling
+endif
 set gdefault           " this makes search/replace global by default
 set switchbuf=useopen  " Switch to an existing buffer if one exists
 
@@ -93,7 +97,7 @@ set tabstop=2
 set backspace=indent,eol,start " Delete everything with backspace
 set shiftwidth=2 " Tabs under smart indent
 set shiftround
-set cindent
+set smartindent
 set autoindent
 set smarttab
 set expandtab
@@ -108,33 +112,37 @@ set hlsearch   " Highlight search results
 set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
   \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc,*/node_modules/*,
   \rake-pipeline-*
-set inccommand=nosplit " Preview replace as you type
+if !exists('g:vscode')
+  set inccommand=nosplit " Preview replace as you type
+endif
 
 " ---------------
 " Visual
 " ---------------
 set showmatch   " Show matching brackets.
 set matchtime=2 " How many tenths of a second to blink
-" Show invisible characters
-set list
+if !exists('g:vscode')
+  " Show invisible characters
+  set list
 
-" Show trailing spaces as dots and carrots for extended lines.
-" From Janus, http://git.io/PLbAlw
+  " Show trailing spaces as dots and carrots for extended lines.
+  " From Janus, http://git.io/PLbAlw
 
-" Reset the listchars
-set listchars=""
-" make tabs visible
-set listchars=tab:▸▸
-" make non-breakable spaces visible
-set listchars+=nbsp:¬
-" show trailing spaces as dots
-set listchars+=trail:•
-" The character to show in the last column when wrap is off and the line
-" continues beyond the right of the screen
-set listchars+=extends:>
-" The character to show in the last column when wrap is off and the line
-" continues beyond the right of the screen
-set listchars+=precedes:<
+  " Reset the listchars
+  set listchars=""
+  " make tabs visible
+  set listchars=tab:▸▸
+  " make non-breakable spaces visible
+  set listchars+=nbsp:¬
+  " show trailing spaces as dots
+  set listchars+=trail:•
+  " The character to show in the last column when wrap is off and the line
+  " continues beyond the right of the screen
+  set listchars+=extends:>
+  " The character to show in the last column when wrap is off and the line
+  " continues beyond the right of the screen
+  set listchars+=precedes:<
+endif
 
 " ---------------
 " Sounds
@@ -150,4 +158,4 @@ set mousehide  " Hide mouse after chars typed
 set mouse=a    " Mouse in all modes
 
 " Better complete options to speed it up
-set complete=.,w,b,u,U
+"  set complete=.,w,b,u,U

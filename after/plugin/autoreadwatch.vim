@@ -1,4 +1,6 @@
 " -----------------
 " vim-autoreadwatch
 " -----------------
-:silent! WatchForChangesAllFile
+if !exists('g:vscode')
+  :silent! WatchForChangesAllFile
+endif
