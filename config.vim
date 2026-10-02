@@ -36,28 +36,30 @@ endif
 " ---------------
 " UI
 " ---------------
-set ruler          " Ruler on
-set number         " Line numbers on
-set relativenumber " Relative numbers on
-set nowrap         " Line wrapping off
-set laststatus=2   " Always show the statusline
-set cmdheight=2    " Make the command area two lines high
-set cursorline     " Highlight current line
-set encoding=utf-8
-set noshowmode     " Don't show the mode since status line shows it
-set title          " Set the title of the window in the terminal to the file
-set updatetime=300 " Added based on guidance from coc.nvim
-set signcolumn=yes " Ensures no flickering for coc-git
-set shortmess+=c   " don't give |ins-completion-menu| messages.
-if exists('+colorcolumn')
-  set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
-endif
-" Disable tooltips for hovering keywords in Vim
-if exists('+ballooneval')
-  " This doesn't seem to stop tooltips for Ruby files
-  set noballooneval
-  " 100 second delay seems to be the only way to disable the tooltips
-  set balloondelay=100000
+if !exists('g:vscode')
+  set ruler          " Ruler on
+  set number         " Line numbers on
+  set relativenumber " Relative numbers on
+  set nowrap         " Line wrapping off
+  set laststatus=2   " Always show the statusline
+  set cmdheight=2    " Make the command area two lines high
+  set cursorline     " Highlight current line
+  set encoding=utf-8
+  set noshowmode     " Don't show the mode since status line shows it
+  set title          " Set the title of the window in the terminal to the file
+  set updatetime=300 " Added based on guidance from coc.nvim
+  set signcolumn=yes " Ensures no flickering for coc-git
+  set shortmess+=c   " don't give |ins-completion-menu| messages.
+  if exists('+colorcolumn')
+    set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
+  endif
+  " Disable tooltips for hovering keywords in Vim
+  if exists('+ballooneval')
+    " This doesn't seem to stop tooltips for Ruby files
+    set noballooneval
+    " 100 second delay seems to be the only way to disable the tooltips
+    set balloondelay=100000
+  endif
 endif
 
 " ---------------
@@ -66,7 +68,9 @@ endif
 syntax enable
 set nocompatible " be iMproved
 filetype plugin indent on
-set backup             " Turn on backups
+if !exists('g:vscode')
+  set backup             " Turn on backups
+endif
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
 " longest common part, then all.
@@ -154,8 +158,10 @@ set t_vb=
 " ---------------
 " Mouse
 " ---------------
-set mousehide  " Hide mouse after chars typed
-set mouse=a    " Mouse in all modes
+if !exists('g:vscode')
+  set mousehide  " Hide mouse after chars typed
+  set mouse=a    " Mouse in all modes
+endif
 
 " Better complete options to speed it up
 "  set complete=.,w,b,u,U
