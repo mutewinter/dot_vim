@@ -196,5 +196,6 @@
   "python.formatting.blackArgs": [
     "--line-length=80"
   ],
-  "python.linting.flake8Enabled": true
+  "python.linting.flake8Enabled": true,
+  "snippets.ultisnips.pythonPrompt": false
 }
